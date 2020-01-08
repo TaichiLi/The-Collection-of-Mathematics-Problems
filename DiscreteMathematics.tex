@@ -1,0 +1,117 @@
+\chapter{离散数学}
+
+\section{数理逻辑}
+
+\section{集合论}
+
+\section{代数结构}
+
+\subsection{代数系统}
+
+\begin{proposition}
+
+    $$V_1 = <\mathbb{Z}, +, \cdot>, \quad V_2 = <\mathbb{Z}_n, \oplus, \otimes>$$
+    其中，$\mathbb{Z}$为整数集，$+$，$\cdot$分别为普通加法和乘法，$\mathbb{Z}_n = \{1, 2, 3, \cdots, n - 1\}$，
+    $\oplus$，$\otimes$分别为模$n$加法和模$n$乘法，令$f: \mathbb{Z} \to \mathbb{Z}_n$，$f(x) = x \mod n$，证明$f$为$V_1$到$V_2$的满同态映射。
+
+\end{proposition}
+
+\begin{proof}
+
+    $\forall x, y \in \mathbb{Z}$
+    $$f(x + y) = (x + y) \mod n$$
+    $$f(x) \oplus f(y) = [(x \mod n) + (y \mod n)] \mod n$$
+    由取模运算的定义知，$\exists q_1, q_2 \in \mathbb{Z}, r_1, r_2 \in \mathbb{Z}_n$
+    $$x = q_1 n + r_1$$
+    $$y = q_2 n + r_2$$
+    则
+    
+    \begin{align*}
+        (x + y) \mod n & =  q_1 n + r_1 + q_2 n + r_2 \\
+        & = (q_1 + q_2)n + r_1 + r_2 \\
+        & = (q_1 + q_2 + q_3)n + r_3 \\
+        & = [(x \mod n) + (y \mod n)] \mod n \\
+        & = (r_1 + r_2) \mod n
+    \end{align*}
+
+    其中
+    $$r_1 + r_2 = q_3 n + r_3,\quad q_3 \in \mathbb{Z}, r_3 \in \mathbb{Z}_n$$
+    即
+    $$f(x + y) = f(x) \oplus f(y)$$
+    同理可证
+    $$f(x \cdot y) = f(x) \otimes f(y)$$
+    且$f$显然是满映射，得证。
+
+\end{proof}
+
+\subsection{群与环}
+
+\begin{theorem}
+
+    $G$为群，则$G$中满足消去律，即对任意$a,b,c \in G$有
+    \begin{enumerate}
+
+        \item 若$ab = ac$，则$b = c$
+        \item 若$ba = ca$，则$b = c$
+        
+    \end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            因为$ab = ac$，且$G$是群，所以$\exists a^{-1} \in G$， 两边左乘$a^{-1}$得
+            $$a^{-1} ab = a^{-1}ac$$
+            即$b = c$，得证。
+        \item 同上。
+        
+    \end{enumerate}
+
+\end{proof}
+
+\begin{proposition}
+
+    设$G$是群，$a,b\in G$是有限阶元，证明：
+
+    \begin{enumerate}
+
+        \item $|b^{-1}ab| = |a|$
+        \item $|ab| = |ba|$
+        
+    \end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            设$|b^{-1}ab| = k$，$|a| = l$，则
+            $$[b^{-1}ab]^l = \overbrace{[b^{-1}ab \  b^{-1}ab \ \cdots \  b^{-1}ab]}^{共l项} = b^{-1}a^{l}b = b^{-1}\circ e \circ b = e$$
+            即$k \leq l$，同理设$|bb^{-1}abb^{-1}| = m$，显然$m = l$，同时
+            $$[bb^{-1}abb^{-1}]^k = \overbrace{[b(b^{-1}ab)b^{-1} \  b(b^{-1}ab)b^{-1} \ \cdots \  b(b^{-1}ab)b^{-1}]}^{共k项} = b(b^{-1}ab)^kb^{-1} = b^{-1}\circ e \circ b = e$$
+            因此$l = m \leq k \leq l$，即
+            $$|b^{-1}ab| = |a|$$
+        \item 
+            $|ba| = |b^{-1}bab| = |ba|$，得证。
+        
+    \end{enumerate}
+
+\end{proof}
+
+\begin{proposition}
+
+    偶数阶群必含$2$阶元。
+
+\end{proposition}
+
+\begin{proof}
+
+    由群的性质和逆元的唯一性知，$\forall a \in G$，若$|a| > 2$，则$\exists a^{-1} \in G$，且$a \neq a^{-1}$\\
+    即群中除单位元外的任何元素都和它的逆元成对存在。因此，偶数阶群必存在$2$阶元。
+
+\end{proof}

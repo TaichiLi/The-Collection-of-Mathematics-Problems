@@ -1,0 +1,587 @@
+\chapter{复分析}
+
+\section{复数}
+
+\begin{proposition}
+    
+    证明：对于$|z| \leq 1, \ |w| \leq 1$，有
+    $$|w - z| \leq |1 - \overline{w}z|$$
+
+\end{proposition}
+
+\begin{proof}
+
+    设$z = x_1 + y_1\imag,\ w = x_2 + y_2\imag$
+    $$|w - z| = | (x_2 - x_1) + (y_2 - y_1)\imag| $$
+    $$|1 - \overline{w}z| = |1 - (x_2 - y_2\imag) (x_1 - y_1\imag)| = | (1 - x_1x_2 - y_1y_2) + (x_1y_2 - x_2y_1) |$$
+
+    \begin{align*}
+        &|w - z|^2 - |1 - \overline{w}z|^2 \\
+        = \ & x_1^2 + x_2^2 + y_1^2 + y_2^2 - 1 - x_1^2x_2^2 -  y_1^2y_2^2 - x_1^2 y_2^2 -  x_2^2y_1^2 \\
+        = \ & (1 - x_1^2 - y_1^2) (1 - x_2^2 - y_2^2) \\
+        \leq \ & 0
+    \end{align*}
+
+    其中
+    $$0 \leq x_1^2 + y_1^2 \leq 1, \quad 0 \leq x_2^2 + y_2^2 \leq 1$$
+    则
+    $$|w - z| \leq |1 - \overline{w}z|$$
+
+\end{proof}
+
+\section{复积分}
+
+\begin{proposition}
+
+    证明：对任意的$\xi \in \mathbb{C}$，有
+    $$\euler^{-\pi\xi^2} = \int_{-\infty}^{+\infty}{\euler^{-\pi x^2}\euler^{-2\pi \imag x\xi}}\diff x$$
+    
+\end{proposition}
+
+\begin{proof}
+
+    $$\euler^{-\pi x^2}\euler^{-2\pi x\xi} = \euler^{-\pi(x^2 + 2\imag x\xi)}$$
+    因为
+    $$-\pi(x^2 + 2\imag x\xi) = -\pi (x^2 + 2\pi\imag x - \xi^2 + \xi^2) = -\pi(x + \imag \xi)^2 - \pi\xi^2$$
+    则
+    $$\int_{-\infty}^{+\infty}{\euler^{-\pi x^2}\euler^{-2\pi \imag x\xi}}\diff x = \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x+\imag\xi)^2}}\diff x$$
+    令$z = x + \imag\xi, \diff x = \diff z$，则有
+
+    \begin{align*}
+        &\euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^-{\pi (x+\imag\xi)^2}}\diff x \\
+        = \ & \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi z^2}}\diff x \\
+        = \ & \euler^{\pi\xi^2} \dfrac{\sqrt{\pi}}{\sqrt{\pi}} \\
+        = \ & \euler^{\pi\xi^2}
+    \end{align*}
+
+\end{proof}
+
+\begin{proposition}
+
+    证明：
+    $$\left| \int_{\gamma}{\euler^{\imag z^2}}\diff z \right| \leq \dfrac{\pi(1 - \euler^{-r^2})}{4r}$$
+    其中$\gamma(t) = r\euler^{\imag t},\ t\in[0,\dfrac{\pi}{4}],\ r \in \mathbb{R}^+$
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{align*}
+        \left| \int_{\gamma}{\euler^{\imag z^2}}\diff z \right| & = \left| \int_{0}^{\frac{\pi}{4}}{\euler^{\imag r^2(\cos{2t} + \imag\sin{2t})}\imag r\euler^{\imag t}}\diff t \right| \\
+        & \leq \int_{0}^{\frac{\pi}{4}}{\left| \euler^{\imag r^2(\cos{2t} + \imag\sin{2t})}\imag r\euler^{\imag t} \right|}\diff t \\
+        & = \int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t
+    \end{align*}
+
+    因为$\sin{2t} \geq \dfrac{4t}{\pi}, \ t \in [0,\dfrac{\pi}{4})$，则
+    $$\int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t \leq \int_{0}^{\frac{\pi}{4}}{r\euler^{\frac{4r^2t}{\pi}}}\diff t = \dfrac{\pi}{4r}(1 - \euler^{-r^2}) $$
+
+\end{proof}
+
+\begin{proposition}
+
+    设$f(z)$在复平面上处处解析，并且不等式
+    $$\int_{0}^{2\pi}{|f(\mathrm{e^{\imag \theta}})}\diff \theta \leq r^{\frac{16}{5}} $$
+    对所有$r > 0$成立，证明：$f(z) \equiv 0$
+
+\end{proposition}
+
+\begin{proof}
+
+    由题设$f(z)$在复平面$\mathrm{C}$内都能\textup{Taylor}展开，则
+    $$f(z) = \sum_{n=0}^{\infty}{\dfrac{f^{(n)(z_0)}}{n!}(z - z_0)^n}$$
+    应用\textup{Cauthy}积分公式，得
+    $$f(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{f(\euler^{\imag \theta})}\diff \theta$$
+    从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r\to0^{+}$，有$f(0) = 0$
+    再由
+    $$f'(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag \theta})}{r\euler^{\imag \theta}}}\diff \theta$$
+    则可知$f'(0) = 0$，同理$f''(0) = f^{(3)}(0) = 0$\\
+    当$n \geq 4$时
+    $$f^{(n)}(0) =  \dfrac{n!}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag\theta})}{r^n \euler^{\imag\theta}}}\diff \theta$$
+    $$|f^{(n)}(0)| \leq \dfrac{n!}{2\pi} \dfrac{r^{\frac{16}{5}}}{r^n} \to 0\quad(r\to+\infty)$$
+    从而
+    $$f^{(n)}(0) = 0,\quad \forall n \in \mathbb{N}$$
+    即
+    $$f(z) \equiv 0$$
+    
+\end{proof}
+
+\section{复级数}
+
+\begin{proposition}
+
+    设$\lim\limits_{n\to\infty}{a_nz^n}$收敛，证明：
+    $$\lim_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum_{n=1}^{\infty}{a_n}$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    记$A_k = \sum\limits_{n = 1}^{k}{A_n},\ A_0 = 0$，则
+
+    \begin{align*}
+        \sum_{n=1}^{N}{(1-r^n)a_n} & = (1-r^N)A_N + \sum_{n=1}^{N}{(r^n-r^{n+1})A_n}\\
+        & = (1 - r)A_N + \sum_{n=1}^{N}{(r^n-r^{n+1})(A_N - A_n)}
+    \end{align*}
+
+    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n-r^{n+1})(A_N - A_n)} = 0$\\
+    对$\forall \varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
+    $$|A_n - A| < \varepsilon $$
+    其中$A = \lim\limits_{n\to\infty}{A_N}$\\
+    取$(1-\varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $\\
+    由于$A_n$有界，设$|A_n| \leq M $，则$n > N'$时
+    
+    \begin{align*}
+        \sum_{n=1}^{N-1}{(r^n - r^{n+1})(A_N - A_n)} & \leq (1 - r)\sum_{n=1}^{N'}{r^n|A_n - A|} + \sum_{n=N'+1}^{N-1}{r^n(|A_n - A| + |A_N -A|)}\\
+        & \leq (\sum_{n=1}^{N'}{2r^nM} + \sum_{n=N'+1}^{N-1}{r^n2\varepsilon})\\
+        & = (1 - r)\left(2M\dfrac{r - r^{N'+1}}{1 - r} + 2\varepsilon r^{N'+1}\dfrac{1 - R^{N-N'+1}}{1 - r}\right)\\
+        & < 2M\varepsilon + 2\varepsilon\\
+        & = 2(M+1)\varepsilon
+    \end{align*}
+
+    令$n\to+\infty$，再$r\to1$\\
+    即
+    $$\lim_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum_{n=1}^{\infty}{a_n}$$
+
+\end{proof}
+
+\begin{proposition}
+    
+    设$f$在$\mathbb{C}$上解析，且满足对于任一点$z_0\in\mathbb{C}$，$f$在$z_0$的\textup{Tarloy}展开式
+    $$f(z) = \sum_{n=0}^{+\infty}{a_n(z-z_0)}$$
+    满足至少有一个$c_n$为$0$，证明$f$是多项式。
+
+\end{proposition}
+
+\begin{proof}
+    
+    考虑开单位圆盘$D = \Delta(0,1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
+    在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p=0$\\
+    可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0\in D$，
+    由唯一性定理知，$f^{(p)}\equiv 0$在$\mathbb{C}$上恒成立，故$f$为多项式。
+
+\end{proof}
+
+\section{解析函数}
+
+\iffalse
+\begin{proposition}
+    
+    设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的一个极点$z_0$）解析，证明：\\
+    若$\lim\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
+    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    考虑$f(z_0z)$的相同问题，则只需证明$z_0 = 1$的情况\\
+    设$g(z)$是$f(z)$在$z=1$处\textup{Taylor}级数的主要部分，即
+    $$g(z) = \sum_{p=1}^{k}{\dfrac{A_p}{(1-z)^p}},\quad p \geq 1$$
+    因为$h(z) = \dfrac{1}{1-z} = \sum_{n=0}^{\infty}{z^n}$，则$h(z)$的$p-1$阶导数
+    
+    \begin{align*}
+        (1-z)^{(p-1)} & = \dfrac{(p-1)!}{(1-z)^p}\\
+        & = (\sum_{n=1}^{\infty}{z_n})^{(p-1)}\\
+        & = \sum_{n=0}^{\infty}{(n+1)(n+2)\cdots(n+p+1)z^n}
+    \end{align*}
+
+    设$g(z) = \sum\limits_{n=1}^{\infty}{b_nz^n}$，有
+    $$b_n = \sum_{p=1}^{k}{\dfrac{1}{(p-1)!}(n+1)(n+2)\cdots(n+p+1)}$$
+    则$\lim\limits_{n\to\infty}{b_n} = $
+
+\end{proof}
+
+\fi
+
+\begin{proposition}
+
+    已知$D$是单位圆盘，假设$f:D\to\mathbb{C}$是解析函数，证明：\\
+    函数$f$的直径$d =\sup\limits_{z,\ w\in D}{|f(z) - f(w)|}$满足
+    $$2|f'(0)| \leq d$$
+
+\end{proposition}
+
+\begin{proof}
+
+    由\textup{Cauthy}公式得，
+    $$f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{f(z)}{z^2}}\diff z, \quad 0 < r < 1 $$
+    $$f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{-f(-z)}{z^2}}\diff z, \quad 0 < r < 1 $$
+    即
+    $$2f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{f(z)-f(-z)}{z^2}}\diff z, \quad 0 < r < 1$$
+
+    \begin{align*}
+        2|f'(0)| & = \dfrac{1}{2 \pi} \left| \oint_{|z| = r}{\dfrac{f(z)-f(-z)}{z^2}}\diff z \right| \\
+        & \leq \dfrac{1}{2 \pi} \oint_{|z|=r}{\left|\dfrac{f(z)-f(-z)}{z^2}\right|}\diff z\\
+        & \leq \dfrac{1}{2 \pi} \dfrac{d}{r^2} \cdot 2 \pi r\\
+        & = \dfrac{d}{r}, \quad 0 < r < 1
+    \end{align*}
+
+    则显然有$2|f'(0)| \leq d$
+    再证等号成立时的情况。充分性显然。
+    % 必要性空缺
+    % TODO
+
+\end{proof}
+
+\begin{proposition}
+    
+    设$f$在$0 < |z| < R$解析，$\exists M >0$，使得$\forall r,\quad 0 < r < R$，有
+    $$r \int_{0}^{2 \pi}{|2f(\mathrm{e^{i\theta}})|}\diff \theta < M$$
+    证明：$z=0$是一个可去奇点，否则是简单极点。
+
+\end{proposition}
+
+\begin{proof}
+    
+    设$r_2 < R$，选取$z_0$，满足$0 < z_0 < \dfrac{r_2}{2}$，再选取$r_1$，使$0 < r_1 < \dfrac{|z_0|}{2}$\\
+    由\textup{Cauthy}积分公式得
+
+    \begin{align*}
+        |f(z_0)| & = \left| \dfrac{1}{2\mathrm{\pi i}} \int_{C_2}{\dfrac{f(z)}{z-z_0}}\diff z - \int_{C_1}{\dfrac{f(z)}{z-z_0}}\diff z \right|\\
+        & \leq \dfrac{1}{2 \pi} \left(\int_{C_2}{\left|\dfrac{f(z)}{z-z_0}\right|}|\diff z| + \int_{C_1}{\left|\dfrac{f(z)}{z-z_0}\right|}|\diff z|\right)
+    \end{align*}
+
+    其中$C_1 = r_1\mathrm{e^{i\theta}},\ C_2 = r_2\mathrm{e^{i\theta}}$
+    由$|z-z_0| \geq \dfrac{r_2}{2},\ z \in C_2$有
+    $$ \dfrac{1}{2 \pi} \int_{C_2}{\left| \dfrac{f(z)}{z-z_0}\right|}|\diff z| \leq \dfrac{1}{ \pi r_2}\int_{0}^{2 \pi}{|f(\euler^{\imag\theta})}\diff \theta \leq \dfrac{M}{ \pi r_2^2}$$
+    由$|z-z_0| \geq \dfrac{|z|}{2},\ z \in C_1$有
+    $$ \dfrac{1}{2 \pi} \int_{C_1}{\left| \dfrac{f(z)}{z-z_0}\right|}|\diff z| \leq \dfrac{1}{ \pi|z|}\int_{0}^{2 \pi}{|f(\euler^{\imag\theta})}\diff \theta \leq \dfrac{M}{ \pi|z|}$$
+    因此，我们有
+    % 似有不对
+    $$|f(z)| \leq \dfrac{M}{ \pi r_2} + \dfrac{M}{ \pi|z|},\quad 0 < |z| < \dfrac{r_2}{2}$$
+    所以$$|zf(z)| \leq \dfrac{M|z|}{ \pi r_2} + \dfrac{M}{\pi}$$
+    则极限是有限的。\\
+    $z=0$是可去极点，极限为$0$。\\
+    $z=0$是简单极点，极限非$0$。
+
+\end{proof}
+
+\begin{proposition}
+
+    设$f(z)$在$|z| < 1 $内解析，并且$z = 0$为$f(z)$的$n(n \geq 1)$级零点，当$|z|<1$时，$|f(z)| < 1$。\\
+    证明：当$|z|<1$时，$|f(z)| \leq |z|^n$
+
+\end{proposition}
+
+\begin{proof}
+    
+    $f(z)$在$|z|<1$内解析，且$z = 0$为$n(n \geq 1)$级零点，则有
+    $$f(z) = \sum_{m = n}^{\infty}{a_mz^m}$$
+    显然$\varphi(z) = \dfrac{f(z)}{z^{n-1}}$在$|z|<1$内解析，且$\varphi(0) = 0$，有
+    $$ \max\varphi(z) \leq \max_{|z| = r}|\varphi(z)| = \dfrac{|f(z)|}{r^{n-1}} \leq \dfrac{1}{r^{n-1}} $$
+    令$n \to 1$，则$|\varphi(z)| < 1$，于是$|\varphi(z)| \leq |z|$，即
+    $$|f(z)| \leq z^n$$
+
+\end{proof}
+
+\section{共形映射}
+
+\begin{proposition}
+
+    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$\\
+    证明：$f(z)$至少有一个零点。
+
+\end{proposition}
+
+\begin{proof}
+    
+    反证法。若存在$a,\ b\in \Delta(0,1), \quad a \neq b$，且
+    $$f(a) = a, \quad  f(b) = b$$
+    则设$\varphi(z) = \dfrac{a-z}{1-\overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $\\
+    令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
+    $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
+    由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
+    因为
+    $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b) = \euler^{\mathrm{i \theta}}\varphi^{-1}(b)$$
+    所以$ \euler^{\mathrm{i \theta}} = 1$
+    则
+    $$ \varphi^{-1} \circ f \circ \varphi(z) = z$$
+    即$ f[\varphi(z)] = \varphi(z)$, $f$为恒等映射，与题设矛盾，得证。
+
+\end{proof}
+
+\begin{proposition}
+    
+    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$，证明：
+    
+    \begin{enumerate}
+        
+        \item   $$|f(z) + f(-z)| \leq 2 |z|^2 \quad (|z| < 1)$$
+        
+        \item   如果$\exists z_0 \neq 0$，使得上面不等式中的等号在$z_0$处成立，则
+                $$f(z) = \euler^{\imag\theta}z^2(\theta \in \mathbb{{R}})$$
+
+    \end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+    
+    \begin{enumerate}
+        
+        \item
+                $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
+                $$ f(z) =\sum_{n=1}^{\infty}{a_nz^n}$$
+                令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$，
+                显然$z=0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
+                $$|\varphi(z)| = |z|^2$$
+                即
+                $$|f(z) + f(-z)| \leq 2|z|^2$$
+
+        \item 
+                $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
+                由\textup{(1)}知，$\left|\dfrac{\varphi(z)}{z^2}\right| \leq 1$，且$\left|\dfrac{\varphi(z_0)}{z_0^2}\right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
+                $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
+                $$f(z) + f(-z) = \sum_{n=1}^{\infty}{a_{2n}z^{2n}}$$
+                设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n=1}^{\infty}{a_{2n-1}z^{2n-1}}$\\
+                显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
+
+                \begin{align*}
+                    &|\euler^{\imag\theta} z^2 + h(z)| \leq 1\\
+                    &|\euler^{\imag\theta} z^2 - h(z)| \leq 1
+                \end{align*}
+
+                即有
+
+                \begin{align*}
+                    &(\euler^{\imag\theta} z^2 + h(z)) \overline{(\euler^{\imag\theta} z^2 + h(z))} \leq 1 \\
+                    &(\euler^{\imag\theta} z^2 - h(z)) \overline{(\euler^{\imag\theta} z^2 - h(z))} \leq 1
+                \end{align*}
+
+                则
+                $$|z|^4 + |H(z)| \leq 1 $$
+                由最大模定理可知$h(z)\equiv0$，即
+                $$f(z) = \euler^{\imag\theta} z^2 $$
+
+    \end{enumerate}
+
+\end{proof}
+
+\begin{proposition}
+    
+    函数$f(z)$在可求面积得区域$D$内单叶解析，并且满足$|f(z)| \leq 1$，证明：
+    $$\iint_{D}{|f'(z)|^2}\diff x\diff y \leq  \pi$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    $S = \iint_{D}{|f'(z)|^2}\diff x\diff y$为$f(z)$将$D$映射成的区域面积，又$|f(z)| \leq 1$，则显然有
+    $$\iint_{D}{|f'(z)|^2}\diff x\diff y \leq  \pi$$
+
+\end{proof}
+
+\begin{proof}
+    
+    若$\lim\limits_{z\to z_0}{f(z)} = w_0$，其中$z_0,\ w_0 \in \mathbb{C}$，则
+    $$\lim_{z\to z_0}{|f(z)|} = |w_0|$$
+
+\end{proof}
+
+\begin{proposition}
+    
+    由极限定义，$\forall \varepsilon > 0$，$\exists \delta > 0$，$|z - z_0| < \delta$时
+    $$|f(z) - w_0 | < \varepsilon$$
+    又$\Big||a| - |b|\Big| \leq |a -b|$，则 
+    $$\Big| |f(z) - |w| \Big| \leq | f(z) - w| < \varepsilon $$
+    易知
+    $$\lim_{z\to z_0}{|f(z)} = |w_0|$$
+
+\end{proposition}
+
+\begin{proposition}
+    
+    设$f(z)$在$|z|\leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$\\
+    证明：$f(z)$在$|z|< 1$内至少有一个零点。
+
+\end{proposition}
+
+\begin{proof}
+    
+    反证法。假设$f(z)$在$|z| < 1$内无零点，又$|z|= 1$上$|f(0)| > m >0$\\
+    则$f(z)$在$|z|\leq 1$内无零点，$\dfrac{1}{f(z)}$在$|z|\leq 1$解析，由最大模定理知
+    $$\max_{|z| \leq 1}{\left|\dfrac{1}{f(z)}\right|} = \max_{|z|=1}{\left|\dfrac{1}{f(z)}\right|}  < \dfrac{1}{m}$$
+    然而$\left|\dfrac{1}{f(z)}\right| > \dfrac{1}{m}$，与题设矛盾，所以$f(z)$在$|z|< 1$内至少有一个零点。
+
+\end{proof}
+
+\begin{proposition}
+    
+    设$f(z) = \sum\limits_{n=0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
+    $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积，证明：
+    $$A =  \pi\sum_{n=1}^{\infty}{n|a_n|^2}$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    易证$A = \iint_{D}{|f'(z)|}\diff x\diff y$，又$f'(z) = \sum\limits_{n=1}^{\infty}{na_nz^{n-1}}$，设$z = \euler^{\imag\theta}$，则有
+
+    \begin{align*}
+        A & = \iint_{D}{|f'(z)|^2}\diff x\diff y \\ 
+          & = \iint_{D}{f'(z)\overline{{f'(z)}}}\diff x\diff y \\
+          & = \iint_{D}{\left(\sum_{n=1}^{\infty}{na_nz^{n-1}}\right)\overline{\left(\sum_{n=1}^{\infty}{na_nz^{n-1}}\right)}}\diff x\diff y \\
+          & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left(r\sum_{n=1}^{\infty}{na_nr^{n-1}\euler^{(n-1)\imag\theta}}\right)\left(\sum_{n=1}^{\infty}{n\overline{a_n}r^{n-1}\euler^{-(n-1)\imag\theta}}\right)}\diff r}\diff \theta \\
+          & = \int_{0}^{1}{r\sum_{n=1}^{\infty}{2n^2|a_n|^2 \pi r^{2n-2}}} \\
+          & = \pi \sum_{n=1}^{\infty}{n|a_n|^2}
+    \end{align*}
+
+    其中
+    $$
+    \int_{o}^{2\pi}{\euler^{\imag n\theta}}\diff \theta = 
+    \left\{
+        \begin{aligned}
+            &2\pi, & n=0\\
+            &0, & n \neq 0\\
+        \end{aligned}
+    \right.
+    $$
+    即
+    $$A = \pi \sum_{n=1}^{\infty}{n|a_n|^2}$$
+
+\end{proof}
+
+\begin{proposition}
+
+    设$f:D\to\mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta,\ \alpha,\ \beta \in D$，则
+    $$|f'(\alpha)| \leq \dfrac{1-|\beta|^2}{1-|\alpha|^2}$$
+    当且仅当等号成立时，有$f(z) = \varphi_{-\beta}(\varphi_{\alpha(z)}),\ c \in \mathbb{C}$，且$|c| = 1$，其中
+    $$\varphi_{\alpha} = \dfrac{z -\alpha}{1 - \overline{\alpha}{z}},\ \varphi_{\beta} = \dfrac{z -\beta}{1 - \overline{\beta}{z}}$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    令$g = \varphi_{\beta}\circ f \circ \varphi_{-\alpha}$，于是$g$在$D$内解析，$|g(z)| \leq 1$，并且$g(0) = 0$，由\textup{Schwarz}引理得
+    $$|g'(0)| \leq 1$$
+    且
+    
+    \begin{align*}
+        g'(0) & = \varphi_{\beta}'(\beta) f'(\alpha) \varphi_{-\alpha}(0)\\
+        & =  (1 -|\beta|^2)^{-1}f'(\alpha (1 - |\alpha|^2))
+    \end{align*}
+
+    则有
+    $$|f'(\alpha)| \leq \dfrac{1-|\beta|^2}{1 - |\alpha|^2}$$
+
+\end{proof}
+
+\begin{proposition}
+    
+    设单叶解析函数$f(z)$将$z$平面上可求面积的区域$D$映射成$w$平面上的区域$G$，设区域$G$的面积为$A$，证明：
+    $$ A = \iint_{D}{|f'(z)|^2}\diff x\diff y$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    显然$A = \iint_{D}\diff x\diff y$，积分区域为$G$，则由积分换元公式知
+
+    \begin{align*}
+        A & = \iint_{G}\diff x\diff y \\
+          & = \iint_{D}{\left|\dfrac{\partial(u,v)}{\partial(x,y)}\right|}\diff x\diff y \\
+          & = \iint_{D}{|f'(z)|^2}\diff x\diff y
+    \end{align*}
+
+\end{proof}
+
+\begin{proposition}
+    
+    设$f:D\to\mathbb{C}$是解析函数，$f(0) = 0$，并且$\forall z \in D,\ \mathrm{Re}(f(z)) \leq A$，\\
+    其中$D = \{z \big| |z| < 1\}$，$A$是正实数，那么$\forall r \in (0,1)$
+    $$M(r) \leq \dfrac{2Ar}{1-r}$$
+    其中$M(r) = \max\limits_{|z|=r}\{|f(z)|\}$
+
+\end{proposition}
+
+\begin{proof}
+    
+    $\forall r \in (0,1)$，令
+    $$A(r) = \max_{|z|=r}\{\mathrm{Re}f(z)\}$$
+    因为
+    $$\euler^{A(r)} = \max_{|z|=r}\{|\euler^{f(z)}|\}$$
+    由最大模原理知$A(r)$是单调增加的飞赴函数，并且由假设知$A(r) \leq A$\\
+    令
+    $$ g(z) = \dfrac{f(z)}{2A - f(z)} = \dfrac{P + Q\imag}{(2A-P)-Q\imag} $$
+    其中
+    $$ P = \mathrm{Re}f(z),\quad Q = \mathrm{Im}f(z) $$
+    那么$f(z)$在$D$内解析，$\forall x\in D$
+    $$|g(z)|^2 = \dfrac{P^2 + Q^2}{(2A-P)^2 + Q^2} \leq \dfrac{R^2 + Q^2}{A^2 + Q^2} \leq 1$$
+    从而$|g(z)| \leq 1,\ g(0) = 0$，于是由\textup{Schwarz}引理得
+    $$|g(z) | \leq z$$
+    由$g(z)$定义知
+    $$f(z) = \dfrac{2Ag(z)}{1 + g(z)}$$
+    则
+    $$ |f(z)| \leq \dfrac{2A(z)}{1-|z|} \leq \dfrac{2Ar}{1-r}$$
+    即
+    $$M(r) \leq \dfrac{2Ar}{1-r}$$
+
+\end{proof}
+
+\begin{lemma}[Schwarz引理]
+    
+    设$f(z)$在单位圆盘$|z|<1$内解析，在闭圆盘$|z| \leq 1$上是连续的，并且满足$f(0) = 0$，又在$|z| < 1$内处处有$|f(z)| < 1$，则
+
+    \begin{enumerate}
+        
+        \item 
+            $|f(z)| \leq |z|$，且$|f'(0)| \leq 1$
+        
+        \item 
+            若在开圆盘内有一复数$z_0 \neq 0$，是$|f(z_0)| = |z_0|$，或者 $|f'(0)| = 1$，那么$f(z) = e^{\imag\alpha}z$，$\alpha$为一实数。
+        
+    \end{enumerate}
+
+\end{lemma}
+
+\begin{proof}
+    
+        
+    由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z|<1$内可以\textup{Taylor}展开，有
+    $$f(z) = c_1 z + c_2 z^2 + c\dots + $$
+    令$\varphi(z) =  c_1 z + c_2 z^2 + \cdots $，则
+    $$
+    \varphi(z) = 
+    \left\{
+        \begin{aligned}
+            &\dfrac{f(z)}{z}, & z \neq 0\\
+            &f'(0), & z = 0\\
+        \end{aligned}
+    \right.
+    $$
+    显然$\varphi(z)$在$|z| < 1$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理
+    $$|\varphi(z+0)| = \max_{|z| = r}|\varphi(z_0)| = \max_{|z| = r}{\left| \dfrac{f(z)}{z}\right|} \leq \dfrac{1}{r}$$
+    令$r \to 1$，则有$|\varphi(z_0)| \leq 1$\\
+    若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$\\
+    若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
+    $$|f(z_0)| \leq |z_0|$$
+    由于$f(0) = 0$，上式当$z=0$时成立，则
+    $$|f(z_0)| \leq |z_0|,\quad x\in \Delta(0,1)$$
+    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0,1)$内取得最大模，\\
+    从而$\varphi(z) \equiv c$， 又$|c| = 1$，则$\varphi(z) = \euler^{\imag\alpha}$，所以
+    $$f(z) = \euler^{\imag\alpha}z$$
+
+\end{proof}
+
+\begin{theorem}[Schwarz-Pick定理]
+
+    设$f:D\to\mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，且$f(z_0) = w_0,\ z\in D$，则
+    $$ \left| \dfrac{f(z)-w_0}{1-\overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
+    等号当且仅当$f(z)$是分式线性映射时成立。
+
+\end{theorem}
+
+\begin{proof}
+    
+    设函数$w =f(z)$，考虑分式线性映射
+    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z},\quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
+    分别$z$平面和$w$平面上的单位圆双方单值映射成$\zeta$和$\tau$平面上的单位元，并且把$z_0,\ w_0$映射成$\zeta = 0,\ \tau = 0$，则
+    $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
+    在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$，于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
+    $$|F(\zeta)| = |S((f(T^{-1}(\zeta))))| \leq |\zeta|$$
+    从而在$|z|<1$内
+    $$|S(f(z))| \leq |T(z)|$$
+    即
+    $$ \left| \dfrac{f(z)-w_0}{1-\overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
+    
+\end{proof}
