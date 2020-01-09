@@ -1187,3 +1187,61 @@
     与题设矛盾。得证。
 
 \end{proof}
+
+\begin{proposition}
+
+    设非负函数$f(x) \in C[0,1]$，且在$[0,1]$上是单调递增的，记
+    $$s = \dfrac{\int_{0}^{1}{xf(x)}\diff x}{\int_{0}^{1}{f(x)}\diff x}$$
+
+    \begin{enumerate}
+
+        \item 证明：$s \geq \dfrac{1}{2}$；
+        \item 试比较$\int_{0}^{s}{f(x)}\diff x$与$\int_{s}^{1}{f(x)}\diff x$的大小。
+        
+    \end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            由题设，即证
+            $$\int_{0}^{1}{xf(x)}\diff x \geq \dfrac{1}{2} \int_{0}^{1}{f(x)}\diff x$$
+            
+            \begin{align*}
+                \int_{0}^{1}{xf(x)}\diff x - \dfrac{1}{2} \int_{0}^{1}{f(x)}\diff x & = \int_{0}^{1}{(x - \dfrac{1}{2})f(x)}\diff x \\
+                & = \int_{0}^{\frac{1}{2}}{(x - \dfrac{1}{2})f(x)}\diff x + \int_{\frac{1}{2}}^{1}{(x - \dfrac{1}{2})f(x)}\diff x \\
+            \end{align*}
+
+            由积分中值定理可得，
+            $$\int_{0}^{\frac{1}{2}}{(x - \dfrac{1}{2})f(x)}\diff x = -\dfrac{1}{8} f(\xi_1)$$
+            $$\int_{\frac{1}{2}}^{1}{(x - \dfrac{1}{2})f(x)}\diff x = \dfrac{1}{8} f(\xi_2)$$
+            其中，$0 < \xi_1 < \dfrac{1}{2} < \xi_2 < 1$，再由$f(x)$在$[0,1]$上单调递增，可知
+            $$ f(\xi_2) - f(\xi_1) \geq 0$$
+            即
+            $$s \geq \dfrac{1}{2}$$
+        \item 
+            因为$f(x) \in C[0,1]$，则$f'(x) \geq 0$，考虑变上限积分
+            $$F(x) = \int_{0}^{x}{f(t)} \diff t$$
+            显然$F''(x) = f'(x) \geq 0$，因此$F(x)$的图像是下凸的且$F(x) \geq 0$.不妨设
+            $$\int_{0}^{1}{f(x)}\diff x = 1$$
+            则$F(1) = 1$，$F(0) = 0$.由题设知，即证
+            $$F(s) = \int_{0}^{s}{f(x)}\diff x \leq \int_{s}^{1}{f(x)}\diff x = F(1) - F(s)$$
+            也即$F(s) \leq \dfrac{1}{2}$.\\
+            由几何直观，$x = s$处的切线（斜率$k > 0$）
+            $$y = k(x - s) + F(s)$$
+            在函数$y = F(x)$的下方，即
+            $$F(x) \geq k(x - s) + F(s)$$
+            利用$f(x)$的非负性得
+            $$F(x)f(x) \geq k(x - s)f(x) + F(s)f(x)$$
+            不等式两边从$0$到$1$积分得
+            $$\text{左边} = \int_{0}^{1}{F(x)f(x)}\diff x = \int_{0}^{1}{F(x)} \diff F(x) = \left. \dfrac{1}{2}F^2(x)\right|_{0}^{1} = \dfrac{1}{2}$$
+            $$\text{右边} = \int_{0}^{1}{k(x - sf(x))}\diff x  + \int_{0}^{1}{F(x)f(x)}\diff x = (ks - ks) + F(s) = F(s)$$
+            所以$F(s) \leq \dfrac{1}{2}$，即
+            $$\int_{0}^{s}{f(x)}\diff x \leq \int_{s}^{1}{f(x)}\diff x$$
+            
+    \end{enumerate}
+
+\end{proof}
