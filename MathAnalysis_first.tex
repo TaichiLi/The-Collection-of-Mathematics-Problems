@@ -415,7 +415,7 @@
 
 \begin{proposition}
 
-    将二项式系数$\binom{n}{0},\ \binom{n}{1},\ \cdots, \ \binom{n}{n}$的算术平均数和几何平均数分别记作$A_n$和$G_n$。证明：
+    将二项式系数$\binom{n}{0},\ \binom{n}{1},\ \cdots, \ \binom{n}{n}$的算术平均数和几何平均数分别记作$A_n$和$G_n$. 证明：
 
     \begin{enumerate}
 
@@ -447,7 +447,8 @@
 
 \begin{proposition}
     
-    设$x_n = \dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}},\ n\in\mathbb{N}$，求$\lim\limits_{n\to\infty}{x_n}$。
+    设$x_n = \dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}},\ n\in\mathbb{N}$，求
+    $$\lim\limits_{n\to\infty}{x_n}$$
 
 \end{proposition}
 
@@ -1061,7 +1062,7 @@
 
 \begin{proof}
 
-    令$X=\sum{{x_i}^p}$，$Y=\sum{{y_i}^q}$。
+    令$X=\sum{{x_i}^p}$，$Y=\sum{{y_i}^q}$.
     由\textup{Young}不等式得
     $$\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}=\left(\dfrac{{x_i}^p}{X}\right)^{\frac{1}{p}}\left(\dfrac{{y_i}^q}{Y}\right)^{\frac{1}{q}}\leq \dfrac{1}{p}\dfrac{{x_i}^p}{X} + \dfrac{1}{q}\dfrac{{y_i}^q}{Y}$$
     $$\sum{\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}} \leq \dfrac{1}{p}\dfrac{\sum{{x_i}^p}}{X} + \dfrac{1}{q}\dfrac{\sum{{y_i}^q}}{Y} = \dfrac{1}{p}+\dfrac{1}{q}=1 $$
@@ -1098,7 +1099,7 @@
 
         \item 设$f,g$在区间$[a,b]$上对于任何$x,y$有
               $$ (f(x)-f(y))(g(x)-g(y))\geq 0 $$
-              又设$p\in\mathbb{R}[a,b]$，且处处大于$0$。则有
+              又设$p\in\mathbb{R}[a,b]$，且处处大于$0$.则有
               $$ \int_{a}^{b}{p(x)f(x)}\diff x\int_{a}^{b}{p(x)g(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x \int_{a}^{b}{p(x)f(x)g(x)}\diff x $$
 
     \end{enumerate}
@@ -1121,7 +1122,7 @@
             $$I_2 = \int_{a}^{b}{\int_{a}^{b}{xF(x)F(y)(F(x)-F(y))}\diff x}\diff y$$
             因为积分区域关于$x=y$对称，则
             $$2I = I_1 + I_2 =  \int_{a}^{b}{\int_{a}^{b}{F(x)F(y)(F(x)-F(y))}\diff x}\diff y$$
-            因为$F(x)$单调减少且处处大于$0$，所以$F(x)F(y)(F(x)-F(y)) \leq 0$，即$I\leq 0$。
+            因为$F(x)$单调减少且处处大于$0$，所以$F(x)F(y)(F(x)-F(y)) \leq 0$，即$I\leq 0$.
             则
             $$ \int_{a}^{b}{F(x)}\diff x\int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x $$
 
