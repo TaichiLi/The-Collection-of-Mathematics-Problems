@@ -951,6 +951,64 @@
 
 \end{proof}
 
+\begin{proposition}
+    
+    已知正数列$\{x_n\}$满足$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}}$，$n \geq 1$。证明：$\{x_n\}$收敛并求出该极限。
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 如果$0 < x_1 < x_2 < 1$，则有
+            $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq x_2$$
+            $$x_{n + 2} - x_{n + 1} = (\sqrt{x_{n + 1}} + \sqrt{x_{n}}) - (\sqrt{x_{n}} + \sqrt{x_{n - 1}}) = (\sqrt{x_{n + 1}} - \sqrt{x_{n}}) + (\sqrt{x_{n}} - \sqrt{x_{n - 1}}) \geq 0$$
+            所以$\{x_n\}$单调增加。且由数学归纳法可证，若$x_n \leq 4$，则
+            $$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}} \leq 4$$
+            所以$\{x_n\}$收敛，且极限为$4$。
+        \item 如果$0 < x_2 < x_1 < 1$，则有
+            $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq x_1$$
+            $$x_{n + 2} - x_{n + 1} = \sqrt{x_{n + 1}} - \sqrt{x_{n - 1}} \geq 0$$
+            同上。
+        \item 如果$x_1 \geq 1$或$x_2 \geq 1$，则
+            $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq 1 \Longrightarrow x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}} \geq 1$$
+            
+            \begin{align*}
+                |x_{n + 2} - 4| & = |\sqrt{x_{n + 1}} - 2 + \sqrt{x_{n}} - 2| \\
+                & \leq |\sqrt{x_{n + 1}} - 2| + |\sqrt{x_{n}} - 2| \\
+                & = \left|\dfrac{x_{n + 1} - 4}{\sqrt{x_{n + 1}} + 2}\right| + \left|\dfrac{x_{n} - 4}{\sqrt{x_{n}} + 2}\right| \\
+                & \leq \dfrac{1}{3} |x_{n + 1} - 4| + \dfrac{1}{3}|x_n - 4| 
+            \end{align*}
+
+            由递推公式易知，
+            $$\lim\limits_{n \to \infty}{|x_{n + 2} - 4|} = 0$$
+
+    \end{enumerate}
+
+\end{proof}
+
+\begin{proposition}
+
+    设$x_0 \in \left(0, \dfrac{\pi}{2}\right]$，定义$x_{n + 1} = \sin x_n$，求$\lim\limits_{n \to\infty}{nx_n^2}$的值。
+
+\end{proposition}
+
+\begin{proof}
+
+    因为$nx_n^2 = \dfrac{n}{\frac{1}{x_n^2}}$，由\textup{Stolz}定理知
+    $$\lim\limits_{n \to\infty}{nx_n^2} = \lim\limits_{n\to\infty}{\dfrac{n}{\frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{(n + 1) - n}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{1}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}}$$
+    $$\dfrac{1}{x_{n + 1}^2} - \dfrac{1}{x_n^2} = \dfrac{1}{\sin^2 x_n} - \dfrac{1}{x_n^2} = \dfrac{x_n^2 - \sin^2 x_n}{x_n^2 \sin^2 x_n}$$
+    易知$\lim\limits_{n\to\infty}{x_n} = 0$，所以
+    $$\lim\limits_{n \to \infty}{\dfrac{x_n^2 - \sin^2 x_n}{x_n^2 \sin^2 x_n}} = \lim\limits_{x \to 0}{\dfrac{x^2 - \sin^2 x}{x^2 \sin^2 x}} = \dfrac{1}{3}$$
+    因此
+    $$\lim\limits_{n \to\infty}{nx_n^2} = 3$$
+    同时可知
+    $$x_n = O(\dfrac{1}{\sqrt{n}})$$
+    $\sum\limits_{n = 1}^{\infty}{x_n^2}$发散。
+
+\end{proof}
+
 \section{不等式}
 
 \begin{theorem}[Bernoulli不等式]
