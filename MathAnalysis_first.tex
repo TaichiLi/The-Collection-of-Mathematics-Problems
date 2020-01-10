@@ -1005,7 +1005,27 @@
     $$\lim\limits_{n \to\infty}{nx_n^2} = 3$$
     同时可知
     $$x_n = O(\dfrac{1}{\sqrt{n}})$$
-    $\sum\limits_{n = 1}^{\infty}{x_n^2}$发散。
+    级数$\sum\limits_{n = 1}^{\infty}{x_n^2}$发散。
+
+\end{proof}
+
+\begin{proposition}
+
+    设$a_1 = \sqrt{2}$，$a_{n + 1} = {\sqrt{2}}^{a_n}$。证明：数列$\{a_n\}$收敛并求出该极限。
+
+\end{proposition}
+
+\begin{proof}
+
+    由数学归纳法易证
+    $$a_n \leq 2, \quad n \in \mathbb{N}$$
+    设函数$f(x) = {\sqrt{2}}^x - x$，则
+    $$f'(x) = \dfrac{1}{2}\ln2 {\sqrt{2}}^x - 1, \quad f''(x) = \left(\dfrac{1}{2}\ln 2 \right)^2 {\sqrt{2}}^x \geq 0$$
+    易知$x \leq 2$时，$f'(x) < 0$，，且$f(2) = 0$. 因此
+    $$f(x) \geq 0, \quad 0 \leq x \leq 2$$
+    即$a_{n + 1} \leq a_n$。所以数列$\{a_n\}$收敛，且极限$a$满足
+    $${\sqrt{2}}^{a} = a$$
+    即$a = 2$。
 
 \end{proof}
 
