@@ -102,9 +102,7 @@
     \begin{enumerate}
 
         \item 利用恰当的傅里叶变换性质求$t\euler^{-|t|}$的傅里叶变换。
-        \item 根据(a)的结果，再结合对偶性质，求
-              $$\dfrac{4t}{(1+t^2)^2}$$
-              的傅里叶变换
+        \item 根据\textup{(a)}的结果，再结合对偶性质，求$\dfrac{4t}{(1+t^2)^2}$的傅里叶变换。
 
     \end{enumerate}
 
@@ -118,7 +116,7 @@
             因为
             $$tx(t) \stackrel{\mathcal{F}}{\longleftrightarrow} \image \dfrac{\diff X(\image \omega)}{\diff \omega}$$
             所以，$t\euler^{-|t|}$的傅里叶变换为
-            $$\image \dfrac{\diff (\dfrac{2}{1 + \omega^2})}{\diff \omega} = \dfrac{-4\omega \image}{(1 + \omega^2)^2}$$
+            $$\image \dfrac{\diff \left( \dfrac{2}{1 + \omega^2} \right)}{\diff \omega} = \dfrac{-4\omega \image}{(1 + \omega^2)^2}$$
         \item 
             设$x(t) = t\euler^{-|t|}$，$y(t) = \dfrac{4t}{(1+t^2)^2} = \image X(\image t)$\\
             由引理\ref{lemma2}知，
@@ -180,17 +178,17 @@
 
 \begin{proof}
     
-    由\textup{Laplace}变换对知
+    由离散时间傅里叶变换对知
     $$x_1[n] = \left\{
         \begin{aligned}
             & 1, & |n| \leq N \\
             & 0, & |n| > N 
         \end{aligned}
-        \right. \stackrel{\mathcal{L}}{\longleftrightarrow} X_1(\euler^{\image \omega})  = \dfrac{\sin \frac{(N + 1)}{2}\omega}{\sin \frac{\omega}{2}}$$ 
-    $$u[n] \stackrel{\mathcal{L}}{\longleftrightarrow} X_2(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}} + \pi\sum\limits_{k = -\infty}^{+\infty}{\delta(w - 2\pi k)}$$
+        \right. \stackrel{\mathcal{F}}{\longleftrightarrow} X_1(\euler^{\image \omega})  = \dfrac{\sin \frac{(N + 1)}{2}\omega}{\sin \frac{\omega}{2}}$$ 
+    $$u[n] \stackrel{\mathcal{F}}{\longleftrightarrow} X_2(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}} + \pi\sum\limits_{k = -\infty}^{+\infty}{\delta(w - 2\pi k)}$$
     则
     $$X(\euler^{\image \omega}) = X_1(\euler^{\image \omega}) X_2(\euler^{\image \omega}) - 3\pi\sum\limits_{k = -\infty}^{+\infty}{\delta(w - 2\pi k)} + 5\pi\delta(\omega), \quad -\pi < \omega \leq \pi$$
-    由\textup{Laplace}变换卷积性质可知
+    由离散时间傅里叶变换卷积性质可知
     $$x[n] = x_1[n] \ast u[n] + 1$$
     即
     $$x[n] = \left\{
