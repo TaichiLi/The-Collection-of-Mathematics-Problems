@@ -48,7 +48,7 @@
     令$z = x + \imag\xi, \diff x = \diff z$，则有
 
     \begin{align*}
-        &\euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^-{\pi (x+\imag\xi)^2}}\diff x \\
+        &\euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x+\imag\xi)^2}}\diff x \\
         = \ & \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi z^2}}\diff x \\
         = \ & \euler^{\pi\xi^2} \dfrac{\sqrt{\pi}}{\sqrt{\pi}} \\
         = \ & \euler^{\pi\xi^2}
@@ -60,7 +60,7 @@
 
     证明：
     $$\left| \int_{\gamma}{\euler^{\imag z^2}}\diff z \right| \leq \dfrac{\pi(1 - \euler^{-r^2})}{4r}$$
-    其中$\gamma(t) = r\euler^{\imag t},\ t\in[0,\dfrac{\pi}{4}],\ r \in \mathbb{R}^+$
+    其中$\gamma(t) = r\euler^{\imag t},\ t\in \left[0,\dfrac{\pi}{4} \right],\ r \in \mathbb{R}^+$
 
 \end{proposition}
 
@@ -72,7 +72,7 @@
         & = \int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t
     \end{align*}
 
-    因为$\sin{2t} \geq \dfrac{4t}{\pi}, \ t \in [0,\dfrac{\pi}{4})$，则
+    因为$\sin{2t} \geq \dfrac{4t}{\pi}, \ t \in \left[0,\dfrac{\pi}{4} \right)$，则
     $$\int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t \leq \int_{0}^{\frac{\pi}{4}}{r\euler^{\frac{4r^2t}{\pi}}}\diff t = \dfrac{\pi}{4r}(1 - \euler^{-r^2}) $$
 
 \end{proof}
@@ -80,7 +80,7 @@
 \begin{proposition}
 
     设$f(z)$在复平面上处处解析，并且不等式
-    $$\int_{0}^{2\pi}{|f(\mathrm{e^{\imag \theta}})}\diff \theta \leq r^{\frac{16}{5}} $$
+    $$\int_{0}^{2\pi}{|f(\mathrm{e^{\imag \theta}})|}\diff \theta \leq r^{\frac{16}{5}} $$
     对所有$r > 0$成立，证明：$f(z) \equiv 0$
 
 \end{proposition}
@@ -538,7 +538,7 @@
     
         
     由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z|<1$内可以\textup{Taylor}展开，有
-    $$f(z) = c_1 z + c_2 z^2 + c\dots + $$
+    $$f(z) = c_1 z + c_2 z^2 + \dots + $$
     令$\varphi(z) =  c_1 z + c_2 z^2 + \cdots $，则
     $$
     \varphi(z) = 
