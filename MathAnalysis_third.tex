@@ -312,11 +312,11 @@
 
         \item 
             $$\euler = \sum_{k=0}^{\infty}{\dfrac{1}{k!}} = \sum_{k=0}^{n+1}{\dfrac{1}{k!}} + O(\dfrac{1}{(n+1)!})$$
-            $$n! \euler = \sum_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n+1}) + \dfrac{1}{n+1}$$
+            $$n! \euler = \sum_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n + 1}) + \dfrac{1}{n + 1}$$
             则有
 
             \begin{align*}
-                \sin{(n!\pi x)} & = \sin{\left[\sum\limits_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n+1}) + \dfrac{1}{n+1}\right]} \\
+                \sin{(n!\pi x)} & = \sin{\left[\sum\limits_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n + 1}) + \dfrac{1}{n + 1}\right]} \\
                 & \sim (-1)^{n+1} \dfrac{\pi}{n+1}
             \end{align*}
             
@@ -592,7 +592,7 @@
 \begin{proposition}
     
     设$f$是定义在$[0,1]$上的连续可微函数，证明：
-    $$\left|f(\dfrac{1}{2})\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
+    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
@@ -601,16 +601,16 @@
     设$x_0 \in [0,1]$，且
     $$|f(x_0)| \leq |f(x)|, \quad x \in \left[0,\dfrac{1}{2}\right]$$
     则有
-    $$f(\dfrac{1}{2}) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
-    $$\left|f(\dfrac{1}{2})\right|= |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
+    $$f\left(\dfrac{1}{2}\right) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
+    $$\left|f\left(\dfrac{1}{2}\right)\right|= |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
     由$|f(x_0)| \leq |f(x)|, \ x \in \left[0,\dfrac{1}{2}\right]$得
     $$|f(x_0)| \leq 2 \int_{0}^{\frac{1}{2}}{|f(x)|}\diff x$$
     又有
-    $$\left|f(\dfrac{1}{2})\right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
+    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
     对于$\forall x \in [\dfrac{1}{2}, 1]$，有不等式
-    $$\left|f(\dfrac{1}{2})\right| \leq 2\int_{\frac{1}{2}}^{1}{|f(x)|}\diff x + \int_{\frac{1}{2}}^{1}{|f'(x)|}\diff x$$
+    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{\frac{1}{2}}^{1}{|f(x)|}\diff x + \int_{\frac{1}{2}}^{1}{|f'(x)|}\diff x$$
     所以有
-    $$\left|f(\dfrac{1}{2})\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
+    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proof}
 
@@ -1272,4 +1272,5 @@
     所以
     $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a,b) \in \mathbb{R}^2}\left(-2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
     右端最小值在$a = -6$，$b = 2$时取得，因此，当$f''(x) = 6x - 2$且满足题设时不等式取等，不难得到此时$f(x) = x^3 - x^2$。
+    
 \end{proof}

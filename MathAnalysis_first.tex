@@ -43,7 +43,7 @@
 
     设$\{a_n\}$是正数列，且收敛于$A$，
     则
-    $$\lim_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}}=A$$
+    $$\lim_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
 
 \end{corollary}
 
@@ -64,8 +64,8 @@
 
     $\forall A > 0$，由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n>N$时，$a_n > 2A + 2$，\\
     又
-    $$\lim\limits_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
-    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
+    $$\lim_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
+    $$\lim_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
     于是，
 
     \begin{align*}
@@ -187,8 +187,8 @@
         &\leq\sum_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n\sqrt[n]{n!}}}\\
         &\leq\euler\sum_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n(n+1)}}\\
         &=\euler\sum_{n=1}^{\infty}{\dfrac{1}{n(n+1)}\sum_{k=1}^{n}{ka_k}}\\
-        &=\euler\sum_{k=1}^{N}{\left\{ka_k\left[\sum_{n=k}{N}{\dfrac{1}{n(n+1)}}\right]\right\}}\\
-        &=\euler\sum_{k=1}^{N}{ka_k(\dfrac{1}{k}-\dfrac{1}{N+1})} \\
+        &=\euler\sum_{k=1}^{N}{\left\{ka_k\left[\sum_{n=k}^{N}{\dfrac{1}{n(n+1)}}\right]\right\}}\\
+        &=\euler\sum_{k=1}^{N}{ka_k(\dfrac{1}{k}-\dfrac{1}{N + 1})} \\
         &\leq\euler\sum_{k=1}^{N}{a_k}
     \end{align*}
 
@@ -243,7 +243,7 @@
         & = \dfrac{a_{n+p+1}}{a_{n+1}}
     \end{align*}
 
-    因为$\lim\limits_{n\to\infty}{a_n}=0$，则总$\exists p \in \mathbb{N}$，
+    因为$\lim\limits_{n\to\infty}{a_n}=0$，则总存在$p \in \mathbb{N}$，
     使得
     $$\sum_{k=n+1}^{n+p}{b_k}\geq\dfrac{1}{2}$$
     所以，$\sum\limits_{n=1}^{\infty}{b_n}$发散。
@@ -289,7 +289,7 @@
         & = 1-\dfrac{a_{n+1}}{a_{n+p+1}}
     \end{align*}
 
-    由柯西准则，因为$\lim\limits_{n\to\infty}{a_n}=+\infty$，则$\exists p \in \mathbb{N}$，
+    由柯西准则，因为$\lim\limits_{n\to\infty}{a_n}=+\infty$，则存在$p \in \mathbb{N}$，
     $$ \dfrac{a_{n+1}}{a_{n+p+1}} \leq \dfrac{1}{2}$$
     则
     $$ 1-\dfrac{a_{n+1}}{a_{n+p+1}} \geq \dfrac{1}{2}$$
@@ -332,7 +332,7 @@
         &= 1-\dfrac{S_{n}}{S_{n+p+1}}
     \end{align*}
 
-    因为$\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}}=+\infty=\lim\limits_{n\to\infty}{S_n}=+\infty$，则$\exists p\in\mathbb{N}$，
+    因为$\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}}=+\infty=\lim\limits_{n\to\infty}{S_n}=+\infty$，则存在$p\in\mathbb{N}$，
     $$1-\dfrac{S_{n}}{S_{n+p+1}} \geq \dfrac{1}{2}$$
     所以$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{S_n}}$发散。
 
@@ -403,7 +403,7 @@
     
     对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列\\
     由$\lim\limits_{n\to\infty}{a_{n+p} - a_n} = \lambda$，则
-    $$\lim\limits_{n\to\infty}{a_{(n+1)p + i} - a_{np+i}} = \lambda$$
+    $$\lim_{n\to\infty}{a_{(n+1)p + i} - a_{np+i}} = \lambda$$
     令$A^{(i)}_{n} = a_{(n+1)p+i} - a_{np + i}$，由\textup{Cauthy}命题知
     $$\lim_{n\to\infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda$$
     即
@@ -447,8 +447,7 @@
 
 \begin{proposition}
     
-    设$x_n = \dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}},\ n\in\mathbb{N}$，求
-    $$\lim\limits_{n\to\infty}{x_n}$$
+    设$x_n = \dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}},\ n\in\mathbb{N}$，求$\lim\limits_{n\to\infty}{x_n}$
 
 \end{proposition}
 
@@ -476,9 +475,9 @@
 
     令$S_n = \sum\limits_{k=1}^{n}{a_k^2}$，则$S_n$单调增加，且$S_n\to\infty$，否则若$\lim\limits_{n\to\infty}{S_n} = S$，\\
     则$\lim\limits_{n\to\infty}{a_n^2} = 0$，即
-    $$\lim\limits_{n\to\infty}{a_n} = 0$$
+    $$\lim_{n\to\infty}{a_n} = 0$$
     所以
-    $$\lim\limits_{n\to\infty}{a_nS_n} = \lim\limits_{n\to\infty}{a_nS} = 0$$
+    $$\lim_{n\to\infty}{a_nS_n} = \lim_{n\to\infty}{a_nS} = 0$$
     与题设矛盾。故$\lim\limits_{n\to\infty}{S_n} = +\infty$，又
     $$\lim_{n\to\infty}{a_n} = \lim_{n\to\infty}{a_n \cdot S_n \cdot \dfrac{1}{S_n}} = \lim_{n\to\infty}{a_nS_n} \cdot \lim_{n\to\infty}{\dfrac{1}{S_n}} = 0$$
 
@@ -529,7 +528,7 @@
 \begin{proposition}
 
     设$a_1 = 1$，$a_n = n(a_{n-1}+1),\quad n = 2,3,\cdots $，且
-    $$x_n = \prod_{k=1}^{n}{(1+\dfrac{1}{a_n})}$$
+    $$x_n = \prod_{k=1}^{n}{\left(1+\dfrac{1}{a_n}\right)}$$
     求$\lim\limits_{n\to\infty}{x_n}$
 
 \end{proposition}
@@ -539,7 +538,7 @@
     由$\dfrac{a_{n-1}+1}{a_n} = \dfrac{1}{n}$得
 
     \begin{align*}
-        \prod_{k=1}^{n}{(1+\dfrac{1}{a_n})} = & (1+\dfrac{1}{a_1}) (1+\dfrac{1}{a_2}) \cdots (1+\dfrac{1}{a_n}) \\
+        \prod_{k=1}^{n}{\left(1+\dfrac{1}{a_n}\right)} = & \left(1+\dfrac{1}{a_1}\right) \left(1+\dfrac{1}{a_2}\right) \cdots \left(1+\dfrac{1}{a_n}\right) \\
         = & \dfrac{a_1 + 1}{a_1} \cdot \dfrac{a_2 + 1}{a_2} \cdots \dfrac{a_n + 1}{a_n} \\
         = & \dfrac{1}{a_1} \cdot \dfrac{a_1 + 1}{a_2} \cdot \dfrac{a_2 + 1}{a_3} \cdots \dfrac{a_{n-1} + 1}{a_n} \cdot a_{n+1} \\
         = & \dfrac{1}{1} \cdot \dfrac{1}{2} \cdots \dfrac{1}{n} \\
@@ -616,10 +615,10 @@
     \end{align*}
 
     $\{x_n\}$有下界，又
-    $$x_{n+1} - x_n = \dfrac{1}{n+1 + \dfrac{1}{n+1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n+1} + \dfrac{1}{n+1} = 0$$
+    $$x_{n+1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
     $\{x_n\}$单调减少，则$\{x_n\}$收敛。
     由$x_n \geq 0,\ x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
-    $$\lim_{n\to\infty}{a_n} \in [0,\dfrac{1}{2}]$$
+    $$\lim_{n\to\infty}{a_n} \in \left[0,\dfrac{1}{2}\right]$$
 
 \end{proof}
 
@@ -669,7 +668,7 @@
 
 \begin{proof}
 
-    设$s_k = \left( \dfrac{1+a_{k+1}}{a_k}^k \right)$，则$s_k \geq 0$，且$\sup\limits_{k\geq n}\{s_k\}$对$n$不增。\\
+    设$s_k = \left( \dfrac{1+a_{k+1}}{a_k} \right)^k$，则$s_k \geq 0$，且$\sup\limits_{k\geq n}\{s_k\}$对$n$不增。\\
     则$\sup\limits_{k\geq n}\{s_k\}$对$n$极限存在，设
     $$\lim_{n\to\infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
     则对任意$0 < \varepsilon < l - \euler$，选取$N \in \mathbb{N}$，$n > N$时
@@ -685,10 +684,10 @@
     进一步
     $$s_n \leq \sup_{k\geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
     则有
-    $$\dfrac{1}{n+1} < \dfrac{a_n}{n} - \dfrac{a_{n+1}}{n+1} < \dfrac{a_{M+1}}{M+1}, \quad n > M$$
-    $$\sum_{k=M+1}^{m-1}{\dfrac{1}{k+1}} < \dfrac{a_{M+1}}{M+1} - \dfrac{a_m}{m} < \dfrac{a_{M+1}}{M+1}$$
-    令$m \to \infty$，则$\sum\limits_{k=M+1}^{\infty}{\dfrac{1}{k+1}}$收敛，而调和级数不收敛。所以
-    $$\lim_{n\to\infty}{\left( \dfrac{1+a_{n+1}}{a_n} \right)^n} \geq \euler$$
+    $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n+1}}{n+1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
+    $$\sum_{k = M + 1}^{m-1}{\dfrac{1}{k+1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
+    令$m \to \infty$，则$\sum\limits_{k = M + 1}^{\infty}{\dfrac{1}{k + 1}}$收敛，而调和级数不收敛。所以
+    $$\lim_{n\to\infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
 
 \end{proof}
 
@@ -705,7 +704,7 @@
 
     $\forall \varepsilon > 0$，$\exists N_1 \in \mathbb{N}$，$n > N_1$时
     $$|a_n - a| < \dfrac{1 - |q|}{3(1 - q)}\varepsilon$$
-    因为$\lim\limits_{n\to\infty}{q^n} = 0$，则$\exists N_2 \in \mathbb{N}$，$n > N_2$时
+    因为$\lim\limits_{n\to\infty}{q^n} = 0$，则存在$N_2 \in \mathbb{N}$，$n > N_2$时
     $$|q|^n < \dfrac{\varepsilon}{3N_1M|1-q|}, \quad |aq^n| < \dfrac{\varepsilon}{3}$$
     因此当$n > N = N_1 + N_2 + 1$时，有
 
@@ -764,8 +763,8 @@
         \item 
         \begin{align*}
             2(a_n - a_{n-1}) & = \dfrac{n+1}{n}a_{n-1} - \dfrac{n+2}{n+1} a_n \\
-            & = a_{n-1} - a_n + \dfrac{1}{n}a_{n-1} - \dfrac{1}{n+1}a_n \\
-            & > (a_{n-1} - a_n) + \dfrac{1}{n+1}(a_{n-1} - a_n) \\
+            & = a_{n-1} - a_n + \dfrac{1}{n}a_{n-1} - \dfrac{1}{n + 1}a_n \\
+            & > (a_{n-1} - a_n) + \dfrac{1}{n + 1}(a_{n-1} - a_n) \\
             & = \dfrac{n+2}{n+1}  (a_{n-1} - a_n) 
         \end{align*}
 
@@ -830,7 +829,7 @@
     $\forall v \in [-1, 1]$，$\exists u \in [0, 2\pi]$
     $$\sin u = v$$
     由$y = \sin x$的连续性可知，$\forall \varepsilon > 0$，$\exists \delta > 0$，使得当$|x - u| < \delta$时
-    $$| \sin u - sin x | = | v - \sin x | < \varepsilon$$
+    $$| \sin u - \sin x | = | v - \sin x | < \varepsilon$$
     由引理\ref{lemma1}知，对任意无理数$\alpha$，集合
     $$\{n\alpha - \lfloor n\alpha \rfloor \big| n \in \mathbb{N}\}$$
     在区间$[0, 1]$上稠密。所以令$\alpha = \dfrac{u}{2\pi}$，$\exists n \in \mathbb{N}$，使得
@@ -1117,8 +1116,8 @@
     令$x=\dfrac{a}{b}$，则
     
     \begin{align*}
-        &(\dfrac{a}{b})^{\alpha} - \alpha (\dfrac{a}{b}) + \alpha - 1 \leq 0 \quad (\alpha < 1)\\
-        &(\dfrac{a}{b})^{\alpha} - \alpha (\dfrac{a}{b}) + \alpha - 1 \geq 0 \quad (\alpha \geq 1)
+        &\left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \leq 0 \quad (\alpha < 1)\\
+        &\left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \geq 0 \quad (\alpha \geq 1)
     \end{align*}
 
     令$\alpha = \dfrac{1}{p}$，有

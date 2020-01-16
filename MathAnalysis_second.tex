@@ -12,7 +12,7 @@
 
     应用数学归纳法。$n=1$时，$f(x) = c_1 \euler^{\lambda_1 x}$无零点，结论成立。\\
     假设$n = m$时成立，则$n = m + 1$时，应用反证法，假设此时零点个数大于等于$m+1$
-    $$f(x) = \sum_{k=1}^{m+1}{c_k\euler^{\lambda_k x}} = [c_{m+1} + \sum_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}}]$$
+    $$f(x) = \sum_{k=1}^{m+1}{c_k\euler^{\lambda_k x}} = \left[c_{m+1} + \sum_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}}\right]$$
     令
     $$g(x) = \sum_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}} + c_{m+1}$$
     则$g(x)$有至少$m+1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum_{k=1}^{m}{c_k (\lambda_k - \lambda_{m+1}) \euler^{(\lambda_k - \lambda_{m+1}) x}}$至少有$m$个零点\\
@@ -32,14 +32,14 @@
 
 \begin{proof}
 
-    因为$f(x) - f(\dfrac{x}{2}) = O(x) \ (x\to 0)$，所以
-    $$\lim_{x\to\infty}{\left| \dfrac{f(x) - f(\dfrac{x}{2})}{x} \right|}$$
+    因为$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$，所以
+    $$\lim_{x\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2}\right)}{x} \right|}$$
     $\forall \varepsilon > 0$，$\exists \delta > 0$，$|x| < \delta$
-    $$\left| \dfrac{f(x) - f(\dfrac{x}{2})}{x} \right| < \dfrac{\varepsilon}{2}$$
+    $$\left| \dfrac{f(x) - f\left(\dfrac{x}{2}\right)}{x} \right| < \dfrac{\varepsilon}{2}$$
     即
     $$f(x) - f\left(\dfrac{x}{2}\right) = x\alpha(x),\quad |x| < \delta$$
     其中$|\alpha(x)| < \dfrac{\varepsilon}{2},\ |x| < \delta$，则
-    $$f(x) - f\left(\dfrac{x}{2^n}\right) = \sum_{k=1}^{n}{\left( f\left(\dfrac{x}{2^{k-1}}\right) - f\left(\dfrac{x}{2^k}\right) \right)} = \sum_{k=1}^{n}{\left[ \dfrac{x}{2^{k-1}}\alpha(\dfrac{x}{2^k}) \right]}$$
+    $$f(x) - f\left(\dfrac{x}{2^n}\right) = \sum_{k=1}^{n}{\left( f\left(\dfrac{x}{2^{k-1}}\right) - f\left(\dfrac{x}{2^k}\right) \right)} = \sum_{k=1}^{n}{\left[ \dfrac{x}{2^{k-1}}\alpha\left(\dfrac{x}{2^k}\right) \right]}$$
     因为$k \in \mathbb{N}$时，
     $$\left| \dfrac{x}{2^{k-1}} \right| \leq |x|$$
     所以
@@ -53,9 +53,9 @@
     所以
     $$\left| \dfrac{f(x) - f\left(\dfrac{x}{2^n}\right)}{x} \right| \leq \varepsilon \left[1 - \left(\dfrac{1}{2}\right)^n \right] < \varepsilon$$
     又
-    $$\lim_{n\to\infty}{f(\dfrac{x}{2^n})} = \lim_{n\to\infty}{f(x)} = 0$$
+    $$\lim_{n\to\infty}{f\left(\dfrac{x}{2^n}\right)} = \lim_{n\to\infty}{f(x)} = 0$$
     则
-    $$\lim_{n\to\infty}{\left| \dfrac{f(x) - f(\dfrac{x}{2^n})}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon $$
+    $$\lim_{n\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2^n}\right)}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon $$
     所以
     $$f(x) = O(x) \quad (x \to 0)$$
 
@@ -166,20 +166,20 @@
 \begin{proposition}
     
     设函数$f$在区间$I$上只有可去间断点，定义
-    $$g(x) = \lim_{t\to x}{f(t)}$$
+    $$g(x) = \lim_{t \to x}{f(t)}$$
     证明：$g \in C(I)$
 
 \end{proposition}
 
 \begin{proof}
 
-    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t\to x}{f(t)}$，所以$\exists \delta > 0, \ t \in \mathring{U}(x_0, \delta)$时
+    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以$\exists \delta > 0, \ t \in \mathring{U}(x_0, \delta)$时
     $$|f(t) - g(x_0)| < \dfrac{\varepsilon}{2}$$
     于是，当$|x - x_0| < \dfrac{\delta}{2}$时，有
 
     \begin{align*}
-        |g(x) - g(x_0)| & = |\lim_{t\to x}{f(t) - g(x_0)}| \\
-        & = \lim_{t\to x}{|f(t) - g(x_0)|} \\
+        |g(x) - g(x_0)| & = \left|\lim_{t \to x}{f(t) - g(x_0)} \right| \\
+        & = \lim_{t \to x}{|f(t) - g(x_0)|} \\
         & \leq \dfrac{\varepsilon}{2} \\
         & < \varepsilon 
     \end{align*}
@@ -319,7 +319,7 @@
             $$|f(t) - \alpha| < \dfrac{1}{2} \varepsilon_0$$
             又由\textup{Heine}归结定理得
             $$\lim_{k \to +\infty}{f(x_k)} = \lim\limits_{t\to \alpha}{f(t)} = \alpha$$
-            则$\exists k_0 \in \mathbb{N}$，$k \geq k_0$时
+            则存在$k_0 \in \mathbb{N}$，$k \geq k_0$时
             $$|f(t) - f(x_k)| \leq |f(t) - \alpha| + |f(x_k) - \alpha| = \dfrac{1}{2} \varepsilon + \dfrac{1}{2} \varepsilon = \varepsilon$$
             其中$|t - x_k|$可任意小，与题设矛盾。
         
@@ -343,9 +343,9 @@
 
 \begin{proof}
 
-    因为$\lim_{x \to +\infty}{[f(x+1) - f(x)]} = A$，所以$\forall \varepsilon > 0$，$\exists \delta_1 > \max\{0,a\}$，$x > \delta_1$时
+    因为$\lim\limits_{x \to +\infty}{[f(x+1) - f(x)]} = A$，所以$\forall \varepsilon > 0$，$\exists \delta_1 > \max\{0,a\}$，$x > \delta_1$时
     $$|f(x+1) - f(x) - A| < \dfrac{\varepsilon}{3}$$
-    固定$\delta_1$，由题设知$f$在$(\delta_1, \delta_1+1)$上有界，则$\exists M > 0$
+    固定$\delta_1$，由题设知$f$在$(\delta_1, \delta_1+1)$上有界，则存在$M > 0$
     $$|f(x)| < M,\quad x \in(\delta_1, \delta_1+1)$$
     选取$\delta > \delta_1$，使
     $$\dfrac{M}{\delta} < \dfrac{\varepsilon}{3}, \quad \left| \dfrac{\delta_1 +1}{\delta} \right| < \dfrac{\varepsilon}{3}$$
@@ -383,7 +383,7 @@
     $$f(x) = 0, \quad \forall x < c$$
     则由函数连续性知$f(c) = 0$. 综上
     $$f(c) = 0, \quad a \leq c < b$$
-    因为$f$在$x = c$处连续且$f(c) = 0$，则$\exists d > c$，使$d$充分接近$c$，且
+    因为$f$在$x = c$处连续且$f(c) = 0$，则存在$d > c$，使$d$充分接近$c$，且
     $|f(x)| \leq 1$，$A(x - c) \leq \dfrac{1}{2}, \ x \in [c,d]$
     因为$f$在$[c,d]$连续，所以存在最值，即令
     $$ |f(t)| = \max_{x\in[c,d]}{|f(x)|}, \quad t \in [c,d]$$
@@ -426,9 +426,9 @@
 \begin{proof}
 
     设
-    $$g(t) = \euler^{\frac{1}{\sqrt{3}}t}f(\frac{1}{\sqrt{3}}t)$$
+    $$g(t) = \euler^{\frac{1}{\sqrt{3}}t}f\left( \frac{1}{\sqrt{3}}t \right)$$
     则
-    $$g + g'' = \dfrac{4}{3}\euler^{\frac{1}{\sqrt{3}}t}[f(\frac{1}{\sqrt{3}}t) + f'(\frac{1}{\sqrt{3}}t) + f''(\frac{1}{\sqrt{3}}t)] \geq 0, \quad t \in(\dfrac{\sqrt{3}}{2}a, \dfrac{\sqrt{3}}{2}b)$$
+    $$g + g'' = \dfrac{4}{3}\euler^{\frac{1}{\sqrt{3}}t} \left[ f\left(\dfrac{1}{\sqrt{3}}t\right) + f'\left(\frac{1}{\sqrt{3}}t\right) + f''\left(\frac{1}{\sqrt{3}}t\right) \right] \geq 0, \quad t \in \left( \dfrac{\sqrt{3}}{2}a, \dfrac{\sqrt{3}}{2}b \right)$$
     选取$s,t$，使得
     $$\max\{b-a, \pi\} < t < s < b$$
     设
@@ -600,13 +600,13 @@
     $$g(x) > 0, \quad \forall x \in [0,+\infty)$$
     
     \begin{align*}
-        S_n &= g(h) + g(2h) + \cdots + g(nh) \\
+        S_n & = g(h) + g(2h) + \cdots + g(nh) \\
         & = [f(h) - f(0)] + [f(2h) - f(h)] + [f(3h) - f(2h)] + \cdots + [f(nh) - f((n-1)h)] \\
         & = f(nh) - f(0)
     \end{align*}
   
     因为$g(x) > 0, \ \forall x \in [0,+\infty)$，所以$S_n > 0$，然而
-    $$\lim_{n\to\infty}{S_n} = \lim_{n\to\infty}{f(nh)} - f(0) = 0$$
+    $$\lim\limits_{n\to\infty}{S_n} = \lim\limits_{n\to\infty}{f(nh)} - f(0) = 0$$
     矛盾，得证。
 
 \end{proof}
@@ -667,7 +667,7 @@
     $$ f(\eta) = g(\eta) -h(\eta) = 0$$
     即
     $$g(\eta) = \dfrac{f(\eta) - f(a)}{\eta - a }= \dfrac{f(b) - f(a)}{b-a}$$
-    则$\exists \xi \in (\eta,b)$使得
+    则存在$\xi \in (\eta,b)$使得
     $$g'(\xi) = \dfrac{(\xi -a )f'(\xi)-[f(\xi) - f(a)]}{(\xi - a)^2}$$
     即
     $$f'(\xi) = \dfrac{f(\xi)-f(a)}{\xi - a}$$
@@ -846,14 +846,14 @@
 \begin{proof}
 
     令$F(x) = f(x) - \dfrac{1}{2}x^2$，则$F(0) = F(1) = 0$\\
-    若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则$\exists \xi,\eta \in (0,1),\ \xi \neq \eta$
+    若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则存在$\xi,\eta \in (0,1),\ \xi \neq \eta$
     $$F'(\xi) + F'(\eta) = 0$$
     即
     $$f'(\xi) + f'(\eta) = \xi + \eta$$
     若$F\left( \dfrac{1}{2} \right) \neq 0$，不妨设$F\left( \dfrac{1}{2} \right) > 0$\\
     由\textup{Lagrange}中值定理，$\exists \xi,\eta \in (0,1),\ \xi \neq \eta$
-    $$ \dfrac{F(1) - F\left( \dfrac{1}{2} \right)}{1 - \dfrac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)$$
-    $$ \dfrac{F\left( \dfrac{1}{2} \right) - F(0)}{\dfrac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)$$
+    $$ \dfrac{F(1) - F(\frac{1}{2})}{1 - \frac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)$$
+    $$ \dfrac{F(\frac{1}{2}) - F(0)}{\frac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)$$
     则
     $$F'(\xi) + F'(\eta) = 0$$
     即
@@ -870,7 +870,7 @@
 
 \begin{proof}
 
-    $g(x)$在闭区间$[0,1]$上连续，则$\exists \alpha \in (0,1)$，使得
+    $g(x)$在闭区间$[0,1]$上连续，则存在$\alpha \in (0,1)$，使得
     $$g(\alpha) = \dfrac{1}{2}[g(1) + g(0)]$$
     由\textup{Lagrange}中值定理得， $\exists \xi,\eta \in (0,1)$
     $$\dfrac{f(\alpha) - f(0)}{g(\alpha) - g(0)} = \dfrac{f'(\xi)}{g'(\xi)}$$
@@ -909,7 +909,7 @@
             $$f'(z_1) \leq 0,\quad f'(z_2) \geq 0$$
             所以
             $$g(z_1) = f'(z_1) \leq 0, \quad g(z_2) = f'(z_2) \geq 0$$
-            则$\exists \eta \in [z_1,z_2]$，使得
+            则存在$\eta \in [z_1,z_2]$，使得
             $$g'(\eta) = 0$$
 
     \end{enumerate}
@@ -960,7 +960,7 @@
     设$f$在$[a,b]$上$n+1$阶可微，$f^{(n+1)}(x_0) \neq 0$，$n \in \mathbb{N}$，在$[a,b]$上有
     $$f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}$$
     证明：
-    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n+1}$$
+    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
 
 \end{proposition}
 
@@ -973,6 +973,6 @@
     $$\dfrac{(f^{(n)}(\xi) - f^{(n)}(x_0))(x - x_0)^n}{n!} = \dfrac{f^{(n+1)}(x_0)(x - x_0)^{n+1}}{(n+1)!} + O(x - x_0)^{n+1}$$
     $$\dfrac{f^{(n)}(\xi) - f^{(n)}(x_0)}{\xi - x_0} \dfrac{\xi - x_0}{x- x_0} \dfrac{(x - x_0)^{n+1}}{n!} = \dfrac{f^{(n+1)}(x_0)(x - x_0)^{n+1}}{(n+1)!} + O(x - x_0)^{n+1}$$
     两边对$x$取极限，得
-    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n+1}$$
+    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
 
 \end{proof}
