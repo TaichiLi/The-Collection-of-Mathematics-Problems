@@ -609,7 +609,7 @@
     \begin{align*}
         x_n \geq & \int_{1}^{2}{\dfrac{1}{x+\frac{1}{x}}}\diff x + \int_{2}^{3}{\dfrac{1}{x+\frac{1}{x}}}\diff x + \cdots + \int_{2}^{3}{\dfrac{1}{x+\frac{1}{x}}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
         = & \int_{1}^{n+1}{\dfrac{x}{x^2 + 1}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
-        = & \dfrac{1}{2} \ln{(x^2 + 1)} \big|_{1}^{n+1} - \ln{\dfrac{n}{\sqrt{2}}} \\
+        = & \dfrac{1}{2} \ln{(x^2 + 1)} \Big|_{1}^{n+1} - \ln{\dfrac{n}{\sqrt{2}}} \\
         = & \dfrac{1}{2} \ln{\dfrac{(n+1)^2 + 1}{2}} - \ln{\dfrac{n}{\sqrt{2}}} \\
         = & \ln{\sqrt{\dfrac{(n+1)^2 + 1}{n}}} \\
         \geq & \ln1 = 0 
@@ -711,7 +711,7 @@
 
     \begin{align*}
         & |(1 - q)(a_n + a_{n-1}q + \cdots + a_1q^{n-1} - a)| \\
-        = \ & \big|(1 - q)[(a_n - a) + (a_{n-1} = a)q + \cdots + (a_{N_1+1} - a)q^{n - N_1 - 1} + \cdots + (a_1 - a)q^{n-1} - aq^n] \big| \\
+        = \ & \Big|(1 - q)[(a_n - a) + (a_{n-1} - a)q + \cdots + (a_{N_1 + 1} - a)q^{n - N_1 - 1} + \cdots + (a_1 - a)q^{n-1} - aq^n] \Big| \\
         < \ & |1 - q| \left[ \dfrac{(1 - |q|)\varepsilon}{3(1 - q)} \cdot \dfrac{1 - |q|^{n - N_1}}{1 - |q|} + N_1M \dfrac{\varepsilon}{3N_1M|1 - q|} \right] + \dfrac{\varepsilon}{3} \\
         < \ & \dfrac{\varepsilon}{3} + \dfrac{\varepsilon}{3} + \dfrac{\varepsilon}{3} \\
         = \ & \varepsilon 
