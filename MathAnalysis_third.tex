@@ -907,7 +907,7 @@
     
     \begin{align*}
         \int_{u}^{u + \diff u}{\pi (\sqrt{1 - u^2})^2}\diff u & = \pi \int_{u}^{u + \diff u}{(1 - u^2)}\diff u \\
-        & = \pi (u - \dfrac{1}{3}u^3) \big|_{u}^{u + \diff u} \\
+        & = \pi (u - \dfrac{1}{3}u^3) \Big|_{u}^{u + \diff u} \\
         & = \pi [\diff u - \dfrac{1}{3}((u + \diff u)^3 - u^3)] \\
         & = \pi (1 - u^2)\diff u
     \end{align*}
@@ -1244,4 +1244,32 @@
 
     \end{enumerate}
 
+\end{proof}
+
+
+\begin{proposition}
+
+    设$f(x) \in C^2[0,1]$，且满足$f(0) = f(1) = f'(0) = 0$，$f'(1) = 1$\\
+    证明：$\int_{0}^{1}{(f''(x))^2}\diff x \geq 4$并指出不等式中等号成立的条件。
+
+\end{proposition}
+
+\begin{proof}
+
+    显然
+    $$\int_{0}^{1}{(f''(x) + ax + b)^2}\diff x \geq 0$$
+    则有
+
+    \begin{align*}
+        & \int_{0}^{1}{(f''(x) + ax + b)^2}\diff x \\
+        = & \int_{0}^{1}{(f''(x))^2}\diff x + 2a \int_{0}^{1}{xf''(x)}\diff x + 2b \int_{0}^{1}{f''(x)}\diff x + \int_{0}^{1}{(ax + b)^2}\diff x \\
+        = & \int_{0}^{1}{(f''(x))^2}\diff x + 2a \int_{0}^{1}{x}\diff f'(x) + 2b f'(x) \Big|_{0}^{1} + \dfrac{a^2}{3} + ab + b^2 \\
+        = & \int_{0}^{1}{(f''(x))^2}\diff x + 2a xf'(x)\Big|_{0}^{1} - 2a \int_{0}^{1}{f'(x)}\diff x + 2b + \dfrac{a^2}{3} + ab + b^2 \\
+        = & \int_{0}^{1}{(f''(x))^2}\diff x + 2a - 2af(x)\Big|_{0}^{1} + 2b + \dfrac{a^2}{3} + ab + b^2 \\
+        = & \int_{0}^{1}{(f''(x))^2}\diff x + 2a + 2b + \dfrac{a^2}{3} + ab + b^2
+    \end{align*}
+
+    所以
+    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a,b) \in \mathbb{R}^2}\left(-2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
+    右端最小值在$a = -6$，$b = 2$时取得，因此，当$f''(x) = 6x - 2$且满足题设时不等式取等，不难得到此时$f(x) = x^3 - x^2$。
 \end{proof}
