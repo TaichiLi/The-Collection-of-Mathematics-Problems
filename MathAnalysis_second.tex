@@ -257,7 +257,7 @@
 
 \begin{proposition}
 
-    设函数$f$在$[0,+\infty)$上一致连续，且$\forall x \in [0,1]$有
+    设函数$f$在$[0,+\infty)$上一致连续，且任意$x \in [0,1]$有
     $$\lim_{n\to\infty}{f'(x+n)} = 0$$
     证明：
     $$\lim_{n\to\infty}{f(x)} = 0$$
@@ -275,7 +275,7 @@
     $$x - \lfloor x \rfloor \in [x_k, x_{k+1}]$$
     即
     $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
-    由于$\lim\limits_{n\to\infty}{f(x+n)} = $对$\forall x \in [0,1]$成立，所以对$\forall x_k,\ k \in \{0,1,2,\cdots , m-1\}$
+    由于$\lim\limits_{n\to\infty}{f(x+n)} = 0$，$\forall x \in [0,1]$成立，所以对任意$x_k,\ k \in \{0,1,2,\cdots , m-1\}$
     $$\lim_{n\to\infty}{f(x+n)} = 0$$
     因此$\exists N \in \mathbb{N}$，$n >N$时
     $$|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0,1,2,\cdots , m\}$$
@@ -611,7 +611,7 @@
 
 \end{proof}
 
-\section{微分中值定理}
+\section{一元函数微分学}
 
 \begin{proposition}
     
@@ -703,7 +703,7 @@
 
 \begin{proof}
     
-    设$f$与$g$的周期分别为$T$和$S$，则对$\forall x \in \mathbb{R}$，有
+    设$f$与$g$的周期分别为$T$和$S$，则对任意$x \in \mathbb{R}$，有
     
     \begin{align*}
         f(x)-g(x) &= \lim_{n\to\infty}{f(x)-g(x)}\\
@@ -736,7 +736,7 @@
 
 \begin{proposition}[Cauthy方程]
     
-    设$f$对$\forall x,\ y \in \mathbb{R}$，满足方程$f(x+y) = f(x) + f(y)$，证明：
+    设$f$对任意$x$，$y \in \mathbb{R}$，满足方程$f(x+y) = f(x) + f(y)$，证明：
 
     \begin{enumerate}
 
@@ -765,7 +765,7 @@
             $$\lim\limits_{\Delta x\to0}{f(x_0+\Delta x)} = f(x_0)$$
             因为$f(x+\Delta x) = f(x_0) + f(\Delta x)$，所以
             $$\lim\limits_{\Delta x\to 0}{f(\Delta x)} = 0$$
-            对于$\forall x \in \mathbb{R}$
+            对于任意$x \in \mathbb{R}$
 
             \begin{align*}
                 \lim\limits_{\Delta x\to 0}{f(x+\Delta x)} &= \lim\limits_{\Delta x\to 0}{(f(x) + f(\Delta x))}\\
@@ -975,4 +975,16 @@
     两边对$x$取极限，得
     $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
 
+\end{proof}
+
+\begin{proposition}
+
+    设$\mathbb{R}$上的函数$f$有任意阶导数，并且对于任意$k \in \mathbb{N}$，存在$C_k > 0$使得
+    $$\sup_{x \in \mathbb{R}}\left(|x|^k|f(x)| + |f^{(k)}(x)|\right) \leq C_k$$
+
+\end{proposition}
+
+\begin{proof}
+
+    
 \end{proof}

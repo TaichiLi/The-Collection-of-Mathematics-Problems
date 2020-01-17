@@ -649,7 +649,7 @@
     
     即
     $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+2} + a_{n+3}}} = 0$$
-    同理可证，对$\forall p \in \mathbb{N}$
+    同理可证，对任意$p \in \mathbb{N}$
     $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+p} + a_{n+p+1}}} = 0$$
     则$\forall p \in \mathbb{N}$，$\exists N_p \in \mathbb{N}$，$n > N_p$时
     $$\dfrac{a_n}{a_{n+p} + a_{n+p+1}} < \dfrac{1}{4}$$
@@ -789,7 +789,7 @@
 
 \begin{proof}
 
-    先证集合$S$为无穷集合。设$\forall i,j \in \mathbb{N}$
+    先证集合$S$为无穷集合。设任意$i,j \in \mathbb{N}$
     $$\{i\alpha\} \neq \{j\alpha\}$$
     否则$\exists i,\ j \in \mathbb{N}$使得
     $$\{i\alpha\} = i\alpha - \lfloor i\alpha \rfloor = j\alpha - \lfloor j\alpha \rfloor = \{j\alpha\}$$
@@ -935,7 +935,7 @@
 
 \begin{proof}
 
-    设$\max|x_n| = M$，且对$\forall \varepsilon ' > 0$，存在一个$N_1(\varepsilon ')$，使得当$N > N_1(\varepsilon ')$时，$|x_k| \leq \varepsilon '$成立。则有
+    设$\max|x_n| = M$，且对任意$\varepsilon ' > 0$，存在一个$N_1(\varepsilon ')$，使得当$N > N_1(\varepsilon ')$时，$|x_k| \leq \varepsilon '$成立。则有
     
     \begin{align*}
         \dfrac{\left|x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right|}{\ln n} & = \dfrac{\left| \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}x_k} + \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k}x_k}\right|}{\ln n} \\
@@ -945,7 +945,7 @@
         & < (M + 1) \varepsilon
     \end{align*}
 
-    因此令$\varepsilon = (M + 1)\varepsilon '$，对于$\forall \varepsilon >  0$，存在一个$N(\varepsilon) = N_1(\varepsilon') = N_1(\dfrac{\varepsilon}{M + 1})$，使得当$N > N(\varepsilon)$时
+    因此令$\varepsilon = (M + 1)\varepsilon '$，对于任意$\varepsilon >  0$，存在一个$N(\varepsilon) = N_1(\varepsilon') = N_1(\dfrac{\varepsilon}{M + 1})$，使得当$N > N(\varepsilon)$时
     $$\dfrac{\left|x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right|}{\ln n} < \varepsilon$$
 
 \end{proof}

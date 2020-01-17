@@ -390,7 +390,8 @@
     设$K_n(x) = \dfrac{(1 - x^2)^n}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}$，显然有
     $$\int_{-1}^{1}{K_n(x)}\diff x = 1$$
     且$x \neq 0$时有$\lim\limits_{n\to\infty}{K_n(x)} = 0$，则$\forall \varepsilon >0$，$\exists N \in \mathbb{N}$，$n > N$时有
-    $$|K_n(x)| < \varepsilon$$$\forall \varepsilon >0$，$\exists \delta > 0$，$|x| < \delta$时，
+    $$|K_n(x)| < \varepsilon$$
+    $\forall \varepsilon >0$，$\exists \delta > 0$，$|x| < \delta$时
     $$| f(x) - f(0) | < \varepsilon$$
     令$N = \max\{N_1, N_2\}$，则有
 
@@ -783,7 +784,7 @@
 
 \begin{proof}
 
-    对任意的$x\in [0,a]$，有
+    对$\forall x \in [0,a]$，有
 
     \begin{align*}
         f(x) - f(0) & = \int_{0}^{x}{f'(t)}\diff t \\
@@ -1062,7 +1063,7 @@
 
 \begin{proof}
 
-    对任意的$\beta$
+    对任意的$\beta$有
     
     \begin{align*}
         \int_{\beta}^{+\infty}{\dfrac{f(ax)}{{x}}}\diff x & = \lim_{T\to +\infty}{\int_{\beta}^{T}{\dfrac{f(ax)}{{x}}}\diff x} \\
