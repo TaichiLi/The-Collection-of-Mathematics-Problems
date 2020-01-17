@@ -981,10 +981,27 @@
 
     设$\mathbb{R}$上的函数$f$有任意阶导数，并且对于任意$k \in \mathbb{N}$，存在$C_k > 0$使得
     $$\sup_{x \in \mathbb{R}}\left(|x|^k|f(x)| + |f^{(k)}(x)|\right) \leq C_k$$
+    证明：对于任意$k,\ l \in \mathbb{N}$，存在$C_{k,l} > 0$使得
+    $$\sup_{x \in \mathbb{R}}|x|^k|f^{(l)}(x)| \leq C_{k,l}$$
 
 \end{proposition}
 
 \begin{proof}
 
+    观察到，问题可以约化为证明：对于任意$k \in \mathbb{N}^{+}$，存在$D_k > 0$，对于任意绝对值大于$2$的数$x \in \mathbb{R}$，成立
+    $$|x|^k|f'(x)| \leq D_k$$
+    任意给定$\varepsilon > 0$，由\textup{Taylor}定理知，存在$\theta \in (0,1)$，使得
+    $$f(x + \varepsilon) - f(x) = f'(x)\varepsilon + \dfrac{1}{2}f''(x + \theta \varepsilon) \varepsilon^2$$
+    于是我们有
+    $$|f'(x)| \leq \dfrac{|f(x + \varepsilon)| + |f(x)|}{\varepsilon} + \dfrac{1}{2}|f''(x + \theta \varepsilon)| \varepsilon$$
+    将$\varepsilon = \dfrac{1}{|x|^k}$代入上式，并利用已知条件，得到
+
+    \begin{align*}
+        |f'(x)| & \leq \dfrac{C_2}{2}|x|^{-k} + |x|^{-k} \cdot |x|^{2k}(|f(x)| + |f(x + |x|^{-k})|) \\
+        & \leq \dfrac{C_2}{2}|x|^{-k} + C_{2k}|x|^{-k} + |x|^{-k} \cdot (2|x + |x|^{-k}|)^{2k}|f(x + |x|^{-k})| \\
+        & \leq \left( \dfrac{C_2}{2} + (2^{2k} + 1)C_{2k} \right) |x|^{-k}
+    \end{align*}
+
+    取$D_k = \dfrac{C_2}{2} + (2^{2k} + 1)C_{2k}$，即证。
     
 \end{proof}
