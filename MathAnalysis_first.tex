@@ -1003,7 +1003,7 @@
     因此
     $$\lim\limits_{n \to\infty}{nx_n^2} = 3$$
     同时可知
-    $$x_n = O(\dfrac{1}{\sqrt{n}})$$
+    $$x_n = O\left( \dfrac{1}{\sqrt{n}} \right)$$
     级数$\sum\limits_{n = 1}^{\infty}{x_n^2}$发散。
 
 \end{proof}
@@ -1025,6 +1025,24 @@
     即$a_{n + 1} \leq a_n$。所以数列$\{a_n\}$收敛，且极限$a$满足
     $${\sqrt{2}}^{a} = a$$
     即$a = 2$。
+
+\end{proof}
+
+\begin{proposition}
+
+    设$$S_{n} = \sum\limits_{k =1}^{n} \left[ \dfrac{1}{4k-3} + \dfrac{1}{4k - 1} - \dfrac{1}{2k} \right]$$
+    证明$S_{n}$收敛并求其值。
+
+\end{proposition}
+
+\begin{proof}
+
+    易知
+    \begin{align*}
+        \lim\limits_{n \to +\infty } S_{n} & =  \lim\limits_{n\to +\infty} \sum\limits_{k = 1}^{n} \left[   \dfrac{1}{4k-3} - \dfrac{1}{4k-2} +  \dfrac{1}{4k-1} - \dfrac{1}{4k}  + \dfrac{1}{2} \left[  \dfrac{1}{2k-1} -\dfrac{1}{2k} \right]      \right] \\
+        & = \dfrac{3}{2} \lim\limits_{n \to + \infty} \sum\limits_{k = 1}^{n}  \left[  \dfrac{1}{2k-1} -\dfrac{1}{2k} \right] \\
+        & = \dfrac{3}{2} \ln 2
+    \end{align*}
 
 \end{proof}
 
@@ -1075,11 +1093,12 @@
     \end{align*}
 
     \begin{align*}
-        \left(\dfrac{a_1+a_2+\cdots+a_{k+1}}{k+1}\right)^{k+1} &= (A+B)^{k+1}\\
-        &\geq A^{k+1} + (k+1) A^k B\\
-        &=A^k(A+(k+1)B)\\
-        &=A^k a_{k+1}\\
-        &\geq a_1 a_2 \cdots a_{k+1}
+        & \left(\dfrac{a_1+a_2+\cdots+a_{k+1}}{k+1}\right)^{k+1} \\
+        = & \  (A+B)^{k+1}\\
+        \geq & \  A^{k+1} + (k+1) A^k B\\
+        = & \ A^k(A+(k+1)B)\\
+        = & \ A^k a_{k+1}\\
+        \geq & \ a_1 a_2 \cdots a_{k+1}
     \end{align*}
 
     不等式等好成立时条件也可以由数学归纳法得到。\\

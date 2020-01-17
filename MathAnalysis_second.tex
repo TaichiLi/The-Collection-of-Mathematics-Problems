@@ -70,7 +70,7 @@
 \begin{proof}
 
     不妨设$x_0$是$f$的唯一极小值点，$x_1$是$f$的最小值点，应用反证法，假设$x_0 \neq x_1$，则不妨设$x_0 < x_1$\\
-    因为$x_0$是极小值点，所以$\exists x_2 > x_0,\ x_2 < x_1$
+    因为$x_0$是极小值点，所以存在$ x_2 > x_0$，$x_2 < x_1$
     $$f(x_2) > f(x_0) > f(x_1)$$
     由介值定理得，$\exists x_3 \in (x_2, x_1)$
     $$f(x_3) = f(x_0)$$
@@ -117,7 +117,7 @@
 
                 \item 
                     $a>b$时\\
-                    因为$a$为上确界，所以$\exists \eta \in A, \ \eta > \dfrac{a+b}{2}$，则
+                    因为$a$为上确界，所以存在$\eta \in A, \ \eta > \dfrac{a+b}{2}$，则
                     $$b = f(a) \geq f(\eta) > \eta > \dfrac{a+b}{2}$$
                     与$a>b$矛盾。
 
@@ -173,7 +173,7 @@
 
 \begin{proof}
 
-    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以$\exists \delta > 0, \ t \in \mathring{U}(x_0, \delta)$时
+    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以存在$\delta > 0, \ t \in \mathring{U}(x_0, \delta)$时
     $$|f(t) - g(x_0)| < \dfrac{\varepsilon}{2}$$
     于是，当$|x - x_0| < \dfrac{\delta}{2}$时，有
 
@@ -186,7 +186,7 @@
 
     所以
     $$\lim_{x\to x_0}{g(x)} = g(x_0)$$
-    即$g$在$x_0$处连续，由$x_0$的任意性可知，$g$在$I$上连续。
+    即$g$在$x_0$处连续，由$x_0$的任意性可知，$g$在区间$I$上连续。
 
 \end{proof}
 
@@ -271,7 +271,7 @@
     将$[0,1]$等分成$0 = x_0 < x_1 < \cdots < x_m = 1$，使每个区间的长度为$\dfrac{1}{m} < \delta$\\
     因为$x - \lfloor x \rfloor,\ \forall x \geq 1$，且
     $$x\to+\infty \leftrightarrow \lfloor x \rfloor \to +\infty$$
-    所以$\exists k \in \{0,1,2,\cdots , m-1\}$
+    所以存在$k \in \{0,1,2,\cdots , m-1\}$
     $$x - \lfloor x \rfloor \in [x_k, x_{k+1}]$$
     即
     $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
@@ -663,7 +663,7 @@
     又令$F(X)=g(x)-h(x)$，则有
     $$F(a) = g(a) - h(a) = f'(a) - \dfrac{f(x)-f(a)}{b-a}$$
     $$F(b) = g(b) - h(b) = \dfrac{f(b) - f(a)}{b-a}  - f'(b) = \dfrac{f(b) - f(a)}{b-a} - f'(a)$$
-    易见$F(a)F(b)$异号，所以$\exists  \eta \in (a,b)$，使得
+    易见$F(a)F(b)$异号，所以存在$\eta \in (a,b)$，使得
     $$ f(\eta) = g(\eta) -h(\eta) = 0$$
     即
     $$g(\eta) = \dfrac{f(\eta) - f(a)}{\eta - a }= \dfrac{f(b) - f(a)}{b-a}$$
@@ -688,7 +688,7 @@
     若不存在$\xi_n$，使得$f(\xi_n) = f\left(\xi_n+\dfrac{1}{n}\right)$\\
     不妨设$F(x)$恒大于$0$，则有
     $$f(1) = f(0) > f\left(\dfrac{1}{n}\right) > f\left(\dfrac{2}{n}\right) > \cdots > f(1)$$
-    与题设矛盾，所以$\exists \xi_n\in \left[0,1-\dfrac{1}{n}\right]$
+    与题设矛盾，所以存在$\xi_n \in \left[0,1-\dfrac{1}{n}\right]$
     $$f(\xi_n) = f\left(\xi_n + \dfrac{1}{n}\right)$$
 
 \end{proof}
@@ -728,7 +728,7 @@
 \begin{proof}
     
     由题设知，$f(x)$的至于为$[f(a),+\infty]$，且$\lim\limits_{x\to\infty}{f(x)}=+\infty$\\
-    因为$f(a)<a$，所以$\exists x_1,\ x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$\\
+    因为$f(a)<a$，所以存在$x_1$，$x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$\\
     显然$f(f(x))\geq f(a) = f(f(x_1)) = f(f(x_2))$，\\
     所以$f(f(x))$至少有两个最小值点。
 
@@ -897,7 +897,7 @@
 
         \item 若$f$无零点，则令
             $$h(x) = \dfrac{x}{2} - \dfrac{1}{f(x)}$$
-            因为$h(0) = h(1) = -\dfrac{1}{2}$，所以$\exists \eta \in (0,1)$，使得
+            因为$h(0) = h(1) = -\dfrac{1}{2}$，所以存在$\eta \in (0,1)$，使得
             $$h'(\eta) = 0$$
             又由$g(x) = f^2(x) h'(x)$，
             所以
@@ -928,7 +928,7 @@
     若$\xi = \eta$则结论显然成立。\\
     $\xi \neq \eta$时，问题等价于
     $$ f'(\eta) = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}$$
-    因为三点共线，所以$\exists \alpha,\beta \in (x_1, x_3), \ \alpha \neq \beta$
+    因为三点共线，所以存在$\alpha$，$\beta \in (x_1, x_3)$，$\alpha \neq \beta$
     $$f'(\alpha) = f'(\beta)$$
     又由\textup{Flett}中值定理得，$\exists \xi,\eta \in (x_1,x_3)$
     $$f'(\eta) = \dfrac{f(\eta) - f(\alpha)}{\eta - \alpha} = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}$$
