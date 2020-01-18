@@ -1,6 +1,6 @@
 \chapter{数学分析}
 
-\section{数列}
+\section{数列与极限}
 
 \begin{proposition}[Cauthy命题]
 
@@ -1044,6 +1044,29 @@
         & = \dfrac{3}{2} \lim\limits_{n \to + \infty} \sum\limits_{k = 1}^{n}  \left[  \dfrac{1}{2k-1} -\dfrac{1}{2k} \right] \\
         & = \dfrac{3}{2} \ln 2
     \end{align*}
+
+\end{proof}
+
+\begin{proposition}
+
+    证明：
+    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n} = + \infty$$
+
+\end{proposition}
+
+\begin{proof}
+
+    注意到，$\sin x \geq x - \dfrac{x^3}{6}$，$\forall x \geq 0$，得到
+
+    \begin{align*}
+        \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n & \geq \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
+        & \geq \left( 1 + \int_{0}^{\frac{1}{\sqrt{n}}}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
+        & \geq \left(1 + \dfrac{5}{6\sqrt{n}}\right)^n \\
+        & \geq \dfrac{5\sqrt{n}}{6}
+    \end{align*}
+
+    因此有
+    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n} = + \infty$$
 
 \end{proof}
 
