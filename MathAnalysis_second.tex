@@ -640,6 +640,36 @@
     
 \end{proposition}
 
+\begin{proof}
+
+    令$\varphi(x) = \euler^{-x} + \cos{2x} + x\sin{x}$，则$\varphi'(x) = -\euler^{-x} - 2\sin{2x} + \sin{x} + x\cos{x}$. 
+    $$\varphi((2n -1)\pi) = \euler^{-(2n -1)\pi} + 1 > 0$$
+    $$\varphi\left( (2n -1)\pi + \dfrac{\pi}{2}\right) = \euler^{-((2n - 1)\pi + \frac{\pi}{2})} - 1 - \left((2n - 1)\pi + \dfrac{\pi}{2}\right) > 0$$
+    当$x \in (2n\pi, (2n + 1)\pi)$时，
+    $$\varphi(x) = \euler^{-x} + \cos^2{x} + (x - \sin{x})\sin{x} > 0$$
+    于是存在$x_{2n - 1} \in \left((2n - 1)\pi, (2n -1)\pi + \dfrac{\pi}{2}\right)$，$x_{2n} \in \left((2n - 1)\pi + \dfrac{\pi}{2}, 2n\pi\right)$. 使得
+    $$\varphi(x_{2n - 1}) = \varphi(x_{2n}) = 0$$
+    下面证明$\varphi(x) = 0$在区间$((2n -1)\pi, (2n + 1)\pi)$只有上述两个根。\\
+    当$x \in \left((2n -1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4})\right)$时，
+    $$\varphi(x) < -\dfrac{\sqrt{2}}{2}\left((2n - 1)\pi + \dfrac{\pi}{4}\right) + 1 + 1 < 0$$
+    所以$\varphi(x) = 0$的两个根分别在区间$\left((2n - 1)\pi, (2n - 1)\pi + \dfrac{\pi}{4}\right)$和 \\
+    $\left((2n -1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4})\right)$上。 \\
+    当$x \in \left((2n - 1)\pi, (2n - 1)\pi + \dfrac{\pi}{4}\right)$时，
+    $$\varphi'(x) < -\dfrac{\sqrt{2}}{2}(2n - 1)\pi < 0$$ 
+    当$x \in \left((2n -1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4})\right)$时，
+    $$\varphi'(x) > \dfrac{\sqrt{x}}{2} \left((2n -1)\pi + \dfrac{3\pi}{4}\right) - 1 > 0$$
+    由函数单调性确定了根的个数。\\
+    因为$\lim_{x_n} = + \infty$，所以
+    $$1 = \lim\limits_{n \to \infty}{\euler^{-x} + 1} = \lim\limits_{n \to \infty}{\sin{x_n}(2\sin{x_n} - x_n)} = \lim\limits_{n \to \infty}{(-1)^n \sin{(x_n - n\pi)}(2\sin{x_n} - x_n)}$$
+    因此$\lim\limits_{n \to \infty}{(x_n - n\pi)} = 0$
+    
+    \begin{align*}
+        \lim\limits_{n \to \infty}{(-1)^n n(x_n - n\pi)} & = \lim\limits_{n \to \infty}{\dfrac{(-1)^n n (x_n - n\pi)}{(-1)^n \sin{(x_n - n\pi)}(2\sin{x_n} - x_n)}} \\
+        & = \lim\limits_{n \to \infty}{\dfrac{n}{2\sin{x_n} - x_n}} \\
+        & = -\dfrac{1}{\pi}
+    \end{align*}
+
+\end{proof}
 
 \section{一元函数微分学}
 
