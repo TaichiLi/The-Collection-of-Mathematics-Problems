@@ -820,16 +820,16 @@
 
 \begin{proposition}
 
-    证明：数列$\{\sin n\}$在区间$[-1,1]$上稠密。
+    证明：数列$\{\sin{n}\}$在区间$[-1,1]$上稠密。
 
 \end{proposition}
 
 \begin{proof}
 
     $\forall v \in [-1, 1]$，$\exists u \in [0, 2\pi]$
-    $$\sin u = v$$
-    由$y = \sin x$的连续性可知，$\forall \varepsilon > 0$，$\exists \delta > 0$，使得当$|x - u| < \delta$时
-    $$| \sin u - \sin x | = | v - \sin x | < \varepsilon$$
+    $$\sin{u} = v$$
+    由$y = \sin{x}$的连续性可知，$\forall \varepsilon > 0$，$\exists \delta > 0$，使得当$|x - u| < \delta$时
+    $$| \sin{u} - \sin{x} | = | v - \sin{x} | < \varepsilon$$
     由引理\ref{lemma1}知，对任意无理数$\alpha$，集合
     $$\{n\alpha - \lfloor n\alpha \rfloor \big| n \in \mathbb{N}\}$$
     在区间$[0, 1]$上稠密。所以令$\alpha = \dfrac{u}{2\pi}$，$\exists n \in \mathbb{N}$，使得
@@ -839,13 +839,13 @@
     两边乘以$2\pi$，得
     $$\left|  2\pi \left \{\dfrac{n}{2\pi} \right\} - u \right| < \delta$$
     所以
-    $$\left| \sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} - \sin u \right| < \varepsilon$$
+    $$\left| \sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} - \sin{u} \right| < \varepsilon$$
     又因为
     $$2\pi \left \{\dfrac{n}{2\pi} \right\} = \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor$$
     则有
-    $$\sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} = \sin\left[2\pi \left( \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor \right)\right] = \sin\left(2\pi \cdot \dfrac{n}{2\pi}\right) = \sin n$$
+    $$\sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} = \sin{\left[2\pi \left( \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor \right)\right]} = \sin{\left(2\pi \cdot \dfrac{n}{2\pi}\right)} = \sin{n}$$
     即
-    $$|\sin n - \sin u| = |\sin n - v| < \varepsilon$$
+    $$|\sin{n} - \sin{u}| = |\sin{n} - v| < \varepsilon$$
 
 \end{proof}
 
@@ -989,7 +989,7 @@
 
 \begin{proposition}
 
-    设$x_0 \in \left(0, \dfrac{\pi}{2}\right]$，定义$x_{n + 1} = \sin x_n$，求$\lim\limits_{n \to\infty}{nx_n^2}$的值。
+    设$x_0 \in \left(0, \dfrac{\pi}{2}\right]$，定义$x_{n + 1} = \sin{x_n}$，求$\lim\limits_{n \to\infty}{nx_n^2}$的值。
 
 \end{proposition}
 
@@ -997,9 +997,9 @@
 
     因为$nx_n^2 = \dfrac{n}{\frac{1}{x_n^2}}$，由\textup{Stolz}定理知
     $$\lim\limits_{n \to\infty}{nx_n^2} = \lim\limits_{n\to\infty}{\dfrac{n}{\frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{(n + 1) - n}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{1}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}}$$
-    $$\dfrac{1}{x_{n + 1}^2} - \dfrac{1}{x_n^2} = \dfrac{1}{\sin^2 x_n} - \dfrac{1}{x_n^2} = \dfrac{x_n^2 - \sin^2 x_n}{x_n^2 \sin^2 x_n}$$
+    $$\dfrac{1}{x_{n + 1}^2} - \dfrac{1}{x_n^2} = \dfrac{1}{\sin^2{x_n}} - \dfrac{1}{x_n^2} = \dfrac{x_n^2 - \sin^2{x_n}}{x_n^2 \sin^2{x_n}}$$
     易知$\lim\limits_{n\to\infty}{x_n} = 0$，所以
-    $$\lim\limits_{n \to \infty}{\dfrac{x_n^2 - \sin^2 x_n}{x_n^2 \sin^2 x_n}} = \lim\limits_{x \to 0}{\dfrac{x^2 - \sin^2 x}{x^2 \sin^2 x}} = \dfrac{1}{3}$$
+    $$\lim\limits_{n \to \infty}{\dfrac{x_n^2 - \sin^2{x_n}}{x_n^2 \sin^2{x_n}}} = \lim\limits_{x \to 0}{\dfrac{x^2 - \sin^2{x}}{x^2 \sin^2{x}}} = \dfrac{1}{3}$$
     因此
     $$\lim\limits_{n \to\infty}{nx_n^2} = 3$$
     同时可知
@@ -1050,23 +1050,23 @@
 \begin{proposition}
 
     证明：
-    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n} = + \infty$$
+    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n} = + \infty$$
 
 \end{proposition}
 
 \begin{proof}
 
-    注意到，$\sin x \geq x - \dfrac{x^3}{6}$，$\forall x \geq 0$，得到
+    注意到，$\sin{x} \geq x - \dfrac{x^3}{6}$，$\forall x \geq 0$，得到
 
     \begin{align*}
-        \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n & \geq \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
-        & \geq \left( 1 + \int_{0}^{\frac{1}{\sqrt{n}}}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
+        \left( 1 + \int_{0}^{1}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n & \geq \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
+        & \geq \left( 1 + \int_{0}^{\frac{1}{\sqrt{n}}}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n \\
         & \geq \left(1 + \dfrac{5}{6\sqrt{n}}\right)^n \\
         & \geq \dfrac{5\sqrt{n}}{6}
     \end{align*}
 
     因此有
-    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n} = + \infty$$
+    $$\lim\limits_{n \to \infty}{\left( 1 + \int_{0}^{1}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n} = + \infty$$
 
 \end{proof}
 

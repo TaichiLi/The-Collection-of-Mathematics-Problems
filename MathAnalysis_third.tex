@@ -341,7 +341,7 @@
             将$a_k$看作在$\{0, 1, \cdots, k-1\}$上的随机变量，是$x$的函数，且$a_k$相互独立，所以由\textup{Borel - Cantelli}定理知
             $$\sum_{k=2}^{\infty}{P \left(\left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
             则$\dfrac{1}{2} < \dfrac{a_k}{k} < \dfrac{1}{4}$，对无限$k \in \mathbb{N}$成立
-            $$\liminf_{n\to\infty}{|\sin(n!\pi x)|} \geq \sin{\dfrac{\pi}{4}} = \dfrac{\sqrt{2}}{2}$$
+            $$\liminf_{n\to\infty}{|\sin{(n!\pi x)}|} \geq \sin{\dfrac{\pi}{4}} = \dfrac{\sqrt{2}}{2}$$
             对几乎所有$x \in [0,1]$成立，又$x \in M$不满足上式，其中$M$为收敛点集合，所以$M$为勒贝格集，不包含任何区间。
 
        \end{enumerate}
@@ -764,9 +764,9 @@
 \begin{proof}
 
     由题设知，$f$可以展开为\textup{Fourier}级数，
-    $$f(x) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty}{a_n\cos\left(\dfrac{2n\pi x}{T}\right) + b_n\sin\left(\dfrac{2n\pi x}{T}\right)}$$
+    $$f(x) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty}{a_n\cos{\left(\dfrac{2n\pi x}{T}\right)} + b_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
     易知$a_0 = 0$，又
-    $$f'(x) = \sum_{n=1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos\left(\dfrac{2n\pi x}{T}\right) - \dfrac{2n\pi}{T}a_n\sin\left(\dfrac{2n\pi x}{T}\right)}$$
+    $$f'(x) = \sum_{n=1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos{\left(\dfrac{2n\pi x}{T}\right)} - \dfrac{2n\pi}{T}a_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
     由\textup{Parseval}恒等式知
     $$\int_{0}^{T}{|f'(x)|^2}\diff x = \sum_{n=1}^{\infty}{\dfrac{4n^2\pi^2}{T^2}(a_n^2 + b_n^2)} \geq \sum_{n=1}^{\infty}{\dfrac{4\pi^2}{T^2}(a_n^2 + b_n^2)}$$
     $$\int_{0}^{T}{|f(x)|^2}\diff x = \sum_{n=1}^{\infty}{(a_n^2 + b_n^2)}$$
@@ -962,7 +962,7 @@
 
 \begin{proposition}
 
-    $$\int_{0}^{2\pi}\diff \varphi \int_{0}^{\pi}{\euler^{\sin\theta(\cos\varphi - \sin\varphi)}\sin\theta}\diff \theta$$
+    证明：$$\int_{0}^{2\pi}\diff \varphi \int_{0}^{\pi}{\euler^{\sin{\theta}(\cos{\varphi} - \sin{\varphi})}\sin{\theta}}\diff \theta$$
 
 \end{proposition}
 
@@ -971,16 +971,16 @@
     设曲面$S:\ x^2 + y^2 + z^2 = 1$，应用球面坐标系，易知
 
     \begin{align*}
-        &x = \sin\theta \cos\varphi \\
-        &y = \sin\theta \sin\varphi \\
-        &z = \cos\theta         
+        &x = \sin{\theta} \cos{\varphi} \\
+        &y = \sin{\theta} \sin{\varphi} \\
+        &z = \cos{\theta}         
     \end{align*}
 
     其中，$0 \leq \theta \leq \pi$，$0 \leq \varphi \leq 2\pi$。\\
     应用定理\ref{theorem1}，则有
 
     \begin{align*}
-        \int_{0}^{2\pi}\diff \varphi \int_{0}^{\pi}{\euler^{\sin\theta(\cos\varphi - \sin\varphi)}\sin\theta}\diff \theta & =\ooint_{S}{\euler^{x - y}}\diff S \\
+        \int_{0}^{2\pi}\diff \varphi \int_{0}^{\pi}{\euler^{\sin{\theta}(\cos{\varphi} - \sin{\varphi})}\sin{\theta}}\diff \theta & =\ooint_{S}{\euler^{x - y}}\diff S \\
         & = 2\pi \int_{-1}^{1}{f(\sqrt{2}u)}\diff u \\
         & = \sqrt{2}\pi(\euler^{\sqrt{2}} - \euler^{-\sqrt{2}})
     \end{align*}

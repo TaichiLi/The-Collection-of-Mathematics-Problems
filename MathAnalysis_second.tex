@@ -432,9 +432,9 @@
     选取$s,t$，使得
     $$\max\{b-a, \pi\} < t < s < b$$
     设
-    $$h_s(t) = g(t) \cos(t-s) - g'(t)\sin(t-s)$$
-    $$h'_s(t) = -[g(t) + g''(t)] \sin(t-s) \geq 0$$
-    其中$\sin(t-s) < 0$则
+    $$h_s(t) = g(t) \cos{(t-s)} - g'(t)\sin{(t-s)}$$
+    $$h'_s(t) = -[g(t) + g''(t)] \sin{(t-s)} \geq 0$$
+    其中$\sin{(t-s)} < 0$则
     $$g(s) = h_s(s) \geq h_s(t) \geq -|g(t)| - |g'(t)|$$
     选取任意$t \in (\max\{b-a,\pi\},b)$，上式表明$g$在$(t,b)$上有上界。\\
     设$G(x) = g(a + b -x)$，则显然$G \in C^2(a,b)$
@@ -631,6 +631,15 @@
     $$\lambda = F(t_0) = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}$$
 
 \end{proof}
+
+\begin{proposition}
+
+    证明：$\euler^{-x} + \cos{2x} + x\sin{x} = 0$在区间$((2n -1)\pi, (2n + 1)\pi)$恰有两个根$x_{2n _1} < x_{2n}$，$\forall n \in \mathbb{N}^{+}$
+    证明如下极限存在并求之：
+    $$\lim\limits_{n \to \infty}{(-1)^n n(x_n - n\pi)}$$
+    
+\end{proposition}
+
 
 \section{一元函数微分学}
 

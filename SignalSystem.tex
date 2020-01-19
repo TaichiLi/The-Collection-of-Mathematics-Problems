@@ -171,7 +171,7 @@
 
 \begin{proposition}
 
-    $$X(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}}\left( \dfrac{\sin \frac{3}{2}\omega}{\sin \frac{\omega}{2}}\right) + 5\pi \delta(\omega), \quad -\pi < \omega \leq \pi$$
+    $$X(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}}\left( \dfrac{\sin{\frac{3}{2}\omega}}{\sin{\frac{\omega}{2}}}\right) + 5\pi \delta(\omega), \quad -\pi < \omega \leq \pi$$
     求$x[n]$
 
 \end{proposition}
@@ -184,7 +184,7 @@
             & 1, & |n| \leq N \\
             & 0, & |n| > N 
         \end{aligned}
-        \right. \stackrel{\mathcal{F}}{\longleftrightarrow} X_1(\euler^{\image \omega})  = \dfrac{\sin \frac{(N + 1)}{2}\omega}{\sin \frac{\omega}{2}}$$ 
+        \right. \stackrel{\mathcal{F}}{\longleftrightarrow} X_1(\euler^{\image \omega})  = \dfrac{\sin{\frac{(N + 1)}{2}\omega}}{\sin{\frac{\omega}{2}}}$$ 
     $$u[n] \stackrel{\mathcal{F}}{\longleftrightarrow} X_2(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}} + \pi\sum\limits_{k = -\infty}^{+\infty}{\delta(w - 2\pi k)}$$
     则
     $$X(\euler^{\image \omega}) = X_1(\euler^{\image \omega}) X_2(\euler^{\image \omega}) - 3\pi\sum\limits_{k = -\infty}^{+\infty}{\delta(w - 2\pi k)} + 5\pi\delta(\omega), \quad -\pi < \omega \leq \pi$$
@@ -233,7 +233,7 @@
     \begin{align*}
         h[n] & = \dfrac{1}{2\pi} \int_{2\pi}{H_d(\euler^{\image \omega})\euler^{\image \omega n}}\diff \omega \\
         & = \dfrac{1}{2\pi} \int_{\pi}^{-\pi}{\image \dfrac{\omega}{T} \euler^{-\frac{\image \omega}{2}} \euler^{\image \omega n}}\diff \omega \\
-        & = - \dfrac{\sin\left[\pi (n - \dfrac{1}{2})\right]}{\pi T \left(n - \dfrac{1}{2}\right)^2}
+        & = - \dfrac{\sin{\left[\pi (n - \dfrac{1}{2})\right]}}{\pi T \left(n - \dfrac{1}{2}\right)^2}
     \end{align*}
 
 \end{proof}
