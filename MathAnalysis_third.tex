@@ -22,16 +22,15 @@
     同时，由\textup{Cauthy-Schwarz}不等式知
 
     \begin{align*}
-        \left( \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} \right) \cdot \left( \sum_{n=2^{k-1}}^{2^k - 1}{a_{n+1}-a_n} \right) &\geq \left( \sum_{n=2^{k-1}}^{2^k - 1}{1} \right)^2\\
-        & = (2^k - 2^{k-1})^2\\
-        & = 4^{k-1}
+        & \left( \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} \right) \cdot \left( \sum_{n=2^{k-1}}^{2^k - 1}{a_{n+1}-a_n} \right) \\
+        \geq & \left( \sum_{n=2^{k-1}}^{2^k - 1}{1} \right)^2 = (2^k - 2^{k-1})^2 =  4^{k-1}
     \end{align*}
 
     因此
 
     \begin{align*}
         \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})} &> \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}}\\
-        & \leq \dfrac{4^{k-1}}{\sum_{n=2^{k-1}}^{2^k - 1}{(a_{n+1}-a_n})}\\
+        & \leq \dfrac{4^{k-1}}{\sum\limits_{n=2^{k-1}}^{2^k - 1}{(a_{n+1}-a_n})}\\
         & = \dfrac{4^{k-1}}{a_{2^k} - a^{2^{k-1}}}\\
         & \geq \dfrac{4^{k-1}}{a_{2^k} - a_1}
     \end{align*}
@@ -107,7 +106,7 @@
 \begin{proposition}
     
     对$N \in \mathbb{N}$，定义
-    $$ S_n = 1 + \dfrac{n-1}{n+2} +\dfrac{n-2}{n+3} + \cdot + \dfrac{1}{2n} $$
+    $$ S_n = 1 + \dfrac{n-1}{n+2} +\dfrac{n-2}{n+3} + \cdots + \dfrac{1}{2n} $$
     证明：
     $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\pi}{2}$$
 
@@ -119,8 +118,7 @@
 
     \begin{align*}
         a_k &= \dfrac{(n-1)(n-2)\cdots(n-k+1)}{(n+2)(n+3)\cdots(n+k)} \\
-        & = \dfrac{\dfrac{(n-1)!}{(n-k)!}}{\dfrac{(n+k)!}{(n+1)!}} \\
-        & = \dfrac{\dfrac{(2n)!(n-1)!}{(n-k)!}}{\dfrac{(2n)!(n+k)!}{(n+1)!}} = \dfrac{\dfrac{(2n)!}{(n-k)!(n+k)!}}{\dfrac{(2n)!}{(n-1)!(n+1)!}} \\
+        & = \dfrac{\dfrac{(n-1)!}{(n-k)!}}{\dfrac{(n+k)!}{(n+1)!}} = \dfrac{\dfrac{(2n)!(n-1)!}{(n-k)!}}{\dfrac{(2n)!(n+k)!}{(n+1)!}} = \dfrac{\dfrac{(2n)!}{(n-k)!(n+k)!}}{\dfrac{(2n)!}{(n-1)!(n+1)!}} \\
         & = \dfrac{\binom{2n}{n-k}}{\binom{2n}{n-1}}
     \end{align*}
 
@@ -132,10 +130,10 @@
         & = \dfrac{2^{2n}(n-1)!(n+1)!}{2(2n)!} - \dfrac{n+1}{2^n}  
     \end{align*}
 
-    \begin{align*}
-        \lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} &= \dfrac{n+1}{n} \dfrac{2^{2n}(n!)^2}{2(2n)!\sqrt{n}} - \dfrac{n+1}{2^n\sqrt{n}} \quad (\mathrm{Waills}\mbox{公式}) \\
-        & = \dfrac{\sqrt{\pi}}{2}
-    \end{align*}
+    因此
+        $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{n+1}{n} \dfrac{2^{2n}(n!)^2}{2(2n)!\sqrt{n}} - \dfrac{n+1}{2^n\sqrt{n}}$$
+    由\textup{Waills}公式知
+        $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\sqrt{\pi}}{2}$$
 
 \end{proof}
 
@@ -347,6 +345,43 @@
        \end{enumerate}
 
 \end{proof}
+
+\begin{proposition}
+    
+    设函数$f(x)$在$[1, + \infty)$满足$f(x) > 0$，$f''(x) \leq 0$，且$\lim\limits_{x \to +\infty}{f(x)} = +\infty$. 证明极限
+    $$\lim\limits_{s \to 0^{+}}{\sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{s}(n)}}}$$
+    收敛并求其值。
+
+\end{proposition}
+
+\begin{proposition}
+
+    由$f''(x) \leq 0$知，$f'(x)$在$[1, +\infty)$单调递减，容易看出$f'(x)$恒正。事实上若存在$x_0$，$f'(x_0) \leq 0$，则由单调性知
+    $$f'(x) \leq f'(x_0), \ f(x) \leq f(x_0), \quad \forall x \geq x_0$$
+    与$f(+\infty) = + \infty$矛盾。因此$f(x)$在$[1, +\infty)$严格单调增加。设
+    $$S_{2n}(s) = \sum\limits_{k = 1}^{n}{\left(\dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k -1)}\right)}$$
+    注意和式中每个括号都是负的且级数通项收敛于$0$，只需要证明对固定的$s > 0$，$S_{2n}(s)$有下界，则
+    $$\lim\limits_{n \to +\infty}{S_{2n}(s)}$$
+    存在且等于
+    $$\sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{(s)}(n)}}$$
+    由\textup{Lagrange}中值定理知，
+    $$\dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k -1)} = \dfrac{-sf'(\xi)}{f^{(s + 1)}(\xi)}, \quad \xi \in (2k - 1, 2k)$$
+    注意到$f(x)$单调增加而$f'(x)$单调减少，则有
+    $$\dfrac{-sf'(2k - 1)}{f^{(s + 1)(2k - 1)}} \leq \dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k - 1)} \leq \dfrac{-sf'(2k)}{f^{(s + 1)}(2k)}$$
+    $$\sum\limits_{k = 1}^{n}{\dfrac{-sf'(2k - 1)}{f^{(s + 1)(2k - 1)}}} \leq S_{2n}(s) \leq \sum\limits_{k = 1}^{n}{\dfrac{-sf'(2k)}{f^{(s + 1)}(2k)}}$$
+    利用面积原理的思想来估计左右两端。由单调性知$k \geq 2$时
+    $$\dfrac{f'(2k - 1)}{f^{(s + 1)}(2k - 1)} \leq \dfrac{1}{2} \int_{2k - 3}^{2k - 1}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t$$
+    $$\sum\limits_{k = 2}^{n}{\dfrac{f'(2k - 1)}{f^{(s + 1)}(2k - 1)}} \leq \dfrac{1}{2} \int_{1}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left.\dfrac{-1}{sf^{(s)}(t)}\right|_{1}^{+\infty} = \dfrac{1}{2sf^{(s)}(1)}$$
+    $S_{2n}(s)$有下界故极限存在。再次利用面积原理知$k \leq 1$时
+    $$\dfrac{f'(2k)}{f^{(s + 1)}(2k)} \geq \dfrac{1}{2} \int_{2k}^{2k + 2}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t$$
+    $$\sum\limits_{k = 1}^{n}{\dfrac{f'(2k)}{f^{(s + 1)}(2k)}} \geq \dfrac{1}{2} \int_{2}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left.\dfrac{-1}{sf^{(s)}(t)}\right|_{2}^{+\infty} = \dfrac{1}{2sf^{(s)}(2)}$$
+    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)}\right) \leq \lim\limits_{n \to +\infty}{S_{2n}(s)} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
+    由前面说明就有
+    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)}\right) \leq \sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{(s)}(n)}} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
+    而上市左右两端在$s \to 0^{+}$时的极限都是$-\dfrac{1}{2}$，所以
+    $$\lim\limits_{s \to o^{+}}{\sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{s}(n)}}} = -\dfrac{1}{2}$$
+
+\end{proposition}
 
 \section{黎曼积分}
 
