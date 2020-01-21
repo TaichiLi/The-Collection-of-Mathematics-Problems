@@ -5,7 +5,7 @@
 \begin{proposition}[Cauthy命题]
 
     设$\{x_n\}$收敛于$l$，则它的前$n$项的算术平均数也收敛于$l$，即有
-    $$\lim_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
+    $$\lim\limits_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
 
 \end{proposition}
 
@@ -27,36 +27,85 @@
     即有$n>N_1$时成立不等式
     $$\left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| < \varepsilon$$
     也即
-    $$\lim_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
+    $$\lim\limits_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
 
 \end{proof}
 
 \begin{corollary}[Cauthy命题推论]
 
-    若$\lim\limits_{n\to\infty}{(a_n-a_{n-1})}=d$，
+    若$\lim\limits_{n\to\infty}{(a_n - a_{n-1})} = d$，
     则
-    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n-1}}}=d$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = d$$
 
 \end{corollary}
+
+\begin{proof}
+
+    因为$\lim\limits_{n\to\infty}{(a_n - a_{n-1})} = d$，所以数列$\{a_n - a_{n - 1}\}$收敛于$d$。\\
+    由\textup{Cauthy}命题知，
+    
+    \begin{align*}
+        & \lim\limits_{n\to\infty}{\dfrac{(a_2 - a_1) + (a_3 - a_2) + \cdots + (a_{n + 1} - a_n)}{n}} \\
+        = & \ \lim\limits_{n\to\infty}{\dfrac{a_{n + 1} - a_1}{n}} \\
+        = & \ \lim\limits_{n\to\infty}{\dfrac{n + 1}{n} \dfrac{a_{n + 1}}{n + 1}} - \lim\limits_{n\to\infty}{\dfrac{a_1}{n}} = d
+    \end{align*}
+
+    即
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = d$$
+
+\end{proof}
 
 \begin{corollary}[Cauthy命题推论]
 
     设$\{a_n\}$是正数列，且收敛于$A$，
     则
-    $$\lim_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
+    $$\lim\limits_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
 
 \end{corollary}
+
+\begin{proof}
+
+    显然有
+    $$\ln{\left((a_1a_2\cdots a_n)^{\frac{1}{n}}\right)} = \dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}$$
+    由\textup{Cauthy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$，所以
+    $$\lim\limits_{n\to\infty}{\dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}} = \ln{A}$$
+    也即
+    $$\lim\limits_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
+
+\end{proof}
+
 
 \begin{corollary}[Cauthy命题推论]
+
     设$\{a_n\}$是正数列，且存在极限$\lim\limits_{n\to\infty}{\dfrac{a_{n+1}}{a_n}}=l$，
     则
-    $$\lim_{n\to\infty}{(a_n)^{\frac{1}{n}}}=l$$
+    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_n}} = l$$
+
 \end{corollary}
+
+\begin{proof}
+
+    因为$\lim\limits_{n\to\infty}{\dfrac{a_{n+1}}{a_n}}=l$，所以数列$\left\{\ln{\dfrac{a_n}{a_{n - 1}}}\right\}$收敛于$\ln{l}$ \\
+    由\textup{Cauthy}命题知，
+    
+    \begin{align*}
+        & \lim\limits_{n\to\infty}{\dfrac{\ln{\dfrac{a_2}{a_1}} + \ln{\dfrac{a_3}{a_2}} + \cdots + \ln{\dfrac{a_{n + 1}}{a_n}}}{n}} \\
+        = & \ \lim\limits_{n\to\infty}{\dfrac{\ln{\dfrac{a_{n + 1}}{a_1}}}{n}} \\
+        = & \ \lim\limits_{n\to\infty}{\dfrac{\ln{a_{n + 1} - \ln{a_1}}}{n}} \\
+        = & \ \lim\limits_{n\to\infty}{\dfrac{n + 1}{n}\dfrac{\ln{a_{n + 1}}}{n + 1}} - \lim\limits_{n\to\infty}{\dfrac{\ln{a_1}}{n}} = \ln{l}
+    \end{align*}
+
+    即
+    $$\lim\limits_{n\to\infty}{\dfrac{\ln{a_n}}{n}} = \ln{l}$$
+    也即
+    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_n}}=l$$
+
+\end{proof}
 
 \begin{proposition}[Cauthy命题$\infty$时的特例]
 
     $\lim\limits_{n\to\infty}{x_n} = +\infty$，证明：
-    $$\lim_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
+    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
 
 \end{proposition}
 
@@ -64,8 +113,8 @@
 
     $\forall A > 0$，由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n>N$时，$a_n > 2A + 2$，\\
     又
-    $$\lim_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
-    $$\lim_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
+    $$\lim\limits_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
     于是，
 
     \begin{align*}
@@ -76,17 +125,17 @@
     \end{align*}
 
     故
-    $$\lim_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
+    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
     
 \end{proof} 
 
 \begin{proposition}[$\dfrac{0}{0}$型的stolz公式]
 
     设$\{a_n\}$和$\{b_n\}$都是收敛于$0$的数列，其中$\{a_n\}$是严格单调递减数列，且存在
-    $$\lim_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
+    $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
     其中$l$为有限值或无穷。\\
     则有
-    $$\lim_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
 
@@ -108,21 +157,21 @@
     $$(l-\varepsilon)(a_{n}-a_{m})<b_{n}-b_{m}<(l+\varepsilon)(a_{n}-a_{m})$$
     $$\left| \dfrac{b_n-b_{m}}{a_n-a_{m}}-l\right| < \varepsilon$$
     对于$m$，令$m\to+\infty$，有
-    $$\lim_{m\to\infty}{a_m}=\lim_{m\to\infty}{b_m}=0$$
+    $$\lim\limits_{m\to\infty}{a_m}=\lim\limits_{m\to\infty}{b_m}=0$$
     又
-    $$\lim_{m\to\infty}{\left| \dfrac{b_n-b_{m}}{a_n-a_{m}}-l\right|} = \left|\dfrac{b_n}{a_n}-l\right|$$
+    $$\lim\limits_{m\to\infty}{\left| \dfrac{b_n-b_{m}}{a_n-a_{m}}-l\right|} = \left|\dfrac{b_n}{a_n}-l\right|$$
     则
-    $$\lim_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proof}
 
 \begin{proposition}[$\dfrac{*}{\infty}$型的stolz公式]
     
     设有数列$\{a_n\}$和$\{b_n\}$，其中$\{a_n\}$是严格单调增加的发散数列，且存在
-    $$\lim_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
+    $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
     其中$l$为有限值或无穷。\\
     则有
-    $$\lim_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
 
@@ -162,9 +211,9 @@
             $$b_{n+1}-b_N>a_{n+1}-a_n$$
             则$\lim\limits_{n\to\infty}{b_n}=+\infty$，且$\{b_n\}$严格单调增加，
             所以，
-            $$\lim_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim_{n\to\infty}{\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}} = 0$$
+            $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}} = 0$$
             故
-            $$\lim_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim_{n\to\infty}{\dfrac{\frac{1}{a_n}}{b_n}}=+\infty$$
+            $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{\frac{1}{a_n}}{b_n}}=+\infty$$
 
     \item   $l$为$-\infty$时同(2)
 
@@ -176,20 +225,20 @@
 
     设$\sum\limits_{n=1}^{\infty}{a_n}$为收敛的正项级数，
     则不等式
-    $$\sum_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}}\leq \euler\sum_{n=1}^{\infty}{a_n}$$
+    $$\sum\limits_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}}\leq \euler\sum\limits_{n=1}^{\infty}{a_n}$$
 
 \end{proposition}
 
 \begin{proof}
 
     \begin{align*}
-        \sum_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}} &= \sum_{n=1}^{\infty}{\dfrac{\sqrt[n]{a_1(2a_2)\cdots (na_n)}}{\sqrt[n]{n!}}}\\
-        &\leq\sum_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n\sqrt[n]{n!}}}\\
-        &\leq\euler\sum_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n(n+1)}}\\
-        &=\euler\sum_{n=1}^{\infty}{\dfrac{1}{n(n+1)}\sum_{k=1}^{n}{ka_k}}\\
-        &=\euler\sum_{k=1}^{N}{\left\{ka_k\left[\sum_{n=k}^{N}{\dfrac{1}{n(n+1)}}\right]\right\}}\\
-        &=\euler\sum_{k=1}^{N}{ka_k(\dfrac{1}{k}-\dfrac{1}{N + 1})} \\
-        &\leq\euler\sum_{k=1}^{N}{a_k}
+        \sum\limits_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}} &= \sum\limits_{n=1}^{\infty}{\dfrac{\sqrt[n]{a_1(2a_2)\cdots (na_n)}}{\sqrt[n]{n!}}}\\
+        &\leq\sum\limits_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n\sqrt[n]{n!}}}\\
+        &\leq\euler\sum\limits_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n(n+1)}}\\
+        &=\euler\sum\limits_{n=1}^{\infty}{\dfrac{1}{n(n+1)}\sum\limits_{k=1}^{n}{ka_k}}\\
+        &=\euler\sum\limits_{k=1}^{N}{\left\{ka_k\left[\sum\limits_{n=k}^{N}{\dfrac{1}{n(n+1)}}\right]\right\}}\\
+        &=\euler\sum\limits_{k=1}^{N}{ka_k(\dfrac{1}{k}-\dfrac{1}{N + 1})} \\
+        &\leq\euler\sum\limits_{k=1}^{N}{a_k}
     \end{align*}
 
     令$N\to+\infty$，即可得到\textup{Carleman}不等式。\\
@@ -203,7 +252,7 @@
     \right.
     $$
     然后作出两个级数和之比，令$n\to+\infty$，应用\textup{stolz}定理，有
-    $$\lim_{N\to\infty}{\dfrac{\sum\limits_{n=1}^{N}{\sqrt[n]{a_1a_2\cdots a_n}}}{\sum\limits_{n=1}^{N}{b_n}}}=\lim_{N\to\infty}{\dfrac{N}{\sqrt[N]{N!}}}=\euler$$
+    $$\lim\limits_{N\to\infty}{\dfrac{\sum\limits_{n=1}^{N}{\sqrt[n]{a_1a_2\cdots a_n}}}{\sum\limits_{n=1}^{N}{b_n}}}=\lim\limits_{N\to\infty}{\dfrac{N}{\sqrt[N]{N!}}}=\euler$$
 
 \end{proof}
 
@@ -217,19 +266,19 @@
     
     先证充分性，\\
     正数列$\{a_n\}$单调减少，则$\{a_n\}$存在极限，即
-    $$\lim_{n\to\infty}{a_n} = a(a>0)$$
+    $$\lim\limits_{n\to\infty}{a_n} = a(a>0)$$
     设$b_n=1-\dfrac{a_{n+1}}{a_n} = \dfrac{a_n-a_{n+1}}{a_n}\leq\dfrac{a_n-a_{n+1}}{a}$，
     则
 
     \begin{align*}
-        \sum_{n=1}^{m}{b_n}&=\sum_{n=1}^{m}{(1-\dfrac{a_{n+1}}{a_{n}})}\\
-        &\leq\dfrac{1}{a}\sum_{n=1}^{m}{(a_n-a_{n+1})}\\
+        \sum\limits_{n=1}^{m}{b_n}&=\sum\limits_{n=1}^{m}{(1-\dfrac{a_{n+1}}{a_{n}})}\\
+        &\leq\dfrac{1}{a}\sum\limits_{n=1}^{m}{(a_n-a_{n+1})}\\
         &=\dfrac{1}{a}(a_1-a_{m+1})
     \end{align*}
 
     \begin{align*}
-        \sum_{n=1}^{\infty}{b_n} &= \lim_{m\to\infty}{\sum_{n=1}^{m}{b_n}}\\
-        &\leq\lim_{m\to\infty}{\dfrac{1}{a}(a_1-a_{m+1})}\\
+        \sum\limits_{n=1}^{\infty}{b_n} &= \lim\limits_{m\to\infty}{\sum\limits_{n=1}^{m}{b_n}}\\
+        &\leq\lim\limits_{m\to\infty}{\dfrac{1}{a}(a_1-a_{m+1})}\\
         & = \dfrac{1}{a}(a_1-a)
     \end{align*}
 
@@ -237,15 +286,15 @@
     再证必要性，若$a=0$，则由柯西准则，
 
     \begin{align*}
-        \sum_{k=n+1}^{n+p}{b_k} &= \sum_{k=n+1}^{n+p}{(1-\dfrac{a_{k+1}}{a_k})}\\
-        &\geq\sum_{k=n+1}^{n+p}{\dfrac{a_k-a_{k+1}}{a_k}}\\
+        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_{k+1}}{a_k})}\\
+        &\geq\sum\limits_{k=n+1}^{n+p}{\dfrac{a_k-a_{k+1}}{a_k}}\\
         & = \dfrac{1}{a_{n+1}}(a_{n+1}-a_{n+p+1})\\
         & = \dfrac{a_{n+p+1}}{a_{n+1}}
     \end{align*}
 
     因为$\lim\limits_{n\to\infty}{a_n}=0$，则总存在$p \in \mathbb{N}$，
     使得
-    $$\sum_{k=n+1}^{n+p}{b_k}\geq\dfrac{1}{2}$$
+    $$\sum\limits_{k=n+1}^{n+p}{b_k}\geq\dfrac{1}{2}$$
     所以，$\sum\limits_{n=1}^{\infty}{b_n}$发散。
 
 \end{proof}
@@ -261,11 +310,11 @@
 \begin{proof}
 
     $\{a_n\}$单调增加，若$\{a_n\}$收敛，则
-    $$\lim_{n\to\infty}{a_n}=a(a\neq+\infty)$$
+    $$\lim\limits_{n\to\infty}{a_n}=a(a\neq+\infty)$$
 
     \begin{align*}
-        \sum_{k=n+1}^{n+p}{b_k} &= \sum_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
-        & \leq \sum_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+1}}}\\
+        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
+        & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+1}}}\\
         & = \dfrac{a_{n+p+1}-a_{n+1}}{a_{n+1}}
     \end{align*}
 
@@ -283,8 +332,8 @@
     若$\lim\limits_{n\to\infty}{a_n}=+\infty$，则
 
     \begin{align*}
-        \sum_{k=n+1}^{n+p}{b_k} &= \sum_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
-        & \leq \sum_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+p+1}}}\\
+        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
+        & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+p+1}}}\\
         & = \dfrac{a_{n+p+1}-a_{n+1}}{a_{n+p+1}}\\
         & = 1-\dfrac{a_{n+1}}{a_{n+p+1}}
     \end{align*}
@@ -309,7 +358,7 @@
     $\sum\limits_{n=1}^{\infty}{a_n}$收敛，则
 
     \begin{align*}
-        \sum_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \leq \sum_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+1}}}\\
+        \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+1}}}\\
         &\leq \dfrac{S_{n+p+1}-S_{n}}{S_{n+1}}\\
         &\leq \dfrac{S_{n+p+1}-S_{n}}{S_{n}}
     \end{align*}
@@ -327,7 +376,7 @@
     $\sum\limits_{n=1}^{\infty}{a_n}$发散，则$\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}}=+\infty$，且有
 
     \begin{align*}
-        \sum_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \geq \sum_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+p+1}}}\\
+        \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \geq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+p+1}}}\\
         &\geq \dfrac{S_{n+p+1}-S_{n}}{S_{n+p+1}}\\
         &= 1-\dfrac{S_{n}}{S_{n+p+1}}
     \end{align*}
@@ -365,8 +414,8 @@
                 不妨设$n\geq 1$，时上式成立，则
 
                 \begin{align*}
-                    \sum_{k=1}^{n}{a_k} &= a_1 + \sum_{k=2}^{n}{a_k}\\
-                    & \leq a_1 +  \dfrac{1}{\delta}\sum_{k=1}^{n-1}{(a_k b_k-a_{k+1}b_{k+1})}\\
+                    \sum\limits_{k=1}^{n}{a_k} &= a_1 + \sum\limits_{k=2}^{n}{a_k}\\
+                    & \leq a_1 +  \dfrac{1}{\delta}\sum\limits_{k=1}^{n-1}{(a_k b_k-a_{k+1}b_{k+1})}\\
                     & = a_1 +  \dfrac{1}{\delta}(a_1 b_1-a_{n}b_{n})\\
                     & = a_1 +  \dfrac{1}{\delta}a_1 b_1
                 \end{align*}
@@ -395,7 +444,7 @@
 \begin{proposition}
     
     $\lim\limits_{n\to\infty}{(a_{n+p} - a_n)} = \lambda_1$，$p$为固定的正整数，$\lambda$是常数，则
-    $$\lim_{n\to\infty}{\dfrac{a_n}{\lambda}} = \dfrac{\lambda}{p}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{\lambda}} = \dfrac{\lambda}{p}$$
 
 \end{proposition}
 
@@ -403,13 +452,13 @@
     
     对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列\\
     由$\lim\limits_{n\to\infty}{a_{n+p} - a_n} = \lambda$，则
-    $$\lim_{n\to\infty}{a_{(n+1)p + i} - a_{np+i}} = \lambda$$
+    $$\lim\limits_{n\to\infty}{a_{(n+1)p + i} - a_{np+i}} = \lambda$$
     令$A^{(i)}_{n} = a_{(n+1)p+i} - a_{np + i}$，由\textup{Cauthy}命题知
-    $$\lim_{n\to\infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda$$
+    $$\lim\limits_{n\to\infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda$$
     即
-    $$\lim_{n\to\infty}{\dfrac{a_{(n+1)p+i} - a_{p+i}}{n}} = \lim_{n\to\infty}{\dfrac{a_{(n+1)p+i}}{n}} = \lambda$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_{(n+1)p+i} - a_{p+i}}{n}} = \lim\limits_{n\to\infty}{\dfrac{a_{(n+1)p+i}}{n}} = \lambda$$
     则
-    $$\lim_{n\to\infty}{\dfrac{a_n}{n}} = \lim_{n\to\infty}{\dfrac{a_{np+i}}{np+i}} = \dfrac{n}{np+i} \lim_{n\to\infty}{\dfrac{a_{np+i}}{n}} = \dfrac{\lambda}{p}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = \lim\limits_{n\to\infty}{\dfrac{a_{np+i}}{np+i}} = \dfrac{n}{np+i} \lim\limits_{n\to\infty}{\dfrac{a_{np+i}}{n}} = \dfrac{\lambda}{p}$$
 
 \end{proof}
 
@@ -420,10 +469,10 @@
     \begin{enumerate}
 
         \item 
-                $$\lim_{n\to\infty}{\sqrt[n]{A_n}} = 2$$
+                $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = 2$$
                 
         \item   
-                $$\lim_{n\to\infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
+                $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
 
     \end{enumerate}
 
@@ -434,12 +483,12 @@
     \begin{enumerate}
         
         \item 
-            因为$$A_n = \sum_{k=0}^{n}{\binom{n}{k}} = 2^n$$则
-            $$\lim_{n\to\infty}{\sqrt[n]{A_n}} = \lim_{n\to\infty}{\sqrt[n]{\dfrac{2^n}{n}}} = 2$$
+            因为$$A_n = \sum\limits_{k=0}^{n}{\binom{n}{k}} = 2^n$$则
+            $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = \lim\limits_{n\to\infty}{\sqrt[n]{\dfrac{2^n}{n}}} = 2$$
 
         \item 
             因为$$G_n = \sqrt[n]{\binom{n}{0}\binom{n}{1}\cdots\binom{n}{n}}$$则
-            $$\lim_{n\to\infty}{\sqrt[n]{G_n}}  = \lim_{n\to\infty}{\sqrt[n^2]{\binom{n}{0}\binom{n}{1}\cdots\binom{n}{n}}} = \lim_{n\to\infty}{\dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}} = \euler^{\frac{1}{2}}  $$
+            $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}}  = \lim\limits_{n\to\infty}{\sqrt[n^2]{\binom{n}{0}\binom{n}{1}\cdots\binom{n}{n}}} = \lim\limits_{n\to\infty}{\dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}} = \euler^{\frac{1}{2}}  $$
     
         \end{enumerate}
     
@@ -456,9 +505,9 @@
     应用\textup{stolz}公式，知
 
     \begin{align*}
-        \lim_{n\to\infty}{x_n}  = & \lim_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\binom{n+1}{k}}} - \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}}{(n+1)^2 - n^2}} \\
-        = & \lim_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\dfrac{n+1}{n+1-k}}}}{2n+1}} \\
-        = & \lim_{n\to\infty}{\dfrac{\ln{(1+\frac{1}{n})^{n-1}}}{2}} \\
+        \lim\limits_{n\to\infty}{x_n}  = & \lim\limits_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\binom{n+1}{k}}} - \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}}{(n+1)^2 - n^2}} \\
+        = & \lim\limits_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\dfrac{n+1}{n+1-k}}}}{2n+1}} \\
+        = & \lim\limits_{n\to\infty}{\dfrac{\ln{(1+\frac{1}{n})^{n-1}}}{2}} \\
         = & \dfrac{1}{2}
     \end{align*}
 
@@ -467,7 +516,7 @@
 \begin{proposition}
     
     设数列$\{a_n\}$满足$\lim\limits_{n\to\infty}{a_n\sum\limits_{k=1}^{n}{a_k^2}} = 1$，证明：
-    $$\lim_{n\to\infty}{\sqrt{3na_n}} = 1$$
+    $$\lim\limits_{n\to\infty}{\sqrt{3na_n}} = 1$$
 
 \end{proposition}
 
@@ -475,11 +524,11 @@
 
     令$S_n = \sum\limits_{k=1}^{n}{a_k^2}$，则$S_n$单调增加，且$S_n\to\infty$，否则若$\lim\limits_{n\to\infty}{S_n} = S$，\\
     则$\lim\limits_{n\to\infty}{a_n^2} = 0$，即
-    $$\lim_{n\to\infty}{a_n} = 0$$
+    $$\lim\limits_{n\to\infty}{a_n} = 0$$
     所以
-    $$\lim_{n\to\infty}{a_nS_n} = \lim_{n\to\infty}{a_nS} = 0$$
+    $$\lim\limits_{n\to\infty}{a_nS_n} = \lim\limits_{n\to\infty}{a_nS} = 0$$
     与题设矛盾。故$\lim\limits_{n\to\infty}{S_n} = +\infty$，又
-    $$\lim_{n\to\infty}{a_n} = \lim_{n\to\infty}{a_n \cdot S_n \cdot \dfrac{1}{S_n}} = \lim_{n\to\infty}{a_nS_n} \cdot \lim_{n\to\infty}{\dfrac{1}{S_n}} = 0$$
+    $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{a_n \cdot S_n \cdot \dfrac{1}{S_n}} = \lim\limits_{n\to\infty}{a_nS_n} \cdot \lim\limits_{n\to\infty}{\dfrac{1}{S_n}} = 0$$
 
     \begin{align*}
         S_n^3 - S_{n-1}^3 &= (S_n - S_{n-1}) (S_n^2 + S_{n-1}S_n + S_{n-1}^2) \\
@@ -487,17 +536,17 @@
         = & 2a_n^2S_n^2 - 3a_n^4S_n + a_n^6 
     \end{align*}
     
-    $$\lim_{n\to\infty}{S_n^3 - S_{n-1}^3}= \lim_{n\to\infty}{\big( 3(a_nS_n)^2 - 3a_n^3(a_nS_n) + a_n^6 \big)} = 3$$
-    $$\lim_{n\to\infty}{\dfrac{1}{3na_n^3}} = \lim_{n\to\infty}{\dfrac{1}{a_n^3S_n^3} \cdot \dfrac{S_n^3}{3n}} = \lim_{n\to\infty}{\dfrac{S_n^3}{3n}} = \lim_{n\to\infty}{\dfrac{S_n^3 - S_{n-1}^3}{3}} = 1$$
+    $$\lim\limits_{n\to\infty}{S_n^3 - S_{n-1}^3}= \lim\limits_{n\to\infty}{\big( 3(a_nS_n)^2 - 3a_n^3(a_nS_n) + a_n^6 \big)} = 3$$
+    $$\lim\limits_{n\to\infty}{\dfrac{1}{3na_n^3}} = \lim\limits_{n\to\infty}{\dfrac{1}{a_n^3S_n^3} \cdot \dfrac{S_n^3}{3n}} = \lim\limits_{n\to\infty}{\dfrac{S_n^3}{3n}} = \lim\limits_{n\to\infty}{\dfrac{S_n^3 - S_{n-1}^3}{3}} = 1$$
     故
-    $$\lim_{n\to\infty}{\sqrt{3na_n}} = 1$$
+    $$\lim\limits_{n\to\infty}{\sqrt{3na_n}} = 1$$
 
 \end{proof}
 
 \begin{proposition}
 
     $\lim\limits_{n\to\infty}{a_n} = a $，$\lim\limits_{n\to\infty}{b_n} = b $，证明：
-    $$\lim_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
 
 \end{proposition}
 
@@ -513,15 +562,15 @@
 
     \begin{align*}
         &\left| \dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n} \right| \\
-        = \ & \dfrac{1}{n} \left| \sum_{k=0}^{n}{b_{n-k}(a_k - a)} + \sum_{k=0}^{n}{a_k(b_{n-k} - b)} + ab \right| \\
-        = \ & \dfrac{M}{N} \left| \sum_{k=0}^{N_1}{|a_k - a|} + \sum_{k=0}^{N_1}{|b_{n-k} - b|} + |b| \right| \\
-        \ & + \ \dfrac{M}{n} \left| \sum_{k=N_1+1}^{n}{|a_k - a|} + \sum_{k=N_1}^{n}{|b_{n-k} - b|} \right| \\
+        = \ & \dfrac{1}{n} \left| \sum\limits_{k=0}^{n}{b_{n-k}(a_k - a)} + \sum\limits_{k=0}^{n}{a_k(b_{n-k} - b)} + ab \right| \\
+        = \ & \dfrac{M}{N} \left| \sum\limits_{k=0}^{N_1}{|a_k - a|} + \sum\limits_{k=0}^{N_1}{|b_{n-k} - b|} + |b| \right| \\
+        \ & + \ \dfrac{M}{n} \left| \sum\limits_{k=N_1+1}^{n}{|a_k - a|} + \sum\limits_{k=N_1}^{n}{|b_{n-k} - b|} \right| \\
         \leq \ & \dfrac{\varepsilon}{2} + \dfrac{2M}{n}(n - N_1) - \dfrac{\varepsilon}{4M} \\
         < \ & \varepsilon 
     \end{align*}
 
     故
-    $$\lim_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
     
 \end{proof}
 
@@ -550,13 +599,13 @@
         = & \dfrac{a_{n-2}}{(n-2)!} + \dfrac{1}{(n-2)!} + \dfrac{1}{(n-1)!} \\
         & \cdots \\ 
         = & \dfrac{a_1}{1!} + \dfrac{1}{1!} + \dfrac{1}{2!} + \cdots + \dfrac{1}{(n-1)!} \\
-        = & \sum_{k=1}^{n-1}{\dfrac{1}{k!}} 
+        = & \sum\limits_{k=1}^{n-1}{\dfrac{1}{k!}} 
     \end{align*}
 
     则
     $$\dfrac{a_n}{n!} = \sum\limits_{k=1}^{n}{\dfrac{1}{k!}}$$
     所以
-    $$\lim_{n\to\infty}{x_n} = \lim_{n\infty}{\sum\limits_{k=0}^{n}{\dfrac{1}{k!}}} = \euler$$
+    $$\lim\limits_{n\to\infty}{x_n} = \lim\limits_{n\infty}{\sum\limits_{k=0}^{n}{\dfrac{1}{k!}}} = \euler$$
 
 \end{proof}
 
@@ -618,14 +667,14 @@
     $$x_{n+1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
     $\{x_n\}$单调减少，则$\{x_n\}$收敛。
     由$x_n \geq 0,\ x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
-    $$\lim_{n\to\infty}{a_n} \in \left[0,\dfrac{1}{2}\right]$$
+    $$\lim\limits_{n\to\infty}{a_n} \in \left[0,\dfrac{1}{2}\right]$$
 
 \end{proof}
 
 \begin{proposition}
 
     设$a_n > 0$，且
-    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+1} + a_{n+2}}} = 0$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1} + a_{n+2}}} = 0$$
     证明：数列$\{a_n\}$无界。
     
 \end{proposition}
@@ -635,7 +684,7 @@
     反证法。假设$\{a_n\}$有界，即$\exists M > 0$，$a_n \leq M,\ \forall n \in \mathbb{N}$，则有
     $$0 < \dfrac{a_n}{2M} \leq \dfrac{a_n}{a_{n+1} + a_{n+2}}, \ \forall n \in \mathbb{N}$$
     两边对$n$取极限，得到
-    $$\lim_{n\to\infty}{a_n} = 0$$
+    $$\lim\limits_{n\to\infty}{a_n} = 0$$
     设
     $$A(n) = \dfrac{a_n}{a_{n+1} + a_{n+2}}, \quad B(n) = \dfrac{a_{n+1}}{a_{n+1} + a_{n+2}}$$
     显然$B(n) \in (0,1],\  \forall n \in \mathbb{N}$，则
@@ -648,9 +697,9 @@
     \end{align*}
     
     即
-    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+2} + a_{n+3}}} = 0$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+2} + a_{n+3}}} = 0$$
     同理可证，对任意$p \in \mathbb{N}$
-    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+p} + a_{n+p+1}}} = 0$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+p} + a_{n+p+1}}} = 0$$
     则$\forall p \in \mathbb{N}$，$\exists N_p \in \mathbb{N}$，$n > N_p$时
     $$\dfrac{a_n}{a_{n+p} + a_{n+p+1}} < \dfrac{1}{4}$$
     即$n > N_p$时，$a_n < 2a_{n+p}$和$a_n < 2a_{n + p + 1}$中至少有一个成立。\\
@@ -661,7 +710,7 @@
 \begin{proposition}
 
     证明：
-    $$\lim_{n\to\infty}{\left( \dfrac{1+a_{n+1}}{a_n} \right)^n} \geq \euler$$
+    $$\lim\limits_{n\to\infty}{\left( \dfrac{1+a_{n+1}}{a_n} \right)^n} \geq \euler$$
     对所有正数数列$\{a_n\}$成立，且$\euler$不能再改进。
 
 \end{proposition}
@@ -670,11 +719,11 @@
 
     设$s_k = \left( \dfrac{1+a_{k+1}}{a_k} \right)^k$，则$s_k \geq 0$，且$\sup\limits_{k\geq n}\{s_k\}$对$n$不增。\\
     则$\sup\limits_{k\geq n}\{s_k\}$对$n$极限存在，设
-    $$\lim_{n\to\infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
+    $$\lim\limits_{n\to\infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
     则对任意$0 < \varepsilon < l - \euler$，选取$N \in \mathbb{N}$，$n > N$时
     $$l \leq \sup_{k\geq n }{\{s_k\}} < \euler - \varepsilon$$
     我们有
-    $$\lim_{n\to\infty}{\left( 1 + \dfrac{1}{n}\right)^n} = \euler$$
+    $$\lim\limits_{n\to\infty}{\left( 1 + \dfrac{1}{n}\right)^n} = \euler$$
     令
     $$r_n = \left(1 + \dfrac{1}{n}\right)^n$$
     选取$N' \in \mathbb{N}$，$n > N'$时
@@ -685,18 +734,18 @@
     $$s_n \leq \sup_{k\geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
     则有
     $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n+1}}{n+1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
-    $$\sum_{k = M + 1}^{m-1}{\dfrac{1}{k+1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
+    $$\sum\limits_{k = M + 1}^{m-1}{\dfrac{1}{k+1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
     令$m \to \infty$，则$\sum\limits_{k = M + 1}^{\infty}{\dfrac{1}{k + 1}}$收敛，而调和级数不收敛。所以
-    $$\lim_{n\to\infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
+    $$\lim\limits_{n\to\infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
 
 \end{proof}
 
 \begin{proposition}
     
     设
-    $$\lim_{n\to\infty}{a_n} = q, \quad |q| < 1$$
+    $$\lim\limits_{n\to\infty}{a_n} = q, \quad |q| < 1$$
     证明：
-    $$\lim_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
+    $$\lim\limits_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
 
 \end{proposition}
 
@@ -717,16 +766,16 @@
     \end{align*}
 
     所以
-    $$\lim_{n\to\infty}{(1 - q)(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = a$$
+    $$\lim\limits_{n\to\infty}{(1 - q)(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = a$$
     又$1 - q \neq 0$，所以
-    $$\lim_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
+    $$\lim\limits_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
 
 \end{proof}
 
 \begin{proposition}
 
     设数列$\{a_n\}$满足
-    $$a_n = \sum_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}}, \quad n = 1,2,\cdots$$
+    $$a_n = \sum\limits_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}}, \quad n = 1,2,\cdots$$
     证明：
     
     \begin{enumerate}
@@ -736,7 +785,7 @@
             $$a_n = \dfrac{n+1}{2n}a_n + 1$$
         
         \item 
-            $$\lim_{n\to\infty}{a_n} = 2$$
+            $$\lim\limits_{n\to\infty}{a_n} = 2$$
         
     \end{enumerate}
 
@@ -749,11 +798,11 @@
         \item 
             由$a_n = \dfrac{n+1}{2n}a_n + 1$知，
             $$2a_n - a_{n-1} - 2 = \dfrac{a_{n-1}}{n}$$
-            $$a_n = \sum_{k=0}^{n -1}{\dfrac{1}{\binom{n}{k}}} + 1$$
+            $$a_n = \sum\limits_{k=0}^{n -1}{\dfrac{1}{\binom{n}{k}}} + 1$$
             所以
 
             \begin{align*}
-                2a_n - a_{n-1} - 2 & = \sum_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}} + \sum_{k=0}^{n}{\binom{n}{k+1}} - \sum_{k=0}^{n}{\binom{n-1}{k}} \\
+                2a_n - a_{n-1} - 2 & = \sum\limits_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}} + \sum\limits_{k=0}^{n}{\binom{n}{k+1}} - \sum\limits_{k=0}^{n}{\binom{n-1}{k}} \\
                 & = \dfrac{k!(n-k)!}{n!} + \dfrac{(k+1)!(n-k+1)!}{n!} - \dfrac{(k-1)!(n-k-1)!}{(n-1)!} \\
                 & = \dfrac{k!(n-k-1)!}{n!} \\
                 & = \dfrac{1}{n} a_{n-1} 
@@ -770,9 +819,9 @@
 
         因为$a_1 = 2, a_2 = \dfrac{5}{2}, a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n+1}$\\
         即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
-        $$\lim_{n\to\infty}{a_n} = \lim_{n\to\infty}{\dfrac{n+1}{2n}a_{n-1}+1}$$
+        $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{\dfrac{n+1}{2n}a_{n-1}+1}$$
         得
-        $$\lim_{n\to\infty}{a_n} = 2$$
+        $$\lim\limits_{n\to\infty}{a_n} = 2$$
 
     \end{enumerate}
 

@@ -12,10 +12,10 @@
 
     应用数学归纳法。$n=1$时，$f(x) = c_1 \euler^{\lambda_1 x}$无零点，结论成立。\\
     假设$n = m$时成立，则$n = m + 1$时，应用反证法，假设此时零点个数大于等于$m+1$
-    $$f(x) = \sum_{k=1}^{m+1}{c_k\euler^{\lambda_k x}} = \left[c_{m+1} + \sum_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}}\right]$$
+    $$f(x) = \sum\limits_{k=1}^{m+1}{c_k\euler^{\lambda_k x}} = \left[c_{m+1} + \sum\limits_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}}\right]$$
     令
-    $$g(x) = \sum_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}} + c_{m+1}$$
-    则$g(x)$有至少$m+1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum_{k=1}^{m}{c_k (\lambda_k - \lambda_{m+1}) \euler^{(\lambda_k - \lambda_{m+1}) x}}$至少有$m$个零点\\
+    $$g(x) = \sum\limits_{k=1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m+1}) x}} + c_{m+1}$$
+    则$g(x)$有至少$m+1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum\limits_{k=1}^{m}{c_k (\lambda_k - \lambda_{m+1}) \euler^{(\lambda_k - \lambda_{m+1}) x}}$至少有$m$个零点\\
     因为$a_k = c_k(\lambda_k - \lambda_{m+1})$互异，且$\lambda_k - \lambda_{m+1}$不同时为$0$\\
     所以$g'(x)$零点个数小于$m$个，与假设矛盾。则$n = m+1$时结论成立。\\
     由数学归纳法，结论得证。
@@ -33,29 +33,29 @@
 \begin{proof}
 
     因为$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$，所以
-    $$\lim_{x\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2}\right)}{x} \right|}$$
+    $$\lim\limits_{x\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2}\right)}{x} \right|}$$
     $\forall \varepsilon > 0$，$\exists \delta > 0$，$|x| < \delta$
     $$\left| \dfrac{f(x) - f\left(\dfrac{x}{2}\right)}{x} \right| < \dfrac{\varepsilon}{2}$$
     即
     $$f(x) - f\left(\dfrac{x}{2}\right) = x\alpha(x),\quad |x| < \delta$$
     其中$|\alpha(x)| < \dfrac{\varepsilon}{2},\ |x| < \delta$，则
-    $$f(x) - f\left(\dfrac{x}{2^n}\right) = \sum_{k=1}^{n}{\left( f\left(\dfrac{x}{2^{k-1}}\right) - f\left(\dfrac{x}{2^k}\right) \right)} = \sum_{k=1}^{n}{\left[ \dfrac{x}{2^{k-1}}\alpha\left(\dfrac{x}{2^k}\right) \right]}$$
+    $$f(x) - f\left(\dfrac{x}{2^n}\right) = \sum\limits_{k=1}^{n}{\left( f\left(\dfrac{x}{2^{k-1}}\right) - f\left(\dfrac{x}{2^k}\right) \right)} = \sum\limits_{k=1}^{n}{\left[ \dfrac{x}{2^{k-1}}\alpha\left(\dfrac{x}{2^k}\right) \right]}$$
     因为$k \in \mathbb{N}$时，
     $$\left| \dfrac{x}{2^{k-1}} \right| \leq |x|$$
     所以
 
     \begin{align*}
-        \left|f(x) - f\left(\dfrac{x}{2^k}\right)\right| & \leq \sum_{k=1}^{n}{\left[\dfrac{x}{2^{k-1}}\left|\alpha\left(\dfrac{x}{2^{k-1}}\right)\right| |x| \right]} \\
-        & \leq |x| \sum_{k=1}^{n}{\left(\dfrac{1}{2^k}\right)} \varepsilon \\
+        \left|f(x) - f\left(\dfrac{x}{2^k}\right)\right| & \leq \sum\limits_{k=1}^{n}{\left[\dfrac{x}{2^{k-1}}\left|\alpha\left(\dfrac{x}{2^{k-1}}\right)\right| |x| \right]} \\
+        & \leq |x| \sum\limits_{k=1}^{n}{\left(\dfrac{1}{2^k}\right)} \varepsilon \\
         & = |x| \left[1 - \left(\dfrac{1}{2}\right)^n \right] \varepsilon 
     \end{align*}
 
     所以
     $$\left| \dfrac{f(x) - f\left(\dfrac{x}{2^n}\right)}{x} \right| \leq \varepsilon \left[1 - \left(\dfrac{1}{2}\right)^n \right] < \varepsilon$$
     又
-    $$\lim_{n\to\infty}{f\left(\dfrac{x}{2^n}\right)} = \lim_{n\to\infty}{f(x)} = 0$$
+    $$\lim\limits_{n\to\infty}{f\left(\dfrac{x}{2^n}\right)} = \lim\limits_{n\to\infty}{f(x)} = 0$$
     则
-    $$\lim_{n\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2^n}\right)}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon $$
+    $$\lim\limits_{n\to\infty}{\left| \dfrac{f(x) - f\left(\dfrac{x}{2^n}\right)}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon $$
     所以
     $$f(x) = O(x) \quad (x \to 0)$$
 
@@ -166,7 +166,7 @@
 \begin{proposition}
     
     设函数$f$在区间$I$上只有可去间断点，定义
-    $$g(x) = \lim_{t \to x}{f(t)}$$
+    $$g(x) = \lim\limits_{t \to x}{f(t)}$$
     证明：$g \in C(I)$
 
 \end{proposition}
@@ -178,14 +178,14 @@
     于是，当$|x - x_0| < \dfrac{\delta}{2}$时，有
 
     \begin{align*}
-        |g(x) - g(x_0)| & = \left|\lim_{t \to x}{f(t) - g(x_0)} \right| \\
-        & = \lim_{t \to x}{|f(t) - g(x_0)|} \\
+        |g(x) - g(x_0)| & = \left|\lim\limits_{t \to x}{f(t) - g(x_0)} \right| \\
+        & = \lim\limits_{t \to x}{|f(t) - g(x_0)|} \\
         & \leq \dfrac{\varepsilon}{2} \\
         & < \varepsilon 
     \end{align*}
 
     所以
-    $$\lim_{x\to x_0}{g(x)} = g(x_0)$$
+    $$\lim\limits_{x\to x_0}{g(x)} = g(x_0)$$
     即$g$在$x_0$处连续，由$x_0$的任意性可知，$g$在区间$I$上连续。
 
 \end{proof}
@@ -224,9 +224,9 @@
 
     \begin{enumerate}
 
-        \item $$\lim_{n\to\infty}{x_n} = +\infty$$
+        \item $$\lim\limits_{n\to\infty}{x_n} = +\infty$$
         
-        \item $$\lim_{n\to\infty}{[f(x_n + \lambda) - f(x_n)]} = 0$$
+        \item $$\lim\limits_{n\to\infty}{[f(x_n + \lambda) - f(x_n)]} = 0$$
         
     \end{enumerate}
 
@@ -258,9 +258,9 @@
 \begin{proposition}
 
     设函数$f$在$[0,+\infty)$上一致连续，且任意$x \in [0,1]$有
-    $$\lim_{n\to\infty}{f'(x+n)} = 0$$
+    $$\lim\limits_{n\to\infty}{f'(x+n)} = 0$$
     证明：
-    $$\lim_{n\to\infty}{f(x)} = 0$$
+    $$\lim\limits_{n\to\infty}{f(x)} = 0$$
 
 \end{proposition}
 
@@ -276,7 +276,7 @@
     即
     $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
     由于$\lim\limits_{n\to\infty}{f(x+n)} = 0$，$\forall x \in [0,1]$成立，所以对任意$x_k,\ k \in \{0,1,2,\cdots , m-1\}$
-    $$\lim_{n\to\infty}{f(x+n)} = 0$$
+    $$\lim\limits_{n\to\infty}{f(x+n)} = 0$$
     因此$\exists N \in \mathbb{N}$，$n >N$时
     $$|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0,1,2,\cdots , m\}$$
     当$x > N > 1$时，$\lfloor x \rfloor > N$，且
@@ -288,7 +288,7 @@
     \end{align*}
 
     所以
-    $$\lim_{n\to\infty}{f(x)} = 0$$
+    $$\lim\limits_{n\to\infty}{f(x)} = 0$$
 
 \end{proof}
 
@@ -314,11 +314,11 @@
         \item
             反证法。若对$\varepsilon_0 > 0$，在$[a,b]$上使$\left| \lim\limits_{t \to x}{f(t) - f(x)} \right| > \varepsilon$的点有无限个，\\
             令间断点集合为点列$\{x_n\} \subset [a,b]$，由聚点定理得，存在子列$\{x_k\}$收敛，即
-            $$\lim_{k \to \infty}{x_k} = \alpha $$
+            $$\lim\limits_{k \to \infty}{x_k} = \alpha $$
             又由题设，设$\lim\limits_{t\to \alpha}{f(t)} = \alpha$，由极限性质得知，$\exists \delta > 0$，$|t- a| < \delta$
             $$|f(t) - \alpha| < \dfrac{1}{2} \varepsilon_0$$
             又由\textup{Heine}归结定理得
-            $$\lim_{k \to +\infty}{f(x_k)} = \lim\limits_{t\to \alpha}{f(t)} = \alpha$$
+            $$\lim\limits_{k \to +\infty}{f(x_k)} = \lim\limits_{t\to \alpha}{f(t)} = \alpha$$
             则存在$k_0 \in \mathbb{N}$，$k \geq k_0$时
             $$|f(t) - f(x_k)| \leq |f(t) - \alpha| + |f(x_k) - \alpha| = \dfrac{1}{2} \varepsilon + \dfrac{1}{2} \varepsilon = \varepsilon$$
             其中$|t - x_k|$可任意小，与题设矛盾。
@@ -337,7 +337,7 @@
 \begin{proposition}
 
     设函数$f$在$[0,+\infty)$上定义，且在其中的每个有界子区间上上有界，证明：
-    $$\lim_{x \to +\infty}{\dfrac{f(x)}{x}} = \lim_{x \to +\infty}{[f(x+1) - f(x)]}$$
+    $$\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = \lim\limits_{x \to +\infty}{[f(x+1) - f(x)]}$$
 
 \end{proposition}
 
@@ -355,13 +355,13 @@
     \begin{align*}
         \left| \dfrac{f(x)}{x} - A \right| & = \left| \dfrac{\sum\limits_{i=1}^{n}{[f(x - i) - f(x - i -1) + f(x -n)]}}{x} - A \right| \\
         & = \left| \dfrac{\sum\limits_{i=1}^{n}{[f(x - i) - f(x - i - 1) - A]} + nA + f(x - n)}{x} - A \right| \\
-        & \leq \sum_{i = 1}^{n}{\left| \dfrac{f(x -i) - f(x -i -1)}{x} - A \right|} + \left| \dfrac{(x-n)A}{x} \right| + \left| \dfrac{f(x -n)}{x} \right| \\
+        & \leq \sum\limits_{i = 1}^{n}{\left| \dfrac{f(x -i) - f(x -i -1)}{x} - A \right|} + \left| \dfrac{(x-n)A}{x} \right| + \left| \dfrac{f(x -n)}{x} \right| \\
         & < \dfrac{\varepsilon}{3} \cdot \dfrac{n}{x} + \dfrac{\delta_1 + 1}{\delta} A + \dfrac{M}{\delta} \\
         & < \dfrac{\varepsilon}{3} +\dfrac{\varepsilon}{3} + \dfrac{\varepsilon}{3} = \varepsilon
     \end{align*}
 
     因此
-    $$\lim_{x \to +\infty}{\dfrac{f(x)}{x}} = A =  \lim_{x \to +\infty}{[f(x+1) - f(x)]}$$
+    $$\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = A =  \lim\limits_{x \to +\infty}{[f(x+1) - f(x)]}$$
 
 \end{proof}
 
@@ -378,7 +378,7 @@
     反证法。设$f(x) \neq 0,\ x \in [a,b]$\\
     令$S = \{x | x \in [a,b] \land f(x) = 0\}$，则显然$S$非空。设$ c = \inf{S}$\\
     如果$c= b$，则$f(x) = 0, \ \forall x \in [a,b]$，由连续性可知
-    $$f(b) = \lim_{x\to b}{f(x)} = 0$$
+    $$f(b) = \lim\limits_{x\to b}{f(x)} = 0$$
     与题设矛盾。因此$c \neq b$，又$c =a $，则有$f(c) = 0$，否则$a<c<b$时
     $$f(x) = 0, \quad \forall x < c$$
     则由函数连续性知$f(c) = 0$. 综上
@@ -411,7 +411,7 @@
     $$f^{(n)}(1) = 0$$
     所以
     $$y^{(n)}(1) = \left[(1 + \sqrt{x})^{2n+2} + (1 - \sqrt{x})^{2n+2}\right]^{(n)}\Big|_{x=1}$$
-    $$ (1 + \sqrt{x})^{2n+2} + (1 - \sqrt{x})^{2n+2} = 2 \sum_{k=0}^{n+1}{\binom{2n+2}{2k}x^k}$$
+    $$ (1 + \sqrt{x})^{2n+2} + (1 - \sqrt{x})^{2n+2} = 2 \sum\limits_{k=0}^{n+1}{\binom{2n+2}{2k}x^k}$$
     对右侧函数求$n$次导，易知
     $$y^{(n)}(1) = 4(n+1)(n+1)!$$
 
@@ -659,7 +659,7 @@
     当$x \in \left((2n -1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4})\right)$时，
     $$\varphi'(x) > \dfrac{\sqrt{x}}{2} \left((2n -1)\pi + \dfrac{3\pi}{4}\right) - 1 > 0$$
     由函数单调性确定了根的个数。\\
-    因为$\lim_{x_n} = + \infty$，所以
+    因为$\lim\limits_{x_n} = + \infty$，所以
     $$1 = \lim\limits_{n \to \infty}{\euler^{-x} + 1} = \lim\limits_{n \to \infty}{\sin{x_n}(2\sin{x_n} - x_n)} = \lim\limits_{n \to \infty}{(-1)^n \sin{(x_n - n\pi)}(2\sin{x_n} - x_n)}$$
     因此$\lim\limits_{n \to \infty}{(x_n - n\pi)} = 0$
     
@@ -766,8 +766,8 @@
     设$f$与$g$的周期分别为$T$和$S$，则对任意$x \in \mathbb{R}$，有
     
     \begin{align*}
-        f(x)-g(x) &= \lim_{n\to\infty}{f(x)-g(x)}\\
-        &= \lim_{n\to\infty}[(f(x+nT)-g(x+nT))+\\
+        f(x)-g(x) &= \lim\limits_{n\to\infty}{f(x)-g(x)}\\
+        &= \lim\limits_{n\to\infty}[(f(x+nT)-g(x+nT))+\\
         &\quad(g(x+nT+nS)-f(x+nT+nS)+f(x+nS)-g(n+nS))]\\
         &= 0 + 0 + 0\\
         &= 0
@@ -835,12 +835,12 @@
 
             所以$f$在$\mathbb{R}$连续。\\
             设$p_0$为任意无理数，则存在有理数列$\{p_n\}\to p_0(n\to\infty)$
-            $$f(p_0) = \lim_{n\to\infty}{f(p_n)} = \lim_{n\to\infty}{p_nf(1)} = p_0f(1)$$
+            $$f(p_0) = \lim\limits_{n\to\infty}{f(p_n)} = \lim\limits_{n\to\infty}{p_nf(1)} = p_0f(1)$$
             
         \item 
             不妨设$f$在$\mathbb{R}$上单调增加。$\forall x \in \mathbb{R}$，取有理数列$\{x_n'\},\ \{x_n''\}$，\\
             使$x_n'f(1) < x < x_n''$，且
-            $$\lim_{n\to\infty}{x_n'} = \lim_{n\to\infty}{x_n''}=x$$
+            $$\lim\limits_{n\to\infty}{x_n'} = \lim\limits_{n\to\infty}{x_n''}=x$$
             由$f$单调增加的条件，
             $$x_n'f(1) < f(x_n') \leq f(x) \leq f(x_n'') = x_n''f(1)$$
             令$n\to+\infty$，
@@ -999,7 +999,7 @@
 \begin{proposition}
     
     设$f$是$[0,1]$上的连续函数，且$f$在$(0,1)$上可微，$f(0) = 0,f(1) = 1$，证明：存在点列$\{\alpha_k\}$，使得
-    $$\sum_{k=0}^{n}{\dfrac{1}{f'(\alpha_k)}} = n, \quad n \in \mathbb{N}$$
+    $$\sum\limits_{k=0}^{n}{\dfrac{1}{f'(\alpha_k)}} = n, \quad n \in \mathbb{N}$$
     
 \end{proposition}
 
@@ -1011,7 +1011,7 @@
     $$f(b_i) = \dfrac{i}{n}, \quad i = 0,1,\cdots,n$$
     由\textup{Lagrange}中值定理知，对于任意区间$[b_i, \ b_{i+1}],\ i = 1,2,\cdots,n$，$\exists \alpha_i \in (b_{i-1}, \ b_i)$
     $$f'(\alpha_i) = \dfrac{f(b_i) - f(b_{i-1})}{b_i - b_{i-1}} = \dfrac{1}{n(b_i - b_{i-1})}$$
-    $$\sum_{i=1}^{n}{\dfrac{1}{f'(\alpha_i)}} = n \sum_{i=0}^{n}{(b_i - b_{i-1})} = n(b_n - b_0) = n$$
+    $$\sum\limits_{i=1}^{n}{\dfrac{1}{f'(\alpha_i)}} = n \sum\limits_{i=0}^{n}{(b_i - b_{i-1})} = n(b_n - b_0) = n$$
 
 \end{proof}
 
@@ -1020,7 +1020,7 @@
     设$f$在$[a,b]$上$n+1$阶可微，$f^{(n+1)}(x_0) \neq 0$，$n \in \mathbb{N}$，在$[a,b]$上有
     $$f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}$$
     证明：
-    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
 
 \end{proposition}
 
@@ -1033,7 +1033,7 @@
     $$\dfrac{(f^{(n)}(\xi) - f^{(n)}(x_0))(x - x_0)^n}{n!} = \dfrac{f^{(n+1)}(x_0)(x - x_0)^{n+1}}{(n+1)!} + O(x - x_0)^{n+1}$$
     $$\dfrac{f^{(n)}(\xi) - f^{(n)}(x_0)}{\xi - x_0} \dfrac{\xi - x_0}{x- x_0} \dfrac{(x - x_0)^{n+1}}{n!} = \dfrac{f^{(n+1)}(x_0)(x - x_0)^{n+1}}{(n+1)!} + O(x - x_0)^{n+1}$$
     两边对$x$取极限，得
-    $$\lim_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
 
 \end{proof}
 

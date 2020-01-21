@@ -3,7 +3,7 @@
 \begin{proposition}
 
     设$\{a_n\}$是严格单调增加的实数列，且$a_n \leq n^2 \ln n,\ n\in\mathbb{N}$，证明：级数
-    $$ \sum_{n=1}^{\infty}{\dfrac{1}{a_{n+1} - a_n}}$$
+    $$ \sum\limits_{n=1}^{\infty}{\dfrac{1}{a_{n+1} - a_n}}$$
 
 \end{proposition}
 
@@ -12,24 +12,24 @@
     反证法。假设级数收敛，则由$a_1 \leq 1^2 \ln1 \leq 0$，得
     
     \begin{align*}
-        \sum_{n=1}^{\infty}{\dfrac{1}{a_{n+1}a_n}} &= \sum_{k=1}^{\infty}{\left(\sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}}\right)}\\
-        &= \sum_{k=1}^{\infty}{\dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}}\\
+        \sum\limits_{n=1}^{\infty}{\dfrac{1}{a_{n+1}a_n}} &= \sum\limits_{k=1}^{\infty}{\left(\sum\limits_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}}\right)}\\
+        &= \sum\limits_{k=1}^{\infty}{\dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}}\\
         &\leq +\infty
     \end{align*}
 
     这意味着$\exists k \in \mathbb{N}$，使
-    $$ \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} < \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}$$
+    $$ \sum\limits_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} < \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}$$
     同时，由\textup{Cauthy-Schwarz}不等式知
 
     \begin{align*}
-        & \left( \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} \right) \cdot \left( \sum_{n=2^{k-1}}^{2^k - 1}{a_{n+1}-a_n} \right) \\
-        \geq & \left( \sum_{n=2^{k-1}}^{2^k - 1}{1} \right)^2 = (2^k - 2^{k-1})^2 =  4^{k-1}
+        & \left( \sum\limits_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}} \right) \cdot \left( \sum\limits_{n=2^{k-1}}^{2^k - 1}{a_{n+1}-a_n} \right) \\
+        \geq & \left( \sum\limits_{n=2^{k-1}}^{2^k - 1}{1} \right)^2 = (2^k - 2^{k-1})^2 =  4^{k-1}
     \end{align*}
 
     因此
 
     \begin{align*}
-        \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})} &> \sum_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}}\\
+        \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})} &> \sum\limits_{n=2^{k-1}}^{2^k - 1}{\dfrac{1}{a_{n+1}-a_n}}\\
         & \leq \dfrac{4^{k-1}}{\sum\limits_{n=2^{k-1}}^{2^k - 1}{(a_{n+1}-a_n})}\\
         & = \dfrac{4^{k-1}}{a_{2^k} - a^{2^{k-1}}}\\
         & \geq \dfrac{4^{k-1}}{a_{2^k} - a_1}
@@ -46,7 +46,7 @@
 \begin{proposition}
 
     设$\{a_n\}$使单调减少收敛于$0$的实数列，证明：
-    $$\sum_{n=1}^{\infty}{\dfrac{a_n}{n}} < \infty$$
+    $$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{n}} < \infty$$
     当且仅当$a_n = O\left(\sum\limits_{n=1}^{\infty}{\dfrac{1}{\ln{n}}}\right)$，且$\sum\limits_{n=1}^{\infty}{(a_n - a_{n+1})\ln{n}}$
 
 \end{proposition}
@@ -54,7 +54,7 @@
 \begin{proof}
     
     令
-    $$S_N = \sum_{n=1}^{N}{\dfrac{a_n}{n}},\ T_N = \sum_{n=1}^{N}{(a_n - a_{n+1})\ln{n}}$$
+    $$S_N = \sum\limits_{n=1}^{N}{\dfrac{a_n}{n}},\ T_N = \sum\limits_{n=1}^{N}{(a_n - a_{n+1})\ln{n}}$$
     因为$\{a_n\}$单调减少收敛于$0$，且$S_n,\ T_n$单调增加，则假设$\{S_n\},\ \{T_n\}$收敛，$S,\ T$分别为其极限，注意到
     $$\ln{n} -\ln{n-1} = \int_{n-1}^{n}{\dfrac{1}{x}}\diff x \in \left(\dfrac{1}{n},\dfrac{1}{n-1}\right)$$
 
@@ -64,9 +64,9 @@
                 如果$S_N < \infty,\ N \geq 2$时，
 
                 \begin{align*}
-                    a_N\ln{N} &\leq a_N\sum_{n=2}^{\infty}{[\ln{n} - \ln{(n-1)}]} \\
-                    & \leq a_N \sum_{n=2}^{\infty}{\dfrac{1}{n-1}} \\
-                    & \leq \sum_{n=2}^{\infty}{\dfrac{a_{n-1}}{n+1}}\\
+                    a_N\ln{N} &\leq a_N\sum\limits_{n=2}^{\infty}{[\ln{n} - \ln{(n-1)}]} \\
+                    & \leq a_N \sum\limits_{n=2}^{\infty}{\dfrac{1}{n-1}} \\
+                    & \leq \sum\limits_{n=2}^{\infty}{\dfrac{a_{n-1}}{n+1}}\\
                     & = S_{n-1}\\
                     & \leq S
                 \end{align*}
@@ -74,11 +74,11 @@
                 这表明$a_n = O\left(\dfrac{1}{\ln{n}}\right)$，同时
 
                 \begin{align*}
-                    T_N &= \sum_{n=1}^{N}{(a_n - a_{n+1})\ln{n}} \\
-                    & = \sum_{n=2}^{N}{a_n\ln{n}} - \sum_{n=2}^{N+1}{a_{n}\ln{(n-1)}} \\
-                    & = \sum_{n=2}^{N}{[a_n\big(\ln{n} - \ln(n-1)\big)]} - a_{N+1}\ln{N} \\
-                    & \leq \sum_{n=1}^{N}{\dfrac{a_{n}}{n-1}} \\
-                    & \leq \sum_{n=1}^{N}{\dfrac{a_{n-1}}{n-1}} \\
+                    T_N &= \sum\limits_{n=1}^{N}{(a_n - a_{n+1})\ln{n}} \\
+                    & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N+1}{a_{n}\ln{(n-1)}} \\
+                    & = \sum\limits_{n=2}^{N}{[a_n\big(\ln{n} - \ln(n-1)\big)]} - a_{N+1}\ln{N} \\
+                    & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n}}{n-1}} \\
+                    & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n-1}}{n-1}} \\
                     & = S_{n-1} \\
                     & \leq S
                 \end{align*}
@@ -89,10 +89,10 @@
                 如果$T < \infty$，且$a_{N}\ln{N} \leq M,\ N \geq 2$时
                         
                 \begin{align*}
-                    S_N - a_1 &= \sum_{n=2}^{N}{\dfrac{a_n}{n}} \\
-                    & \leq \sum_{n=2}^{N}{a_n\big(\ln{n} - \ln(n-1)\big)} \\
-                    & = \sum_{n=2}^{N}{a_n\ln{n}} - \sum_{n=2}^{N-1}{a_{n+1}\ln{n}} \\
-                    & = \sum_{n=2}^{N-1}{(a_n - a_{n+1})\ln{n}} + a_N\ln{N} \\
+                    S_N - a_1 &= \sum\limits_{n=2}^{N}{\dfrac{a_n}{n}} \\
+                    & \leq \sum\limits_{n=2}^{N}{a_n\big(\ln{n} - \ln(n-1)\big)} \\
+                    & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N-1}{a_{n+1}\ln{n}} \\
+                    & = \sum\limits_{n=2}^{N-1}{(a_n - a_{n+1})\ln{n}} + a_N\ln{N} \\
                     & = T_{N-1} + a_N\ln{(N+1)} \\ 
                     & < T + M
                 \end{align*}
@@ -108,7 +108,7 @@
     对$N \in \mathbb{N}$，定义
     $$ S_n = 1 + \dfrac{n-1}{n+2} +\dfrac{n-2}{n+3} + \cdots + \dfrac{1}{2n} $$
     证明：
-    $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\pi}{2}$$
+    $$\lim\limits_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\pi}{2}$$
 
 \end{proposition}
 
@@ -131,16 +131,16 @@
     \end{align*}
 
     因此
-        $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{n+1}{n} \dfrac{2^{2n}(n!)^2}{2(2n)!\sqrt{n}} - \dfrac{n+1}{2^n\sqrt{n}}$$
+        $$\lim\limits_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{n+1}{n} \dfrac{2^{2n}(n!)^2}{2(2n)!\sqrt{n}} - \dfrac{n+1}{2^n\sqrt{n}}$$
     由\textup{Waills}公式知
-        $$\lim_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\sqrt{\pi}}{2}$$
+        $$\lim\limits_{n\to\infty}{\dfrac{S_n}{\sqrt{n}}} = \dfrac{\sqrt{\pi}}{2}$$
 
 \end{proof}
 
 \begin{proposition}
     
     设$a_n > 0(n = 1,2,\cdots)$，且级数$\sum\limits_{n=1}^{\infty}{\dfrac{1}{a_n}}$，证明：级数
-    $$ \sum_{n=1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2+ \cdots + a_n)^2}} $$
+    $$ \sum\limits_{n=1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2+ \cdots + a_n)^2}} $$
 
 \end{proposition}
 
@@ -150,17 +150,17 @@
     再令$b_n = 0$，于是原级数部分和$S_n = \sum\limits_{k=1}^{n}{\dfrac{k^2a_k}{(a_1 + a_2 + \cdots + a_k)^2}}$有
 
     \begin{align*}
-        S_n &= \sum_{k=1}^{n}{\dfrac{k^2(b_k - b_{k-1})}{b_k^2}} \\
-        & \leq \sum_{k=2}^{n}{\dfrac{k^2(b_k - b_{k-1})}{b_k b_{k-1}}} + \dfrac{1}{a_1} \\
-        & \leq  \dfrac{1}{a_1} + \sum_{k=2}^{n}{\dfrac{k^2}{b_{k-1}}} - \sum_{k=2}^{n}{\dfrac{k^2}{b_k}} \\
-        & = \dfrac{5}{a_1} + \sum_{k=2}^{n}{\dfrac{2k+1}{b_k}} \\
-        & = \dfrac{5}{a_1} + 2\sum_{k=2}^{n}{\dfrac{k}{b_k}} + \sum_{k=2}^{n}{\dfrac{1}{b_k}} \\
-        & = \dfrac{5}{a_1} + 2\sum_{k=2}^{n}{\dfrac{k}{b_k}} + \sum_{k=2}^{n}{\dfrac{1}{a_k}}
+        S_n &= \sum\limits_{k=1}^{n}{\dfrac{k^2(b_k - b_{k-1})}{b_k^2}} \\
+        & \leq \sum\limits_{k=2}^{n}{\dfrac{k^2(b_k - b_{k-1})}{b_k b_{k-1}}} + \dfrac{1}{a_1} \\
+        & \leq  \dfrac{1}{a_1} + \sum\limits_{k=2}^{n}{\dfrac{k^2}{b_{k-1}}} - \sum\limits_{k=2}^{n}{\dfrac{k^2}{b_k}} \\
+        & = \dfrac{5}{a_1} + \sum\limits_{k=2}^{n}{\dfrac{2k+1}{b_k}} \\
+        & = \dfrac{5}{a_1} + 2\sum\limits_{k=2}^{n}{\dfrac{k}{b_k}} + \sum\limits_{k=2}^{n}{\dfrac{1}{b_k}} \\
+        & = \dfrac{5}{a_1} + 2\sum\limits_{k=2}^{n}{\dfrac{k}{b_k}} + \sum\limits_{k=2}^{n}{\dfrac{1}{a_k}}
     \end{align*}
 
     \begin{align*}
-        \left( \sum_{k=1}^{n}{\dfrac{k}{(a_1 + a_2 + \cdots + a_k)^2}} \right)^2 & = \left( \sum_{k=1}^{n}{\left( \dfrac{k\sqrt{a_k}}{(a_1 + a_2 + \cdots + a_k)^2} \cdot \dfrac{1}{\sqrt{a_k}} \right)} \right)^2 \\
-        & \leq \sum_{k=1}^{n}{\dfrac{k^2a_k}{(a_1 + a_2 + \cdots + a_k)^2}} \cdot \sum_{k=1}^{n}{\dfrac{1}{a_k}} \\
+        \left( \sum\limits_{k=1}^{n}{\dfrac{k}{(a_1 + a_2 + \cdots + a_k)^2}} \right)^2 & = \left( \sum\limits_{k=1}^{n}{\left( \dfrac{k\sqrt{a_k}}{(a_1 + a_2 + \cdots + a_k)^2} \cdot \dfrac{1}{\sqrt{a_k}} \right)} \right)^2 \\
+        & \leq \sum\limits_{k=1}^{n}{\dfrac{k^2a_k}{(a_1 + a_2 + \cdots + a_k)^2}} \cdot \sum\limits_{k=1}^{n}{\dfrac{1}{a_k}} \\
         & = S_n T_n
     \end{align*}
 
@@ -186,7 +186,7 @@
 \begin{proposition}
     
     设$a_n > 0$，证明级数
-    $$\sum_{n=1}^{\infty}{\dfrac{a_n}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_n)}}$$
+    $$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_n)}}$$
     收敛
 
 \end{proposition}
@@ -194,7 +194,7 @@
 \begin{proof}
     
     \begin{align*}
-        &\sum_{n=1}^{\infty}{\dfrac{a_k}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_k)}} \\
+        &\sum\limits_{n=1}^{\infty}{\dfrac{a_k}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_k)}} \\
         = \  & \dfrac{a_1}{1 + a_1} + \dfrac{a_2}{(1 + a_1)(1 + a_2)} + \cdots + \quad \dfrac{a_{k-1}}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_{k-1})} + \\
         & \quad \dfrac{a_k}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_k)} \\
         \leq \ & \dfrac{a_1}{1 + a_1} + \dfrac{a_2}{(1 + a_1)(1 + a_2)} + \cdots + \quad \dfrac{a_{k-1}}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_{k-1})} + \\
@@ -216,11 +216,11 @@
     \begin{enumerate}
         
         \item 
-                $$\lim_{n\to\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n}} = 0$$
+                $$\lim\limits_{n\to\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n}} = 0$$
         
         \item   
                 级数$\sum\limits_{n=1}^{\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n(n+1)}}$收敛，且和为
-                $$S = \lim_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}} = \sum\limits_{n=1}^{\infty}{a_n}$$
+                $$S = \lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}} = \sum\limits_{n=1}^{\infty}{a_n}$$
 
     \end{enumerate}
 
@@ -241,7 +241,7 @@
             \end{align*}
 
             由\textup{Cauthy}命题知，
-            $$\lim_{n\to\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n}} = 0$$
+            $$\lim\limits_{n\to\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n}} = 0$$
 
         \item 
             $$\dfrac{a_1 + 2a_2 + \cdots + na_n}{n(n+1)} = \dfrac{a_1 + 2a_2 + \cdots + na_n}{n} - \dfrac{a_1 + 2a_2 + \cdots + na_n + (n+1)a_{n+1}}{n+1} + a_{n+1}$$
@@ -249,8 +249,8 @@
 
             \begin{align*}
                 &\sum\limits_{n=1}^{\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n(n+1)}} \\
-                = \  & \sum_{k=1}^{n}{b_k - b_{k+1} + a_{k+1}} \\
-                = \  & \sum_{k=1}^{n}{a_{k+1} + b_1 + b_{n+1}} \\
+                = \  & \sum\limits_{k=1}^{n}{b_k - b_{k+1} + a_{k+1}} \\
+                = \  & \sum\limits_{k=1}^{n}{a_{k+1} + b_1 + b_{n+1}} \\
                 = \  & S_n - a_1 + b_1 - b_{n+1} \\
                 = \  & S_n - b_{n+1} 
             \end{align*}
@@ -264,7 +264,7 @@
 \begin{proposition}
     
     若正项级数$\sum\limits_{n=1}^{\infty}{\dfrac{1}{a_n}}$收敛，证明：级数
-    $$\sum_{n=1}^{\infty}{\dfrac{n}{a_1 + a_2 + \cdots + a_n}}$$
+    $$\sum\limits_{n=1}^{\infty}{\dfrac{n}{a_1 + a_2 + \cdots + a_n}}$$
     收敛。
 
 \end{proposition}
@@ -309,8 +309,8 @@
     \begin{enumerate}
 
         \item 
-            $$\euler = \sum_{k=0}^{\infty}{\dfrac{1}{k!}} = \sum_{k=0}^{n+1}{\dfrac{1}{k!}} + O(\dfrac{1}{(n+1)!})$$
-            $$n! \euler = \sum_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n + 1}) + \dfrac{1}{n + 1}$$
+            $$\euler = \sum\limits_{k=0}^{\infty}{\dfrac{1}{k!}} = \sum\limits_{k=0}^{n+1}{\dfrac{1}{k!}} + O(\dfrac{1}{(n+1)!})$$
+            $$n! \euler = \sum\limits_{k=0}^{n-2} = \dfrac{n!}{k!} + (n+1) + O(\dfrac{1}{n + 1}) + \dfrac{1}{n + 1}$$
             则有
 
             \begin{align*}
@@ -330,14 +330,14 @@
             显然$\sum\limits_{n=0}^{\infty}{\sin{(n!\pi x)}}$收敛。
 
         \item 注意到$\forall x \in [0,1]$，可以被表示为如下形式
-            $$x = \sum_{k=0}^{\infty}{\dfrac{a_k}{k!}}, \quad a_k \in \{0, 1, \cdots, k-1\}$$
+            $$x = \sum\limits_{k=0}^{\infty}{\dfrac{a_k}{k!}}, \quad a_k \in \{0, 1, \cdots, k-1\}$$
             又由$x$的展开形式得
             $$\sin{(n!\pi x)} = (-1)^{na_{n-1} + a_n} \sin{\left(\pi \sum\limits_{k=1}^{\infty}{\dfrac{a_{n+k}}{(n+1)(n+2) \cdots(n+k)}}\right)}$$
             由观察得
             $$ |\sin{(n!\pi x)}| = \left| \sin{\left(\pi \sum\limits_{k=1}^{\infty}{\dfrac{a_{n+k}}{(n+1)(n+2) \cdots(n+k)}}\right)} \right|$$
-            $$\dfrac{a_{n+1}}{n+1} \leq \sum_{k=1}^{\infty}{\dfrac{a_{n+k}}{(n+1)(n+2) \cdots (n+k)}} \leq \dfrac{a_{n+1} + 1}{n+1} $$
+            $$\dfrac{a_{n+1}}{n+1} \leq \sum\limits_{k=1}^{\infty}{\dfrac{a_{n+k}}{(n+1)(n+2) \cdots (n+k)}} \leq \dfrac{a_{n+1} + 1}{n+1} $$
             将$a_k$看作在$\{0, 1, \cdots, k-1\}$上的随机变量，是$x$的函数，且$a_k$相互独立，所以由\textup{Borel - Cantelli}定理知
-            $$\sum_{k=2}^{\infty}{P \left(\left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
+            $$\sum\limits_{k=2}^{\infty}{P \left(\left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
             则$\dfrac{1}{2} < \dfrac{a_k}{k} < \dfrac{1}{4}$，对无限$k \in \mathbb{N}$成立
             $$\liminf_{n\to\infty}{|\sin{(n!\pi x)}|} \geq \sin{\dfrac{\pi}{4}} = \dfrac{\sqrt{2}}{2}$$
             对几乎所有$x \in [0,1]$成立，又$x \in M$不满足上式，其中$M$为收敛点集合，所以$M$为勒贝格集，不包含任何区间。
@@ -416,7 +416,7 @@
 \begin{proposition}
 
     设$f(x) \in \mathbb{C}[-1,1]$
-    $$\lim_{n\to\infty}{\dfrac{\int_{-1}^{1}{f(x)(1 - x^2)^n}\diff x}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}} = f(0)$$
+    $$\lim\limits_{n\to\infty}{\dfrac{\int_{-1}^{1}{f(x)(1 - x^2)^n}\diff x}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}} = f(0)$$
 
 \end{proposition}
 
@@ -439,7 +439,7 @@
     \end{align*}
 
     所以
-    $$\lim_{n\to\infty}{\dfrac{\int_{-1}^{1}{f(x)(1 - x^2)^n}\diff x}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}} = f(0)$$
+    $$\lim\limits_{n\to\infty}{\dfrac{\int_{-1}^{1}{f(x)(1 - x^2)^n}\diff x}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}} = f(0)$$
 
 \end{proof}
 
@@ -691,7 +691,7 @@
     应用分部积分法，有
     $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x = - \left( \left.\dfrac{f^(x)}{x^2} \right|_{0}^{b} - \int_{0}^{b}{\dfrac{2f'(x)f(x)}{x}}\diff x \right)$$
     又因为
-    $$\lim_{x \to 0}{\dfrac{f^2(x)}{x}} = \lim_{x \to 0}{f'(x)f(x)} = 0$$
+    $$\lim\limits_{x \to 0}{\dfrac{f^2(x)}{x}} = \lim\limits_{x \to 0}{f'(x)f(x)} = 0$$
     所以
 
     \begin{align*}
@@ -767,7 +767,7 @@
     \end{align*}
 
     则有
-    $$\lim_{w\to\infty}{\euler^{-w}\int_{0}^{w}{\euler^tf(t)}\diff t} = 0$$
+    $$\lim\limits_{w\to\infty}{\euler^{-w}\int_{0}^{w}{\euler^tf(t)}\diff t} = 0$$
     则$\dfrac{1}{2}(f(x) - g(x))^2$在$[0,a]\ (\forall a \in \mathrm{R}^+)$上必定有界连续，则
 
     \begin{align*}
@@ -779,8 +779,8 @@
     由上式可知
 
     \begin{align*}
-        \lim_{w\to\infty}{\int_{0}^{w}{f^2(x) - g^2(x)}\diff x} & = \int_{0}^{+\infty}{f^2(x) - g^2(x)}\diff x \\
-        & = \lim_{w\to\infty}{2 \mathbb{e}^{-2w} \left( \int_{0}^{w}{\euler^tf(t)}\diff t \right)^2} \\
+        \lim\limits_{w\to\infty}{\int_{0}^{w}{f^2(x) - g^2(x)}\diff x} & = \int_{0}^{+\infty}{f^2(x) - g^2(x)}\diff x \\
+        & = \lim\limits_{w\to\infty}{2 \mathbb{e}^{-2w} \left( \int_{0}^{w}{\euler^tf(t)}\diff t \right)^2} \\
         & = 0
     \end{align*}
 
@@ -799,12 +799,12 @@
 \begin{proof}
 
     由题设知，$f$可以展开为\textup{Fourier}级数，
-    $$f(x) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty}{a_n\cos{\left(\dfrac{2n\pi x}{T}\right)} + b_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
+    $$f(x) = \dfrac{a_0}{2} + \sum\limits_{n=1}^{\infty}{a_n\cos{\left(\dfrac{2n\pi x}{T}\right)} + b_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
     易知$a_0 = 0$，又
-    $$f'(x) = \sum_{n=1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos{\left(\dfrac{2n\pi x}{T}\right)} - \dfrac{2n\pi}{T}a_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
+    $$f'(x) = \sum\limits_{n=1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos{\left(\dfrac{2n\pi x}{T}\right)} - \dfrac{2n\pi}{T}a_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
     由\textup{Parseval}恒等式知
-    $$\int_{0}^{T}{|f'(x)|^2}\diff x = \sum_{n=1}^{\infty}{\dfrac{4n^2\pi^2}{T^2}(a_n^2 + b_n^2)} \geq \sum_{n=1}^{\infty}{\dfrac{4\pi^2}{T^2}(a_n^2 + b_n^2)}$$
-    $$\int_{0}^{T}{|f(x)|^2}\diff x = \sum_{n=1}^{\infty}{(a_n^2 + b_n^2)}$$
+    $$\int_{0}^{T}{|f'(x)|^2}\diff x = \sum\limits_{n=1}^{\infty}{\dfrac{4n^2\pi^2}{T^2}(a_n^2 + b_n^2)} \geq \sum\limits_{n=1}^{\infty}{\dfrac{4\pi^2}{T^2}(a_n^2 + b_n^2)}$$
+    $$\int_{0}^{T}{|f(x)|^2}\diff x = \sum\limits_{n=1}^{\infty}{(a_n^2 + b_n^2)}$$
     所以 
     $$\int_{0}^{T}{|f(x)|^2}\diff x \leq \dfrac{T^2}{4\pi^2}\int_{0}^{T}{|f'(x)|^2}\diff x$$
 
@@ -885,7 +885,7 @@
     否则由\textup{Darboux}定理知，必存在不同的两点$x,\ y$使得
     $$f'(x) = g'(x)(f(y) - f(x))$$
     令$y \to x$，有
-    $$\lim_{y \to x}{f'(x)} = f'(x) \geq \lim_{y \to x}{g'(x)(f(y) - f(x))} = 0$$
+    $$\lim\limits_{y \to x}{f'(x)} = f'(x) \geq \lim\limits_{y \to x}{g'(x)(f(y) - f(x))} = 0$$
     由$x$的任意性知，$f'(x) \geq 0$，$\forall x \in [0,1]$，
     则由题设
     $$\int_{0}^{\frac{2}{3}}{f(x)}\diff x = 2 \int_{\frac{2}{3}}^{1}{f(x)}\diff x$$
@@ -1101,8 +1101,8 @@
     对任意的$\beta$有
     
     \begin{align*}
-        \int_{\beta}^{+\infty}{\dfrac{f(ax)}{{x}}}\diff x & = \lim_{T\to +\infty}{\int_{\beta}^{T}{\dfrac{f(ax)}{{x}}}\diff x} \\
-        & = \lim_{T\to +\infty}{\int_{a\beta}^{aT}{\dfrac{f(x)}{x}}\diff x} \\
+        \int_{\beta}^{+\infty}{\dfrac{f(ax)}{{x}}}\diff x & = \lim\limits_{T\to +\infty}{\int_{\beta}^{T}{\dfrac{f(ax)}{{x}}}\diff x} \\
+        & = \lim\limits_{T\to +\infty}{\int_{a\beta}^{aT}{\dfrac{f(x)}{x}}\diff x} \\
         & = \int_{a\beta}^{+\infty}{\dfrac{f(x)}{x}}\diff x
     \end{align*}
 
@@ -1111,7 +1111,7 @@
     则
     $$\int_{0}^{+\infty}{\dfrac{f(ax) - f(bx)}{x}}\diff x = \int_{a\beta}^{b\beta}{\dfrac{f(x)}{x}}\diff x = \int_{a}^{b}{\dfrac{f(\beta x)}{x}}\diff x$$
     又
-    $$\lim_{\beta \to 0}{\int_{a}^{b}{\dfrac{f(\beta x)}{x}}\diff x} = f(0) \int_{a}^{b}{\dfrac{1}{x}}\diff x = f(0)\log{\dfrac{b}{a}}$$
+    $$\lim\limits_{\beta \to 0}{\int_{a}^{b}{\dfrac{f(\beta x)}{x}}\diff x} = f(0) \int_{a}^{b}{\dfrac{1}{x}}\diff x = f(0)\ln{\dfrac{b}{a}}$$
     
 \end{proof}
 

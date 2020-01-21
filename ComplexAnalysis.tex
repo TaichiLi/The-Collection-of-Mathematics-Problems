@@ -88,7 +88,7 @@
 \begin{proof}
 
     由题设$f(z)$在复平面$\mathrm{C}$内都能\textup{Taylor}展开，则
-    $$f(z) = \sum_{n=0}^{\infty}{\dfrac{f^{(n)}(z_0)}{n!}(z - z_0)^n}$$
+    $$f(z) = \sum\limits_{n=0}^{\infty}{\dfrac{f^{(n)}(z_0)}{n!}(z - z_0)^n}$$
     应用\textup{Cauthy}积分公式，得
     $$f(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{f(\euler^{\imag \theta})}\diff \theta$$
     从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r\to0^{+}$，有$f(0) = 0$
@@ -110,7 +110,7 @@
 \begin{proposition}
 
     设$\lim\limits_{n\to\infty}{a_nz^n}$收敛，证明：
-    $$\lim_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum_{n=1}^{\infty}{a_n}$$
+    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum\limits_{n=1}^{\infty}{a_n}$$
 
 \end{proposition}
 
@@ -119,8 +119,8 @@
     记$A_k = \sum\limits_{n = 1}^{k}{A_n},\ A_0 = 0$，则
 
     \begin{align*}
-        \sum_{n=1}^{N}{(1-r^n)a_n} & = (1-r^N)A_N + \sum_{n=1}^{N}{(r^n-r^{n+1})A_n}\\
-        & = (1 - r)A_N + \sum_{n=1}^{N}{(r^n-r^{n+1})(A_N - A_n)}
+        \sum\limits_{n=1}^{N}{(1-r^n)a_n} & = (1-r^N)A_N + \sum\limits_{n=1}^{N}{(r^n-r^{n+1})A_n}\\
+        & = (1 - r)A_N + \sum\limits_{n=1}^{N}{(r^n-r^{n+1})(A_N - A_n)}
     \end{align*}
 
     因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n-r^{n+1})(A_N - A_n)} = 0$\\
@@ -131,8 +131,8 @@
     由于$A_n$有界，设$|A_n| \leq M $，则$n > N'$时
     
     \begin{align*}
-        \sum_{n=1}^{N-1}{(r^n - r^{n+1})(A_N - A_n)} & \leq (1 - r)\sum_{n=1}^{N'}{r^n|A_n - A|} + \sum_{n=N'+1}^{N-1}{r^n(|A_n - A| + |A_N -A|)}\\
-        & \leq (\sum_{n=1}^{N'}{2r^nM} + \sum_{n=N'+1}^{N-1}{r^n2\varepsilon})\\
+        \sum\limits_{n=1}^{N-1}{(r^n - r^{n+1})(A_N - A_n)} & \leq (1 - r)\sum\limits_{n=1}^{N'}{r^n|A_n - A|} + \sum\limits_{n=N'+1}^{N-1}{r^n(|A_n - A| + |A_N -A|)}\\
+        & \leq (\sum\limits_{n=1}^{N'}{2r^nM} + \sum\limits_{n=N'+1}^{N-1}{r^n2\varepsilon})\\
         & = (1 - r)\left(2M\dfrac{r - r^{N'+1}}{1 - r} + 2\varepsilon r^{N'+1}\dfrac{1 - R^{N-N'+1}}{1 - r}\right)\\
         & < 2M\varepsilon + 2\varepsilon\\
         & = 2(M+1)\varepsilon
@@ -140,14 +140,14 @@
 
     令$n\to+\infty$，再$r\to1$\\
     即
-    $$\lim_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum_{n=1}^{\infty}{a_n}$$
+    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum\limits_{n=1}^{\infty}{a_n}$$
 
 \end{proof}
 
 \begin{proposition}
     
     设$f$在$\mathbb{C}$上解析，且满足对于任一点$z_0\in\mathbb{C}$，$f$在$z_0$的\textup{Tarloy}展开式
-    $$f(z) = \sum_{n=0}^{+\infty}{a_n(z-z_0)}$$
+    $$f(z) = \sum\limits_{n=0}^{+\infty}{a_n(z-z_0)}$$
     满足至少有一个$c_n$为$0$，证明$f$是多项式。
 
 \end{proposition}
@@ -168,7 +168,7 @@
     
     设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的一个极点$z_0$）解析，证明：\\
     若$\lim\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
-    $$\lim_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
+    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
 
 \end{proposition}
 
@@ -176,17 +176,17 @@
     
     考虑$f(z_0z)$的相同问题，则只需证明$z_0 = 1$的情况\\
     设$g(z)$是$f(z)$在$z=1$处\textup{Taylor}级数的主要部分，即
-    $$g(z) = \sum_{p=1}^{k}{\dfrac{A_p}{(1-z)^p}},\quad p \geq 1$$
-    因为$h(z) = \dfrac{1}{1-z} = \sum_{n=0}^{\infty}{z^n}$，则$h(z)$的$p-1$阶导数
+    $$g(z) = \sum\limits_{p=1}^{k}{\dfrac{A_p}{(1-z)^p}},\quad p \geq 1$$
+    因为$h(z) = \dfrac{1}{1-z} = \sum\limits_{n=0}^{\infty}{z^n}$，则$h(z)$的$p-1$阶导数
     
     \begin{align*}
         (1-z)^{(p-1)} & = \dfrac{(p-1)!}{(1-z)^p}\\
-        & = (\sum_{n=1}^{\infty}{z_n})^{(p-1)}\\
-        & = \sum_{n=0}^{\infty}{(n+1)(n+2)\cdots(n+p+1)z^n}
+        & = (\sum\limits_{n=1}^{\infty}{z_n})^{(p-1)}\\
+        & = \sum\limits_{n=0}^{\infty}{(n+1)(n+2)\cdots(n+p+1)z^n}
     \end{align*}
 
     设$g(z) = \sum\limits_{n=1}^{\infty}{b_nz^n}$，有
-    $$b_n = \sum_{p=1}^{k}{\dfrac{1}{(p-1)!}(n+1)(n+2)\cdots(n+p+1)}$$
+    $$b_n = \sum\limits_{p=1}^{k}{\dfrac{1}{(p-1)!}(n+1)(n+2)\cdots(n+p+1)}$$
     则$\lim\limits_{n\to\infty}{b_n} = $
 
 \end{proof}
@@ -266,7 +266,7 @@
 \begin{proof}
     
     $f(z)$在$|z|<1$内解析，且$z = 0$为$n(n \geq 1)$级零点，则有
-    $$f(z) = \sum_{m = n}^{\infty}{a_mz^m}$$
+    $$f(z) = \sum\limits_{m = n}^{\infty}{a_mz^m}$$
     显然$\varphi(z) = \dfrac{f(z)}{z^{n-1}}$在$|z|<1$内解析，且$\varphi(0) = 0$，有
     $$ \max\varphi(z) \leq \max_{|z| = r}|\varphi(z)| = \dfrac{|f(z)|}{r^{n-1}} \leq \dfrac{1}{r^{n-1}} $$
     令$n \to 1$，则$|\varphi(z)| < 1$，于是$|\varphi(z)| \leq |z|$，即
@@ -321,7 +321,7 @@
         
         \item
                 $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
-                $$ f(z) =\sum_{n=1}^{\infty}{a_nz^n}$$
+                $$ f(z) =\sum\limits_{n=1}^{\infty}{a_nz^n}$$
                 令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$，
                 显然$z=0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
                 $$|\varphi(z)| = |z|^2$$
@@ -332,7 +332,7 @@
                 $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
                 由\textup{(1)}知，$\left|\dfrac{\varphi(z)}{z^2}\right| \leq 1$，且$\left|\dfrac{\varphi(z_0)}{z_0^2}\right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
                 $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
-                $$f(z) + f(-z) = \sum_{n=1}^{\infty}{a_{2n}z^{2n}}$$
+                $$f(z) + f(-z) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$$
                 设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n=1}^{\infty}{a_{2n-1}z^{2n-1}}$\\
                 显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
 
@@ -374,7 +374,7 @@
 \begin{proof}
     
     若$\lim\limits_{z\to z_0}{f(z)} = w_0$，其中$z_0,\ w_0 \in \mathbb{C}$，则
-    $$\lim_{z\to z_0}{|f(z)|} = |w_0|$$
+    $$\lim\limits_{z\to z_0}{|f(z)|} = |w_0|$$
 
 \end{proof}
 
@@ -385,7 +385,7 @@
     又$\Big||a| - |b|\Big| \leq |a -b|$，则 
     $$\Big| |f(z) - |w| \Big| \leq | f(z) - w| < \varepsilon $$
     易知
-    $$\lim_{z\to z_0}{|f(z)} = |w_0|$$
+    $$\lim\limits_{z\to z_0}{|f(z)} = |w_0|$$
 
 \end{proposition}
 
@@ -409,7 +409,7 @@
     
     设$f(z) = \sum\limits_{n=0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
     $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积，证明：
-    $$A =  \pi\sum_{n=1}^{\infty}{n|a_n|^2}$$
+    $$A =  \pi\sum\limits_{n=1}^{\infty}{n|a_n|^2}$$
 
 \end{proposition}
 
@@ -420,10 +420,10 @@
     \begin{align*}
         A & = \iint_{D}{|f'(z)|^2}\diff x\diff y \\ 
           & = \iint_{D}{f'(z)\overline{{f'(z)}}}\diff x\diff y \\
-          & = \iint_{D}{\left(\sum_{n=1}^{\infty}{na_nz^{n-1}}\right)\overline{\left(\sum_{n=1}^{\infty}{na_nz^{n-1}}\right)}}\diff x\diff y \\
-          & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left(r\sum_{n=1}^{\infty}{na_nr^{n-1}\euler^{(n-1)\imag\theta}}\right)\left(\sum_{n=1}^{\infty}{n\overline{a_n}r^{n-1}\euler^{-(n-1)\imag\theta}}\right)}\diff r}\diff \theta \\
-          & = \int_{0}^{1}{r\sum_{n=1}^{\infty}{2n^2|a_n|^2 \pi r^{2n-2}}} \\
-          & = \pi \sum_{n=1}^{\infty}{n|a_n|^2}
+          & = \iint_{D}{\left(\sum\limits_{n=1}^{\infty}{na_nz^{n-1}}\right)\overline{\left(\sum\limits_{n=1}^{\infty}{na_nz^{n-1}}\right)}}\diff x\diff y \\
+          & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left(r\sum\limits_{n=1}^{\infty}{na_nr^{n-1}\euler^{(n-1)\imag\theta}}\right)\left(\sum\limits_{n=1}^{\infty}{n\overline{a_n}r^{n-1}\euler^{-(n-1)\imag\theta}}\right)}\diff r}\diff \theta \\
+          & = \int_{0}^{1}{r\sum\limits_{n=1}^{\infty}{2n^2|a_n|^2 \pi r^{2n-2}}} \\
+          & = \pi \sum\limits_{n=1}^{\infty}{n|a_n|^2}
     \end{align*}
 
     其中
@@ -437,7 +437,7 @@
     \right.
     $$
     即
-    $$A = \pi \sum_{n=1}^{\infty}{n|a_n|^2}$$
+    $$A = \pi \sum\limits_{n=1}^{\infty}{n|a_n|^2}$$
 
 \end{proof}
 
