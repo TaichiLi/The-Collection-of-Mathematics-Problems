@@ -196,7 +196,7 @@
 \begin{proposition}
 
     已知$D$是单位圆盘，假设$f:D\to\mathbb{C}$是解析函数，证明：\\
-    函数$f$的直径$d =\sup\limits_{z,\ w\in D}{|f(z) - f(w)|}$满足
+    函数$f$的直径$d =\sup\limits_{z,w\in D}{|f(z) - f(w)|}$满足
     $$2|f'(0)| \leq d$$
 
 \end{proposition}
@@ -204,28 +204,25 @@
 \begin{proof}
 
     由\textup{Cauthy}公式得，
-    $$f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{f(z)}{z^2}}\diff z, \quad 0 < r < 1 $$
-    $$f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{-f(-z)}{z^2}}\diff z, \quad 0 < r < 1 $$
-    即
-    $$2f'(0) = \dfrac{1}{2\mathrm{\pi i}} \oint_{|z| = r}{\dfrac{f(z)-f(-z)}{z^2}}\diff z, \quad 0 < r < 1$$
+    $$f'(0) = \dfrac{1}{2\pi \imag} \oint_{|z| = r}{\dfrac{f(z)}{z^2}}\diff z$$
+    $$f'(0) = \dfrac{1}{2\pi \imag} \oint_{|z| = r}{\dfrac{-f(-z)}{z^2}}\diff z$$
+    其中$0 < r < 1$，即
+    $$2f'(0) = \dfrac{1}{2\pi \imag} \oint_{|z| = r}{\dfrac{f(z)-f(-z)}{z^2}}\diff z$$
 
     \begin{align*}
         2|f'(0)| & = \dfrac{1}{2 \pi} \left| \oint_{|z| = r}{\dfrac{f(z)-f(-z)}{z^2}}\diff z \right| \\
         & \leq \dfrac{1}{2 \pi} \oint_{|z|=r}{\left|\dfrac{f(z)-f(-z)}{z^2}\right|}\diff z\\
         & \leq \dfrac{1}{2 \pi} \dfrac{d}{r^2} \cdot 2 \pi r\\
-        & = \dfrac{d}{r}, \quad 0 < r < 1
+        & = \dfrac{d}{r}
     \end{align*}
 
-    则显然有$2|f'(0)| \leq d$
-    再证等号成立时的情况。充分性显然。
-    % 必要性空缺
-    % TODO
+    则显然有$2|f'(0)| \leq d$。
 
 \end{proof}
 
 \begin{proposition}
     
-    设$f$在$0 < |z| < R$解析，$\exists M >0$，使得任意$r$，$0 < r < R$，有
+    设$f$在$0 < |z| < R$解析，存在$M >0$，使得任意$r$，$0 < r < R$，有
     $$r \int_{0}^{2 \pi}{|2f(\mathrm{e^{i\theta}})|}\diff \theta < M$$
     证明：$z=0$是一个可去奇点，否则是简单极点。
 
