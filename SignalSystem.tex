@@ -75,7 +75,7 @@
 
 \section{连续时间傅里叶变换}
 
-\begin{lemma}\label{lemma2}
+\begin{lemma}\label{lemma:dual}
     
     考虑连续时间信号$x(t)$，$x(t)$的傅里叶变换为$X(\image \omega)$，求连续时间信号
     $$y(t) = X(\image t)$$
@@ -119,7 +119,7 @@
             $$\image \dfrac{\diff \left( \dfrac{2}{1 + \omega^2} \right)}{\diff \omega} = \dfrac{-4\omega \image}{(1 + \omega^2)^2}$$
         \item 
             设$x(t) = t\euler^{-|t|}$，$y(t) = \dfrac{4t}{(1+t^2)^2} = \image X(\image t)$\\
-            由引理\ref{lemma2}知，
+            由引理\ref{lemma:dual}知，
             $$Y(\image \omega) = -2 \pi \image t \euler^{-|t|}$$
 
     \end{enumerate}

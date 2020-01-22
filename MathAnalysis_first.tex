@@ -827,11 +827,11 @@
 
 \end{proof}
 
-\begin{lemma}\label{lemma1}
+\begin{lemma}\label{lemma:decimal}
 
     设集合
-    $$S = \{n\alpha - \lfloor n\alpha\rfloor \big| n \in \mathbb{N}\}$$
-    其中$\{n\alpha\} = n\alpha - \lfloor n\alpha\rfloor$，$\alpha \in \mathbb{R} \backslash \mathbb{Q}$，即$\alpha$为无理数。\\
+    $$S = \{n\alpha - \lfloor n \alpha \rfloor \big| n \in \mathbb{N}\}$$
+    其中$\{n\alpha\} = n\alpha - \lfloor n \alpha \rfloor$，$\alpha \in \mathbb{R} \backslash \mathbb{Q}$，即$\alpha$为无理数。\\
     证明：集合$S$在区间$[0,1]$上稠密。
 
 \end{lemma}
@@ -879,7 +879,7 @@
     $$\sin{u} = v$$
     由$y = \sin{x}$的连续性可知，$\forall \varepsilon > 0$，$\exists \delta > 0$，使得当$|x - u| < \delta$时
     $$| \sin{u} - \sin{x} | = | v - \sin{x} | < \varepsilon$$
-    由引理\ref{lemma1}知，对任意无理数$\alpha$，集合
+    由引理\ref{lemma:decimal}知，对任意无理数$\alpha$，集合
     $$\{n\alpha - \lfloor n\alpha \rfloor \big| n \in \mathbb{N}\}$$
     在区间$[0, 1]$上稠密。所以令$\alpha = \dfrac{u}{2\pi}$，$\exists n \in \mathbb{N}$，使得
     $$\left| \left \{\dfrac{n}{2\pi} \right\} - \dfrac{u}{2\pi} \right| < \dfrac{\delta}{2\pi}$$
