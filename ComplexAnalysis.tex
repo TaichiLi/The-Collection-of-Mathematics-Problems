@@ -163,11 +163,10 @@
 
 \section{解析函数}
 
-\iffalse
 \begin{proposition}
     
-    设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的一个极点$z_0$）解析，证明：\\
-    若$\lim\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
+    设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的一个极点$z_0$）解析，证明：
+    若$\sum\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
     $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
 
 \end{proposition}
@@ -181,7 +180,7 @@
     
     \begin{align*}
         (1-z)^{(p-1)} & = \dfrac{(p-1)!}{(1-z)^p}\\
-        & = (\sum\limits_{n=1}^{\infty}{z_n})^{(p-1)}\\
+        & = \left(\sum\limits_{n=1}^{\infty}{z_n}\right)^{(p-1)}\\
         & = \sum\limits_{n=0}^{\infty}{(n+1)(n+2)\cdots(n+p+1)z^n}
     \end{align*}
 
@@ -191,11 +190,60 @@
 
 \end{proof}
 
-\fi
+\begin{proposition}
+
+    设$f : D(0,1) \to \mathbb{C}$是解析函数，
+    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{|f(z) - f(-z)|}$$
+    证明：对于任意$0 < r < 1$，
+    $$2|f'(0)| \leq \dfrac{d_r^{*}}{r}$$
+    成立。且等号成立当且仅当
+    $$f(z) - f(-z) = 2f'(0)z, \quad \forall z \in D(0,1)$$
+
+\end{proposition}
+
+\begin{proof}
+
+    充分性显然。\\
+    必要性。应用反证法，不妨设
+    $$f(z) - f(-z) = 2f'(0)z + 2f^{(3)}(0)z^3, \quad \forall z \in D(0,1)$$
+    其中$f'(0) = r_1\euler^{\imag \theta_1}$，$f^{(3)}(0) = r_2\euler^{\imag \theta_2} \neq 0$. 则
+    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{(|2f'(0)z + 2f^{(3)}(0)z^3|)} = \sup\limits_{z \in D(0,r)}{(2|z||f'(0) + f^{(3)}(0)z^2|)}$$
+    总存在$|z| = r$，使得$f'(0)$与$f^{(3)}(0)z^2$同向，也即
+    $$\dfrac{d_r^{*}}{r} = 2|f'(0) + f^{(3)}(0)z^2| > 2|f'(0)|$$
+    与题设矛盾，得证。
+
+\end{proof}
 
 \begin{proposition}
 
-    已知$D$是单位圆盘，假设$f:D\to\mathbb{C}$是解析函数，证明：\\
+    证明：函数$\dfrac{d_r}{r}$是$r$的单调不减函数。其中
+    $$d_r = \sup\limits_{z,w \in D(0,r)}{|f(z) - f(w)|}$$
+
+\end{proposition}
+
+\begin{proof}
+
+    考虑$0 < r < R < 1$，注意到对于任意的$|u| = 1$，$z \mapsto  \dfrac{f(z) - f(zu)}{z}$是单位圆$D(0,1)$上的解析函数，因此
+    
+    \begin{align*}
+        \dfrac{d_r}{r} & = \dfrac{1}{r} \sup_{z \in D(0,r)}{|f(z) - f(zu)|} \\
+        & = \dfrac{1}{r} \sup_{|z| = r}{|f(z) - f(zu)|} \\
+        & = \sup_{|z| = r}{\left| \dfrac{f(z) - f(zu)}{z}\right|} \\
+        & \leq \sup_{z \in \overline{D}(0,R)}{\left| \dfrac{f(z) - f(zu)}{z}\right|} \\
+        & = \sup_{|z| = R}{\left| \dfrac{f(z) - f(zu)}{z}\right|} \\
+        & = \dfrac{1}{R} \sup_{|z| = R}{|f(z) - f(zu)|} \\
+        & = \dfrac{1}{R} \sup_{z \in D(0,R)}{|f(z) - f(zu)|} \\
+        & = \dfrac{1}{R} d_{R} \leq \dfrac{1}{R} d_{1}
+    \end{align*}
+
+    令$R \to 1$，则有
+    $$\dfrac{d_{r}}{r} \leq \dfrac{1}{R} d_{R} \leq d_1$$
+
+\end{proof}
+
+\begin{proposition}
+
+    已知$D$是单位圆盘，设$f:D\to\mathbb{C}$是解析函数，证明：\\
     函数$f$的直径$d =\sup\limits_{z,w\in D}{|f(z) - f(w)|}$满足
     $$2|f'(0)| \leq d$$
 
@@ -216,7 +264,7 @@
         & = \dfrac{d}{r}
     \end{align*}
 
-    则显然有$2|f'(0)| \leq d$。
+    则显然有$2|f'(0)| \leq d$.
 
 \end{proof}
 
@@ -536,7 +584,7 @@
         
     由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z|<1$内可以\textup{Taylor}展开，有
     $$f(z) = c_1 z + c_2 z^2 + \dots + $$
-    令$\varphi(z) =  c_1 z + c_2 z^2 + \cdots $，则
+    令$\varphi(z) =  c_1 + c_2 z + \cdots $，则
     $$
     \varphi(z) = 
     \left\{
