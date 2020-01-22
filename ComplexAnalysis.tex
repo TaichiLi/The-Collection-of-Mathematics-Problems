@@ -287,7 +287,7 @@
     所以$2|f'(0)| \leq \dfrac{d_r^{*}}{r}$，因此
     $$f(z) - f(-z) = 2f'(0)z$$
     假设存在$|a| = r$，使得
-    $$\Im{f'(a)} \neq 0$$
+    $$\mathrm{Im}\{f'(a)\} \neq 0$$
     函数$f^{*}(z) = \overline{f(\overline{z})}$是单位圆上的解析函数。对$\theta \in \mathbb{R}$，有
 
     \begin{align*}
@@ -297,9 +297,9 @@
     \end{align*}
 
     由\textup{Cauthy}定理知，
-    $$\varphi'(\theta) = 2 \Re{\left( a\imag \euler^{\imag \theta}f'(a\euler^{\imag \theta}) \left( f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a} \right) \right)}$$
+    $$\varphi'(\theta) = 2 \mathrm{Re}\left\{ a\imag \euler^{\imag \theta}f'(a\euler^{\imag \theta}) \left( f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a} \right) \right\}$$
     所以
-    $$\varphi'(0) = 2 \Re{\left(a\imag f'(a)\dfrac{d_r^{*}}{r}\overline{a}\right)} = -2\dfrac{d_r^{*}}{r}|a|^2\Im{f'(a)} \neq 0$$
+    $$\varphi'(0) = 2 \mathrm{Re}\left\{a\imag f'(a)\dfrac{d_r^{*}}{r}\overline{a}\right\} = -2\dfrac{d_r^{*}}{r}|a|^2\mathrm{Im}\{f'(a)\} \neq 0$$
     因此$\varphi(\theta)$在$\theta = 0$处要么单调增加要么单调减少，所以存在$\theta_0$，使得$\varphi(\theta_0) > \varphi(0)$. 也即
     $$d_r \geq |f(a\euler^{\imag \theta}) - f(-a)| = \sqrt{\varphi(\theta)} > \sqrt{\varphi(0)} = |f(a) - f(-a)| = \dfrac{d_r^{*}}{r}r = d_r$$
     与$d_r^{*} \leq d_r$矛盾。所以
