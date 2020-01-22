@@ -217,13 +217,13 @@
 \begin{proposition}
 
     证明：函数$\dfrac{d_r}{r}$是$r$的单调不减函数。其中
-    $$d_r = \sup\limits_{z,w \in D(0,r)}{|f(z) - f(w)|}$$
+    $$d_r = \sup\{|f(z) - f(w)|\big| z,w \in D(0,r), |z| = |w|\}$$
 
 \end{proposition}
 
 \begin{proof}
 
-    考虑$0 < r < R < 1$，注意到对于任意的$|u| = 1$，$z \mapsto  \dfrac{f(z) - f(zu)}{z}$是单位圆$D(0,1)$上的解析函数，因此
+    考虑$0 < r < R < 1$，易知$d_r = \sup\{|f(z) - f(zu)| \big| z \in D(0,1), |z| = 1 \}$，注意到对于任意的$|u| = 1$，$z \mapsto  \dfrac{f(z) - f(zu)}{z}$是单位圆$D(0,1)$上的解析函数，因此
     
     \begin{align*}
         \dfrac{d_r}{r} & = \dfrac{1}{r} \sup_{z \in D(0,r)}{|f(z) - f(zu)|} \\
@@ -266,6 +266,50 @@
 
     则显然有$2|f'(0)| \leq d$.
 
+\end{proof}
+
+\begin{proposition}
+
+    证明：对任意的$0 < r < 1$，
+    $$2|f'(0)| = \dfrac{d_r}{r}$$
+    成立当且仅当
+    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0,1)$$
+    其中
+    $$d_r = \sup\{|f(z) - f(w)|\big| z,w \in D(0,r), |z| = |w|\}$$
+    
+\end{proposition}
+
+\begin{proof}
+    
+    充分性显然。\\
+    必要性。易知
+    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{|f(z) - f(-z)|} \leq d_r$$
+    所以$2|f'(0)| \leq \dfrac{d_r^{*}}{r}$，因此
+    $$f(z) - f(-z) = 2f'(0)z$$
+    假设存在$|a| = r$，使得
+    $$\Im{f'(a)} \neq 0$$
+    函数$f^{*}(z) = \overline{f(\overline{z})}$是单位圆上的解析函数。对$\theta \in \mathbb{R}$，有
+
+    \begin{align*}
+        \varphi(\theta) & = |f(a\euler^{\imag \theta}) - f(-a)|^2 \\
+        & = \left|f(a\euler^{\imag \theta}) - f(a) + \dfrac{d_r^{*}}{r}a\right|^2 \\
+        & = \left(f(a\euler^{\imag \theta}) - f(a) + \dfrac{d_r^{*}}{r}a\right) \left(f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a}\right)
+    \end{align*}
+
+    由\textup{Cauthy}定理知，
+    $$\varphi'(\theta) = 2 \Re{\left( a\imag \euler^{\imag \theta}f'(a\euler^{\imag \theta}) \left( f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a} \right) \right)}$$
+    所以
+    $$\varphi'(0) = 2 \Re{\left(a\imag f'(a)\dfrac{d_r^{*}}{r}\overline{a}\right)} = -2\dfrac{d_r^{*}}{r}|a|^2\Im{f'(a)} \neq 0$$
+    因此$\varphi(\theta)$在$\theta = 0$处要么单调增加要么单调减少，所以存在$\theta_0$，使得$\varphi(\theta_0) > \varphi(0)$. 也即
+    $$d_r \geq |f(a\euler^{\imag \theta}) - f(-a)| = \sqrt{\varphi(\theta)} > \sqrt{\varphi(0)} = |f(a) - f(-a)| = \dfrac{d_r^{*}}{r}r = d_r$$
+    与$d_r^{*} \leq d_r$矛盾。所以
+    $$f'(z) = 0, \quad \forall |z| = r$$
+    由最大模定理知，
+    $$f'(z) = 0, \quad \forall z \in D(0,r)$$
+    因此由\textup{Cauthy-Riemann}条件知，$f'(z)$是常值函数，即
+    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0,1)$$
+    成立。
+    
 \end{proof}
 
 \begin{proposition}
