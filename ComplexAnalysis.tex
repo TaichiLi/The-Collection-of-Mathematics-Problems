@@ -387,6 +387,31 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设
+    $$S_n = \sum\limits_{k = 0}^{\infty}{u_k}$$
+    证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{u_kz^k}$的收敛半径$R(A)$为$1$，
+    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_kz^k}$的收敛半径$R(C)$也为$1$。
+
+\end{proposition}
+
+\begin{proof}
+    
+    因为
+    $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{u_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
+    则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$。则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k}, \quad 1 < |z| < R$$
+    所以
+    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|u_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
+    因此
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|u_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|u_k||z|^k}$$
+    由\textup{(1)}式知，
+    $$\sum\limits_{k = n + 1}^{n + p}{|u_k||z|^K} < \varepsilon, \quad 1 < |z| < R$$
+    若$R(C) < 1$，则必有$R(A) < 1$，与题设矛盾。得证。
+
+\end{proof}
+
 \section{共形映射}
 
 \begin{proposition}

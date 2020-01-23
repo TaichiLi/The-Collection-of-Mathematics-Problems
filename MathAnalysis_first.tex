@@ -59,7 +59,7 @@
 
     设$\{a_n\}$是正数列，且收敛于$A$，
     则
-    $$\lim\limits_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
+    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_1a_2\cdots a_n}} = A$$
 
 \end{corollary}
 
@@ -70,7 +70,7 @@
     由\textup{Cauthy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$，所以
     $$\lim\limits_{n\to\infty}{\dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}} = \ln{A}$$
     也即
-    $$\lim\limits_{n\to\infty}{(a_1a_2\cdots a_n)^{\frac{1}{n}}} = A$$
+    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_1a_2\cdots a_n}} = A$$
 
 \end{proof}
 
@@ -302,7 +302,7 @@
 \begin{theorem}[Sapagof判别法等价形式\romannum{1}]
 
     设$\{a_n\}$是单调增加的正数列，则该数列与级数
-    $$\sum\limits_{n=1}^{\infty}{(1-\dfrac{a_{n+1}}{a_n})}$$
+    $$\sum\limits_{n=1}^{\infty}{\left(1-\dfrac{a_{n+1}}{a_n}\right)}$$
     同敛散。
         
 \end{theorem}
@@ -310,7 +310,7 @@
 \begin{proof}
 
     $\{a_n\}$单调增加，若$\{a_n\}$收敛，则
-    $$\lim\limits_{n\to\infty}{a_n}=a(a\neq+\infty)$$
+    $$\lim\limits_{n\to\infty}{a_n}=a \ (a\neq+\infty)$$
 
     \begin{align*}
         \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
@@ -464,7 +464,7 @@
 
 \begin{proposition}
 
-    将二项式系数$\binom{n}{0},\ \binom{n}{1},\ \cdots, \ \binom{n}{n}$的算术平均数和几何平均数分别记作$A_n$和$G_n$. 证明：
+    将二项式系数$\binom{n}{0}$，$\binom{n}{1}$，$\cdots$，$\binom{n}{n}$的算术平均数和几何平均数分别记作$A_n$和$G_n$. 证明：
 
     \begin{enumerate}
 
@@ -667,7 +667,7 @@
     $$x_{n+1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
     $\{x_n\}$单调减少，则$\{x_n\}$收敛。
     由$x_n \geq 0,\ x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
-    $$\lim\limits_{n\to\infty}{a_n} \in \left[0,\dfrac{1}{2}\right]$$
+    $$0 \leq \lim\limits_{n\to\infty}{a_n} \leq \dfrac{1}{2}$$
 
 \end{proof}
 
@@ -730,7 +730,7 @@
     $$\euler - \varepsilon < r_n < \euler + \varepsilon$$
     令$M = \max\{N,N'\}$，
     $$s_n \leq \sup_{k\geq n}\{s_k\} < r_n, \quad \forall n > M$$
-    进一步
+    进一步有
     $$s_n \leq \sup_{k\geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
     则有
     $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n+1}}{n+1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
