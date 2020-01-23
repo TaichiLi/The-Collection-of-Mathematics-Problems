@@ -203,7 +203,7 @@
             则当$n>\max\{N_1, N\}$有
             $$\left|\dfrac{b_n}{a_n}-l\right|<3\varepsilon$$
 
-    \item
+        \item
             $l$为$+\infty$\\
             $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
             $$b_{n+1}-b_n>a_{n+1}-a_n$$
@@ -215,7 +215,7 @@
             故
             $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{\frac{1}{a_n}}{b_n}}=+\infty$$
 
-    \item   $l$为$-\infty$时同(2)
+        \item $l$为$-\infty$时同(2)
 
     \end{enumerate}
 
@@ -407,35 +407,37 @@
     
     \begin{enumerate}
 
-        \item   先证充分性。\\
-                由$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}\geq \delta >0$得
-                $$a_nb_n-a_{n+1}b_{n+1}\geq \delta a_{n+1}$$
-                $$a_{n+1}\leq \dfrac{1}{\delta}(a_nb_n-a_{n+1}b_{n+1})$$
-                不妨设$n\geq 1$，时上式成立，则
+        \item   
+            先证充分性。\\
+            由$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}\geq \delta >0$得
+            $$a_nb_n-a_{n+1}b_{n+1}\geq \delta a_{n+1}$$
+            $$a_{n+1}\leq \dfrac{1}{\delta}(a_nb_n-a_{n+1}b_{n+1})$$
+            不妨设$n\geq 1$，时上式成立，则
 
-                \begin{align*}
-                    \sum\limits_{k=1}^{n}{a_k} &= a_1 + \sum\limits_{k=2}^{n}{a_k}\\
-                    & \leq a_1 +  \dfrac{1}{\delta}\sum\limits_{k=1}^{n-1}{(a_k b_k-a_{k+1}b_{k+1})}\\
-                    & = a_1 +  \dfrac{1}{\delta}(a_1 b_1-a_{n}b_{n})\\
-                    & = a_1 +  \dfrac{1}{\delta}a_1 b_1
-                \end{align*}
+            \begin{align*}
+                \sum\limits_{k=1}^{n}{a_k} &= a_1 + \sum\limits_{k=2}^{n}{a_k}\\
+                & \leq a_1 +  \dfrac{1}{\delta}\sum\limits_{k=1}^{n-1}{(a_k b_k-a_{k+1}b_{k+1})}\\
+                & = a_1 +  \dfrac{1}{\delta}(a_1 b_1-a_{n}b_{n})\\
+                & = a_1 +  \dfrac{1}{\delta}a_1 b_1
+            \end{align*}
 
-                所以$\sum\limits_{n=1}^{\infty}{a_n}$收敛。
-                再证必要性。\\
-                令
-                $$b_n=\dfrac{R_n}{a_n}$$
-                其中$R_n$为$\sum\limits_{n=1}^{\infty}{a_n}$的余项，即
-                $$R_n= S-S_n$$
-                $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{R_n}{a_{n+1}}-\dfrac{R_{n+1}}{a_{n+1}}=1>0$$
-                必要性得证。
+            所以$\sum\limits_{n=1}^{\infty}{a_n}$收敛。
+            再证必要性。\\
+            令
+            $$b_n=\dfrac{R_n}{a_n}$$
+            其中$R_n$为$\sum\limits_{n=1}^{\infty}{a_n}$的余项，即
+            $$R_n= S-S_n$$
+            $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{R_n}{a_{n+1}}-\dfrac{R_{n+1}}{a_{n+1}}=1>0$$
+            必要性得证。
 
-        \item   充分性即为比较判别法的比值形式。\\
-                必要性\\
-                令
-                $$b_n=\dfrac{S_n}{a_n}$$
-                易知$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$发散
-                $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{S_{n}-S_{n+1}}{a_{n+1}}=-1\leq0$$
-                必要性得证。
+        \item   
+            充分性即为比较判别法的比值形式。\\
+            必要性\\
+            令
+            $$b_n=\dfrac{S_n}{a_n}$$
+            易知$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$发散
+            $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{S_{n}-S_{n+1}}{a_{n+1}}=-1\leq0$$
+            必要性得证。
 
 \end{enumerate}
 
@@ -468,11 +470,9 @@
 
     \begin{enumerate}
 
-        \item 
-                $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = 2$$
+        \item $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = 2$$
                 
-        \item   
-                $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
+        \item $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
 
     \end{enumerate}
 
@@ -784,8 +784,7 @@
             当$n \geq 2$时，
             $$a_n = \dfrac{n+1}{2n}a_n + 1$$
         
-        \item 
-            $$\lim\limits_{n\to\infty}{a_n} = 2$$
+        \item $$\lim\limits_{n\to\infty}{a_n} = 2$$
         
     \end{enumerate}
 
@@ -810,18 +809,18 @@
 
 
         \item 
-        \begin{align*}
-            2(a_n - a_{n-1}) & = \dfrac{n+1}{n}a_{n-1} - \dfrac{n+2}{n+1} a_n \\
-            & = a_{n-1} - a_n + \dfrac{1}{n}a_{n-1} - \dfrac{1}{n + 1}a_n \\
-            & > (a_{n-1} - a_n) + \dfrac{1}{n + 1}(a_{n-1} - a_n) \\
-            & = \dfrac{n+2}{n+1}  (a_{n-1} - a_n) 
-        \end{align*}
+            \begin{align*}
+                2(a_n - a_{n-1}) & = \dfrac{n+1}{n}a_{n-1} - \dfrac{n+2}{n+1} a_n \\
+                & = a_{n-1} - a_n + \dfrac{1}{n}a_{n-1} - \dfrac{1}{n + 1}a_n \\
+                & > (a_{n-1} - a_n) + \dfrac{1}{n + 1}(a_{n-1} - a_n) \\
+                & = \dfrac{n+2}{n+1}  (a_{n-1} - a_n) 
+            \end{align*}
 
-        因为$a_1 = 2, a_2 = \dfrac{5}{2}, a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n+1}$\\
-        即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
-        $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{\dfrac{n+1}{2n}a_{n-1}+1}$$
-        得
-        $$\lim\limits_{n\to\infty}{a_n} = 2$$
+            因为$a_1 = 2, a_2 = \dfrac{5}{2}, a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n+1}$\\
+            即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
+            $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{\dfrac{n+1}{2n}a_{n-1}+1}$$
+            得
+            $$\lim\limits_{n\to\infty}{a_n} = 2$$
 
     \end{enumerate}
 
@@ -1009,17 +1008,22 @@
 
     \begin{enumerate}
 
-        \item 如果$0 < x_1 < x_2 < 1$，则有
+        \item 
+            如果$0 < x_1 < x_2 < 1$，则有
             $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq x_2$$
             $$x_{n + 2} - x_{n + 1} = (\sqrt{x_{n + 1}} + \sqrt{x_{n}}) - (\sqrt{x_{n}} + \sqrt{x_{n - 1}}) = (\sqrt{x_{n + 1}} - \sqrt{x_{n}}) + (\sqrt{x_{n}} - \sqrt{x_{n - 1}}) \geq 0$$
             所以$\{x_n\}$单调增加。且由数学归纳法可证，若$x_n \leq 4$，则
             $$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}} \leq 4$$
             所以$\{x_n\}$收敛，且极限为$4$。
-        \item 如果$0 < x_2 < x_1 < 1$，则有
+
+        \item 
+            如果$0 < x_2 < x_1 < 1$，则有
             $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq x_1$$
             $$x_{n + 2} - x_{n + 1} = \sqrt{x_{n + 1}} - \sqrt{x_{n - 1}} \geq 0$$
             同上。
-        \item 如果$x_1 \geq 1$或$x_2 \geq 1$，则
+
+        \item 
+            如果$x_1 \geq 1$或$x_2 \geq 1$，则
             $$x_3 = \sqrt{x_1} + \sqrt{x_2} \geq 1 \Longrightarrow x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}} \geq 1$$
             
             \begin{align*}
@@ -1263,13 +1267,15 @@
 
     \begin{enumerate}
         
-        \item 设$F\in\mathbb{C}[a,b]$，处处大于$0$，且单调减少，则有
-              $$ \int_{a}^{b}{F(x)}\diff x\int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x $$
+        \item 
+            设$F\in\mathbb{C}[a,b]$，处处大于$0$，且单调减少，则有
+            $$ \int_{a}^{b}{F(x)}\diff x\int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x $$
 
-        \item 设$f,g$在区间$[a,b]$上对于任何$x,y$有
-              $$ (f(x)-f(y))(g(x)-g(y))\geq 0 $$
-              又设$p\in\mathbb{R}[a,b]$，且处处大于$0$.则有
-              $$ \int_{a}^{b}{p(x)f(x)}\diff x\int_{a}^{b}{p(x)g(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x \int_{a}^{b}{p(x)f(x)g(x)}\diff x $$
+        \item 
+            设$f,g$在区间$[a,b]$上对于任何$x,y$有
+            $$ (f(x)-f(y))(g(x)-g(y))\geq 0 $$
+            又设$p\in\mathbb{R}[a,b]$，且处处大于$0$.则有
+            $$ \int_{a}^{b}{p(x)f(x)}\diff x\int_{a}^{b}{p(x)g(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x \int_{a}^{b}{p(x)f(x)g(x)}\diff x $$
 
     \end{enumerate}
 

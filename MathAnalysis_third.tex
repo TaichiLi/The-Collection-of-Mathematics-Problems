@@ -61,43 +61,43 @@
     \begin{enumerate}
         
         \item 
-                如果$S_N < \infty,\ N \geq 2$时，
+            如果$S_N < \infty,\ N \geq 2$时，
 
-                \begin{align*}
-                    a_N\ln{N} &\leq a_N\sum\limits_{n=2}^{\infty}{[\ln{n} - \ln{(n-1)}]} \\
-                    & \leq a_N \sum\limits_{n=2}^{\infty}{\dfrac{1}{n-1}} \\
-                    & \leq \sum\limits_{n=2}^{\infty}{\dfrac{a_{n-1}}{n+1}}\\
-                    & = S_{n-1}\\
-                    & \leq S
-                \end{align*}
+            \begin{align*}
+                a_N\ln{N} &\leq a_N\sum\limits_{n=2}^{\infty}{[\ln{n} - \ln{(n-1)}]} \\
+                & \leq a_N \sum\limits_{n=2}^{\infty}{\dfrac{1}{n-1}} \\
+                & \leq \sum\limits_{n=2}^{\infty}{\dfrac{a_{n-1}}{n+1}}\\
+                & = S_{n-1}\\
+                & \leq S
+            \end{align*}
 
-                这表明$a_n = O\left(\dfrac{1}{\ln{n}}\right)$，同时
+            这表明$a_n = O\left(\dfrac{1}{\ln{n}}\right)$，同时
 
-                \begin{align*}
-                    T_N &= \sum\limits_{n=1}^{N}{(a_n - a_{n+1})\ln{n}} \\
-                    & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N+1}{a_{n}\ln{(n-1)}} \\
-                    & = \sum\limits_{n=2}^{N}{[a_n\big(\ln{n} - \ln(n-1)\big)]} - a_{N+1}\ln{N} \\
-                    & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n}}{n-1}} \\
-                    & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n-1}}{n-1}} \\
-                    & = S_{n-1} \\
-                    & \leq S
-                \end{align*}
+            \begin{align*}
+                T_N &= \sum\limits_{n=1}^{N}{(a_n - a_{n+1})\ln{n}} \\
+                & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N+1}{a_{n}\ln{(n-1)}} \\
+                & = \sum\limits_{n=2}^{N}{[a_n\big(\ln{n} - \ln(n-1)\big)]} - a_{N+1}\ln{N} \\
+                & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n}}{n-1}} \\
+                & \leq \sum\limits_{n=1}^{N}{\dfrac{a_{n-1}}{n-1}} \\
+                & = S_{n-1} \\
+                & \leq S
+            \end{align*}
 
-                即$T < \infty$
+            即$T < \infty$
 
         \item 
-                如果$T < \infty$，且$a_{N}\ln{N} \leq M,\ N \geq 2$时
-                        
-                \begin{align*}
-                    S_N - a_1 &= \sum\limits_{n=2}^{N}{\dfrac{a_n}{n}} \\
-                    & \leq \sum\limits_{n=2}^{N}{a_n\big(\ln{n} - \ln(n-1)\big)} \\
-                    & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N-1}{a_{n+1}\ln{n}} \\
-                    & = \sum\limits_{n=2}^{N-1}{(a_n - a_{n+1})\ln{n}} + a_N\ln{N} \\
-                    & = T_{N-1} + a_N\ln{(N+1)} \\ 
-                    & < T + M
-                \end{align*}
+            如果$T < \infty$，且$a_{N}\ln{N} \leq M,\ N \geq 2$时
+                    
+            \begin{align*}
+                S_N - a_1 &= \sum\limits_{n=2}^{N}{\dfrac{a_n}{n}} \\
+                & \leq \sum\limits_{n=2}^{N}{a_n\big(\ln{n} - \ln(n-1)\big)} \\
+                & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N-1}{a_{n+1}\ln{n}} \\
+                & = \sum\limits_{n=2}^{N-1}{(a_n - a_{n+1})\ln{n}} + a_N\ln{N} \\
+                & = T_{N-1} + a_N\ln{(N+1)} \\ 
+                & < T + M
+            \end{align*}
 
-                即$S < \infty$
+            即$S < \infty$
 
      \end{enumerate}
 
@@ -279,6 +279,7 @@
                 因此有不等式
                 $$\dfrac{2n-1}{a_1 + a_2 + \cdots + a_{2n-1}} + \dfrac{2n1}{a_1 + a_2 + \cdots + a_{2n}} \leq \dfrac{2n-1}{a_n} + \dfrac{2n}{na_n} \leq \dfrac{4}{a_n} $$
                 所以部分和有上界，级数收敛。
+
         \item   对于一般情况，将$\{a_n\}$按照升序排列，重排后的数列可记为$\{b_n\}$，收敛的正项级数重排后仍收敛，因此级数$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$收敛。
                 由\textup{(1)}知道$\sum\limits_{n=1}^{\infty}{\dfrac{n}{b_1 + b_2 + \cdots + b_n}}$收敛，同时可以看出，有
                 $$\dfrac{n}{a_1 + a_2 + \cdots + a_n} \leq \dfrac{n}{b_1 + b_2 + \cdots + b_n} $$
@@ -329,7 +330,8 @@
             $$\sin{(n!\pi x)} = 0, \ n \geq q$$
             显然$\sum\limits_{n=0}^{\infty}{\sin{(n!\pi x)}}$收敛。
 
-        \item 注意到$\forall x \in [0,1]$，可以被表示为如下形式
+        \item 
+            注意到$\forall x \in [0,1]$，可以被表示为如下形式
             $$x = \sum\limits_{k=0}^{\infty}{\dfrac{a_k}{k!}}, \quad a_k \in \{0, 1, \cdots, k-1\}$$
             又由$x$的展开形式得
             $$\sin{(n!\pi x)} = (-1)^{na_{n-1} + a_n} \sin{\left(\pi \sum\limits_{k=1}^{\infty}{\dfrac{a_{n+k}}{(n+1)(n+2) \cdots(n+k)}}\right)}$$
@@ -1232,6 +1234,7 @@
     \begin{enumerate}
 
         \item 证明：$s \geq \dfrac{1}{2}$；
+        
         \item 试比较$\int_{0}^{s}{f(x)}\diff x$与$\int_{s}^{1}{f(x)}\diff x$的大小。
         
     \end{enumerate}
@@ -1258,6 +1261,7 @@
             $$ f(\xi_2) - f(\xi_1) \geq 0$$
             即
             $$s \geq \dfrac{1}{2}$$
+
         \item 
             因为$f(x) \in C[0,1]$，则$f'(x) \geq 0$，考虑变上限积分
             $$F(x) = \int_{0}^{x}{f(t)} \diff t$$

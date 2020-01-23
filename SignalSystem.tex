@@ -40,6 +40,7 @@
     \begin{enumerate}
         
         \item 求整数$A$以满足$h[n] - Ah[n -1] = \delta[n]$。
+        
         \item 利用\textup{(a)}的结果，求$S_1$的逆系统$S_2$是线性时不变的单位脉冲响应$g[n]$。
         
     \end{enumerate}
@@ -63,6 +64,7 @@
                         \right.
             $$
             所以，$A = \dfrac{1}{5}$
+
         \item 
             即求$g[n]$，使得
             $$h[n] \ast g[n] = \delta[n]$$
@@ -102,6 +104,7 @@
     \begin{enumerate}
 
         \item 利用恰当的傅里叶变换性质求$t\euler^{-|t|}$的傅里叶变换。
+        
         \item 根据\textup{(a)}的结果，再结合对偶性质，求$\dfrac{4t}{(1+t^2)^2}$的傅里叶变换。
 
     \end{enumerate}
@@ -117,6 +120,7 @@
             $$tx(t) \stackrel{\mathcal{F}}{\longleftrightarrow} \image \dfrac{\diff X(\image \omega)}{\diff \omega}$$
             所以，$t\euler^{-|t|}$的傅里叶变换为
             $$\image \dfrac{\diff \left( \dfrac{2}{1 + \omega^2} \right)}{\diff \omega} = \dfrac{-4\omega \image}{(1 + \omega^2)^2}$$
+        
         \item 
             设$x(t) = t\euler^{-|t|}$，$y(t) = \dfrac{4t}{(1+t^2)^2} = \image X(\image t)$\\
             由引理\ref{lemma:dual}知，
@@ -247,7 +251,9 @@
         \begin{enumerate}
 
             \item 当输入电流$x(t) = \euler^{-2t}u(t)$时，确定该电路的零状态响应。
+            
             \item 已知$y(0^{-}) = 1$，确定该电路在$t > 0^{-}$时的零输入响应。
+            
             \item 当输入电流$x(t) =  \euler^{-2t}u(t)$，初始条件同\textup{(b)}时，确定该电路的输出。
             
         \end{enumerate}
@@ -274,6 +280,7 @@
             $$\mathscr{Y}(s) = \dfrac{1}{(s + 1)(s + 2)} = \dfrac{1}{s + 1} - \dfrac{1}{s + 2}$$
             由变换对易知，电路的零状态响应为
             $$y(t) = \euler^{-t}u(t) - \euler^{-2t}u(t)$$
+
         \item 
             当输入电流$x(t) = 0$，且$y(0^{-}) = 0$时，微分方程的\textup{Laplace}变换为
             $$s\mathscr{Y}(s) - y(0^{-}) + \mathscr{Y}(s) = 0$$
@@ -300,9 +307,13 @@
     关于信号$x(t)$，已知以下三点：
     
     \begin{enumerate}
+
         \item $x(t) = 0,\ t < 0$
+        
         \item $x\left(\dfrac{k}{80}\right) = 0, \ k = 1, 2, 3, \cdots$
+        
         \item $x\left(\dfrac{1}{160}\right) = \euler^{-120}$
+        
    \end{enumerate}
 
    设$X(s)$为$x(t)$的\textup{Laplace}变换，则$X(s)$在有限$s$平面内有几个极点。
@@ -319,6 +330,7 @@
     \begin{enumerate}
 
         \item 假定收敛域是$|z| > \dfrac{1}{3}$，利用长除法求$x[0]$，$x[1]$和$x[2]$的值。
+        
         \item 假定收敛域是$|z| < \dfrac{1}{3}$，利用长除法求$x[0]$，$x[1]$和$x[2]$的值。
         
     \end{enumerate}
@@ -329,10 +341,9 @@
     
     \begin{enumerate}
 
-        \item 
-            $$(1 + z^{-1}) / \left(1 + \frac{1}{3}z^{-1}\right) = \left(1 + \dfrac{2}{3}z^{-1} - \dfrac{2}{9}z^{-2}\right)$$
-        \item 
-            $$(z^{-1} + 1) / \left(\frac{1}{3}z^{-1} + 1\right) = (3 - 6z^{1} + 18z^{2})$$
+        \item $$(1 + z^{-1}) / \left(1 + \frac{1}{3}z^{-1}\right) = \left(1 + \dfrac{2}{3}z^{-1} - \dfrac{2}{9}z^{-2}\right)$$
+        
+        \item $$(z^{-1} + 1) / \left(\frac{1}{3}z^{-1} + 1\right) = (3 - 6z^{1} + 18z^{2})$$
 
     \end{enumerate}
 
