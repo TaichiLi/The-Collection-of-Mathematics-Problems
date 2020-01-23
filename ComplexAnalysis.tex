@@ -268,7 +268,7 @@
 
 \end{proof}
 
-\begin{proposition}
+\begin{theorem}\label{theorem:complex}
 
     证明：对任意的$0 < r < 1$，
     $$2|f'(0)| = \dfrac{d_r}{r}$$
@@ -277,7 +277,7 @@
     其中
     $$d_r = \sup\{|f(z) - f(w)|\big| z,w \in D(0,r), |z| = |w|\}$$
     
-\end{proposition}
+\end{theorem}
 
 \begin{proof}
     
@@ -310,6 +310,30 @@
     $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0,1)$$
     成立。
     
+\end{proof}
+
+\begin{theorem}
+
+    设函数$f(z)$是单位圆上的解析函数。证明：
+    $$2|f'(0)| = d$$
+    当且仅当
+    $$f(z) = f'(0)z + f(0)$$
+    其中
+    $$d =\sup\limits_{z,w\in D(0,1)}{|f(z) - f(w)|}$$
+    
+\end{theorem}
+
+\begin{proof}
+
+    充分性显然。\\
+    必要性。易知
+    $$\dfrac{d_r^{*}}{r} \leq \dfrac{d_r}{r} \leq d$$
+    因此
+    $$2|f'(0)| = \dfrac{d_r}{r}$$
+    由定理\ref{theorem:complex}知，
+    $$f(z) = f'(0)z + f(0)$$
+    得证。
+
 \end{proof}
 
 \begin{proposition}
