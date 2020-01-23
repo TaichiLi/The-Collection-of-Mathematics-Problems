@@ -390,27 +390,88 @@
 \begin{proposition}
 
     设
-    $$S_n = \sum\limits_{k = 0}^{\infty}{u_k}$$
-    证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{u_kz^k}$的收敛半径$R(A)$为$1$，
-    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_kz^k}$的收敛半径$R(C)$也为$1$。
+    $$S_n = \sum\limits_{k = 0}^{\infty}{a_k}$$
+    证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{a_kz^k}$的收敛半径$R(A)$为$1$，
+    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_k z^k}$的收敛半径$R(C)$也为$1$。
 
 \end{proposition}
 
 \begin{proof}
     
     因为
-    $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{u_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
+    $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{a_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
     则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$。则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
-    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k}, \quad 1 < |z| < R$$
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k}, \quad 1 < |z| < R$$
     所以
-    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|u_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
+    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
     因此
-    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|u_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|u_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|u_k||z|^k}$$
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|a_k||z|^k}$$
     由\textup{(1)}式知，
-    $$\sum\limits_{k = n + 1}^{n + p}{|u_k||z|^K} < \varepsilon, \quad 1 < |z| < R$$
+    $$\sum\limits_{k = n + 1}^{n + p}{|a_k||z|^K} < \varepsilon, \quad 1 < |z| < R$$
     若$R(C) < 1$，则必有$R(A) < 1$，与题设矛盾。得证。
 
 \end{proof}
+
+\begin{theorem}[Tauber 定理]
+
+    幂级数$\sum\limits_{n = 0}^{\infty}{a_k z^n}$的收敛半径为$1$，且$\lim\limits_{n \to \infty}{na_n} = 0$. 证明：
+
+    \begin{enumerate}
+        
+        \item $$\lim\limits_{m \to \infty}{\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m}} = 0$$
+        
+        \item 
+            设
+            $$f(z) = \sum\limits_{n = 0}^{m}{a_n z^n}, \quad |z| < 1$$
+            如果存在$\lim\limits_{x \to 1}{f(x)} = A$，那么级数$\sum\limits_{n = 0}^{n}{a_n}$收敛到$A$。
+        
+    \end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，使得当$n > N$时，$n|a_n| < \dfrac{\varepsilon}{2}$。
+            选择$n = n_0$满足上述条件。则对任意$m > n_0$，有
+            
+            \begin{align*}
+                \dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} & = \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\sum\limits_{n = n_0 + 1}^{m}{n|a_n|}}{m} \\
+                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{m - n_0}{2m} \varepsilon \\
+                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\varepsilon}{2}
+            \end{align*}
+
+            对足够大的$m > M$，有
+            $$\dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} < \dfrac{\varepsilon}{2}$$
+            因此对$m > \max{(N,M)}$
+            $$\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} < \varepsilon$$
+
+        \item 
+            \begin{align*}
+                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & = \left| \sum\limits_{k = 0}^{n}{a_k(1 - x^k)} - \sum\limits_{k = n + 1}^{\infty}{a_k x^k} \right| \\
+                & \leq (1 - x)\sum\limits_{k = 0}^{n}{\left[ |a_k|(1 + x + \cdots + x^{k -1}) \right]} + \sum\limits_{k = n + 1}^{\infty}{|a_k|x^k} \\
+                & < n(1 - x)\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{n} + \sum\limits_{k = n + 1}^{\infty}{k|a_k|\dfrac{x^k}{k}}        
+            \end{align*}
+
+            令$m|a_m| < \dfrac{\varepsilon}{2}$，由(a)知，$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得当$m > M$时有 
+            $$\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{m} < \dfrac{\varepsilon}{2}$$
+            我们由上述不等式得
+
+            \begin{align*}
+                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & < n(1 - x)\dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2n}\sum\limits_{k = n + 1}^{\infty}{x^k} \\
+                & = \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{x^{n + 1}}{1 - x} \right] \\
+                & < \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{1}{1 - x} \right]
+            \end{align*}
+
+            即
+            $$\sum\limits_{k = 0}^{n}{a_k} = A$$
+
+        \end{enumerate}
+
+\end{proof}
+
 
 \section{共形映射}
 
@@ -458,38 +519,38 @@
     \begin{enumerate}
         
         \item
-                $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
-                $$ f(z) =\sum\limits_{n=1}^{\infty}{a_nz^n}$$
-                令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$，
-                显然$z=0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
-                $$|\varphi(z)| = |z|^2$$
-                即
-                $$|f(z) + f(-z)| \leq 2|z|^2$$
+            $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
+            $$ f(z) =\sum\limits_{n=1}^{\infty}{a_nz^n}$$
+            令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$，
+            显然$z=0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
+            $$|\varphi(z)| = |z|^2$$
+            即
+            $$|f(z) + f(-z)| \leq 2|z|^2$$
 
         \item 
-                $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
-                由\textup{(1)}知，$\left|\dfrac{\varphi(z)}{z^2}\right| \leq 1$，且$\left|\dfrac{\varphi(z_0)}{z_0^2}\right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
-                $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
-                $$f(z) + f(-z) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$$
-                设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n=1}^{\infty}{a_{2n-1}z^{2n-1}}$\\
-                显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
+            $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
+            由\textup{(1)}知，$\left|\dfrac{\varphi(z)}{z^2}\right| \leq 1$，且$\left|\dfrac{\varphi(z_0)}{z_0^2}\right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
+            $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
+            $$f(z) + f(-z) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$$
+            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n=1}^{\infty}{a_{2n-1}z^{2n-1}}$\\
+            显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
 
-                \begin{align*}
-                    &|\euler^{\imag\theta} z^2 + h(z)| \leq 1\\
-                    &|\euler^{\imag\theta} z^2 - h(z)| \leq 1
-                \end{align*}
+            \begin{align*}
+                &|\euler^{\imag\theta} z^2 + h(z)| \leq 1\\
+                &|\euler^{\imag\theta} z^2 - h(z)| \leq 1
+            \end{align*}
 
-                即有
+            即有
 
-                \begin{align*}
-                    &(\euler^{\imag\theta} z^2 + h(z)) \overline{(\euler^{\imag\theta} z^2 + h(z))} \leq 1 \\
-                    &(\euler^{\imag\theta} z^2 - h(z)) \overline{(\euler^{\imag\theta} z^2 - h(z))} \leq 1
-                \end{align*}
+            \begin{align*}
+                &(\euler^{\imag\theta} z^2 + h(z)) \overline{(\euler^{\imag\theta} z^2 + h(z))} \leq 1 \\
+                &(\euler^{\imag\theta} z^2 - h(z)) \overline{(\euler^{\imag\theta} z^2 - h(z))} \leq 1
+            \end{align*}
 
-                则
-                $$|z|^4 + |H(z)| \leq 1 $$
-                由最大模定理可知$h(z)\equiv0$，即
-                $$f(z) = \euler^{\imag\theta} z^2 $$
+            则
+            $$|z|^4 + |H(z)| \leq 1 $$
+            由最大模定理可知$h(z)\equiv0$，即
+            $$f(z) = \euler^{\imag\theta} z^2 $$
 
     \end{enumerate}
 
@@ -662,11 +723,11 @@
 
     \begin{enumerate}
         
+        \item $|f(z)| \leq |z|$，且$|f'(0)| \leq 1$
+            
         \item 
-            $|f(z)| \leq |z|$，且$|f'(0)| \leq 1$
-        
-        \item 
-            若在开圆盘内有一复数$z_0 \neq 0$，是$|f(z_0)| = |z_0|$，或者 $|f'(0)| = 1$，那么$f(z) = e^{\imag\alpha}z$，$\alpha$为一实数。
+            若在开圆盘内有一复数$z_0 \neq 0$，是$|f(z_0)| = |z_0|$，或者 $|f'(0)| = 1$，
+            那么$f(z) = e^{\imag\alpha}z$，$\alpha$为一实数。
         
     \end{enumerate}
 
