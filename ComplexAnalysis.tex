@@ -161,6 +161,152 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设
+    $$S_n = \sum\limits_{k = 0}^{\infty}{a_k}$$
+    证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{a_kz^k}$的收敛半径$R(A)$为$1$，
+    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_k z^k}$的收敛半径$R(C)$也为$1$。
+
+\end{proposition}
+
+\begin{proof}
+    
+    因为
+    $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{a_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
+    则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$。则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k}, \quad 1 < |z| < R$$
+    所以
+    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
+    因此
+    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|a_k||z|^k}$$
+    由\textup{(1)}式知，
+    $$\sum\limits_{k = n + 1}^{n + p}{|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R$$
+    若$R(C) < 1$，则必有$R(A) < 1$，与题设矛盾。得证。
+
+\end{proof}
+
+\begin{theorem}[Tauber定理]
+
+    幂级数$\sum\limits_{n = 0}^{\infty}{a_k z^n}$的收敛半径为$1$，且$\lim\limits_{n \to \infty}{na_n} = 0$. 证明：
+
+    \begin{enumerate}
+        
+        \item $$\lim\limits_{m \to \infty}{\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m}} = 0$$
+        
+        \item 
+            设
+            $$f(z) = \sum\limits_{n = 0}^{m}{a_n z^n}, \quad |z| < 1$$
+            如果存在$\lim\limits_{x \to 1}{f(x)} = A$，那么级数$\sum\limits_{n = 0}^{n}{a_n}$收敛到$A$。
+        
+    \end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，使得当$n > N$时，$n|a_n| < \dfrac{\varepsilon}{2}$。
+            选择$n = n_0$满足上述条件。则对任意$m > n_0$，有
+            
+            \begin{align*}
+                \dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} & = \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\sum\limits_{n = n_0 + 1}^{m}{n|a_n|}}{m} \\
+                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{m - n_0}{2m} \varepsilon \\
+                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\varepsilon}{2}
+            \end{align*}
+
+            对足够大的$m > M$，有
+            $$\dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} < \dfrac{\varepsilon}{2}$$
+            因此对$m > \max{(N,M)}$
+            $$\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} < \varepsilon$$
+
+        \item 
+            \begin{align*}
+                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & = \left| \sum\limits_{k = 0}^{n}{a_k(1 - x^k)} - \sum\limits_{k = n + 1}^{\infty}{a_k x^k} \right| \\
+                & \leq (1 - x)\sum\limits_{k = 0}^{n}{\left[ |a_k|(1 + x + \cdots + x^{k -1}) \right]} + \sum\limits_{k = n + 1}^{\infty}{|a_k|x^k} \\
+                & < n(1 - x)\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{n} + \sum\limits_{k = n + 1}^{\infty}{k|a_k|\dfrac{x^k}{k}}        
+            \end{align*}
+
+            令$m|a_m| < \dfrac{\varepsilon}{2}$，由(a)知，$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得当$m > M$时有 
+            $$\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{m} < \dfrac{\varepsilon}{2}$$
+            我们由上述不等式得
+
+            \begin{align*}
+                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & < n(1 - x)\dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2n}\sum\limits_{k = n + 1}^{\infty}{x^k} \\
+                & = \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{x^{n + 1}}{1 - x} \right] \\
+                & < \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{1}{1 - x} \right]
+            \end{align*}
+
+            即
+            $$\sum\limits_{k = 0}^{n}{a_k} = A$$
+
+        \end{enumerate}
+
+\end{proof}
+
+\begin{lemma}\label{lemma:radius}
+
+    设函数
+    $$\varphi(z) = \sum\limits_{n = 0}^{\infty}{a_n (z - z_0)^n}$$
+    的收敛半径为$R$。$w$是收敛圆边界上的点，$z_1$是半径$\vec{z_0w}$上不同于$z_0$和$w$的任意一点。
+    证明：如果
+    $$\Delta = R - |z_1 - z_0| = \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+    则$w$是$\varphi(z)$的发散点。且如果
+    $$\Delta < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+    则$w$是$\varphi(z)$的收敛点。
+
+\end{lemma}
+
+\begin{proof}
+
+    由题设知，$\varphi(z)$在$|z - z_0| < R$内收敛，固定$w$，选择$z_1$，并将$\varphi(z)$在$z = z_1$展开，得到
+    $$\varphi(z) = \sum\limits_{n = 0}^{\infty}{b_n (z - z_1)^n}, \quad |z - z_1| < r$$
+    其中$r$是收敛半径，且有
+
+    \begin{align*}
+        b_n & = \dfrac{\varphi^{(n)}{z_1}}{n!} \\
+        & = a_n + \dfrac{n + 1}{1}a_{n + 1}(z_1 - z_0) + \dfrac{(n + 1)(n + 2)}{1 \cdot 2}a_{n + 2}(z_1 - z_0)^2 + \cdots \\
+        & = \sum\limits_{m = n}^{\infty}{\binom{m}{n}a_m(z_1 - z_0)^{m - n}}
+    \end{align*}
+
+    因为
+    $$\dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}} = r$$
+    所以
+    $$\Delta = R - |z_1 - z_0| = r = \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+
+\end{proof}
+
+\begin{theorem}[Pringshajm theorem]
+    
+    设幂级数$\varphi(z) = \sum\limits_{n = 0}^{\infty}{a_n z^n}$收敛半径$R = 1$，且$a_n \geq n$，$n \in \mathbb{N}$，证明：
+    $z = 1$是$\varphi(z)$的发散点。
+
+\end{theorem}
+
+\begin{proof}
+
+    反证法。假设$z_0 = 1$不是$\varphi(z)$的发散点。设$x$是区间$(0,1)$上的任意点，由引理\ref{lemma:radius}可知，
+    $$\Delta = R - |x - z_0| = 1 - x < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+    设$w$是单位圆上的任意一点，且$z_1$是半径$\vec{z_0w}$和圆$|z| = x$的交点，则有
+    $$R - |z_1| = 1 - x$$
+    且有
+    
+    \begin{align*}
+        |\varphi^{(n)}(z_1)| & = \left| a_n + \dfrac{n + 1}{1} a_{n + 1}z_1 + \dfrac{(n + 1)(n + 2)}{1 \cdot 2}a_{n + 2}z_1^2 + \cdots \right| \\
+        & \leq a_n + \dfrac{n + 1}{1} a_{n + 1}x + \dfrac{(n + 1)(n + 2)}{1 \cdot 2}a_{n + 2}x^2 + \cdots \\
+        & = \varphi^{(n)}(x)
+    \end{align*}
+
+    因此
+    $$\dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}} \geq \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(x)|}{n!}}}}$$
+    从最后一个不等式知
+    $$\Delta < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+    由$w$的任意性和引理\ref{lemma:radius}可知，$\varphi(z)$在$|z| = 1$上没有发散点，这与$\varphi(z)$的收敛半径$R = 1$矛盾。得证。
+    
+\end{proof}
+
 \section{解析函数}
 
 \begin{proposition}
@@ -340,7 +486,7 @@
     
     设$f$在$0 < |z| < R$解析，存在$M >0$，使得任意$r$，$0 < r < R$，有
     $$r \int_{0}^{2 \pi}{|2f(\mathrm{e^{i\theta}})|}\diff \theta < M$$
-    证明：$z=0$是一个可去奇点，否则是简单极点。
+    证明：$z=0$是一个可去发散点，否则是简单极点。
 
 \end{proposition}
 
@@ -386,92 +532,6 @@
     $$|f(z)| \leq z^n$$
 
 \end{proof}
-
-\begin{proposition}
-
-    设
-    $$S_n = \sum\limits_{k = 0}^{\infty}{a_k}$$
-    证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{a_kz^k}$的收敛半径$R(A)$为$1$，
-    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_k z^k}$的收敛半径$R(C)$也为$1$。
-
-\end{proposition}
-
-\begin{proof}
-    
-    因为
-    $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{a_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
-    则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$。则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
-    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k}, \quad 1 < |z| < R$$
-    所以
-    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
-    因此
-    $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|a_k||z|^k}$$
-    由\textup{(1)}式知，
-    $$\sum\limits_{k = n + 1}^{n + p}{|a_k||z|^K} < \varepsilon, \quad 1 < |z| < R$$
-    若$R(C) < 1$，则必有$R(A) < 1$，与题设矛盾。得证。
-
-\end{proof}
-
-\begin{theorem}[Tauber 定理]
-
-    幂级数$\sum\limits_{n = 0}^{\infty}{a_k z^n}$的收敛半径为$1$，且$\lim\limits_{n \to \infty}{na_n} = 0$. 证明：
-
-    \begin{enumerate}
-        
-        \item $$\lim\limits_{m \to \infty}{\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m}} = 0$$
-        
-        \item 
-            设
-            $$f(z) = \sum\limits_{n = 0}^{m}{a_n z^n}, \quad |z| < 1$$
-            如果存在$\lim\limits_{x \to 1}{f(x)} = A$，那么级数$\sum\limits_{n = 0}^{n}{a_n}$收敛到$A$。
-        
-    \end{enumerate}
-
-\end{theorem}
-
-\begin{proof}
-
-    \begin{enumerate}
-
-        \item 
-            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，使得当$n > N$时，$n|a_n| < \dfrac{\varepsilon}{2}$。
-            选择$n = n_0$满足上述条件。则对任意$m > n_0$，有
-            
-            \begin{align*}
-                \dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} & = \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\sum\limits_{n = n_0 + 1}^{m}{n|a_n|}}{m} \\
-                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{m - n_0}{2m} \varepsilon \\
-                & < \dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} + \dfrac{\varepsilon}{2}
-            \end{align*}
-
-            对足够大的$m > M$，有
-            $$\dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} < \dfrac{\varepsilon}{2}$$
-            因此对$m > \max{(N,M)}$
-            $$\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} < \varepsilon$$
-
-        \item 
-            \begin{align*}
-                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & = \left| \sum\limits_{k = 0}^{n}{a_k(1 - x^k)} - \sum\limits_{k = n + 1}^{\infty}{a_k x^k} \right| \\
-                & \leq (1 - x)\sum\limits_{k = 0}^{n}{\left[ |a_k|(1 + x + \cdots + x^{k -1}) \right]} + \sum\limits_{k = n + 1}^{\infty}{|a_k|x^k} \\
-                & < n(1 - x)\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{n} + \sum\limits_{k = n + 1}^{\infty}{k|a_k|\dfrac{x^k}{k}}        
-            \end{align*}
-
-            令$m|a_m| < \dfrac{\varepsilon}{2}$，由(a)知，$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得当$m > M$时有 
-            $$\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{m} < \dfrac{\varepsilon}{2}$$
-            我们由上述不等式得
-
-            \begin{align*}
-                \left| \sum\limits_{k = 0}^{n}{a_k} - f(x) \right| & < n(1 - x)\dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2n}\sum\limits_{k = n + 1}^{\infty}{x^k} \\
-                & = \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{x^{n + 1}}{1 - x} \right] \\
-                & < \dfrac{\varepsilon}{2}\left[ n(1 - x) + \dfrac{1}{n} \dfrac{1}{1 - x} \right]
-            \end{align*}
-
-            即
-            $$\sum\limits_{k = 0}^{n}{a_k} = A$$
-
-        \end{enumerate}
-
-\end{proof}
-
 
 \section{共形映射}
 
