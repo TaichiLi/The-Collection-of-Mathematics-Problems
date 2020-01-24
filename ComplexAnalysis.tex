@@ -105,6 +105,53 @@
     
 \end{proof}
 
+\begin{proposition}
+
+    设函数$f$在$z = 0$的邻域上连续。证明：
+
+    \begin{enumerate}
+
+        \item $$\lim\limits_{r \to 0}{\int_{0}^{2 \pi}{f(r\euler^{\imag t})}\diff t} = 2 \pi f(0)$$
+        
+        \item $$ \lim\limits_{r \to 0}{\int_{L}{\dfrac{f(z)}{z}}\diff z} = 2 \pi \imag f(0)$$
+        
+    \end{enumerate}
+
+    其中$L$是圆$|z| = r$。
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+            因为函数$f$在$z = 0$的邻域上连续，则$\forall \varepsilon > 0$，$\exists \delta$，使得当$r < \delta$时
+            $$|f(r\euler^{\imag t}) - f(0| < \dfrac{\varepsilon}{2 \pi}, \quad 0 \leq t \leq 2 \pi$$
+            因此
+
+            \begin{align*}
+                \left| \int_{0}^{2 \pi}{f(r\euler^{\imag t})}\diff t - 2 \pi f(0) \right| & = \left| \int_{0}^{2 \pi}{f(r\euler^{\imag t})- f(0)}\diff t \right| \\
+                & \leq \int_{0}^{2 \pi}{\left| f(r\euler^{\imag t})- f(0) \right|}\diff t \\
+                & < \dfrac{\varepsilon}{2 \pi}\int_{0}^{2 \pi}\diff t \\
+                & = \varepsilon
+            \end{align*}
+
+        \item 
+            设$z = r\euler^{\imag t}$，$0 \leq t \leq 2 \pi$，则$\forall \varepsilon > 0$，$\exists \delta$，使得当$r < \delta$时
+
+            \begin{align*}
+                \left| \int_{L}{\dfrac{f(z)}{z}}\diff t - 2 \pi \imag f(0) \right| & = \left| \int_{0}^{2 \pi}{\dfrac{f(r\euler^{\imag t})}{r\euler^{\imag t}}r\euler^{\imag t} \imag - f(0)\imag}\diff t \right| \\
+                & = \left| \imag \int_{0}^{2 \pi}{f(r\euler^{\imag t}) - f(0)}\diff t \right|\\
+                & \leq \int_{0}^{2 \pi}{|f(r\euler^{\imag t}) - f(0)|}\diff t \\
+                & < \dfrac{\varepsilon}{2 \pi}\int_{0}^{2 \pi}\diff t \\
+                & = \varepsilon
+            \end{align*}
+
+    \end{enumerate}
+
+\end{proof}
+
 \section{复级数}
 
 \begin{proposition}
@@ -304,7 +351,7 @@
     从最后一个不等式知
     $$\Delta < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
     由$w$的任意性和引理\ref{lemma:radius}可知，$\varphi(z)$在$|z| = 1$上没有发散点，这与$\varphi(z)$的收敛半径$R = 1$矛盾。得证。
-    
+
 \end{proof}
 
 \section{解析函数}
