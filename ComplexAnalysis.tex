@@ -53,7 +53,7 @@
     \end{align*}
 
     得证。
-    
+
 \end{proof}
 
 \section{复积分}
@@ -385,29 +385,30 @@
 
 \begin{proposition}
     
-    设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的一个极点$z_0$）解析，证明：
-    若$\sum\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
+    设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的唯一一个极点$z_0$）解析。\\
+    证明：若$\sum\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
     $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
 
 \end{proposition}
 
 \begin{proof}
     
-    考虑$f(z_0z)$的相同问题，则只需证明$z_0 = 1$的情况\\
-    设$g(z)$是$f(z)$在$z=1$处\textup{Taylor}级数的主要部分，即
-    $$g(z) = \sum\limits_{p=1}^{k}{\dfrac{A_p}{(1-z)^p}},\quad p \geq 1$$
-    因为$h(z) = \dfrac{1}{1-z} = \sum\limits_{n=0}^{\infty}{z^n}$，则$h(z)$的$p-1$阶导数
+    函数$f$在单位圆内可以表示为
+    $$f(z) = \dfrac{c}{z - z_0} + h(z)$$
+    其中$h(z)$是解析函数且$c \neq 0$. 因为$h(z)$解析，因此在单位圆内有\textup{Taylor}级数
+    $$h(z) = \sum\limits_{n = 0}^{\infty}{b_n z^n}$$
+    又$\dfrac{c}{z - z_0}$能展开为幂级数
+    $$\dfrac{c}{z - z_0} = -\dfrac{c}{z_0}\dfrac{1}{1 - \frac{z}{z_0}} = \sum\limits_{n = 0}^{\infty}{\left(\dfrac{z}{z_0}\right)^n}$$
+    所以
+    $$f(z) = \sum\limits_{n = 0}^{\infty}{\left(b_n - \dfrac{c}{z^{n + 1}}\right)z^n} = \sum\limits_{n = 0}^{\infty}{a_n z^n}$$
+    则有
+    $$\dfrac{a_n}{a_{n+1}} = 
+    \dfrac{b_n - \frac{c}{z_0^{n+1}}} {b_{n+1} - \frac{c}{z_0^{n+2}}} = 
+    z_0 \dfrac{(b_n z_0^n) z_0 - c} {(b_{n+1}z_0^{n+1}) z_0 - c} =
+    z_0 \dfrac{z_0 h_n - c}{z_0 h_{n+1} - c}$$
+    其中$h_n$是$h(z)$在$z = z_0$处\textup{Taylor}级数第$n$项的系数。因为$h(z)$在单位圆内解析，有$\lim\limits_{n \to \infty}{h_n} = 0$. 且
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 1}}} = \lim\limits_{n \to \infty}{\left(a_0 \dfrac{a_0 h_n - c}{z_0h_{n + 1} - c}\right)} = z_0$$
     
-    \begin{align*}
-        (1-z)^{(p-1)} & = \dfrac{(p-1)!}{(1-z)^p}\\
-        & = \left(\sum\limits_{n=1}^{\infty}{z_n}\right)^{(p-1)}\\
-        & = \sum\limits_{n=0}^{\infty}{(n+1)(n+2)\cdots(n+p+1)z^n}
-    \end{align*}
-
-    设$g(z) = \sum\limits_{n=1}^{\infty}{b_nz^n}$，有
-    $$b_n = \sum\limits_{p=1}^{k}{\dfrac{1}{(p-1)!}(n+1)(n+2)\cdots(n+p+1)}$$
-    则$\lim\limits_{n\to\infty}{b_n} = $
-
 \end{proof}
 
 \begin{proposition}
