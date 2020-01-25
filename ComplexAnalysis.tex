@@ -29,6 +29,33 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设数列$\{a_n\}$由$-1$，$0$，$1$组成。证明：
+    $$a_0\sqrt{2 + \sqrt{a_1 \sqrt{2 + a_2\sqrt{2 + \cdots}}}} = 2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{n = 0}^{\infty}{\dfrac{a_0 a_1 \cdots a_n}{2^n}}\right)}$$
+
+\end{proposition}
+
+\begin{proof}
+
+    设
+    $$z_n = 2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^n}}\right)}$$
+    易知
+    $$\mathrm{sgn}{z_n} = \mathrm{sgn}\left(2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^n}}\right)}\right) = a_0$$
+    对$a_0 \neq 0$，有
+    $$z_n^2 - 2 = a_1\sqrt{2 + a_2\sqrt{2 + \cdots + a_n\sqrt{2}}}$$
+    且有
+
+    \begin{align*}
+        z_n^2 - 2 & = -2 \cos{\left(\dfrac{\pi}{2}\sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^k}}\right)} \\
+        & = 2 \cos{\left(\dfrac{\pi}{2} + \dfrac{\pi}{2}\sum\limits_{k = 0}^{n}{\dfrac{a_1 \cdots a_k}{2^k}}\right)} \\
+        & = 2 \sin{\left(\dfrac{\pi}{4}\sum\limits_{k = 1}^{n}{\dfrac{a_1 \cdots a_k}{2^{k - 1}}}\right)}
+    \end{align*}
+
+    得证。
+    
+\end{proof}
+
 \section{复积分}
 
 \begin{proposition}
