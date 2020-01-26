@@ -1,2 +1,28 @@
 \chapter{线性代数}
 
+\section{矩阵的初等变换}
+
+\begin{theorem}
+
+    设$A$是严格对角占优矩阵，即
+    $$|a_{kk}| > \sum\limits_{i \neq k}{|a_{ki}|}, \quad n = 1, 2, \cdots , n$$
+    证明：$A$是非奇异矩阵。
+
+\end{theorem}
+
+\begin{proof}
+    
+    反证法。假设$\det A = 0$，则齐次线性方程组有非零解$x = (x_1, x_2, \cdots , x_n)^{T}$。
+    设$|x_1|, |x_2|, \cdots , |x_n|$中最大的一个是$|x_k|$，显然$|x_k| > 0$. 由假设知
+    $$\sum\limits_{j = 1}^{n}{a_{kj}x_j}  = 0$$
+    
+    \begin{align*}
+        \left| \sum\limits_{j \neq k}{a_{kj}x_j} \right| & = |-a_{kk}x_k| = |a_{kk}||x_j| \\ 
+        & > |x_k| \sum\limits_{j \neq k}{|x_{kj}|} \\
+        & \geq \sum\limits_{j \neq k}{|x_j||a_{kj}|} \\
+        & \geq \left| \sum\limits_{j \neq k}{a_{kj}x_j} \right|
+    \end{align*}
+
+    与假设矛盾。得证。
+    
+\end{proof}
