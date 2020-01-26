@@ -432,6 +432,59 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设
+    $$f(z) = \dfrac{\sum\limits_{n = 0}^{\infty}{a_n(z - a)^n}}{\sum\limits_{n = 0}^{\infty}{b_n(z - a)^n}}, \quad |z - a| < R$$
+    其中$b_0 \neq 0$. 证明：$f(z)$可以表示为下列形式
+    $$f(z) = \sum\limits_{n = 0}^{\infty}{c_n(z - a)^n}, \quad |z - a| < R$$
+    并用系数$a_n$和$b_n$来表示上述系数$c_n$。
+
+\end{proposition}
+
+\begin{proof}
+
+    易知
+    $$\dfrac{\sum\limits_{n = 0}^{\infty}{a_n(z - a)^n}}{\sum\limits_{n = 0}^{\infty}{b_n(z - a)^n}}$$
+    在$|z - a| < R$内解析，因此存在\textup{Taylor}级数展开式
+    $$f(z) = \sum\limits_{n = 0}^{\infty}{c_n(z - a)^n}, \quad |z - a| < R$$
+    则有
+
+    \begin{align*}
+        \sum\limits_{n = 0}^{\infty}{a_n(z - a)^n} & = \sum\limits_{n = 0}^{\infty}{c_n(z - a)^n} \cdot \sum\limits_{n = 0}^{\infty}{b_n(z - a)^n} \\
+        & = \sum\limits_{n = 0}^{\infty}{\sum\limits_{k = 0}^{\infty}{a_kb_{n - k}(z - a)^n}}
+    \end{align*}
+
+    由幂级数展开的唯一性可得
+
+    \begin{align*}
+        & c_0 b_0 = a_0 \\
+        & c_0 b_1 + c_1 b_0 = a_1 \\
+        & c_0 b_2 + c_1 b_1 + c_2 b_0 = a_2 \\
+        & \vdots \\
+        & c_0 b_n + c_1 b_{n - 1} + c_2 b_{n - 2} + \cdots + c_n b_0 = a_n
+    \end{align*}
+
+    可得线性方程组，解得
+    $$c_n = \dfrac{1}{b_{n + 1}}
+    \begin{vmatrix} 
+        b_0 & 0 & 0 & \cdots & a_0 \\
+        b_1 & b_0 & 0 & \cdots & a_1 \\
+        b_2 & b_1 & b_0 & \cdots & a_2 \\
+        \vdots & \vdots & \vdots & \cdots & \vdots \\
+        b_n & b_{n - 1} & b_{n - 2} & \cdots & a_n
+    \end{vmatrix}$$
+    且
+    $$\begin{vmatrix} 
+        b_0 & 0 & 0 & \cdots & 0 \\
+        b_1 & b_0 & 0 & \cdots & 0 \\
+        b_2 & b_1 & b_0 & \cdots & 0 \\
+        \vdots & \vdots & \vdots & \cdots & \vdots \\
+        b_n & b_{n - 1} & b_{n - 2} & \cdots & b_0
+    \end{vmatrix} = b_0^{n + 1} \neq 0$$
+
+\end{proof}
+
 \section{解析函数}
 
 \begin{proposition}
