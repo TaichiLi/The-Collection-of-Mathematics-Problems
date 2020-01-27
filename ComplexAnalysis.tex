@@ -345,10 +345,12 @@
         & = \sum\limits_{m = n}^{\infty}{\binom{m}{n}a_m(z_1 - z_0)^{m - n}}
     \end{align*}
 
-    因为
-    $$\dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}} = r$$
-    所以
+    易知，若$w$是$\varphi(z)$的发散点，则$\varphi(z)$在$z = z_1$处的\textup{Taylor}展开式的收敛半径为$r$，因此对$b_n$有
+    $$\dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}} = \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{|b_n|}}} = r$$
+    即
     $$\Delta = R - |z_1 - z_0| = r = \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
+    反之，$w$是$\varphi(z)$的收敛点，则$\varphi(z)$在$z = z_1$处的\textup{Taylor}展开式的收敛半径大于$r$，因此对$b_n$有
+    $$\Delta < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
 
 \end{proof}
 
@@ -399,7 +401,7 @@
 
     \begin{align*}
         (2n + 1)C_n & = \sum\limits_{|m| > n + M}{|a_{m - n} + \cdots + a_{m + n}|} \\
-        & \quad + \sum\limits_{n + M\leq |m| > n - M}{|a_{m - n} + \cdots + a_{m + n}|} \\
+        & \quad + \sum\limits_{n + M\leq |m| < n - M}{|a_{m - n} + \cdots + a_{m + n}|} \\
         & \quad + \sum\limits_{|m| < n - M}{|a_{m - n} + \cdots + a_{m + n}|}
     \end{align*}
 
