@@ -5,6 +5,7 @@ A Collection of Mathematics Problems, which includes mathematical analysis, line
 
 - Mathematics Analysis
 - Linear Algebra
-- Complex Analysis
+- Probability Theory and Mathematical Statistics
 - Discrete Mathematics
+- Complex Analysis
 - Signals and Systems
