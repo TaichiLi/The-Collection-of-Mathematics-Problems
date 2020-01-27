@@ -1,0 +1,31 @@
+\chapter{概率论与数理统计}
+
+\section{随机事件与概率}
+
+\subsection{概率的性质}
+
+\begin{proposition}
+
+    证明：
+    $$|P(AB) - P(A)P(B)| \leq \dfrac{1}{4}$$
+
+\end{proposition}
+
+\begin{proposition}
+
+    因为
+    $$P(AB) - P(A)P(B) = P(AB) + P(A)[P(AB) - P(\overline{A}B)] = P(AB)[1 - P(A)] - P(A)P(\overline{A}B)$$
+    且
+    $$0 \leq P(AB)[1 - P(A)] \leq P(A)[1 - P(A)]$$
+    $$0 \leq P(A)P(\overline{A}B) \leq P(A)P(\overline{A}) = P(A)[1 - P(A)]$$
+    所以
+    
+    \begin{align*}
+        |P(AB) - P(A)P(B)| & = |P(AB)[1 - P(A)] - P(A)P(\overline{A}B)| \\
+        & \leq \max\{P(AB)[1 - P(A)], P(A)P(\overline{A}B)\} \\
+        & \leq P(A)[1 - P(A)] = P(A) - [P(A)]^2 \\
+        & = \dfrac{1}{4} - \left[ P(A) - \dfrac{1}{2} \right]^2 \\
+        & \leq \dfrac{1}{4}
+    \end{align*}
+
+\end{proposition}

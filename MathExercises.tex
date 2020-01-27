@@ -61,7 +61,8 @@
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]{\raggedright\huge\bfseries}{第\chinese{chapter}章}{1em}{\Huge\vspace{1pt}}
-\titleformat{\section}{\centering\Large\bfseries}{\S \arabic{section}}{1em}{}
+\titleformat{\section}{\centering\Large\bfseries}{\S \arabic{section}}{1em}{\vspace{1em}}
+\titleformat{\subsection}{\raggedright\large\bfseries}{\arabic{section}.\arabic{subsection}}{1em}{\vspace{1em}}
 
 \usepackage{enumerate}
 \usepackage{enumitem}
@@ -119,6 +120,8 @@ leftmargin=7mm,labelsep=1.5mm,topsep=-0.8mm,itemsep=-0.8mm}
 \input{MathAnalysis_third.tex}
 
 \input{LinearAlgebra.tex}
+
+\input{ProbabilityStatistics.tex}
 
 \input{DiscreteMathematics.tex}
 
