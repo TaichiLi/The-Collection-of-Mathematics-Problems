@@ -81,3 +81,26 @@
     \end{align*}
 
 \end{proof}
+
+\begin{proposition}
+
+    设$g(x)$为随机变量$X$取值的集合上的非负不减函数，且$E(g(x))$存在。证明：对任意的$\varepsilon > 0$，有
+    $$P(X > \varepsilon) \leq \dfrac{E(g(X))}{g(\varepsilon)}$$
+
+\end{proposition}
+
+\begin{proof}
+
+    因为$g(x)$为非负不减函数，则对任意的$\varepsilon > 0$，有
+    $$g(x) \geq g(\varepsilon) \leq 0$$
+    即$\dfrac{g(x)}{g(\varepsilon)} \leq 1$，因此
+
+    \begin{align*}
+        P(X > \varepsilon) & = \int_{\varepsilon}^{+\infty}{p(x)}\diff x \\
+        & \leq \int_{\varepsilon}^{+\infty}{\dfrac{g(x)}{g(\varepsilon)}p(x)}\diff x \\
+        & \leq \int_{-\infty}^{+\infty}{\dfrac{g(x)}{g(\varepsilon)}p(x)}\diff x \\
+        & = \dfrac{\int_{-\infty}^{+\infty}{g(x)p(x)}\diff x}{g(\varepsilon)} \\
+        & = \dfrac{E(g(X))}{g(\varepsilon)}
+    \end{align*}
+
+\end{proof}
