@@ -104,3 +104,29 @@
     \end{align*}
 
 \end{proof}
+
+\section{常用离散分布}
+
+\begin{theorem}[Poisson定理]
+
+    在$n$重伯努利试验中，记事件$A$在一次实验中发生的概率为$p_n$（与试验次数有关）。若$\lim\limits_{n \to \infty}{n p_n} = \lambda$，则
+    $$\lim\limits_{n \to \infty}{\binom{n}{k}p_n^k(1 - p_n)^{n - k}} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
+
+\end{theorem}
+
+\begin{proof}
+
+    记$n p_n^k = \lambda_n$，即$p_n = \dfrac{\lambda_n}{n}$，则有
+
+    \begin{align*}
+        \binom{n}{k}p_n^k(1 - p_n)^{n - k} & = \dfrac{n(n - 1) \cdots (n - k + 1)}{k!}\left(\dfrac{\lambda_n}{n}\right)^k\left(1 - \dfrac{\lambda_n}{n}\right)^{n - k} \\
+        & = \dfrac{\lambda_n^k}{k!}\left(1 - \dfrac{1}{n}\right)\left(1 - \dfrac{2}{n}\right) \cdots \left(1 - \dfrac{k - 1}{n}\right)\left(1 - \dfrac{\lambda_n}{n}\right)^{n - k}
+    \end{align*}
+
+    对固定的$k$有
+    $$\lim\limits_{n \to \infty}{\lambda_n} = \lambda$$
+    $$\lim\limits_{n \to \infty}{\left(1 - \dfrac{\lambda_n}{n}\right)^{n - k}} = \euler^{-\lambda}$$
+    $$\lim\limits_{n \to \infty}{\left(1 - \dfrac{1}{n}\right)\left(1 - \dfrac{2}{n}\right) \cdots \left(1 - \dfrac{k - 1}{n}\right)} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
+    因此，对任意的$k$成立。定理得证。
+
+\end{proof}
