@@ -29,3 +29,55 @@
     \end{align*}
 
 \end{proposition}
+
+\section{随机变量极其分布}
+
+\subsection{随机变量的方差与标准差}
+
+\begin{theorem}[Chebyshev不等式]
+    
+    设随机变量$X$的数学期望和方差都存在，则对任意常数$\varepsilon > 0$，有
+    $$P(|X - E(X)| \geq \varepsilon) \leq \dfrac{Var(X)}{\varepsilon^2}$$
+
+\end{theorem}
+
+\begin{proof}
+
+    设$X$是一个随机变量，其密度函数为$p(x)$。记$E(X) = a$，则有
+
+    \begin{align*}
+        P(|X - a| \geq \varepsilon) & = \int_{|x - a| \geq \varepsilon}{p(x)}\diff x \\
+        & \leq \int_{|x - a| \geq \varepsilon}{\dfrac{(x - a)^2}{\varepsilon^2}p(x)}\diff x \\
+        & \leq \dfrac{1}{\varepsilon^2}\int_{-\infty}^{+\infty}{(x - a)^2p(x)}\diff x \\
+        & = \dfrac{Var(X)}{\varepsilon^2}
+    \end{align*}
+    
+\end{proof}
+
+\begin{proposition}
+    
+    设随机变量$X$仅在区间$[a,b]$上取值，证明：$a \leq E(X) \leq b$，$Var(X) \leq \left(\dfrac{b - a}{2}\right)^2$.
+
+\end{proposition}
+
+\begin{proof}
+
+    设随机变量$X$的密度函数为$p(x)$，则有
+    $$E(X) = \int_{a}^{b}{xp(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x = b$$
+    同理$E(X) \geq a$，即$a \leq E(X) \leq b$。
+    因为$a \leq X \leq b$，则
+    $$-\dfrac{b - a}{2} \leq X - \dfrac{a + b}{2} \leq \dfrac{b - a}{2}$$
+    因此
+    $$\left(X - \dfrac{a + b}{2}\right)^2 \leq \left(\dfrac{b - a}{2}\right)^2$$
+    易知
+    $$E\left(X - \dfrac{a + b}{2}\right)^2 \leq \left(\dfrac{b - a}{2}\right)^2$$
+    则有
+    
+    \begin{align*}
+        Var(X) & = Var\left(X - \dfrac{a + b}{2}\right) \\
+        & = E\left(X - \dfrac{a + b}{2}\right)^2 - \left[E\left(X - \dfrac{a + b}{2}\right)\right]^2 \\
+        & \leq E\left(X - \dfrac{a + b}{2}\right)^2 \\
+        & \leq \left(\dfrac{b - a}{2}\right)^2
+    \end{align*}
+
+\end{proof}
