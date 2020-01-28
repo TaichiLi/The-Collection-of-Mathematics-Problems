@@ -12,7 +12,7 @@
 
 \begin{proof}
     
-    反证法。假设$\det A = 0$，则齐次线性方程组有非零解$x = (x_1, x_2, \cdots , x_n)^{T}$。
+    反证法。假设$\det A = 0$，则齐次线性方程组有非零解$x = (x_1, x_2, \cdots , x_n)^{\transpose}$。
     设$|x_1|, |x_2|, \cdots , |x_n|$中最大的一个是$|x_k|$，显然$|x_k| > 0$. 由假设知
     $$\sum\limits_{j = 1}^{n}{a_{kj}x_j}  = 0$$
     
@@ -25,4 +25,29 @@
 
     与假设矛盾。得证。
     
+\end{proof}
+
+\section{矩阵的相似变换}
+
+\begin{theorem}
+    
+    实对称矩阵的特征值为实数。
+
+\end{theorem}
+
+\begin{proof}
+
+    设$\lambda$是实对称矩阵$A$的特征值，$\boldsymbol{x}$为对应的特征向量，即$\boldsymbol{Ax} = \lambda \boldsymbol{x}$，$\boldsymbol{x} \neq \boldsymbol{0}$. \\
+    则有
+    $$\boldsymbol{A\overline{x}} = \boldsymbol{\overline{A}}\boldsymbol{\overline{x}} = \boldsymbol{\overline{Ax}} = \overline{\lambda\boldsymbol{x}} = \overline{\lambda}\boldsymbol{\overline{x}}$$
+    于是
+    $$\boldsymbol{\overline{x}}^{\transpose} \boldsymbol{A} \boldsymbol{x} = \boldsymbol{\overline{x}}^{\transpose} (\boldsymbol{A} \boldsymbol{x}) = \boldsymbol{\overline{x}}^{\transpose} \lambda \boldsymbol{x} = \lambda \boldsymbol{\overline{x}}^{\transpose} \boldsymbol{x}$$
+    及
+    $$\boldsymbol{\overline{x}}^{\transpose} \boldsymbol{A} \boldsymbol{x} = (\boldsymbol{\overline{x}}^{\transpose} \boldsymbol{A}^{\transpose}) \boldsymbol{x} = (\boldsymbol{A} \boldsymbol{\overline{x}})^{\transpose} \boldsymbol{x} = \overline{\lambda} \boldsymbol{\overline{x}}^{\transpose} \boldsymbol{x}$$
+    两式相减得
+    $$(\lambda - \overline{\lambda}) \boldsymbol{\overline{x}}^{\transpose} \boldsymbol{x}$$
+    但因为$x = (x_1, x_2, \cdots , x_n)^{\transpose}  \neq \boldsymbol{0}$，所以
+    $$\boldsymbol{\overline{x}}^{\transpose} \boldsymbol{x} = \sum\limits_{i = 1}^{n}{\overline{x_i}x_i} = \sum\limits_{i = 1}^{n}{|x_i|^2} > 0$$
+    因此$\lambda - \overline{\lambda} = 0$，即$\lambda$是实数。
+
 \end{proof}
