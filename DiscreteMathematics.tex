@@ -4,6 +4,29 @@
 
 \section{集合论}
 
+\subsection{函数}
+
+\begin{proposition}
+
+    设函数$f : \mathbb{N} \to \mathbb{R}$
+    $$f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}}$$
+    证明：函数$f$是单射。
+
+\end{proposition}
+
+\begin{proof}
+
+    易知$\sin{n} = \dfrac{1}{2\imag}(\euler^{\imag n} - \euler^{-\imag n})$，则有
+    $$f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{\euler^{\imag k} - \euler^{-\imag k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{z^n - z^{-n}}}$$
+    其中$z = \euler^{\imag k}$。因为$z$为超越数，所以$z$不能是任何有理系数代数方程的根。
+    反证法。假设存在$n_1$，$n_2$，$n_1 < n_2$，使得$f(n_1) = f(n_2)$，则有
+    $$f(n_2) - f(n_1) = \dfrac{1}{2\imag}\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0$$
+    即
+    $$\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0$$
+    而上式为有理函数，与$z$为超越数的性质矛盾。得证。
+    
+\end{proof}
+
 \section{代数结构}
 
 \subsection{代数系统}
