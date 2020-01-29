@@ -375,19 +375,21 @@
 
 \begin{proof}
 
-    反证法。设$f(x) \neq 0,\ x \in [a,b]$\\
-    令$S = \{x | x \in [a,b] \land f(x) = 0\}$，则显然$S$非空。设$ c = \inf{S}$\\
-    如果$c= b$，则$f(x) = 0, \ \forall x \in [a,b]$，由连续性可知
+    反证法。设存在$x \in [a,b]$，$f(x) \neq 0$.\\
+    令$S = \{x | x \in [a,b] \land f(x) \neq 0\}$，则显然$S$非空。设$ c = \inf{S}$\\
+    如果$c= b$，则$f(x) = 0$，$\forall x \in [a,b)$，又由连续性可知
     $$f(b) = \lim\limits_{x\to b}{f(x)} = 0$$
-    与题设矛盾。因此$c \neq b$，又$c =a $，则有$f(c) = 0$，否则$a<c<b$时
+    即$f(x) = 0$，$\forall x \in [a,b]$，与题设矛盾。因此$c \neq b$，又若$c =a$，则有$f(c) = 0$.\\
+    否则当$a<c<b$时
     $$f(x) = 0, \quad \forall x < c$$
     则由函数连续性知$f(c) = 0$. 综上
     $$f(c) = 0, \quad a \leq c < b$$
-    因为$f$在$x = c$处连续且$f(c) = 0$，则存在$d > c$，使$d$充分接近$c$，且
-    $|f(x)| \leq 1$，$A(x - c) \leq \dfrac{1}{2}, \ x \in [c,d]$
+    因为$f$在$x = c$处连续且$f(c) = 0$，则存在$\delta > 0$，选取一个$d$满足$|d - c| < \delta$，使得$x \in [c,d]$时，
+    $|f(x)| \leq 1$，且
+    $$A(x - c) \leq \dfrac{1}{2}$$
     因为$f$在$[c,d]$连续，所以存在最值，即令
-    $$ |f(t)| = \max_{x\in[c,d]}{|f(x)|}, \quad t \in [c,d]$$
-    又因为$c = \inf{S}$，则$\forall \varepsilon > 0$，$\exists m \in (m, m+\varepsilon)$，使得$f(m) = \neq 0$\\
+    $$ |f(t)| = \max_{x\in[c,d]}{|f(x)|}$$
+    又因为$c = \inf{S}$，则$\forall \varepsilon > 0$，$\exists m \in (c, c + \varepsilon)$，使得$f(m) \neq 0$\\
     则$f(t) \neq 0$，且$t > c$，由\textup{Lagrange}中值定理知
     $$| f(t)| = |f(t) - f(c)| = |t-c||f'(u)| \leq |t-c||f(u)|^{\beta}, \quad u \in (c,t)$$
     又由$A(x-c) \leq \dfrac{1}{2}$得

@@ -115,7 +115,7 @@
     又
     $$\lim\limits_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
     $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
-    于是，
+    于是
 
     \begin{align*}
         \dfrac{x_1 + x_2 + \cdots + x_n}{n} & = \dfrac{x_1 + x_2 + \cdots + x_{N_1}}{n} + \dfrac{x_{N_1+1} + x_{N_1+2} + \cdots + x_n}{n} \\
@@ -133,8 +133,7 @@
 
     设$\{a_n\}$和$\{b_n\}$都是收敛于$0$的数列，其中$\{a_n\}$是严格单调递减数列，且存在
     $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
-    其中$l$为有限值或无穷。\\
-    则有
+    其中$l$为有限值或无穷。则有
     $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
@@ -169,8 +168,7 @@
     
     设有数列$\{a_n\}$和$\{b_n\}$，其中$\{a_n\}$是严格单调增加的发散数列，且存在
     $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
-    其中$l$为有限值或无穷。\\
-    则有
+    其中$l$为有限值或无穷。则有
     $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
@@ -197,14 +195,14 @@
             $$(l-\varepsilon)(a_{n}-a_{N})<b_{n}-b_{N}<(l+\varepsilon)(a_{n}-a_{N})$$
             $$\left| \dfrac{b_n-b_{N}}{a_n-a_{N}}-l\right| < \varepsilon$$
             $$\dfrac{b_n}{a_n}-l = \left(1-\dfrac{a_N}{a_n}\right)\left(\dfrac{b_n-b_N}{a_n-a_N}-l\right) + \dfrac{b_N-la_N}{a_N}$$
-            由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使$n>N_1$成立
+            由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使得当$n>N_1$时成立
             $$0<1-\dfrac{a_N}{a_n}<2$$
             $$\left|\dfrac{b_N-la_N}{a_n}\right|<\varepsilon$$
             则当$n>\max\{N_1, N\}$有
             $$\left|\dfrac{b_n}{a_n}-l\right|<3\varepsilon$$
 
         \item
-            $l$为$+\infty$\\
+            $l$为$+\infty$时\\
             $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
             $$b_{n+1}-b_n>a_{n+1}-a_n$$
             由\textup{(1)}可知，
@@ -215,7 +213,7 @@
             故
             $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{\frac{1}{a_n}}{b_n}}=+\infty$$
 
-        \item $l$为$-\infty$时同(2)
+        \item $l$为$-\infty$时同\textup{(2)}.
 
     \end{enumerate}
 
@@ -264,7 +262,7 @@
 
 \begin{proof}
     
-    先证充分性，\\
+    先证充分性。\\
     正数列$\{a_n\}$单调减少，则$\{a_n\}$存在极限，即
     $$\lim\limits_{n\to\infty}{a_n} = a(a>0)$$
     设$b_n=1-\dfrac{a_{n+1}}{a_n} = \dfrac{a_n-a_{n+1}}{a_n}\leq\dfrac{a_n-a_{n+1}}{a}$，
@@ -283,7 +281,7 @@
     \end{align*}
 
     可知$\sum\limits_{n=1}^{\infty}{b_n}$收敛。\\
-    再证必要性，若$a=0$，则由柯西准则，
+    再证必要性。若$a=0$，则由柯西准则，
 
     \begin{align*}
         \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_{k+1}}{a_k})}\\
@@ -295,7 +293,7 @@
     因为$\lim\limits_{n\to\infty}{a_n}=0$，则总存在$p \in \mathbb{N}$，
     使得
     $$\sum\limits_{k=n+1}^{n+p}{b_k}\geq\dfrac{1}{2}$$
-    所以，$\sum\limits_{n=1}^{\infty}{b_n}$发散。
+    所以$\sum\limits_{n=1}^{\infty}{b_n}$发散。
 
 \end{proof}
 
@@ -328,7 +326,7 @@
         & = \dfrac{2\varepsilon}{a_{n+1}}
     \end{align*} 
 
-    所以，$\sum\limits_{n=1}^{\infty}{b_n}$收敛。\\
+    所以$\sum\limits_{n=1}^{\infty}{b_n}$收敛。\\
     若$\lim\limits_{n\to\infty}{a_n}=+\infty$，则
 
     \begin{align*}
@@ -432,7 +430,7 @@
 
         \item   
             充分性即为比较判别法的比值形式。\\
-            必要性\\
+            下证必要性。\\
             令
             $$b_n=\dfrac{S_n}{a_n}$$
             易知$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$发散
@@ -1196,8 +1194,8 @@
     $p,q\in\mathbb{R}^+$，且$\dfrac{1}{p}+\dfrac{1}{q}=1$，则
 
     \begin{align*}
-        a^{\dfrac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p > 1)\\
-        a^{\dfrac{1}{p}} b^{\frac{1}{q}} & \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p < 1)
+        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p > 1)\\
+        a^{\frac{1}{p}} b^{\frac{1}{q}} & \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p < 1)
     \end{align*}
 
     其中$a,\ b$为任意实数。
