@@ -482,7 +482,7 @@
 \begin{proof}
 
     设$f$与$y = x$的交点为$x_1, x_2, \cdots , x_n$\\
-    任意区间$[x_i, x_{i+1}], \ i \in \{1,2,\cdots,n\}$上，若$f(x) < x$，则
+    任意区间$[x_i, x_{i+1}]$，$i = 1, 2, \cdots, n$上，若$f(x) < x$，则
     $$f(f(x)) \leq f(x)$$
     即
     $$\int_{x_i}^{x_{i+1}{f(f(x))}}\diff x \leq \int_{x_i}^{x_{i+1}}{f(f(x_{i+1}))}\diff x \leq 2\int_{x_i}^{x_{i+1}}{f(x)}\diff x$$
@@ -645,7 +645,7 @@
     $$|f(x_0)| \leq 2 \int_{0}^{\frac{1}{2}}{|f(x)|}\diff x$$
     又有
     $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
-    对于$\forall x \in [\dfrac{1}{2}, 1]$，有不等式
+    对于$\forall x \in \left[\dfrac{1}{2}, 1\right]$，有不等式
     $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{\frac{1}{2}}^{1}{|f(x)|}\diff x + \int_{\frac{1}{2}}^{1}{|f'(x)|}\diff x$$
     所以有
     $$\left|f\left(\dfrac{1}{2}\right)\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
@@ -1288,7 +1288,9 @@
 \begin{proposition}
 
     设$f(x) \in C^2[0,1]$，且满足$f(0) = f(1) = f'(0) = 0$，$f'(1) = 1$\\
-    证明：$\int_{0}^{1}{(f''(x))^2}\diff x \geq 4$并指出不等式中等号成立的条件。
+    证明：
+    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq 4$$
+    并指出不等式中等号成立的条件。
 
 \end{proposition}
 
@@ -1360,3 +1362,42 @@
     否则我们不妨设$c = u$，易知$f$和$g$为常值函数，因此任意$t \in [a,b]$，满足$h(t) = 0$. 若$c = v$，同理可证。
 
 \end{proof} 
+
+\begin{proposition}
+    
+    设函数$f(x) \in C^1[0,1]$，且$f(0) = f(1) = 0$. 证明：
+    $$\left( \int_{0}^{1}{f(x)}\diff x \right)^2 \leq \dfrac{1}{12} \int_{0}^{1}{|f'(x)|^2}\diff x$$
+
+\end{proposition}
+
+\begin{proof}
+
+    应用分部积分法，因为$f(0) = f(1) = 0$，则对任意$y \in [0,1]$，有
+    $$\int_{0}^{y}{f(x)}\diff x = \int_{0}^{y}{(y - x)f'(x)}\diff x$$
+    且有
+    $$\int_{y}^{1}{f(x)}\diff x = \int_{y}^{1}{(y - x)f'(x)}\diff x$$
+    令$y = \dfrac{1}{2}$，应用\textup{Cauchy-Schwarz}不等式知
+    
+    \begin{align*}
+        \left( \int_{0}^{\frac{1}{2}}{f(x)}\diff x \right)^2 & = \left( \int_{0}^{\frac{1}{2}}{\left( \dfrac{1}{2} - x \right)f'(x)}\diff x \right)^2 \\
+        & \leq \int_{0}^{\frac{1}{2}}{\left( \dfrac{1}{2} - x \right)^2}\diff x \int_{0}^{\frac{1}{2}}{\left( f'(x) \right)^2}\diff x \\
+        & = \dfrac{1}{24} \int_{0}^{\frac{1}{2}}{\left( f'(x) \right)^2}\diff x
+    \end{align*}
+
+    且有
+
+    \begin{align*}
+        \left( \int_{\frac{1}{2}}^{1}{f(x)}\diff x \right)^2 & = \left( \int_{\frac{1}{2}}^{1}{\left( \dfrac{1}{2} - x \right)f'(x)}\diff x \right)^2 \\
+        & \leq \int_{\frac{1}{2}}^{1}{\left( \dfrac{1}{2} - x \right)^2}\diff x \int_{\frac{1}{2}}^{1}{\left( f'(x) \right)^2}\diff x \\
+        & = \dfrac{1}{24} \int_{\frac{1}{2}}^{1}{\left( f'(x) \right)^2}\diff x
+    \end{align*}
+
+    因此
+
+    \begin{align*}
+        \dfrac{1}{2} \left( \int_{0}^{1}{f(x)}\diff x\right)^2 & \leq \left( \int_{0}^{\frac{1}{2}}{f(x)}\diff x\right)^2 + \left( \int_{\frac{1}{2}}^{1}{f(x)}\diff x\right)^2 \\
+        & \leq \dfrac{1}{24} \left( \int_{0}^{\frac{1}{2}}{\left( f'(x) \right)^2}\diff x + \int_{\frac{1}{2}}^{1}{\left( f'(x) \right)^2}\diff x \right) \\
+        & = \dfrac{1}{24} \int_{0}^{1}{\left( f'(x) \right)^2}\diff x
+    \end{align*}
+
+\end{proof}
