@@ -121,7 +121,7 @@
     从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r \to 0^{+}$，有$f(0) = 0$
     再由
     $$f'(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag \theta})}{r\euler^{\imag \theta}}}\diff \theta$$
-    则可知$f'(0) = 0$，同理$f''(0) = f^{(3)}(0) = 0$\\
+    则可知$f'(0) = 0$，同理$f''(0) = f^{(3)}(0) = 0$ \\
     当$n \geq 4$时
     $$f^{(n)}(0) =  \dfrac{n!}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag\theta})}{r^n \euler^{\imag\theta}}}\diff \theta$$
     $$|f^{(n)}(0)| \leq \dfrac{n!}{2\pi} \dfrac{r^{\frac{16}{5}}}{r^n} \to 0 \quad (r \to + \infty)$$
@@ -144,7 +144,7 @@
         
     \end{enumerate}
 
-    其中$L$是圆$|z| = r$。
+    其中$L$是圆$|z| = r$.
 
 \end{proposition}
 
@@ -169,7 +169,7 @@
 
             \begin{align*}
                 \left| \int_{L}{\dfrac{f(z)}{z}}\diff t - 2 \pi \imag f(0) \right| & = \left| \int_{0}^{2 \pi}{\dfrac{f(r\euler^{\imag t})}{r\euler^{\imag t}}r\euler^{\imag t} \imag - f(0)\imag}\diff t \right| \\
-                & = \left| \imag \int_{0}^{2 \pi}{f(r\euler^{\imag t}) - f(0)}\diff t \right|\\
+                & = \left| \imag \int_{0}^{2 \pi}{f(r\euler^{\imag t}) - f(0)}\diff t \right| \\
                 & \leq \int_{0}^{2 \pi}{|f(r\euler^{\imag t}) - f(0)|}\diff t \\
                 & < \dfrac{\varepsilon}{2 \pi}\int_{0}^{2 \pi}\diff t \\
                 & = \varepsilon
@@ -193,26 +193,26 @@
     记$A_k = \sum\limits_{n = 1}^{k}{A_n},\ A_0 = 0$，则
 
     \begin{align*}
-        \sum\limits_{n = 1}^{N}{(1 - r^n)a_n} & = (1 - r^N)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})A_n}\\
+        \sum\limits_{n = 1}^{N}{(1 - r^n)a_n} & = (1 - r^N)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})A_n} \\
         & = (1 - r)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})(A_N - A_n)}
     \end{align*}
 
-    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$\\
+    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$ \\
     对任意$\varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
     $$|A_n - A| < \varepsilon $$
-    其中$A = \lim\limits_{n \to \infty}{A_N}$\\
-    取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $\\
+    其中$A = \lim\limits_{n \to \infty}{A_N}$ \\
+    取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $ \\
     由于$A_n$有界，设$|A_n| \leq M $，则$n > N'$时
     
     \begin{align*}
-        \sum\limits_{n = 1}^{N - 1}{(r^n - r^{n + 1})(A_N - A_n)} & \leq (1 - r)\sum\limits_{n = 1}^{N'}{r^n|A_n - A|} + \sum\limits_{n = N' + 1}^{N - 1}{r^n(|A_n - A| + |A_N - A|)}\\
+        \sum\limits_{n = 1}^{N - 1}{(r^n - r^{n + 1})(A_N - A_n)} & \leq (1 - r)\sum\limits_{n = 1}^{N'}{r^n|A_n - A|} + \sum\limits_{n = N' + 1}^{N - 1}{r^n(|A_n - A| + |A_N - A|)} \\
         & \leq (\sum\limits_{n = 1}^{N'}{2r^nM} + \sum\limits_{n = N' + 1}^{N - 1}{r^n2\varepsilon}) \\
-        & = (1 - r)\left( 2M\dfrac{r - r^{N' + 1}}{1 - r} + 2\varepsilon r^{N' + 1}\dfrac{1 - R^{N - N' + 1}}{1 - r} \right)\\
-        & < 2M\varepsilon + 2\varepsilon\\
+        & = (1 - r)\left( 2M\dfrac{r - r^{N' + 1}}{1 - r} + 2\varepsilon r^{N' + 1}\dfrac{1 - R^{N - N' + 1}}{1 - r} \right) \\
+        & < 2M\varepsilon + 2\varepsilon \\
         & = 2(M + 1)\varepsilon
     \end{align*}
 
-    令$n \to +\infty$，再$r \to 1$\\
+    令$n \to +\infty$，再$r \to 1$ \\
     即
     $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
@@ -229,7 +229,7 @@
 \begin{proof}
     
     考虑开单位圆盘$D = \Delta(0,1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
-    在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p = 0$\\
+    在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p = 0$ \\
     可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0\in D$，
     由唯一性定理知，$f^{(p)}\equiv 0$在$\mathbb{C}$上恒成立，故$f$为多项式。
 
@@ -240,7 +240,7 @@
     设
     $$S_n = \sum\limits_{k = 0}^{\infty}{a_k}$$
     证明：如果幂级数$A = \sum\limits_{k = 0}^{\infty}{a_kz^k}$的收敛半径$R(A)$为$1$，
-    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_k z^k}$的收敛半径$R(C)$也为$1$。
+    则幂级数$C = \sum\limits_{k = 0}^{\infty}{S_k z^k}$的收敛半径$R(C)$也为$1$.
 
 \end{proposition}
 
@@ -248,7 +248,7 @@
     
     因为
     $$\sum\limits_{k = 0}^{\infty}{z^k} \cdot \sum\limits_{k = 0}^{\infty}{a_kz^k} = \sum\limits_{k = 0}^{\infty}{\sum\limits_{m = 0}^{\infty}{u_mz^m}} = \sum\limits_{k = 0}^{\infty}{S_kz^k} = C$$
-    则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$。则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
+    则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$. 则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
     $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k}, \quad 1 < |z| < R$$
     所以
     $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
@@ -271,7 +271,7 @@
         \item 
             设
             $$f(z) = \sum\limits_{n = 0}^{m}{a_n z^n}, \quad |z| < 1$$
-            如果存在$\lim\limits_{x \to 1}{f(x)} = A$，那么级数$\sum\limits_{n = 0}^{n}{a_n}$收敛到$A$。
+            如果存在$\lim\limits_{x \to 1}{f(x)} = A$，那么级数$\sum\limits_{n = 0}^{n}{a_n}$收敛到$A$.
         
     \end{enumerate}
 
@@ -282,7 +282,7 @@
     \begin{enumerate}
 
         \item 
-            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，使得当$n > N$时，$n|a_n| < \dfrac{\varepsilon}{2}$。
+            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，使得当$n > N$时，$n|a_n| < \dfrac{\varepsilon}{2}$.
             选择$n = n_0$满足上述条件。则对任意$m > n_0$，有
             
             \begin{align*}
@@ -324,7 +324,7 @@
 
     设函数
     $$\varphi(z) = \sum\limits_{n = 0}^{\infty}{a_n (z - z_0)^n}$$
-    的收敛半径为$R$。$w$是收敛圆边界上的点，$z_1$是半径$\vec{z_0w}$上不同于$z_0$和$w$的任意一点。
+    的收敛半径为$R$，$w$是收敛圆边界上的点，$z_1$是半径$\vec{z_0w}$上不同于$z_0$和$w$的任意一点。
     证明：如果
     $$\Delta = R - |z_1 - z_0| = \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
     则$w$是$\varphi(z)$的发散点。且如果
@@ -392,10 +392,10 @@
 
 \begin{proof}
 
-    因为$\sum\limits_{m = -\infty}^{+\infty}{|a_m|} < \infty$，所以存在$\sum\limits_{m = -\infty}^{+\infty}{a_m} = S$\\
+    因为$\sum\limits_{m = -\infty}^{+\infty}{|a_m|} < \infty$，所以存在$\sum\limits_{m = -\infty}^{+\infty}{a_m} = S$ \\
     令
     $$C_n = \dfrac{1}{2n + 1}\sum\limits_{m = -\infty}^{+\infty}{|a_{m - n} + a_{m - n + 1} + \cdots + a_{m + n}|}$$
-    下证$\lim\limits_{n \to \infty}{C_n} = |S|$。$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得
+    下证$\lim\limits_{n \to \infty}{C_n} = |S|$. $\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得
     $$\sum\limits_{|m| > M}{|a_m|} < \varepsilon$$
     则对$m > M$有
 
@@ -440,7 +440,7 @@
     $$f(z) = \dfrac{\sum\limits_{n = 0}^{\infty}{a_n(z - a)^n}}{\sum\limits_{n = 0}^{\infty}{b_n(z - a)^n}}, \quad |z - a| < R$$
     其中$b_0 \neq 0$. 证明：$f(z)$可以表示为下列形式
     $$f(z) = \sum\limits_{n = 0}^{\infty}{c_n(z - a)^n}, \quad |z - a| < R$$
-    并用系数$a_n$和$b_n$来表示上述系数$c_n$。
+    并用系数$a_n$和$b_n$来表示上述系数$c_n$.
 
 \end{proposition}
 
@@ -587,7 +587,7 @@
     \begin{align*}
         2|f'(0)| & = \dfrac{1}{2 \pi} \left| \oint_{|z| = r}{\dfrac{f(z) - f(-z)}{z^2}}\diff z \right| \\
         & \leq \dfrac{1}{2 \pi} \oint_{|z| = r}{\left| \dfrac{f(z) - f(-z)}{z^2} \right|}\diff z \\
-        & \leq \dfrac{1}{2 \pi} \dfrac{d}{r^2} \cdot 2 \pi r\\
+        & \leq \dfrac{1}{2 \pi} \dfrac{d}{r^2} \cdot 2 \pi r \\
         & = \dfrac{d}{r}
     \end{align*}
 
@@ -673,11 +673,11 @@
 
 \begin{proof}
     
-    设$r_2 < R$，选取$z_0$，满足$0 < z_0 < \dfrac{r_2}{2}$，再选取$r_1$，使$0 < r_1 < \dfrac{|z_0|}{2}$\\
+    设$r_2 < R$，选取$z_0$，满足$0 < z_0 < \dfrac{r_2}{2}$，再选取$r_1$，使$0 < r_1 < \dfrac{|z_0|}{2}$ \\
     由\textup{Cauthy}积分公式得
 
     \begin{align*}
-        |f(z_0)| & = \left| \dfrac{1}{2\mathrm{\pi i}} \int_{C_2}{\dfrac{f(z)}{z - z_0}}\diff z - \int_{C_1}{\dfrac{f(z)}{z - z_0}}\diff z \right|\\
+        |f(z_0)| & = \left| \dfrac{1}{2\mathrm{\pi i}} \int_{C_2}{\dfrac{f(z)}{z - z_0}}\diff z - \int_{C_1}{\dfrac{f(z)}{z - z_0}}\diff z \right| \\
         & \leq \dfrac{1}{2 \pi} \left( \int_{C_2}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| + \int_{C_1}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| \right)
     \end{align*}
 
@@ -691,14 +691,14 @@
     $$|f(z)| \leq \dfrac{M}{ \pi r_2} + \dfrac{M}{ \pi|z|},\quad 0 < |z| < \dfrac{r_2}{2}$$
     所以$$|zf(z)| \leq \dfrac{M|z|}{ \pi r_2} + \dfrac{M}{\pi}$$
     则极限是有限的。\\
-    $z = 0$是可去极点，极限为$0$.\\
+    $z = 0$是可去极点，极限为$0$. \\
     $z = 0$是简单极点，极限非$0$.
 
 \end{proof}
 
 \begin{proposition}
 
-    设$f(z)$在$|z| < 1 $内解析，并且$z = 0$为$f(z)$的$n(n \geq 1)$级零点，当$|z|<1$时，$|f(z)| < 1$.\\
+    设$f(z)$在$|z| < 1 $内解析，并且$z = 0$为$f(z)$的$n(n \geq 1)$级零点，当$|z|<1$时，$|f(z)| < 1$. \\
     证明：当$|z|<1$时，$|f(z)| \leq |z|^n$
 
 \end{proposition}
@@ -718,7 +718,7 @@
 
 \begin{proposition}
 
-    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$\\
+    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
     证明：$f(z)$至少有一个零点。
 
 \end{proposition}
@@ -727,7 +727,7 @@
     
     反证法。若存在$a,\ b\in \Delta(0,1), \quad a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
-    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $\\
+    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $ \\
     令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
     $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
     由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
@@ -770,14 +770,14 @@
 
         \item 
             $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
-            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
+            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得 \\
             $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
             $$f(z) + f(-z) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$$
-            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$\\
+            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$ \\
             显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
 
             \begin{align*}
-                &|\euler^{\imag\theta} z^2 + h(z)| \leq 1\\
+                &|\euler^{\imag\theta} z^2 + h(z)| \leq 1 \\
                 &|\euler^{\imag\theta} z^2 - h(z)| \leq 1
             \end{align*}
 
@@ -831,14 +831,14 @@
 
 \begin{proposition}
     
-    设$f(z)$在$|z|\leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$\\
+    设$f(z)$在$|z|\leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$ \\
     证明：$f(z)$在$|z|< 1$内至少有一个零点。
 
 \end{proposition}
 
 \begin{proof}
     
-    反证法。假设$f(z)$在$|z| < 1$内无零点，又$|z| = 1$上$|f(0)| > m >0$\\
+    反证法。假设$f(z)$在$|z| < 1$内无零点，又$|z| = 1$上$|f(0)| > m >0$ \\
     则$f(z)$在$|z|\leq 1$内无零点，$\dfrac{1}{f(z)}$在$|z|\leq 1$解析，由最大模定理知
     $$\max_{|z| \leq 1}{\left| \dfrac{1}{f(z)} \right|} = \max_{|z| = 1}{\left| \dfrac{1}{f(z)} \right|}  < \dfrac{1}{m}$$
     然而$\left| \dfrac{1}{f(z)} \right| > \dfrac{1}{m}$，与题设矛盾，所以$f(z)$在$|z|< 1$内至少有一个零点。
@@ -871,8 +871,8 @@
     \int_{o}^{2\pi}{\euler^{\imag n\theta}}\diff \theta = 
     \left\{
         \begin{aligned}
-            &2\pi, & n = 0\\
-            &0, & n \neq 0\\
+            &2\pi, & n = 0 \\
+            &0, & n \neq 0 \\
         \end{aligned}
     \right.
     $$
@@ -897,7 +897,7 @@
     且
     
     \begin{align*}
-        g'(0) & = \varphi_{\beta}'(\beta) f'(\alpha) \varphi_{-\alpha}(0)\\
+        g'(0) & = \varphi_{\beta}'(\beta) f'(\alpha) \varphi_{-\alpha}(0) \\
         & =  (1 - |\beta|^2)^{-1}f'(\alpha (1 - |\alpha|^2))
     \end{align*}
 
@@ -940,7 +940,7 @@
     $$A(r) = \max_{|z| = r}\{\mathrm{Re}f(z)\}$$
     因为
     $$\euler^{A(r)} = \max_{|z| = r}\{|\euler^{f(z)}|\}$$
-    由最大模原理知$A(r)$是单调增加的飞赴函数，并且由假设知$A(r) \leq A$\\
+    由最大模原理知$A(r)$是单调增加的飞赴函数，并且由假设知$A(r) \leq A$ \\
     令
     $$ g(z) = \dfrac{f(z)}{2A - f(z)} = \dfrac{P + Q\imag}{(2A - P) - Q\imag} $$
     其中
@@ -984,15 +984,15 @@
     \varphi(z) = 
     \left\{
         \begin{aligned}
-            & \dfrac{f(z)}{z}, & z \neq 0\\
-            &f'(0), & z = 0\\
+            & \dfrac{f(z)}{z}, & z \neq 0 \\
+            &f'(0), & z = 0 \\
         \end{aligned}
     \right.
     $$
     显然$\varphi(z)$在$|z| < 1$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理
     $$|\varphi(z + 0)| = \max_{|z| = r}|\varphi(z_0)| = \max_{|z| = r}{\left| \dfrac{f(z)}{z} \right|} \leq \dfrac{1}{r}$$
-    令$r \to 1$，则有$|\varphi(z_0)| \leq 1$\\
-    若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$\\
+    令$r \to 1$，则有$|\varphi(z_0)| \leq 1$ \\
+    若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$ \\
     若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
     $$|f(z_0)| \leq |z_0|$$
     由于$f(0) = 0$，上式当$z = 0$时成立，则

@@ -16,9 +16,9 @@
     则有
 
     \begin{align*}
-        \left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| & = \left| \dfrac{\sum\limits_{i = 1}^{n}{x_i - l}}{n} \right|\\
-        & \leq \dfrac{\sum\limits_{i = 1}^{n}{|x_i - l|}}{n}\\
-        & = \dfrac{\sum\limits_{i = 1}^{N}{|x_i - l|}}{n} + \dfrac{\sum\limits_{i = N + 1}^{n}{|x_i - l|}}{n}\\
+        \left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| & = \left| \dfrac{\sum\limits_{i = 1}^{n}{x_i - l}}{n} \right| \\
+        & \leq \dfrac{\sum\limits_{i = 1}^{n}{|x_i - l|}}{n} \\
+        & = \dfrac{\sum\limits_{i = 1}^{N}{|x_i - l|}}{n} + \dfrac{\sum\limits_{i = N + 1}^{n}{|x_i - l|}}{n} \\
         & \leq \dfrac{M}{n} + \dfrac{(n - N)\varepsilon}{n}
     \end{align*}
 
@@ -312,8 +312,8 @@
     $$\lim\limits_{n \to \infty}{a_n} = a \ (a \neq +\infty)$$
 
     \begin{align*}
-        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)}\\
-        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + 1}}}\\
+        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)} \\
+        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + 1}}} \\
         & = \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}}
     \end{align*}
 
@@ -321,8 +321,8 @@
     所以
 
     \begin{align*}
-        \left| \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}} \right| & = \left| \dfrac{a_{n + p + 1} - a + a - a_{n + 1}}{a_{n + 1}} \right|\\
-        & = \dfrac{|a_{n + p + 1} - a| + |a_{n + 1} - a|}{a_{n + 1}}\\
+        \left| \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}} \right| & = \left| \dfrac{a_{n + p + 1} - a + a - a_{n + 1}}{a_{n + 1}} \right| \\
+        & = \dfrac{|a_{n + p + 1} - a| + |a_{n + 1} - a|}{a_{n + 1}} \\
         & = \dfrac{2\varepsilon}{a_{n + 1}}
     \end{align*} 
 
@@ -330,9 +330,9 @@
     若$\lim\limits_{n \to \infty}{a_n} = +\infty$，则
 
     \begin{align*}
-        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)}\\
-        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + p + 1}}}\\
-        & = \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + p + 1}}\\
+        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)} \\
+        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + p + 1}}} \\
+        & = \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + p + 1}} \\
         & = 1 - \dfrac{a_{n + 1}}{a_{n + p + 1}}
     \end{align*}
 
@@ -356,8 +356,8 @@
     $\sum\limits_{n = 1}^{\infty}{a_n}$收敛，则
 
     \begin{align*}
-        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + 1}}}\\
-        & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + 1}}\\
+        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + 1}}} \\
+        & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + 1}} \\
         & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n}}
     \end{align*}
 
@@ -365,8 +365,8 @@
     则有
 
     \begin{align*}
-        \left| \dfrac{S_{n + p + 1} - S_{n}}{S_{n}} \right| & = \left| \dfrac{S_{n + p + 1} - S + S - S_{n}}{S_{n}} \right|\\
-        & \leq \dfrac{|S_{n + p + 1} - S| + |S_{n + 1} - S|}{S_n}\\
+        \left| \dfrac{S_{n + p + 1} - S_{n}}{S_{n}} \right| & = \left| \dfrac{S_{n + p + 1} - S + S - S_{n}}{S_{n}} \right| \\
+        & \leq \dfrac{|S_{n + p + 1} - S| + |S_{n + 1} - S|}{S_n} \\
         & = \dfrac{2\varepsilon}{S_n}
     \end{align*}
 
@@ -374,8 +374,8 @@
     $\sum\limits_{n = 1}^{\infty}{a_n}$发散，则$\lim\limits_{n \to \infty}{\sum\limits_{k  = 1}^{n}{a_k}} = +\infty$，且有
 
     \begin{align*}
-        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + p + 1}}}\\
-        & \geq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + p + 1}}\\
+        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + p + 1}}} \\
+        & \geq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + p + 1}} \\
         & = 1 - \dfrac{S_{n}}{S_{n + p + 1}}
     \end{align*}
 
@@ -413,9 +413,9 @@
             不妨设$n \geq 1$时上式成立，则
 
             \begin{align*}
-                \sum\limits_{k  = 1}^{n}{a_k} & = a_1 + \sum\limits_{k = 2}^{n}{a_k}\\
-                & \leq a_1 + \dfrac{1}{\delta} \sum\limits_{k  = 1}^{n - 1}{(a_k b_k - a_{k + 1}b_{k + 1})}\\
-                & = a_1 + \dfrac{1}{\delta}(a_1 b_1 - a_{n}b_{n})\\
+                \sum\limits_{k  = 1}^{n}{a_k} & = a_1 + \sum\limits_{k = 2}^{n}{a_k} \\
+                & \leq a_1 + \dfrac{1}{\delta} \sum\limits_{k  = 1}^{n - 1}{(a_k b_k - a_{k + 1}b_{k + 1})} \\
+                & = a_1 + \dfrac{1}{\delta}(a_1 b_1 - a_{n}b_{n}) \\
                 & = a_1 + \dfrac{1}{\delta}a_1 b_1
             \end{align*}
 
@@ -450,7 +450,7 @@
 
 \begin{proof}
     
-    对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列\\
+    对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列 \\
     由$\lim\limits_{n \to \infty}{a_{n + p} - a_n} = \lambda$，则
     $$\lim\limits_{n \to \infty}{a_{(n + 1)p + i} - a_{np + i}} = \lambda$$
     令$A^{(i)}_{n} = a_{(n + 1)p + i} - a_{np + i}$，由\textup{Cauthy}命题知
@@ -556,7 +556,7 @@
     $$|a_n| < M,\quad |b_n| < M, \quad \forall n \in \mathbb{N}$$
     $\forall \varepsilon > 0 $，$\exists N \in \mathbb{N}$，$n > N$时有
     $$|a_n - a| < \dfrac{\varepsilon}{4M}, \quad |b_n - b| < \dfrac{\varepsilon}{4M}$$
-    取自然数$N_1 > \max\left\{ N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right) \right\}$\\
+    取自然数$N_1 > \max\left\{ N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right) \right\}$ \\
     则当$n > N_1$时有
 
     \begin{align*}
@@ -634,15 +634,15 @@
     \end{align*}
 
     同理$l = \dfrac{1}{L}$，则$lL = 1$. \\
-    可设$\{a_{nk + 3}\}$收敛到$L$，$\{a_{nk + 2}\},\{a_{nk + 1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又\\
-    $L = \dfrac{2}{a + b} $，则$a + b = 2l $，同理，$b = c = L$\\
-    所以$l = L = 1$，$\{a_n\}$收敛，极限为$1$。
+    可设$\{a_{nk + 3}\}$收敛到$L$，$\{a_{nk + 2}\},\{a_{nk + 1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又 \\
+    $L = \dfrac{2}{a + b} $，则$a + b = 2l $，同理，$b = c = L$ \\
+    所以$l = L = 1$，$\{a_n\}$收敛，极限为$1$.
 
 \end{proof}
 
 \begin{proposition}
 
-    证明：数列$x_n = \dfrac{1}{1 + 1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n + \frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1, 2, \cdots)$\\
+    证明：数列$x_n = \dfrac{1}{1 + 1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n + \frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1, 2, \cdots)$ \\
     有位于$\left[ 0,\dfrac{1}{2} \right]$的极限。
     
 \end{proposition}
@@ -817,7 +817,7 @@
                 & = \dfrac{n + 2}{n + 1}  (a_{n - 1} - a_n) 
             \end{align*}
 
-            因为$a_1 = 2$， $a_2 = \dfrac{5}{2}$， $a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n + 1}$\\
+            因为$a_1 = 2$， $a_2 = \dfrac{5}{2}$， $a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n + 1}$ \\
             即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
             $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{\dfrac{n + 1}{2n}a_{n - 1} + 1}$$
             得
@@ -844,7 +844,7 @@
     $$\{i\alpha\} = i\alpha - \lfloor i\alpha \rfloor = j\alpha - \lfloor j\alpha \rfloor = \{j\alpha\}$$
     则有
     $$\alpha = \dfrac{\lfloor i\alpha \rfloor - \lfloor j\alpha \rfloor}{i - j} \in \mathbb{Q}$$
-    与题设矛盾，所以显然集合$S$是无穷集，且$S \subseteq [0, 1]$。\\
+    与题设矛盾，所以显然集合$S$是无穷集，且$S \subseteq [0, 1]$. \\
     由\textup{Bolzano-Weierstrass}定理知，集合$S$至少存在一个聚点。因此易知，$\forall n \in \mathbb{N}$，$\exists i,\ j \in \mathbb{N}$使得
     $$0 < \{i\alpha\} - \{j\alpha\} < \dfrac{1}{n}$$
     则存在$M \in \mathbb{N}$使得
@@ -1001,7 +1001,7 @@
 
 \begin{proposition}
     
-    已知正数列$\{x_n\}$满足$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}}$，$n \geq 1$。证明：$\{x_n\}$收敛并求出该极限。
+    已知正数列$\{x_n\}$满足$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}}$，$n \geq 1$. 证明：$\{x_n\}$收敛并求出该极限。
 
 \end{proposition}
 
@@ -1015,7 +1015,7 @@
             $$x_{n + 2} - x_{n + 1} = (\sqrt{x_{n + 1}} + \sqrt{x_{n}}) - (\sqrt{x_{n}} + \sqrt{x_{n - 1}}) = (\sqrt{x_{n + 1}} - \sqrt{x_{n}}) + (\sqrt{x_{n}} - \sqrt{x_{n - 1}}) \geq 0$$
             所以$\{x_n\}$单调增加。且由数学归纳法可证，若$x_n \leq 4$，则
             $$x_{n + 2} = \sqrt{x_{n + 1}} + \sqrt{x_{n}} \leq 4$$
-            所以$\{x_n\}$收敛，且极限为$4$。
+            所以$\{x_n\}$收敛，且极限为$4$.
 
         \item 
             如果$0 < x_2 < x_1 < 1$，则有
@@ -1064,7 +1064,7 @@
 
 \begin{proposition}
 
-    设$a_1 = \sqrt{2}$，$a_{n + 1} = {\sqrt{2}}^{a_n}$。证明：数列$\{a_n\}$收敛并求出该极限。
+    设$a_1 = \sqrt{2}$，$a_{n + 1} = {\sqrt{2}}^{a_n}$. 证明：数列$\{a_n\}$收敛并求出该极限。
 
 \end{proposition}
 
@@ -1074,11 +1074,11 @@
     $$a_n \leq 2, \quad n \in \mathbb{N}$$
     设函数$f(x) = {\sqrt{2}}^x - x$，则
     $$f'(x) = \dfrac{1}{2}\ln2 {\sqrt{2}}^x - 1, \quad f''(x) = \left( \dfrac{1}{2}\ln 2 \right)^2 {\sqrt{2}}^x \geq 0$$
-    易知$x \leq 2$时，$f'(x) < 0$，，且$f(2) = 0$. 因此
+    易知$x \leq 2$时，$f'(x) < 0$，且$f(2) = 0$. 因此
     $$f(x) \geq 0, \quad 0 \leq x \leq 2$$
-    即$a_{n + 1} \leq a_n$。所以数列$\{a_n\}$收敛，且极限$a$满足
+    即$a_{n + 1} \leq a_n$. 所以数列$\{a_n\}$收敛，且极限$a$满足
     $${\sqrt{2}}^{a} = a$$
-    即$a = 2$。
+    即$a = 2$.
 
 \end{proof}
 
@@ -1139,9 +1139,9 @@
     $n = 1$或$h = 0$时不等式显然成立，下面只证明$n>1$和$h\neq 0$时的情况。\\
     将$(1 + h)^n - 1$作因式分解，可以得到
     $$(1 + h)^n - 1 = h[1 + (1 + h) + (1 + h)^2 + \cdots + (1 + h)^{n - 1}]$$
-    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1 + h)^n - 1>nh$.\\
+    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1 + h)^n - 1>nh$. \\
     当$-1 < h < 0$时，右边方括号内第二项起都小于$1$，则$(1 + h)^n - 1 < nh$，又因为$h < 0$，\\
-    所以得到$(1 + h)^n - 1 > nh$.\\
+    所以得到$(1 + h)^n - 1 > nh$. \\
     下证等号成立的条件，易知$A > 0$，$A + B > 0$，$n \in \mathbb{N}$时成立不等式
     $$(A + B)^n \geq A^n + nA^{n - 1}B$$
     且$n>1$时等号成立的充分必要条件是$B = 0$.
@@ -1158,7 +1158,7 @@
 
 \begin{proof}
     
-    显然，若$a_1, a_2,\cdots, a_n$中有$0$，则不等式成立，且此时等号成立的充分必要条件是$a_1 = a_2 = \cdots = a_n = 0$.\\
+    显然，若$a_1, a_2,\cdots, a_n$中有$0$，则不等式成立，且此时等号成立的充分必要条件是$a_1 = a_2 = \cdots = a_n = 0$. \\
     下面只证$a_1, a_2,\cdots, a_n$全为正数时的情况。
     $n = 1$时不等式成立。\\
     假设$n = k$时不等式成立，则$n = k + 1$时有以下分解
@@ -1172,10 +1172,10 @@
 
     \begin{align*}
         & \left( \dfrac{a_1 + a_2 + \cdots + a_{k + 1}}{k + 1} \right)^{k + 1} \\
-        = & \  (A + B)^{k + 1}\\
-        \geq & \  A^{k + 1} + (k + 1) A^k B\\
-        = & \ A^k(A + (k + 1)B)\\
-        = & \ A^k a_{k + 1}\\
+        = & \  (A + B)^{k + 1} \\
+        \geq & \  A^{k + 1} + (k + 1) A^k B \\
+        = & \ A^k(A + (k + 1)B) \\
+        = & \ A^k a_{k + 1} \\
         \geq & \ a_1 a_2 \cdots a_{k + 1}
     \end{align*}
 

@@ -15,8 +15,8 @@
     $$f(x) = \sum\limits_{k  = 1}^{m + 1}{c_k\euler^{\lambda_k x}} = \left[ c_{m + 1} + \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} \right]$$
     令
     $$g(x) = \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} + c_{m + 1}$$
-    则$g(x)$有至少$m + 1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum\limits_{k  = 1}^{m}{c_k (\lambda_k - \lambda_{m + 1}) \euler^{(\lambda_k - \lambda_{m + 1}) x}}$至少有$m$个零点\\
-    因为$a_k = c_k(\lambda_k - \lambda_{m + 1})$互异，且$\lambda_k - \lambda_{m + 1}$不同时为$0$\\
+    则$g(x)$有至少$m + 1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum\limits_{k  = 1}^{m}{c_k (\lambda_k - \lambda_{m + 1}) \euler^{(\lambda_k - \lambda_{m + 1}) x}}$至少有$m$个零点 \\
+    因为$a_k = c_k(\lambda_k - \lambda_{m + 1})$互异，且$\lambda_k - \lambda_{m + 1}$不同时为$0$ \\
     所以$g'(x)$零点个数小于$m$个，与假设矛盾。则$n = m + 1$时结论成立。\\
     由数学归纳法，结论得证。
 
@@ -24,7 +24,7 @@
 
 \begin{proposition}
 
-    设$\lim\limits_{n \to \infty}{f(x)} = 0$，且$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$\\
+    设$\lim\limits_{n \to \infty}{f(x)} = 0$，且$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$ \\
     证明：
     $$f(x) = O(x) \quad (x \to 0)$$
 
@@ -69,7 +69,7 @@
 
 \begin{proof}
 
-    不妨设$x_0$是$f$的唯一极小值点，$x_1$是$f$的最小值点，应用反证法，假设$x_0 \neq x_1$，则不妨设$x_0 < x_1$\\
+    不妨设$x_0$是$f$的唯一极小值点，$x_1$是$f$的最小值点，应用反证法，假设$x_0 \neq x_1$，则不妨设$x_0 < x_1$ \\
     因为$x_0$是极小值点，所以存在$ x_2 > x_0$，$x_2 < x_1$
     $$f(x_2) > f(x_0) > f(x_1)$$
     由介值定理得，$\exists x_3 \in (x_2, x_1)$
@@ -150,7 +150,7 @@
 
     设
     $$A = \{x| x \in [a,b] \land x \leq f(x) \land x \leq g(x)\}$$
-    显然$A$非空，所以存在上确界$ u = \sup{A}$\\
+    显然$A$非空，所以存在上确界$ u = \sup{A}$ \\
     易知$u \leq f(u),\ u \leq g(u)$，所以            
     $$f(u) \leq f(g(u)) = g(f(u))$$ 
     又
@@ -200,8 +200,8 @@
 
 \begin{proof}
 
-    反证法。若$F(x) = f(x) - g(x) \neq 0,\ x \in [a, b]$，不妨设$F(x) > 0$\\
-    则由$F$连续知，$F$在$[a, b]$上有最值，设$\min{F(x)} = m$\\
+    反证法。若$F(x) = f(x) - g(x) \neq 0,\ x \in [a, b]$，不妨设$F(x) > 0$ \\
+    则由$F$连续知，$F$在$[a, b]$上有最值，设$\min{F(x)} = m$ \\
     则
     $$F(x_{n + 1}) = f(x_{x_{n + 1}}) - g(x_{n + 1}) = f(x_{n + 1}) - f(x_{n + 2}) \geq m$$
     所以
@@ -268,7 +268,7 @@
 
     因为$f$在$[0,+\infty)$上一致连续，所以$\forall \varepsilon > 0$，$\exists \delta > 0$，当$x', x'' \in [0,+\infty)$时
     $$|f(x') - f(x'')| < \dfrac{\varepsilon}{2}$$
-    将$[0,1]$等分成$0 = x_0 < x_1 < \cdots < x_m = 1$，使每个区间的长度为$\dfrac{1}{m} < \delta$\\
+    将$[0,1]$等分成$0 = x_0 < x_1 < \cdots < x_m = 1$，使每个区间的长度为$\dfrac{1}{m} < \delta$ \\
     因为$x - \lfloor x \rfloor,\ \forall x \geq 1$，且
     $$x\to+\infty \leftrightarrow \lfloor x \rfloor \to +\infty$$
     所以存在$k \in \{0,1,2,\cdots , m - 1\}$
@@ -349,7 +349,7 @@
     $$|f(x)| < M,\quad x \in(\delta_1, \delta_1 + 1)$$
     选取$\delta > \delta_1$，使
     $$\dfrac{M}{\delta} < \dfrac{\varepsilon}{3}, \quad \left| \dfrac{\delta_1 + 1}{\delta} \right| < \dfrac{\varepsilon}{3}$$
-    于是，当$x > \delta$时，$\exists n \in \mathbb{N}$，使$x - n \in (\delta_1, \delta_1 + 1)$\\
+    于是，当$x > \delta$时，$\exists n \in \mathbb{N}$，使$x - n \in (\delta_1, \delta_1 + 1)$ \\
     又
 
     \begin{align*}
@@ -375,11 +375,11 @@
 
 \begin{proof}
 
-    反证法。设存在$x \in [a,b]$，$f(x) \neq 0$.\\
-    令$S = \{x | x \in [a,b] \land f(x) \neq 0\}$，则显然$S$非空。设$ c = \inf{S}$\\
+    反证法。设存在$x \in [a,b]$，$f(x) \neq 0$. \\
+    令$S = \{x | x \in [a,b] \land f(x) \neq 0\}$，则显然$S$非空。设$ c = \inf{S}$ \\
     如果$c = b$，则$f(x) = 0$，$\forall x \in [a,b)$，又由连续性可知
     $$f(b) = \lim\limits_{x \to b}{f(x)} = 0$$
-    即$f(x) = 0$，$\forall x \in [a,b]$，与题设矛盾。因此$c \neq b$，又若$c = a$，则有$f(c) = 0$.\\
+    即$f(x) = 0$，$\forall x \in [a,b]$，与题设矛盾。因此$c \neq b$，又若$c = a$，则有$f(c) = 0$. \\
     否则当$a<c<b$时
     $$f(x) = 0, \quad \forall x < c$$
     则由函数连续性知$f(c) = 0$. 综上
@@ -389,7 +389,7 @@
     $$A(x - c) \leq \dfrac{1}{2}$$
     因为$f$在$[c,d]$连续，所以存在最值，即令
     $$ |f(t)| = \max_{x\in[c,d]}{|f(x)|}$$
-    又因为$c = \inf{S}$，则$\forall \varepsilon > 0$，$\exists m \in (c, c + \varepsilon)$，使得$f(m) \neq 0$\\
+    又因为$c = \inf{S}$，则$\forall \varepsilon > 0$，$\exists m \in (c, c + \varepsilon)$，使得$f(m) \neq 0$ \\
     则$f(t) \neq 0$，且$t > c$，由\textup{Lagrange}中值定理知
     $$| f(t)| = |f(t) - f(c)| = |t - c||f'(u)| \leq |t - c||f(u)|^{\beta}, \quad u \in (c,t)$$
     又由$A(x - c) \leq \dfrac{1}{2}$得
@@ -465,20 +465,20 @@
     这表明$h_1$是$\mathbb{R}$上连续的下凸函数，同理设$h_2(x) = f(x) + \dfrac{M}{2}x^2$，$h_2$是$\mathbb{R}$上连续的上凸函数。则
 
     \begin{align}
-        &h_1^{(-)}(x) \leq h_1^{(+)}(x) \tag{1}\\
+        &h_1^{(-)}(x) \leq h_1^{(+)}(x) \tag{1} \\
         &h_2^{(-)}(x) \leq h_2^{(+)}(x) \tag{2}
     \end{align}
 
     所以$f^{(-)}$，$f^{(+)}$在任意点有定义，且满足
 
     \begin{align}
-        &f^{(-)}(x) \equiv h_1^{(-)}(x) + Mx \tag{3}\\
-        &f^{(+)}(x) \equiv h_1^{(+)}(x) + Mx \tag{4}\\
-        &f^{(-)}(x) \equiv h_2^{(-)}(x) + Mx \tag{5}\\
+        &f^{(-)}(x) \equiv h_1^{(-)}(x) + Mx \tag{3} \\
+        &f^{(+)}(x) \equiv h_1^{(+)}(x) + Mx \tag{4} \\
+        &f^{(-)}(x) \equiv h_2^{(-)}(x) + Mx \tag{5} \\
         &f^{(+)}(x) \equiv h_2^{(+)}(x) + Mx \tag{6}
     \end{align}
 
-    由\textup{(1)}，\textup{(3)}，\textup{(4)}得$f^{(-)} \geq f^{(+)}$，而由\textup{(2)}，\textup{(5)}，\textup{(6)}得$f^{(-)} \leq f^{(+)}$\\
+    由\textup{(1)}，\textup{(3)}，\textup{(4)}得$f^{(-)} \geq f^{(+)}$，而由\textup{(2)}，\textup{(5)}，\textup{(6)}得$f^{(-)} \leq f^{(+)}$ \\
     因此$f^{(-)} \equiv f^{(+)}$，即$f$在$\mathbb{R}$上可微，且$h_1$，$h_2$也可微，由$h_1$，$h_2$凸性得，$\forall x,y$，$x \leq y$有
 
     \begin{align*}
@@ -526,7 +526,7 @@
     有
 
     \begin{align}
-        f''(x) + f(x) = \dfrac{1}{g(x)} \tag{1}\\
+        f''(x) + f(x) = \dfrac{1}{g(x)} \tag{1} \\
         g''(x) + f(x) = \dfrac{1}{f(x)} \tag{2}
     \end{align}
 
@@ -534,8 +534,8 @@
     $$fg'' - gf'' = (fg' - g'f)'$$
     所以
     $$f'g - g'f = c, \quad c \in \mathbb{R}$$
-    同时由于$g'(x)$，$f'(x)$是奇函数，则$c = 0$\\
-    又$f$，$g$为$\mathbb{R}$上周期函数，所以$f$，$g$必有界，则由\textup{(1)}式得$g(x) \neq 0$\\
+    同时由于$g'(x)$，$f'(x)$是奇函数，则$c = 0$ \\
+    又$f$，$g$为$\mathbb{R}$上周期函数，所以$f$，$g$必有界，则由\textup{(1)}式得$g(x) \neq 0$ \\
     故
     $$\left( \dfrac{f}{g} \right)' = \dfrac{c}{g^2} = 0$$
     即
@@ -587,7 +587,7 @@
 \end{proof}
 
 \begin{proposition}
-    设函数$f(x)$在区间$[0, +\infty]$上连续，且$\lim\limits_{x \to +\infty}{f(x)} = f(0)$，常数$h > 0$\\
+    设函数$f(x)$在区间$[0, +\infty]$上连续，且$\lim\limits_{x \to +\infty}{f(x)} = f(0)$，常数$h > 0$ \\
     证明：存在$\xi \in [h, +\infty)$，使得
     $$f(\xi) = f(\xi - h)$$
 \end{proposition}
@@ -617,7 +617,7 @@
 
     设$f \in C(0,1)$，且
     $$\dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \alpha < \beta = \dfrac{f(x_4) - f(x_3)}{x_4 - x_3}$$    
-    其中$x_1$，$x_2$，$x_3$，$x_4 \in (0,1)$.证明:对任意$\lambda \in (\alpha, \beta)$，存在$x_5$，$x_6 \in (0,1)$，使得
+    其中$x_1$，$x_2$，$x_3$，$x_4 \in (0,1)$. 证明:对任意$\lambda \in (\alpha, \beta)$，存在$x_5$，$x_6 \in (0,1)$，使得
     $$\lambda = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}$$
 
 \end{proposition}
@@ -710,15 +710,15 @@
     
     设$$h(x) = \left\{
         \begin{aligned}
-            & \dfrac{f(b) - f(x)}{b - x}, &&a \leq x < b\\
-            &f'(b), &&x = b\\
+            & \dfrac{f(b) - f(x)}{b - x}, &&a \leq x < b \\
+            &f'(b), &&x = b \\
         \end{aligned}
     \right.
     $$
     $$g(x) = \left\{
         \begin{aligned}
-            &f'(a), &&x = a\\
-            & \dfrac{f(x) - f(a)}{x - a}, &&a < x \leq b\\
+            &f'(a), &&x = a \\
+            & \dfrac{f(x) - f(a)}{x - a}, &&a < x \leq b \\
         \end{aligned}
     \right.
     $$
@@ -746,8 +746,8 @@
 
 \begin{proof}
     
-    设$F(x) = f(x) - f\left( x + \dfrac{1}{n} \right),\quad \forall n \in \mathbb{N}$\\
-    若不存在$\xi_n$，使得$f(\xi_n) = f\left( \xi_n +\dfrac{1}{n} \right)$\\
+    设$F(x) = f(x) - f\left( x + \dfrac{1}{n} \right),\quad \forall n \in \mathbb{N}$ \\
+    若不存在$\xi_n$，使得$f(\xi_n) = f\left( \xi_n +\dfrac{1}{n} \right)$ \\
     不妨设$F(x)$恒大于$0$，则有
     $$f(1) = f(0) > f\left( \dfrac{1}{n} \right) > f\left( \dfrac{2}{n} \right) > \cdots > f(1)$$
     与题设矛盾，所以存在$\xi_n \in \left[ 0,1 - \dfrac{1}{n} \right]$
@@ -771,7 +771,7 @@
         f(x) - g(x) & = \lim\limits_{n \to \infty}{f(x) - g(x)} \\
         & = \lim\limits_{n \to \infty}[(f(x + nT) - g(x + nT)) + \\
         & \quad(g(x + nT + nS) - f(x + nT + nS) + f(x + nS) - g(n + nS))] \\
-        & = 0 + 0 + 0\\
+        & = 0 + 0 + 0 \\
         & = 0
     \end{align*}
 
@@ -789,8 +789,8 @@
 
 \begin{proof}
     
-    由题设知，$f(x)$的至于为$[f(a),+\infty]$，且$\lim\limits_{x \to \infty}{f(x)} = +\infty$\\
-    因为$f(a)<a$，所以存在$x_1$，$x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$\\
+    由题设知，$f(x)$的至于为$[f(a),+\infty]$，且$\lim\limits_{x \to \infty}{f(x)} = +\infty$ \\
+    因为$f(a)<a$，所以存在$x_1$，$x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$ \\
     显然$f(f(x))\geq f(a) = f(f(x_1)) = f(f(x_2))$，\\
     所以$f(f(x))$至少有两个最小值点。
 
@@ -822,7 +822,7 @@
             对任意有理数$q = \dfrac{m}{n},\ m,\ n \in \mathbb{N}$，由于$f(1) = f\left( n \cdot \dfrac{1}{n} \right)$，
             故$f\left( \dfrac{1}{n} \right) = \dfrac{1}{n}f(1)$，从而
             $$f\left( \dfrac{m}{n} \right) = f\left( m \cdot \dfrac{1}{n} \right) = mf\left( \dfrac{1}{n} \right) = \dfrac{m}{n}f(1)$$
-            则只需证$f(x) = f(1)x,\quad x \notin \mathbb{Q}$\\
+            则只需证$f(x) = f(1)x,\quad x \notin \mathbb{Q}$ \\
             $f$在$x_0$处连续，故$\lim\limits_{x \to x_0}{f(x)} = f(x_0)$，也即
             $$\lim\limits_{\Delta x \to 0}{f(x_0 +\Delta x)} = f(x_0)$$
             因为$f(x +\Delta x) = f(x_0) + f(\Delta x)$，所以
@@ -830,8 +830,8 @@
             对于任意$x \in \mathbb{R}$
 
             \begin{align*}
-                \lim\limits_{\Delta x \to 0}{f(x +\Delta x)} & = \lim\limits_{\Delta x \to 0}{(f(x) + f(\Delta x))}\\
-                & = f(x) + 0\\
+                \lim\limits_{\Delta x \to 0}{f(x +\Delta x)} & = \lim\limits_{\Delta x \to 0}{(f(x) + f(\Delta x))} \\
+                & = f(x) + 0 \\
                 & = f(x)
             \end{align*}
 
@@ -907,12 +907,12 @@
 
 \begin{proof}
 
-    令$F(x) = f(x) - \dfrac{1}{2}x^2$，则$F(0) = F(1) = 0$\\
+    令$F(x) = f(x) - \dfrac{1}{2}x^2$，则$F(0) = F(1) = 0$ \\
     若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则存在$\xi,\eta \in (0,1),\ \xi \neq \eta$
     $$F'(\xi) + F'(\eta) = 0$$
     即
     $$f'(\xi) + f'(\eta) = \xi + \eta$$
-    若$F\left( \dfrac{1}{2} \right) \neq 0$，不妨设$F\left( \dfrac{1}{2} \right) > 0$\\
+    若$F\left( \dfrac{1}{2} \right) \neq 0$，不妨设$F\left( \dfrac{1}{2} \right) > 0$ \\
     由\textup{Lagrange}中值定理，$\exists \xi,\eta \in (0,1),\ \xi \neq \eta$
     $$ \dfrac{F(1) - F(\frac{1}{2})}{1 - \frac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)$$
     $$ \dfrac{F(\frac{1}{2}) - F(0)}{\frac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)$$
@@ -967,7 +967,7 @@
             $$g(\eta) = 0$$
 
         \item 
-            若$f$至少有一个零点，令$z_1$为第一个零点，$z_2$为最后一个零点，由题设知，$0 < z_1 \leq z_2 < 1$\\
+            若$f$至少有一个零点，令$z_1$为第一个零点，$z_2$为最后一个零点，由题设知，$0 < z_1 \leq z_2 < 1$ \\
             函数$f$在区间$[0,z_1],\ [z_2,1]$上是正的，这表明
             $$f'(z_1) \leq 0,\quad f'(z_2) \geq 0$$
             所以
