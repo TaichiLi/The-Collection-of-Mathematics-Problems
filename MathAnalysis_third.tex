@@ -12,25 +12,25 @@
     反证法。假设级数收敛，则由$a_1 \leq 1^2 \ln1 \leq 0$，得
     
     \begin{align*}
-        \sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_{n + 1}a_n}} & = \sum\limits_{k = 1}^{\infty}{\left( \sum\limits_{n=2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \right)}\\
-        & = \sum\limits_{k = 1}^{\infty}{\dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}}\\
+        \sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_{n + 1}a_n}} & = \sum\limits_{k = 1}^{\infty}{\left( \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \right)}\\
+        & = \sum\limits_{k = 1}^{\infty}{\dfrac{1}{4(\ln{2}\ k - \frac{a}{4k})}}\\
         & \leq +\infty
     \end{align*}
 
     这意味着$\exists k \in \mathbb{N}$，使
-    $$ \sum\limits_{n=2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} < \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})}$$
+    $$ \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} < \dfrac{1}{4(\ln{2}\ k - \frac{a}{4k})}$$
     同时，由\textup{Cauthy-Schwarz}不等式知
 
     \begin{align*}
-        & \left( \sum\limits_{n=2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \right) \left( \sum\limits_{n=2^{k - 1}}^{2^k - 1}{a_{n + 1} - a_n} \right) \\
-        \geq & \left( \sum\limits_{n=2^{k - 1}}^{2^k - 1}{1} \right)^2 = (2^k - 2^{k - 1})^2 =  4^{k - 1}
+        & \left( \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \right) \left( \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{a_{n + 1} - a_n} \right) \\
+        \geq & \left( \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{1} \right)^2 = (2^k - 2^{k - 1})^2 =  4^{k - 1}
     \end{align*}
 
     因此
 
     \begin{align*}
-        \dfrac{1}{4(\ln{2}\ k-\frac{a}{4k})} &> \sum\limits_{n=2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}}\\
-        & \leq \dfrac{4^{k - 1}}{\sum\limits_{n=2^{k - 1}}^{2^k - 1}{(a_{n + 1} - a_n})}\\
+        \dfrac{1}{4(\ln{2}\ k - \frac{a}{4k})} &> \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}}\\
+        & \leq \dfrac{4^{k - 1}}{\sum\limits_{n = 2^{k - 1}}^{2^k - 1}{(a_{n + 1} - a_n})}\\
         & = \dfrac{4^{k - 1}}{a_{2^k} - a^{2^{k - 1}}}\\
         & \geq \dfrac{4^{k - 1}}{a_{2^k} - a_1}
     \end{align*}
@@ -56,7 +56,7 @@
     令
     $$S_N = \sum\limits_{n = 1}^{N}{\dfrac{a_n}{n}},\ T_N = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}}$$
     因为$\{a_n\}$单调减少收敛于$0$，且$S_n,\ T_n$单调增加，则假设$\{S_n\},\ \{T_n\}$收敛，$S,\ T$分别为其极限，注意到
-    $$\ln{n} -\ln{n - 1} = \int_{n - 1}^{n}{\dfrac{1}{x}}\diff x \in \left( \dfrac{1}{n},\dfrac{1}{n - 1} \right)$$
+    $$\ln{n} - \ln{n - 1} = \int_{n - 1}^{n}{\dfrac{1}{x}}\diff x \in \left( \dfrac{1}{n},\dfrac{1}{n - 1} \right)$$
 
     \begin{enumerate}
         
@@ -64,9 +64,9 @@
             如果$S_N < \infty,\ N \geq 2$时，
 
             \begin{align*}
-                a_N\ln{N} & \leq a_N\sum\limits_{n=2}^{\infty}{[\ln{n} - \ln{(n - 1)}]} \\
-                & \leq a_N \sum\limits_{n=2}^{\infty}{\dfrac{1}{n - 1}} \\
-                & \leq \sum\limits_{n=2}^{\infty}{\dfrac{a_{n - 1}}{n + 1}}\\
+                a_N\ln{N} & \leq a_N\sum\limits_{n = 2}^{\infty}{[\ln{n} - \ln{(n - 1)}]} \\
+                & \leq a_N \sum\limits_{n = 2}^{\infty}{\dfrac{1}{n - 1}} \\
+                & \leq \sum\limits_{n = 2}^{\infty}{\dfrac{a_{n - 1}}{n + 1}}\\
                 & = S_{n - 1}\\
                 & \leq S
             \end{align*}
@@ -75,8 +75,8 @@
 
             \begin{align*}
                 T_N & = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}} \\
-                & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N + 1}{a_{n}\ln{(n - 1)}} \\
-                & = \sum\limits_{n=2}^{N}{[a_n\big(\ln{n} - \ln(n - 1)\big)]} - a_{N + 1}\ln{N} \\
+                & = \sum\limits_{n = 2}^{N}{a_n\ln{n}} - \sum\limits_{n = 2}^{N + 1}{a_{n}\ln{(n - 1)}} \\
+                & = \sum\limits_{n = 2}^{N}{[a_n\big(\ln{n} - \ln(n - 1)\big)]} - a_{N + 1}\ln{N} \\
                 & \leq \sum\limits_{n = 1}^{N}{\dfrac{a_{n}}{n - 1}} \\
                 & \leq \sum\limits_{n = 1}^{N}{\dfrac{a_{n - 1}}{n - 1}} \\
                 & = S_{n - 1} \\
@@ -89,11 +89,11 @@
             如果$T < \infty$，且$a_{N}\ln{N} \leq M,\ N \geq 2$时
                     
             \begin{align*}
-                S_N - a_1 & = \sum\limits_{n=2}^{N}{\dfrac{a_n}{n}} \\
-                & \leq \sum\limits_{n=2}^{N}{a_n\big(\ln{n} - \ln(n - 1)\big)} \\
-                & = \sum\limits_{n=2}^{N}{a_n\ln{n}} - \sum\limits_{n=2}^{N-1}{a_{n + 1}\ln{n}} \\
-                & = \sum\limits_{n=2}^{N-1}{(a_n - a_{n + 1})\ln{n}} + a_N\ln{N} \\
-                & = T_{N-1} + a_N\ln{(N + 1)} \\ 
+                S_N - a_1 & = \sum\limits_{n = 2}^{N}{\dfrac{a_n}{n}} \\
+                & \leq \sum\limits_{n = 2}^{N}{a_n\big(\ln{n} - \ln(n - 1)\big)} \\
+                & = \sum\limits_{n = 2}^{N}{a_n\ln{n}} - \sum\limits_{n = 2}^{N - 1}{a_{n + 1}\ln{n}} \\
+                & = \sum\limits_{n = 2}^{N - 1}{(a_n - a_{n + 1})\ln{n}} + a_N\ln{N} \\
+                & = T_{N - 1} + a_N\ln{(N + 1)} \\ 
                 & < T + M
             \end{align*}
 
@@ -117,8 +117,8 @@
     设数列$\{a_k\}$，其中$a_k$为$S_n$中的第$k$项，则当$k \geq 2$时有
 
     \begin{align*}
-        a_k & = \dfrac{(n - 1)(n - 2)\cdots(n - k + 1)}{(n + 2)(n + 3)\cdots(n+k)} \\
-        & = \dfrac{\dfrac{(n - 1)!}{(n - k)!}}{\dfrac{(n+k)!}{(n + 1)!}} = \dfrac{\dfrac{(2n)!(n - 1)!}{(n - k)!}}{\dfrac{(2n)!(n+k)!}{(n + 1)!}} = \dfrac{\dfrac{(2n)!}{(n - k)!(n+k)!}}{\dfrac{(2n)!}{(n - 1)!(n + 1)!}} \\
+        a_k & = \dfrac{(n - 1)(n - 2)\cdots(n - k + 1)}{(n + 2)(n + 3)\cdots(n + k)} \\
+        & = \dfrac{\dfrac{(n - 1)!}{(n - k)!}}{\dfrac{(n + k)!}{(n + 1)!}} = \dfrac{\dfrac{(2n)!(n - 1)!}{(n - k)!}}{\dfrac{(2n)!(n + k)!}{(n + 1)!}} = \dfrac{\dfrac{(2n)!}{(n - k)!(n + k)!}}{\dfrac{(2n)!}{(n - 1)!(n + 1)!}} \\
         & = \dfrac{\binom{2n}{n - k}}{\binom{2n}{n - 1}}
     \end{align*}
 
@@ -140,7 +140,7 @@
 \begin{proposition}
     
     设$a_n > 0(n = 1,2,\cdots)$，且级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$，证明：级数
-    $$ \sum\limits_{n = 1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2+ \cdots + a_n)^2}} $$
+    $$ \sum\limits_{n = 1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2 + \cdots + a_n)^2}} $$
 
 \end{proposition}
 
@@ -319,7 +319,7 @@
                 & \sim (-1)^{n + 1} \dfrac{\pi}{n + 1}
             \end{align*}
             
-            $\sum\limits_{n=o}^{\infty}{(-1)^{n + 1} \dfrac{\pi}{n + 1}}$显然收敛，所以$\sum\limits_{n = 0}^{\infty}{\sin{(n!\pi x)}}$在$x= \euler$处，即
+            $\sum\limits_{n = 0}^{\infty}{(-1)^{n + 1} \dfrac{\pi}{n + 1}}$显然收敛，所以$\sum\limits_{n = 0}^{\infty}{\sin{(n!\pi x)}}$在$x = \euler$处，即
             $$\sum\limits_{n = 0}^{\infty}{\sin{(n!\pi \euler)}}$$
             收敛。
         
@@ -334,12 +334,12 @@
             注意到$\forall x \in [0,1]$，可以被表示为如下形式
             $$x = \sum\limits_{k = 0}^{\infty}{\dfrac{a_k}{k!}}, \quad a_k \in \{0, 1, \cdots, k - 1\}$$
             又由$x$的展开形式得
-            $$\sin{(n!\pi x)} = (-1)^{na_{n - 1} + a_n} \sin{\left( \pi \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n+k}}{(n + 1)(n + 2) \cdots(n+k)}} \right)}$$
+            $$\sin{(n!\pi x)} = (-1)^{na_{n - 1} + a_n} \sin{\left( \pi \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n + k}}{(n + 1)(n + 2) \cdots(n + k)}} \right)}$$
             由观察得
-            $$ |\sin{(n!\pi x)}| = \left| \sin{\left( \pi \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n + k}}{(n + 1)(n + 2) \cdots(n+k)}} \right)} \right|$$
-            $$\dfrac{a_{n + 1}}{n + 1} \leq \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n+k}}{(n + 1)(n + 2) \cdots (n+k)}} \leq \dfrac{a_{n + 1} + 1}{n + 1} $$
-            将$a_k$看作在$\{0, 1, \cdots, k - 1\}$上的随机变量，是$x$的函数，且$a_k$相互独立，所以由\textup{Borel-Cantelli}定理知
-            $$\sum\limits_{k = 2}^{\infty}{P \left(\left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
+            $$ |\sin{(n!\pi x)}| = \left| \sin{\left( \pi \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n + k}}{(n + 1)(n + 2) \cdots(n + k)}} \right)} \right|$$
+            $$\dfrac{a_{n + 1}}{n + 1} \leq \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n + k}}{(n + 1)(n + 2) \cdots (n + k)}} \leq \dfrac{a_{n + 1} + 1}{n + 1} $$
+            将$a_k$看作在$\{0, 1, \cdots, k - 1\}$上的随机变量，是$x$的函数，且$a_k$相互独立，所以由\textup{Borel - Cantelli}定理知
+            $$\sum\limits_{k = 2}^{\infty}{P \left( \left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
             则$\dfrac{1}{2} < \dfrac{a_k}{k} < \dfrac{1}{4}$，对无限$k \in \mathbb{N}$成立
             $$\liminf_{n \to \infty}{|\sin{(n!\pi x)}|} \geq \sin{\dfrac{\pi}{4}} = \dfrac{\sqrt{2}}{2}$$
             对几乎所有$x \in [0,1]$成立，又$x \in M$不满足上式，其中$M$为收敛点集合，所以$M$为勒贝格集，不包含任何区间。
@@ -361,25 +361,25 @@
     由$f''(x) \leq 0$知，$f'(x)$在$[1, +\infty)$单调递减，容易看出$f'(x)$恒正。事实上若存在$x_0$，$f'(x_0) \leq 0$，则由单调性知
     $$f'(x) \leq f'(x_0), \ f(x) \leq f(x_0), \quad \forall x \geq x_0$$
     与$f(+\infty) = + \infty$矛盾。因此$f(x)$在$[1, +\infty)$严格单调增加。设
-    $$S_{2n}(s) = \sum\limits_{k = 1}^{n}{\left(\dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k -1)}\right)}$$
+    $$S_{2n}(s) = \sum\limits_{k = 1}^{n}{\left( \dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k - 1)} \right)}$$
     注意和式中每个括号都是负的且级数通项收敛于$0$，只需要证明对固定的$s > 0$，$S_{2n}(s)$有下界，则
     $$\lim\limits_{n \to +\infty}{S_{2n}(s)}$$
     存在且等于
     $$\sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{(s)}(n)}}$$
     由\textup{Lagrange}中值定理知，
-    $$\dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k -1)} = \dfrac{-sf'(\xi)}{f^{(s + 1)}(\xi)}, \quad \xi \in (2k - 1, 2k)$$
+    $$\dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k - 1)} = \dfrac{-sf'(\xi)}{f^{(s + 1)}(\xi)}, \quad \xi \in (2k - 1, 2k)$$
     注意到$f(x)$单调增加而$f'(x)$单调减少，则有
     $$\dfrac{-sf'(2k - 1)}{f^{(s + 1)(2k - 1)}} \leq \dfrac{1}{f^{(s)}(2k)} - \dfrac{1}{f^{(s)}(2k - 1)} \leq \dfrac{-sf'(2k)}{f^{(s + 1)}(2k)}$$
     $$\sum\limits_{k = 1}^{n}{\dfrac{-sf'(2k - 1)}{f^{(s + 1)(2k - 1)}}} \leq S_{2n}(s) \leq \sum\limits_{k = 1}^{n}{\dfrac{-sf'(2k)}{f^{(s + 1)}(2k)}}$$
     利用面积原理的思想来估计左右两端。由单调性知$k \geq 2$时
     $$\dfrac{f'(2k - 1)}{f^{(s + 1)}(2k - 1)} \leq \dfrac{1}{2} \int_{2k - 3}^{2k - 1}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t$$
-    $$\sum\limits_{k = 2}^{n}{\dfrac{f'(2k - 1)}{f^{(s + 1)}(2k - 1)}} \leq \dfrac{1}{2} \int_{1}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left.\dfrac{-1}{sf^{(s)}(t)}\right|_{1}^{+\infty} = \dfrac{1}{2sf^{(s)}(1)}$$
+    $$\sum\limits_{k = 2}^{n}{\dfrac{f'(2k - 1)}{f^{(s + 1)}(2k - 1)}} \leq \dfrac{1}{2} \int_{1}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left. \dfrac{-1}{sf^{(s)}(t)} \right|_{1}^{+\infty} = \dfrac{1}{2sf^{(s)}(1)}$$
     $S_{2n}(s)$有下界故极限存在。再次利用面积原理知$k \leq 1$时
     $$\dfrac{f'(2k)}{f^{(s + 1)}(2k)} \geq \dfrac{1}{2} \int_{2k}^{2k + 2}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t$$
-    $$\sum\limits_{k = 1}^{n}{\dfrac{f'(2k)}{f^{(s + 1)}(2k)}} \geq \dfrac{1}{2} \int_{2}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left.\dfrac{-1}{sf^{(s)}(t)}\right|_{2}^{+\infty} = \dfrac{1}{2sf^{(s)}(2)}$$
-    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)}\right) \leq \lim\limits_{n \to +\infty}{S_{2n}(s)} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
+    $$\sum\limits_{k = 1}^{n}{\dfrac{f'(2k)}{f^{(s + 1)}(2k)}} \geq \dfrac{1}{2} \int_{2}^{+\infty}{\dfrac{f'(t)}{f^{(s + 1)}(t)}}\diff t = \dfrac{1}{2} \left. \dfrac{-1}{sf^{(s)}(t)} \right|_{2}^{+\infty} = \dfrac{1}{2sf^{(s)}(2)}$$
+    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)} \right) \leq \lim\limits_{n \to +\infty}{S_{2n}(s)} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
     由前面说明就有
-    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)}\right) \leq \sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{(s)}(n)}} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
+    $$-s\left( \dfrac{f'(1)}{f^{(s + 1)}(1)} + \dfrac{1}{2sf^{(s)}(1)} \right) \leq \sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{(s)}(n)}} \leq -s\dfrac{1}{2sf^{(s)}(2)}$$
     而上市左右两端在$s \to 0^{+}$时的极限都是$-\dfrac{1}{2}$，所以
     $$\lim\limits_{s \to o^{+}}{\sum\limits_{n = 1}^{\infty}{\dfrac{(-1)^n}{f^{s}(n)}}} = -\dfrac{1}{2}$$
 
@@ -403,15 +403,15 @@
     又有
     
     \begin{align*}
-        \int_{a}^{b}{g^2(x)}\diff x = & \int_{a}^{b}{g(x)\left[ f(x) - \dfrac{1}{b-a} \int_{a}^{b}{f(x)}\diff x \right]}\diff x \\
-        = & \int_{a}^{b}{g(x)f(x)}\diff x - \dfrac{1}{b-a} \int_{a}^{b}{g(x)}\diff x \int_{a}^{b}{f(x)}\diff x \\
+        \int_{a}^{b}{g^2(x)}\diff x = & \int_{a}^{b}{g(x)\left[ f(x) - \dfrac{1}{b - a} \int_{a}^{b}{f(x)}\diff x \right]}\diff x \\
+        = & \int_{a}^{b}{g(x)f(x)}\diff x - \dfrac{1}{b - a} \int_{a}^{b}{g(x)}\diff x \int_{a}^{b}{f(x)}\diff x \\
         = & \ 0 - 0 \\
         = & \  0
     \end{align*}
     
     则知$g(x) = 0$，即
-    $$g(x) = f(x) - \dfrac{1}{b-a} \int_{a}^{b}{g(x)}\diff x = 0$$
-    $$f(x) = \dfrac{1}{b-a} \int_{a}^{b}{g(x)}\diff x $$
+    $$g(x) = f(x) - \dfrac{1}{b - a} \int_{a}^{b}{g(x)}\diff x = 0$$
+    $$f(x) = \dfrac{1}{b - a} \int_{a}^{b}{g(x)}\diff x $$
 
 \end{proof}
 
@@ -448,7 +448,7 @@
 \begin{proposition}
 
     $0 < a < b,\ f:[a,b] \to [-1,1]$，满足$\int_{a}^{b}{f(x)}\diff x = 0$，证明：
-    $$\int_{a}^{b}{\dfrac{f(x)}{x}}\diff x \leq \ln{\dfrac{(a+b)^2}{4ab}}$$
+    $$\int_{a}^{b}{\dfrac{f(x)}{x}}\diff x \leq \ln{\dfrac{(a + b)^2}{4ab}}$$
 
 \end{proposition}
 
@@ -456,18 +456,18 @@
 
     \begin{align*}
         & \int_{a}^{b}{\dfrac{f(x)}{x} + kf(x)}\diff x \\
-        = & \int_{a}^{b}{f(x) \left(\dfrac{1}{x} + k \right)}\diff x \\
-        \leq & \int_{a}^{b}{|f(x)| \left|\dfrac{1}{x} + k \right|}\diff x \\
+        = & \int_{a}^{b}{f(x) \left( \dfrac{1}{x} + k \right)}\diff x \\
+        \leq & \int_{a}^{b}{|f(x)| \left| \dfrac{1}{x} + k \right|}\diff x \\
         \leq & \int_{a}^{b}{\left| \dfrac{1}{x} + k \right|}\diff x
     \end{align*}
 
-    其中$k$为实数，显然当$k = - \dfrac{2}{a+b}$时，上式积分最小，即
+    其中$k$为实数，显然当$k = - \dfrac{2}{a + b}$时，上式积分最小，即
 
     \begin{align*}
         \int_{a}^{b}{\dfrac{f(x)}{x}}\diff x & \leq \int_{a}^{b}{\left| \dfrac{1}{x} + k \right|}\diff x \\  
-        & = \int_{a}^{b}{\left| \dfrac{1}{x} - \dfrac{2}{a+b} \right|}\diff x \\
-        & = \int_{a}^{\frac{a+b}{2}}{\dfrac{1}{x} - \dfrac{2}{a+b}}\diff x + \int_{a}^{\frac{a+b}{2}}{\dfrac{2}{a+b} - \dfrac{1}{x}}\diff x \\
-        & = \ln{\dfrac{(a+b)^2}{4ab}}
+        & = \int_{a}^{b}{\left| \dfrac{1}{x} - \dfrac{2}{a + b} \right|}\diff x \\
+        & = \int_{a}^{\frac{a + b}{2}}{\dfrac{1}{x} - \dfrac{2}{a + b}}\diff x + \int_{a}^{\frac{a + b}{2}}{\dfrac{2}{a + b} - \dfrac{1}{x}}\diff x \\
+        & = \ln{\dfrac{(a + b)^2}{4ab}}
     \end{align*}
 
 \end{proof}
@@ -482,13 +482,13 @@
 \begin{proof}
 
     设$f$与$y = x$的交点为$x_1, x_2, \cdots , x_n$\\
-    任意区间$[x_i, x_{i+1}]$，$i = 1, 2, \cdots, n$上，若$f(x) < x$，则
+    任意区间$[x_i, x_{i + 1}]$，$i = 1, 2, \cdots, n$上，若$f(x) < x$，则
     $$f(f(x)) \leq f(x)$$
     即
-    $$\int_{x_i}^{x_{i+1}{f(f(x))}}\diff x \leq \int_{x_i}^{x_{i+1}}{f(f(x_{i+1}))}\diff x \leq 2\int_{x_i}^{x_{i+1}}{f(x)}\diff x$$
+    $$\int_{x_i}^{x_{i + 1}{f(f(x))}}\diff x \leq \int_{x_i}^{x_{i + 1}}{f(f(x_{i + 1}))}\diff x \leq 2\int_{x_i}^{x_{i + 1}}{f(x)}\diff x$$
     若$f(x) \geq x$，则$f(f(x)) \geq f(x) \geq x$
-    $$2\int_{x_i}^{x_{i+1}}{f(x)}\diff x \geq 2\int_{x_i}^{x_{i+1}}{x}\diff x = x_{i+1}^2 - x_i^2$$
-    $$2\int_{x_i}^{x_{i+1}}{f(f(x))}\diff x \leq \int_{x_i}^{x_{i+1}}{f(f(x_{i+1}))}\diff x = x_{i+1}(x_{i+1} - x_i)$$
+    $$2\int_{x_i}^{x_{i + 1}}{f(x)}\diff x \geq 2\int_{x_i}^{x_{i + 1}}{x}\diff x = x_{i + 1}^2 - x_i^2$$
+    $$2\int_{x_i}^{x_{i + 1}}{f(f(x))}\diff x \leq \int_{x_i}^{x_{i + 1}}{f(f(x_{i + 1}))}\diff x = x_{i + 1}(x_{i + 1} - x_i)$$
     则
     $$\int_{0}^{1}{f(f(x))}\diff x \leq 2\int_{0}^{1}{f(x)}\diff x$$
 
@@ -509,7 +509,7 @@
         & \int_{0}^{1}{f(g(x))}\diff x - \int_{0}^{1}{f(x)}\diff x - \int_{0}^{1}{g(x)}\diff x \\
         \leq & \ f(t) - t - \int_{0}^{1}{f(x)}\diff x \\
         = & \int_{0}^{1}{[f(t) - f(x)]}\diff x - t \\
-        \leq & \ t -t = 0
+        \leq & \ t - t = 0
     \end{align*}
 
     即
@@ -543,21 +543,21 @@
 \begin{proposition}
 
     设$f:[0,1] \to \mathrm{R}$是连续函数，且$\int_{0}^{1}{f(x)}\diff x = 0$，证明：
-    $$2 \left(\int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
+    $$2 \left( \int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
     \begin{align*}
-        \left(\int_{0}^{1}{xf(x)}\diff x \right)^2 & = \left( \int_{0}^{1}{(x-1)f(x)}\diff x \right)^2 \\
-        & \leq \left( \int_{0}^{1}{\dfrac{(x-1)^2}{1 - x^2}}\diff x \right) \left( \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x \right) \\
+        \left( \int_{0}^{1}{xf(x)}\diff x \right)^2 & = \left( \int_{0}^{1}{(x - 1)f(x)}\diff x \right)^2 \\
+        & \leq \left( \int_{0}^{1}{\dfrac{(x - 1)^2}{1 - x^2}}\diff x \right) \left( \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x \right) \\
         & = (2\ln{2} - 1)  \left( \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x \right) \\
         & \leq \dfrac{1}{2} \left( \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x \right)
     \end{align*}
 
     所以
-    $$2 \left(\int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
+    $$2 \left( \int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
 
 \end{proof}
 
@@ -609,10 +609,10 @@
     \end{align*}
 
     因为$f(1) = 0$，应用\textup{Jensen}不等式得
-    $$ \int_{0}^{1}{|f(x) + c|^2}\diff x - c^2 \leq 2\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x} \cdot \sqrt{\int_{0}^{1}{x^2 \left(f'(x)\right)^2}\diff x} $$
-    $$ \sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x} - \dfrac{c^2}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 2\sqrt{\int_{0}^{1}{x^2 \left(f'(x)\right)^2}\diff x} $$
+    $$ \int_{0}^{1}{|f(x) + c|^2}\diff x - c^2 \leq 2\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x} \cdot \sqrt{\int_{0}^{1}{x^2 \left( f'(x) \right)^2}\diff x} $$
+    $$ \sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x} - \dfrac{c^2}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 2\sqrt{\int_{0}^{1}{x^2 \left( f'(x) \right)^2}\diff x} $$
     两边平方得
-    $$\int_{0}^{1}{|f(x) + c|^2}\diff x -2c^2 + \dfrac{c^4}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 4 \int_{0}^{1}{x^2 \left(f'(x)\right)^2}\diff x $$
+    $$\int_{0}^{1}{|f(x) + c|^2}\diff x -2c^2 + \dfrac{c^4}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 4 \int_{0}^{1}{x^2 \left( f'(x) \right)^2}\diff x $$
 
     \begin{align*}
         \int_{0}^{1}{|f(x) + c|^2}\diff x & = \int_{0}^{1}{f^2(x)}\diff x + 2c \int_{0}^{1}{f(x)}\diff x + c^2 \\
@@ -621,7 +621,7 @@
     \end{align*}
 
     因此有
-    $$\int_{0}^{1}{|f(x)|^2}\diff x + \left( \int_{0}^{1}{f(x)}\diff x \right)^2 + \dfrac{c^4}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 4 \int_{0}^{1}{x^2 \left(f'(x)\right)^2}\diff x $$
+    $$\int_{0}^{1}{|f(x)|^2}\diff x + \left( \int_{0}^{1}{f(x)}\diff x \right)^2 + \dfrac{c^4}{\sqrt{\int_{0}^{1}{|f(x) + c|^2}\diff x}} \leq 4 \int_{0}^{1}{x^2 \left( f'(x) \right)^2}\diff x $$
     由$\int_{0}^{1}{(f(x) + c)^2}\diff x > 0$得
     $$4\int_{0}^{1}{|f'(x)|^2}\diff x \geq \int_{0}^{1}{|f(x)|^2}\diff x + \left( \int_{0}^{1}{|f(x)|}\diff x \right)$$
 
@@ -630,25 +630,25 @@
 \begin{proposition}
     
     设$f$是定义在$[0,1]$上的连续可微函数，证明：
-    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
+    $$\left| f\left( \dfrac{1}{2} \right) \right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
     设$x_0 \in [0,1]$，且
-    $$|f(x_0)| \leq |f(x)|, \quad x \in \left[0,\dfrac{1}{2}\right]$$
+    $$|f(x_0)| \leq |f(x)|, \quad x \in \left[ 0,\dfrac{1}{2} \right]$$
     则有
-    $$f\left(\dfrac{1}{2}\right) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
-    $$\left|f\left(\dfrac{1}{2}\right)\right|= |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
-    由$|f(x_0)| \leq |f(x)|, \ x \in \left[0,\dfrac{1}{2}\right]$得
+    $$f\left( \dfrac{1}{2} \right) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
+    $$\left| f\left( \dfrac{1}{2} \right) \right| = |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
+    由$|f(x_0)| \leq |f(x)|, \ x \in \left[ 0,\dfrac{1}{2} \right]$得
     $$|f(x_0)| \leq 2 \int_{0}^{\frac{1}{2}}{|f(x)|}\diff x$$
     又有
-    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
-    对于$\forall x \in \left[\dfrac{1}{2}, 1\right]$，有不等式
-    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq 2\int_{\frac{1}{2}}^{1}{|f(x)|}\diff x + \int_{\frac{1}{2}}^{1}{|f'(x)|}\diff x$$
+    $$\left| f\left( \dfrac{1}{2} \right) \right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
+    对于$\forall x \in \left[ \dfrac{1}{2}, 1 \right]$，有不等式
+    $$\left| f\left( \dfrac{1}{2} \right) \right| \leq 2\int_{\frac{1}{2}}^{1}{|f(x)|}\diff x + \int_{\frac{1}{2}}^{1}{|f'(x)|}\diff x$$
     所以有
-    $$\left|f\left(\dfrac{1}{2}\right)\right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
+    $$\left| f\left( \dfrac{1}{2} \right) \right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proof}
 
@@ -670,7 +670,7 @@
     所以
     $$M > 0, \quad m < 0$$
     令$a = x_M$，有
-    $$F'(a) = Mx_M - M\int_{0}^{x_M}{t}\diff t = Mx_M \left(1 - \dfrac{x_M}{2} \right) > 0$$
+    $$F'(a) = Mx_M - M\int_{0}^{x_M}{t}\diff t = Mx_M \left( 1 - \dfrac{x_M}{2} \right) > 0$$
     同理可知$\exists b \in (0,1), F'(b) < 0$\\
     由介值定理知$\exists d \in (a,b)$，使$F'(d) = 0$\\
     又由\textup{Rolle}中值定理知，$\exists c \in (0,d)$
@@ -684,14 +684,14 @@
 \begin{proposition}
 
     设$f$是$[0,1]$上的连续可微函数，$b > 0$，且$f(0) = 0$，证明：
-    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x)\right)^2 }\diff x $$
+    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x) \right)^2 }\diff x $$
 
 \end{proposition}
 
 \begin{proof}
 
     应用分部积分法，有
-    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x = - \left( \left.\dfrac{f^(x)}{x^2} \right|_{0}^{b} - \int_{0}^{b}{\dfrac{2f'(x)f(x)}{x}}\diff x \right)$$
+    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x = - \left( \left. \dfrac{f^(x)}{x^2} \right|_{0}^{b} - \int_{0}^{b}{\dfrac{2f'(x)f(x)}{x}}\diff x \right)$$
     又因为
     $$\lim\limits_{x \to 0}{\dfrac{f^2(x)}{x}} = \lim\limits_{x \to 0}{f'(x)f(x)} = 0$$
     所以
@@ -699,11 +699,11 @@
     \begin{align*}
         \int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x & = -\dfrac{f^2(b)}{b} + 2 \int_{0}^{b}{\dfrac{2f'(x)f(x)}{x}}\diff x \\
         & \leq 2\int_{0}^{b}{\dfrac{2f'(x)f(x)}{x}}\diff x \\
-        & \leq 2\left( \int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \cdot \int_{0}^{b}{\left(f'(x)\right)^2}\diff x\right)^{\frac{1}{2}}
+        & \leq 2\left( \int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \cdot \int_{0}^{b}{\left( f'(x) \right)^2}\diff x \right)^{\frac{1}{2}}
     \end{align*}
 
     因此有
-    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x)\right)^2 }\diff x $$
+    $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x) \right)^2 }\diff x $$
 
 \end{proof}
 
@@ -721,22 +721,22 @@
     由题设知$f'$是连续函数，因此$f'$黎曼可积，对于$d \geq 0$，有
 
     \begin{align*}
-        0 < f(x + d) & = f(x) + \int_{x}^{x+d}{f'(t)}\diff t \\
-        & = f(x) + df'(x) + \int_{x}^{x+d}{(f'(t) - f'(x))}\diff t \\
-        & \leq f(x) + df'(x) + \int_{x}^{x+d}{k(t - x)}\diff t \\
+        0 < f(x + d) & = f(x) + \int_{x}^{x + d}{f'(t)}\diff t \\
+        & = f(x) + df'(x) + \int_{x}^{x + d}{(f'(t) - f'(x))}\diff t \\
+        & \leq f(x) + df'(x) + \int_{x}^{x + d}{k(t - x)}\diff t \\
         & = f(x) + df'(x) + \dfrac{1}{2}kd^2
     \end{align*}
 
     对于$d < 0$，有
 
     \begin{align*}
-        \int_{x}^{x+d}{f'(t)}\diff t & = - \int_{x+d}^{x}{f'(t)}\diff t\\
-        & \leq -  \int_{x+d}^{x}{k(t - x)}\diff t \\
+        \int_{x}^{x + d}{f'(t)}\diff t & = - \int_{x + d}^{x}{f'(t)}\diff t\\
+        & \leq -  \int_{x + d}^{x}{k(t - x)}\diff t \\
         & = \dfrac{k}{d^2}
     \end{align*}
 
     特别地，令$d = -\frac{f'(x)}{k}$，有
-    $$0 < f(x) - \dfrac{\left(f'(x)\right)^2}{k} + \dfrac{\left(f'(x)\right)^2}{2k} = f(x) - \dfrac{\left(f'(x)\right)^2}{2k}$$
+    $$0 < f(x) - \dfrac{\left( f'(x) \right)^2}{k} + \dfrac{\left( f'(x) \right)^2}{2k} = f(x) - \dfrac{\left( f'(x) \right)^2}{2k}$$
     所以
     $$\left( f'(x) \right)^2 < 2kf(x)$$
     
@@ -773,7 +773,7 @@
     则$\dfrac{1}{2}(f(x) - g(x))^2$在$[0,a]\ (\forall a \in \mathrm{R}^+)$上必定有界连续，则
 
     \begin{align*}
-        \int_{0}^{w}{f^2(x) - g^2(x)}\diff x & = \int_{0}^{w}{\left( \dfrac{(f(x) - g(x))^2}{2}\right)'}\diff x \\
+        \int_{0}^{w}{f^2(x) - g^2(x)}\diff x & = \int_{0}^{w}{\left( \dfrac{(f(x) - g(x))^2}{2} \right)'}\diff x \\
         & = \left. \dfrac{(f(x) - g(x))^2}{2} \right|_{0}^{w} \\ 
         & = 2 \mathbb{e}^{-2w} \left( \int_{0}^{w}{\euler^tf(t)}\diff t \right)^2
     \end{align*}
@@ -793,7 +793,7 @@
 
 \begin{proposition}
 
-    设$f$是周期为$T$的连续函数，且$\int_{0}^{T}{f(x)}\diff x= 0$，证明：
+    设$f$是周期为$T$的连续函数，且$\int_{0}^{T}{f(x)}\diff x = 0$，证明：
     $$\int_{0}^{T}{|f(x)|^2}\diff x \leq \dfrac{T^2}{4\pi^2}\int_{0}^{T}{|f'(x)|^2}\diff x$$
 
 \end{proposition}
@@ -801,9 +801,9 @@
 \begin{proof}
 
     由题设知，$f$可以展开为\textup{Fourier}级数，
-    $$f(x) = \dfrac{a_0}{2} + \sum\limits_{n = 1}^{\infty}{a_n\cos{\left(\dfrac{2n\pi x}{T}\right)} + b_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
+    $$f(x) = \dfrac{a_0}{2} + \sum\limits_{n = 1}^{\infty}{a_n\cos{\left( \dfrac{2n\pi x}{T} \right)} + b_n\sin{\left( \dfrac{2n\pi x}{T} \right)}}$$
     易知$a_0 = 0$，又
-    $$f'(x) = \sum\limits_{n = 1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos{\left(\dfrac{2n\pi x}{T}\right)} - \dfrac{2n\pi}{T}a_n\sin{\left(\dfrac{2n\pi x}{T}\right)}}$$
+    $$f'(x) = \sum\limits_{n = 1}^{\infty}{\dfrac{2n\pi}{T}b_n\cos{\left( \dfrac{2n\pi x}{T} \right)} - \dfrac{2n\pi}{T}a_n\sin{\left( \dfrac{2n\pi x}{T} \right)}}$$
     由\textup{Parseval}恒等式知
     $$\int_{0}^{T}{|f'(x)|^2}\diff x = \sum\limits_{n = 1}^{\infty}{\dfrac{4n^2\pi^2}{T^2}(a_n^2 + b_n^2)} \geq \sum\limits_{n = 1}^{\infty}{\dfrac{4\pi^2}{T^2}(a_n^2 + b_n^2)}$$
     $$\int_{0}^{T}{|f(x)|^2}\diff x = \sum\limits_{n = 1}^{\infty}{(a_n^2 + b_n^2)}$$
@@ -829,7 +829,7 @@
     \end{align*}
 
     \begin{align*}
-        |f(0)| & \leq |f(x)| + \left|\int_{0}^{x}{f'(t)}\diff t\right| \\
+        |f(0)| & \leq |f(x)| + \left| \int_{0}^{x}{f'(t)}\diff t \right| \\
         & \leq |f(x)| + \int_{0}^{x}{|f'(t)|}\diff t \\
         & \leq |f(x)| + \int_{0}^{a}{|f'(t)|}\diff t 
     \end{align*}
@@ -844,22 +844,22 @@
 \begin{proposition}
 
     设$f$在$[0,1]$上有可积的导函数，证明：
-    $$\int_{0}^{1}{|f(x)|}\diff x \leq \max\left\{\int_{0}^{1}{|f'(x)|}\diff x,\  \left|\int_{0}^{1}{f(x)}\diff x\right|\right\}$$
+    $$\int_{0}^{1}{|f(x)|}\diff x \leq \max\left\{ \int_{0}^{1}{|f'(x)|}\diff x,\  \left| \int_{0}^{1}{f(x)}\diff x \right| \right\}$$
 
 \end{proposition}
 
 \begin{proof}
     
     若
-    $$\int_{0}^{1}{|f'(x)|}\diff x = \left|\int_{0}^{1}{f(x)}\diff x\right|$$
+    $$\int_{0}^{1}{|f'(x)|}\diff x = \left| \int_{0}^{1}{f(x)}\diff x \right|$$
     则不等式显然成立
     若
-    $$\left|\int_{0}^{1}{f(x)}\diff x\right| < \int_{0}^{1}{|f(x)|}\diff x$$
+    $$\left| \int_{0}^{1}{f(x)}\diff x \right| < \int_{0}^{1}{|f(x)|}\diff x$$
     则$f(x)$在$[0,1]$上一定变号，所以存在$x_0 \in [0,1]$，$f(x_0) = 0$，则
 
     \begin{align*}
         |f(x)| & = |f(x) - f(x_0)| \\
-        & = \left|\int_{x_0}^{x}{f'(t)}\diff t\right| \\
+        & = \left| \int_{x_0}^{x}{f'(t)}\diff t \right| \\
         & \leq \int_{x_0}^{x}{|f'(t)|}\diff t \\
         & \leq \int_{0}^{1}{|f'(x)|}\diff x
     \end{align*}
@@ -900,7 +900,7 @@
 \begin{proposition}
     
     设$f'(x)$在$[a,\ b]$上连续，证明：
-    $$\max_{x\in[a,b]}{|f(x)|} \leq \left|\dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x\right| + \int_{a}^{b}{|f'(x)|}\diff x$$
+    $$\max_{x\in[a,b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
@@ -911,8 +911,8 @@
     所以
 
     \begin{align*}
-        |f(x_0)| & = \left|f(x) - \int_{x_0}^{x}{f'(t)}\diff t \right| \\
-        & \leq |f(x)| + \left|\int_{x_0}^{x}{f'(t)}\diff t \right| \\
+        |f(x_0)| & = \left| f(x) - \int_{x_0}^{x}{f'(t)}\diff t \right| \\
+        & \leq |f(x)| + \left| \int_{x_0}^{x}{f'(t)}\diff t \right| \\
         & \leq |f(x)| +  \int_{x_0}^{x}{|f'(t)|}\diff t \\
         & \leq |f(x)| +  \int_{a}^{b}{|f'(t)|}\diff t \\
     \end{align*}
@@ -920,9 +920,9 @@
     两边对$x$从$a$到$b$积分得
     $$(b - a)|f(x_0)| \leq \int_{a}^{b}{|f(x)|}\diff x + (b - a)\int_{a}^{b}{|f'(t)|}\diff t$$
     即
-    $$|f(x_0)| \leq \left|\dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x\right| + \int_{a}^{b}{|f'(x)|}\diff x$$
+    $$|f(x_0)| \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
     由$x_0$的任意性知
-    $$\max_{x\in[a,b]}{|f(x)|} \leq \left|\dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x\right| + \int_{a}^{b}{|f'(x)|}\diff x$$
+    $$\max_{x\in[a,b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
     
 \end{proof}
 
@@ -985,11 +985,11 @@
     
     \begin{align*}
         \ooint_{S}{f(ax + by + cz)}\diff S & = \ooint_{S}{f(\delta u)}\diff S \\
-        & = 2\iint_{D}{f(\delta u) \sqrt{1 + \left( \dfrac{\partial w}{\partial u} \right)^2 + \left( \dfrac{\partial w}{\partial v}\right)^2}}\diff u \diff v\\
+        & = 2\iint_{D}{f(\delta u) \sqrt{1 + \left( \dfrac{\partial w}{\partial u} \right)^2 + \left( \dfrac{\partial w}{\partial v} \right)^2}}\diff u \diff v\\
         & = 2\iint_{D}{f(\delta u) \dfrac{1}{\sqrt{1 - u^2 - v^2}}}\diff u \diff v \\
         & = 2\int_{-1}^{1}{f(\delta u)}\diff u \int_{-\sqrt{1 - u^2}}^{\sqrt{1 - u^2}}{\dfrac{1}{\sqrt{1 - u^2 - v^2}}}\diff v \\
         & = 2\int_{-1}^{1}{f(\delta u)}\diff u \cdot 2 \int_{0}^{\sqrt{1 - u^2}}{\dfrac{1}{\sqrt{1 - u^2 - v^2}}}\diff v \\
-        & = 2\int_{-1}^{1}{f(\delta u)}\diff u \cdot 2\arcsin\left.\left(\dfrac{v}{\sqrt{1 - u^2}}\right) \right|_{0}^{\sqrt{1 - u^2}} \\
+        & = 2\int_{-1}^{1}{f(\delta u)}\diff u \cdot 2\arcsin\left.\left( \dfrac{v}{\sqrt{1 - u^2}} \right) \right|_{0}^{\sqrt{1 - u^2}} \\
         & = 2\pi\int_{-1}^{1}{f(\delta u)}\diff u
     \end{align*}
 
@@ -1033,7 +1033,7 @@
 \begin{proof}
     
     由$f(x)$，$\dfrac{f(x)}{g(x)}$单调增加知，$\forall m,\ n \in \mathbb{R}$，有
-    $$(f(m) - f(n))\left(\dfrac{f(m)}{g(m)} - \dfrac{f(n)}{g(n)}\right) \geq 0$$
+    $$(f(m) - f(n))\left( \dfrac{f(m)}{g(m)} - \dfrac{f(n)}{g(n)} \right) \geq 0$$
     对上式关于$m,\ n$从$0$到$x$积分，得
     $$x\int_{0}^{x}{g(t)}\diff t \geq \int_{0}^{x}{f(t)}\diff t \int_{0}^{x}{\dfrac{g(t)}{f(t)}}\diff t$$
     其中，$x > 0$，则有
@@ -1074,8 +1074,8 @@
     原等式左边有
     
     \begin{align*}
-        \sum\limits_{k = 0}^{n}{(-1)^k \binom{n}{k}\dfrac{1}{k + m + 1}} & =  \sum\limits_{k = 0}^{n}{\left[(-1)^k \binom{n}{k} \int_{0}^{1}{x^{k + n}}\diff x\right]} \\
-        & = \int_{0}^{1}{\left[x^m \sum\limits_{k = 0}^{n}{\left[(-1)^k\binom{n}{k} x^k\right]}\right]}\diff x \\
+        \sum\limits_{k = 0}^{n}{(-1)^k \binom{n}{k}\dfrac{1}{k + m + 1}} & =  \sum\limits_{k = 0}^{n}{\left[ (-1)^k \binom{n}{k} \int_{0}^{1}{x^{k + n}}\diff x \right]} \\
+        & = \int_{0}^{1}{\left[ x^m \sum\limits_{k = 0}^{n}{\left[ (-1)^k\binom{n}{k} x^k \right]} \right]}\diff x \\
         & = \int_{0}^{1}{x^m (1 - x)^n}\diff x        
     \end{align*}
 
@@ -1118,20 +1118,20 @@
 \begin{proposition}
 
     计算
-    $$\lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left(\dfrac{\sin{nx}}{\sin{x}}\right)}}\diff x$$
+    $$\lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left( \dfrac{\sin{nx}}{\sin{x}} \right)}}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
     由
-    $$\lim\limits_{x \to 0}{x^2\left(\dfrac{1}{\sin^4{x}} - \dfrac{1}{x^4}\right)} = \dfrac{2}{3}$$
+    $$\lim\limits_{x \to 0}{x^2\left( \dfrac{1}{\sin^4{x}} - \dfrac{1}{x^4} \right)} = \dfrac{2}{3}$$
     知存在常数$C > 0$，使得
-    $$\left| \dfrac{x\sin^4{nx}}{\sin^4{x} - \dfrac{\sin^4{nx}}{x^3}}\right| \leq C\dfrac{\sin^4{nx}}{x} \leq Cn, \quad \forall x \in \left(0,\ \dfrac{\pi}{2}\right)$$
+    $$\left| \dfrac{x\sin^4{nx}}{\sin^4{x} - \dfrac{\sin^4{nx}}{x^3}} \right| \leq C\dfrac{\sin^4{nx}}{x} \leq Cn, \quad \forall x \in \left( 0,\ \dfrac{\pi}{2} \right)$$
     因此
 
     \begin{align*}
-        \lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left(\dfrac{\sin{nx}}{\sin{x}}\right)}}\diff x & = \lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{\dfrac{\sin^4{nx}}{x^3}\diff x}} \\
+        \lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left( \dfrac{\sin{nx}}{\sin{x}} \right)}}\diff x & = \lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{\dfrac{\sin^4{nx}}{x^3}\diff x}} \\
         & = \lim\limits_{n \to \infty}{\int_{0}^{\frac{n\pi}{2}}{\dfrac{\sin^4{x}}{x^3}}\diff x} \\
         & = \int_{0}^{+\infty}{\dfrac{\sin^4{x}}{x^3}}\diff x \\
         & = \int_{0}^{+\infty}{\dfrac{2\sin^3{x}\cos{x}}{x^2}}\diff x \\
@@ -1142,7 +1142,7 @@
     由\textup{Frullani}公式知
     $$\int_{0}^{+\infty}{\dfrac{\cos{2x} - \cos{4x}}{x}}\diff x = \ln{2}$$
     即
-    $$\lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left(\dfrac{\sin{nx}}{\sin{x}}\right)}}\diff x = \ln{2}$$
+    $$\lim\limits_{n \to \infty}{\dfrac{1}{n^2}\int_{0}^{\frac{\pi}{2}}{x\left( \dfrac{\sin{nx}}{\sin{x}} \right)}}\diff x = \ln{2}$$
 
 \end{proof}
 
@@ -1150,55 +1150,55 @@
 \begin{proposition}
 
     设函数$f \in C^{1}[0,1]$，证明：
-    $$\lim\limits_{n \to \infty}{n \left[\int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left(\dfrac{k}{n}\right)}\right]} = -\dfrac{1}{2}(f(1) - f(0))$$
+    $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} \right]} = -\dfrac{1}{2}(f(1) - f(0))$$
 
 \end{proposition}
 
 \begin{proof}
     
     \begin{align*}
-        \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left(\dfrac{k}{n}\right)} & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f(x) - f\left(\dfrac{k}{n}\right)}\diff x} \\
-        & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f'(\xi_k)\left(x - \dfrac{k}{n}\right)}\diff x} \\
+        \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f(x) - f\left( \dfrac{k}{n} \right)}\diff x} \\
+        & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f'(\xi_k)\left( x - \dfrac{k}{n} \right)}\diff x} \\
     \end{align*}
     
-    因为$f \in C^{1}[0,1]$，所以在$\left[\dfrac{k - 1}{n}, \dfrac{k}{n}\right],\ k = 1,\ 2,\  \cdots,\ n$中，存在$m_k,\ M_k$，使得
+    因为$f \in C^{1}[0,1]$，所以在$\left[ \dfrac{k - 1}{n}, \dfrac{k}{n} \right],\ k = 1,\ 2,\  \cdots,\ n$中，存在$m_k,\ M_k$，使得
     $$m_k \leq f'(x) \leq M_k$$
     因此有
 
     \begin{align*}
-        \int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left(\dfrac{k}{n}\right)} & \leq \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{m_k\left(x - \dfrac{k}{n}\right)}\diff x} \\
-        & \leq \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{m_k\left(x - \dfrac{k}{n}\right)}\diff x} \\
+        \int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} & \leq \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{m_k\left( x - \dfrac{k}{n} \right)}\diff x} \\
+        & \leq \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{m_k\left( x - \dfrac{k}{n} \right)}\diff x} \\
         & \leq \sum\limits_{k = 1}^{n}{-m_k \cdot \dfrac{1}{2n^2}} \\
         & = - \dfrac{1}{2n^2} \sum\limits_{k = 1}^{n}{m_k}
     \end{align*}
 
     同理
-    $$\int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left(\dfrac{k}{n}\right)} \geq - \dfrac{1}{2n^2} \sum\limits_{k = 1}^{n}{M_k}$$
+    $$\int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} \geq - \dfrac{1}{2n^2} \sum\limits_{k = 1}^{n}{M_k}$$
     两边对$n$取极限，由黎曼积分性质可知
-    $$\lim\limits_{n \to \infty}{n \left[\int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left(\dfrac{k}{n}\right)}\right]} = -\dfrac{1}{2}(f(1) - f(0))$$
+    $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} \right]} = -\dfrac{1}{2}(f(1) - f(0))$$
     
 \end{proof}
 
 \begin{proposition}
     
     设函数$f \in C^{1}[0,1]$，$\theta \in [0, 1]$，证明：
-    $$\lim\limits_{n \to \infty}{n \left[\int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left(\dfrac{k + \theta}{n}\right)}\right]} = -\left(\theta -\dfrac{1}{2}\right) (f(1) - f(0))$$
+    $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + \theta}{n} \right)} \right]} = -\left( \theta - \dfrac{1}{2} \right) (f(1) - f(0))$$
 \end{proposition}
 
 \begin{proof}
     
     \begin{align*}
-        \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left(\dfrac{k + \theta}{n}\right)} & = \int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 0}^{n - 1}{\left[f\left(\dfrac{k + \theta}{n}\right) - f\left(\dfrac{k + 1}{n}\right) + f\left(\dfrac{k + 1}{n}\right)\right]} \\
-        & = \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left(\dfrac{k + 1}{n}\right)} \\
-        & \quad + \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{\left[f\left(\dfrac{k + 1}{n}\right) - f\left(\dfrac{k + \theta}{n}\right)\right]}
+        \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + \theta}{n} \right)} & = \int_{0}^{1}{f(x)}\diff x - \sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + \theta}{n} \right) - f\left( \dfrac{k + 1}{n} \right) + f\left( \dfrac{k + 1}{n} \right) \right]} \\
+        & = \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + 1}{n} \right)} \\
+        & \quad + \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + 1}{n} \right) - f\left( \dfrac{k + \theta}{n} \right) \right]}
     \end{align*}
 
-    $$\sum\limits_{k = 0}^{n - 1}{\left[f\left(\dfrac{k + 1}{n}\right) - f\left(\dfrac{k + \theta}{n}\right)\right]} = -\dfrac{1}{n}(\theta - 1)\sum\limits_{k = 0}^{n - 1}{f'(\xi_k)}$$
-    其中，$\xi_k \in \left[\dfrac{k}{n}, \dfrac{k + 1}{n}\right],\ k = 0,\ 1,\  \cdots,\ n$
+    $$\sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + 1}{n} \right) - f\left( \dfrac{k + \theta}{n} \right) \right]} = -\dfrac{1}{n}(\theta - 1)\sum\limits_{k = 0}^{n - 1}{f'(\xi_k)}$$
+    其中，$\xi_k \in \left[ \dfrac{k}{n}, \dfrac{k + 1}{n} \right],\ k = 0,\ 1,\  \cdots,\ n$
     对$n$取极限，由黎曼积分性质可知
-    $$\lim\limits_{n \to \infty}{\sum\limits_{k = 0}^{n - 1}{\left[f\left(\dfrac{k + 1}{n}\right) - f\left(\dfrac{k + \theta}{n}\right)\right]}} = -(\theta - 1)(f(1) - f(0))$$
+    $$\lim\limits_{n \to \infty}{\sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + 1}{n} \right) - f\left( \dfrac{k + \theta}{n} \right) \right]}} = -(\theta - 1)(f(1) - f(0))$$
     综上
-    $$\lim\limits_{n \to \infty}{n \left[\int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left(\dfrac{k + \theta}{n}\right)}\right]} = -\left(\theta -\dfrac{1}{2}\right) (f(1) - f(0))$$
+    $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + \theta}{n} \right)} \right]} = -\left( \theta - \dfrac{1}{2} \right) (f(1) - f(0))$$
 
 \end{proof}
 
@@ -1214,7 +1214,7 @@
 
     反证法。设$\exists x_0 \in [0,1]$，$f(x_0) = y < M$，则由函数连续性可知，$\exists \delta > 0$，$|x - x_0| < \delta$时
     $$|f(x) - f(x_0)| < \varepsilon$$
-    其中$\varepsilon = \dfrac{M -y}{2}$，又由黎曼积分性质知，
+    其中$\varepsilon = \dfrac{M - y}{2}$，又由黎曼积分性质知，
     $$\lim\limits_{n \to \infty}{\dfrac{f(0) + f(\frac{1}{n}) + f(\frac{2}{n}) + \cdots + f(1)}{n}} = \int_{0}^{1}{f(x)}\diff x = M$$
     然而
     $$\int_{x_0 - \delta}^{x_0 + \delta}{f(x)}\diff x < 2 \delta \dfrac{M + y}{2} = \delta (M + y) < 2M \delta$$
@@ -1275,7 +1275,7 @@
             利用$f(x)$的非负性得
             $$F(x)f(x) \geq k(x - s)f(x) + F(s)f(x)$$
             不等式两边从$0$到$1$积分得
-            $$\text{左边} = \int_{0}^{1}{F(x)f(x)}\diff x = \int_{0}^{1}{F(x)} \diff F(x) = \left. \dfrac{1}{2}F^2(x)\right|_{0}^{1} = \dfrac{1}{2}$$
+            $$\text{左边} = \int_{0}^{1}{F(x)f(x)}\diff x = \int_{0}^{1}{F(x)} \diff F(x) = \left. \dfrac{1}{2}F^2(x) \right|_{0}^{1} = \dfrac{1}{2}$$
             $$\text{右边} = \int_{0}^{1}{k(x - sf(x))}\diff x  + \int_{0}^{1}{F(x)f(x)}\diff x = (ks - ks) + F(s) = F(s)$$
             所以$F(s) \leq \dfrac{1}{2}$，即
             $$\int_{0}^{s}{f(x)}\diff x \leq \int_{s}^{1}{f(x)}\diff x$$
@@ -1310,7 +1310,7 @@
     \end{align*}
 
     所以
-    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a,b) \in \mathbb{R}^2}\left(-2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
+    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a,b) \in \mathbb{R}^2}\left( -2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
     右端最小值在$a = -6$，$b = 2$时取得，因此，当$f''(x) = 6x - 2$且满足题设时不等式取等，不难得到此时$f(x) = x^3 - x^2$。
     
 \end{proof}
@@ -1324,7 +1324,7 @@
 
 \begin{proof}
 
-    设$x \in \left[0, \dfrac{1}{3}\right]$，$y \in \left[\dfrac{2}{3}, 1\right]$，由\textup{Lagrange}中值定理知，$\exists z \in (x,y)$，使得
+    设$x \in \left[ 0, \dfrac{1}{3} \right]$，$y \in \left[ \dfrac{2}{3}, 1 \right]$，由\textup{Lagrange}中值定理知，$\exists z \in (x,y)$，使得
     $$f'(z) = \dfrac{f(y) - f(x)}{y - x}$$
     所以
     $$|f'(z)| \leq 3|f(x)| + 3|f(y)|$$
@@ -1395,7 +1395,7 @@
     因此
 
     \begin{align*}
-        \dfrac{1}{2} \left( \int_{0}^{1}{f(x)}\diff x\right)^2 & \leq \left( \int_{0}^{\frac{1}{2}}{f(x)}\diff x\right)^2 + \left( \int_{\frac{1}{2}}^{1}{f(x)}\diff x\right)^2 \\
+        \dfrac{1}{2} \left( \int_{0}^{1}{f(x)}\diff x \right)^2 & \leq \left( \int_{0}^{\frac{1}{2}}{f(x)}\diff x \right)^2 + \left( \int_{\frac{1}{2}}^{1}{f(x)}\diff x \right)^2 \\
         & \leq \dfrac{1}{24} \left( \int_{0}^{\frac{1}{2}}{\left( f'(x) \right)^2}\diff x + \int_{\frac{1}{2}}^{1}{\left( f'(x) \right)^2}\diff x \right) \\
         & = \dfrac{1}{24} \int_{0}^{1}{\left( f'(x) \right)^2}\diff x
     \end{align*}

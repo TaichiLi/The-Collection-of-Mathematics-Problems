@@ -16,14 +16,14 @@
     则有
 
     \begin{align*}
-        \left|\dfrac{x_1 + x_2 + \cdots + x_n}{n} - l\right| & = \left|\dfrac{\sum\limits_{i = 1}^{n}{x_i - l}}{n}\right|\\
+        \left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| & = \left| \dfrac{\sum\limits_{i = 1}^{n}{x_i - l}}{n} \right|\\
         & \leq \dfrac{\sum\limits_{i = 1}^{n}{|x_i - l|}}{n}\\
         & = \dfrac{\sum\limits_{i = 1}^{N}{|x_i - l|}}{n} + \dfrac{\sum\limits_{i = N + 1}^{n}{|x_i - l|}}{n}\\
         & \leq \dfrac{M}{n} + \dfrac{(n - N)\varepsilon}{n}
     \end{align*}
 
     其中$M = \sum\limits_{i = 1}^{N}{|x_i - l|}$，$M$为有限值。\\
-    $N_1 = \max\left\{\left\lfloor\dfrac{M}{\varepsilon}\right\rfloor,\ N \right\}$，当$N > N_1$时成立不等式
+    $N_1 = \max\left\{ \left\lfloor \dfrac{M}{\varepsilon} \right\rfloor,\ N \right\}$，当$N > N_1$时成立不等式
     $$\left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| < \varepsilon$$
     也即
     $$\lim\limits_{x \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
@@ -85,7 +85,7 @@
 
 \begin{proof}
 
-    因为$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，所以数列$\left\{\ln{\dfrac{a_n}{a_{n - 1}}}\right\}$收敛于$\ln{l}$ \\
+    因为$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，所以数列$\left\{ \ln{\dfrac{a_n}{a_{n - 1}}} \right\}$收敛于$\ln{l}$ \\
     由\textup{Cauthy}命题知
     
     \begin{align*}
@@ -141,8 +141,8 @@
 \begin{proof}
     
     $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
-    $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l\right| < \varepsilon$$
-    $$(l-\varepsilon)(a_n - a_{n + 1})<b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
+    $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l \right| < \varepsilon$$
+    $$(l - \varepsilon)(a_n - a_{n + 1})<b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
     任取$m>n$，将上式中$n$替换为$n + 1$，$n + 2$，$n + 3$，$\cdots$，$m - 1$，有
 
     \begin{align*}
@@ -153,12 +153,12 @@
     \end{align*}
 
     将上式相加得到
-    $$(l-\varepsilon)(a_{n} - a_{m})<b_{n} - b_{m}<(l + \varepsilon)(a_{n} - a_{m})$$
-    $$\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l\right| < \varepsilon$$
+    $$(l - \varepsilon)(a_{n} - a_{m})<b_{n} - b_{m}<(l + \varepsilon)(a_{n} - a_{m})$$
+    $$\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l \right| < \varepsilon$$
     对于$m$，令$m \to +\infty$，有
     $$\lim\limits_{m \to \infty}{a_m} = \lim\limits_{m \to \infty}{b_m} =  0$$
     又有
-    $$\lim\limits_{m \to \infty}{\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l\right|} = \left|\dfrac{b_n}{a_n} - l\right|$$
+    $$\lim\limits_{m \to \infty}{\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l \right|} = \left| \dfrac{b_n}{a_n} - l \right|$$
     则
     $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = l$$
 
@@ -180,7 +180,7 @@
         \item
             $l$为有限值时。\\
             $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
-            $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l\right| < \varepsilon$$
+            $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l \right| < \varepsilon$$
             $$(l - \varepsilon)(a_n - a_{n + 1}) < b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
             取定$n$，将上式中$n$替换为$N$，$N + 1$，$N + 2$，$\cdots$，$n - 1$，有
 
@@ -193,13 +193,13 @@
 
             将上式相加得到
             $$(l - \varepsilon)(a_{n} - a_{N}) < b_{n} - b_{N} < (l + \varepsilon)(a_{n} - a_{N})$$
-            $$\left| \dfrac{b_n - b_{N}}{a_n - a_{N}} - l\right| < \varepsilon$$
-            $$\dfrac{b_n}{a_n} - l = \left(1 - \dfrac{a_N}{a_n}\right)\left(\dfrac{b_n - b_N}{a_n - a_N} - l\right) + \dfrac{b_N - la_N}{a_N}$$
+            $$\left| \dfrac{b_n - b_{N}}{a_n - a_{N}} - l \right| < \varepsilon$$
+            $$\dfrac{b_n}{a_n} - l = \left( 1 - \dfrac{a_N}{a_n} \right)\left( \dfrac{b_n - b_N}{a_n - a_N} - l \right) + \dfrac{b_N - la_N}{a_N}$$
             由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使得当$n > N_1$时成立
             $$0 < 1 - \dfrac{a_N}{a_n} < 2$$
-            $$\left|\dfrac{b_N - la_N}{a_n}\right| < \varepsilon$$
+            $$\left| \dfrac{b_N - la_N}{a_n} \right| < \varepsilon$$
             则当$n>\max\{N_1, N\}$时有
-            $$\left|\dfrac{b_n}{a_n} - l\right| < 3\varepsilon$$
+            $$\left| \dfrac{b_n}{a_n} - l \right| < 3\varepsilon$$
 
         \item
             $l$为$+\infty$时。\\
@@ -235,14 +235,14 @@
         & \leq \euler \sum\limits_{n = 1}^{\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n(n + 1)}} \\
         & = \euler \sum\limits_{n = 1}^{\infty}{\left[ \dfrac{1}{n(n + 1)} \sum\limits_{k = 1}^{n}{ka_k} \right]} \\
         & = \euler \sum\limits_{k = 1}^{N}{\left\{ ka_k\left[ \sum\limits_{n = k}^{N}{\dfrac{1}{n(n + 1)}} \right] \right\}} \\
-        & = \euler \sum\limits_{k = 1}^{N}{\left[ ka_k \left(\dfrac{1}{k} - \dfrac{1}{N + 1} \right) \right]} \\
+        & = \euler \sum\limits_{k = 1}^{N}{\left[ ka_k \left( \dfrac{1}{k} - \dfrac{1}{N + 1} \right) \right]} \\
         & \leq \euler \sum\limits_{k = 1}^{N}{a_k}
     \end{align*}
 
     令$N\to+\infty$，即可得到\textup{Carleman}不等式。\\
     下证不等式右边的系数$\euler$不能在改进。\\
     对于每个$N$构造一个数列
-    $$b_n= \left\{
+    $$b_n = \left\{
         \begin{aligned}
             & \dfrac{1}{n}, & n & = 1,2,\cdots,N \\
             & 0, & n & > N
@@ -286,7 +286,7 @@
 
     \begin{align*}
         \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{(1 - \dfrac{a_{k + 1}}{a_k})} \\
-        & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k-a_{k + 1}}{a_k}} \\
+        & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k - a_{k + 1}}{a_k}} \\
         & = \dfrac{1}{a_{n + 1}}(a_{n + 1} - a_{n + p + 1}) \\
         & = \dfrac{a_{n + p + 1}}{a_{n + 1}}
     \end{align*}
@@ -301,7 +301,7 @@
 \begin{theorem}[Sapagof判别法等价形式\romannum{1}]
 
     设$\{a_n\}$是单调增加的正数列，则该数列与级数
-    $$\sum\limits_{n = 1}^{\infty}{\left(1 - \dfrac{a_{n + 1}}{a_n}\right)}$$
+    $$\sum\limits_{n = 1}^{\infty}{\left( 1 - \dfrac{a_{n + 1}}{a_n} \right)}$$
     同敛散。
         
 \end{theorem}
@@ -321,7 +321,7 @@
     所以
 
     \begin{align*}
-        \left| \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}}\right| & = \left| \dfrac{a_{n + p + 1} - a + a - a_{n + 1}}{a_{n + 1}}\right|\\
+        \left| \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}} \right| & = \left| \dfrac{a_{n + p + 1} - a + a - a_{n + 1}}{a_{n + 1}} \right|\\
         & = \dfrac{|a_{n + p + 1} - a| + |a_{n + 1} - a|}{a_{n + 1}}\\
         & = \dfrac{2\varepsilon}{a_{n + 1}}
     \end{align*} 
@@ -365,7 +365,7 @@
     则有
 
     \begin{align*}
-        \left|\dfrac{S_{n + p + 1} - S_{n}}{S_{n}}\right| & = \left|\dfrac{S_{n + p + 1} - S + S - S_{n}}{S_{n}}\right|\\
+        \left| \dfrac{S_{n + p + 1} - S_{n}}{S_{n}} \right| & = \left| \dfrac{S_{n + p + 1} - S + S - S_{n}}{S_{n}} \right|\\
         & \leq \dfrac{|S_{n + p + 1} - S| + |S_{n + 1} - S|}{S_n}\\
         & = \dfrac{2\varepsilon}{S_n}
     \end{align*}
@@ -424,7 +424,7 @@
             令
             $$b_n = \dfrac{R_n}{a_n}$$
             其中$R_n$为$\sum\limits_{n = 1}^{\infty}{a_n}$的余项，即
-            $$R_n= S-S_n$$
+            $$R_n = S - S_n$$
             $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{R_n}{a_{n + 1}} - \dfrac{R_{n + 1}}{a_{n + 1}} = 1>0$$
             必要性得证。
 
@@ -434,7 +434,7 @@
             令
             $$b_n = \dfrac{S_n}{a_n}$$
             易知$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{b_n}}$发散
-            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{S_{n} - S_{n + 1}}{a_{n + 1}} = -1\leq0$$
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{S_{n} - S_{n + 1}}{a_{n + 1}} = -1 \leq 0$$
             必要性得证。
 
 \end{enumerate}
@@ -555,8 +555,8 @@
     因$\lim\limits_{n \to \infty}{a_n} = a$，$\lim\limits_{n \to \infty}{b_n} = b $，故数列$\{a_n\},\ \{b_n\}$有界，$\exists M > 0$，
     $$|a_n| < M,\quad |b_n| < M, \quad \forall n \in \mathbb{N}$$
     $\forall \varepsilon > 0 $，$\exists N \in \mathbb{N}$，$n > N$时有
-    $$|a_n -a| < \dfrac{\varepsilon}{4M}, \quad |b_n -b| < \dfrac{\varepsilon}{4M}$$
-    取自然数$N_1 > \max\left\{N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right)\right\}$\\
+    $$|a_n - a| < \dfrac{\varepsilon}{4M}, \quad |b_n - b| < \dfrac{\varepsilon}{4M}$$
+    取自然数$N_1 > \max\left\{ N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right) \right\}$\\
     则当$n > N_1$时有
 
     \begin{align*}
@@ -575,18 +575,18 @@
 
 \begin{proposition}
 
-    设$a_1 = 1$，$a_n = n(a_{n - 1}+1),\quad n = 2,3,\cdots $，且
-    $$x_n = \prod_{k  = 1}^{n}{\left(1+\dfrac{1}{a_n}\right)}$$
+    设$a_1 = 1$，$a_n = n(a_{n - 1} + 1),\quad n = 2,3,\cdots $，且
+    $$x_n = \prod_{k  = 1}^{n}{\left( 1 + \dfrac{1}{a_n} \right)}$$
     求$\lim\limits_{n \to \infty}{x_n}$
 
 \end{proposition}
 
 \begin{proof}
 
-    由$\dfrac{a_{n - 1}+1}{a_n} = \dfrac{1}{n}$得
+    由$\dfrac{a_{n - 1} + 1}{a_n} = \dfrac{1}{n}$得
 
     \begin{align*}
-        \prod_{k  = 1}^{n}{\left(1+\dfrac{1}{a_n}\right)} = & \left(1+\dfrac{1}{a_1}\right) \left(1 + \dfrac{1}{a_2}\right) \cdots \left(1+\dfrac{1}{a_n}\right) \\
+        \prod_{k  = 1}^{n}{\left( 1 + \dfrac{1}{a_n} \right)} = & \left( 1 + \dfrac{1}{a_1} \right) \left( 1 + \dfrac{1}{a_2} \right) \cdots \left( 1 + \dfrac{1}{a_n} \right) \\
         = & \dfrac{a_1 + 1}{a_1} \cdot \dfrac{a_2 + 1}{a_2} \cdots \dfrac{a_n + 1}{a_n} \\
         = & \dfrac{1}{a_1} \cdot \dfrac{a_1 + 1}{a_2} \cdot \dfrac{a_2 + 1}{a_3} \cdots \dfrac{a_{n - 1} + 1}{a_n} \cdot a_{n + 1} \\
         = & \dfrac{1}{1} \cdot \dfrac{1}{2} \cdots \dfrac{1}{n} \\
@@ -634,16 +634,16 @@
     \end{align*}
 
     同理$l = \dfrac{1}{L}$，则$lL = 1$. \\
-    可设$\{a_{nk+3}\}$收敛到$L$，$\{a_{nk+2}\},\{a_{nk + 1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又\\
-    $L = \dfrac{2}{a+b} $，则$a+b = 2l $，同理，$b =c =L$\\
+    可设$\{a_{nk + 3}\}$收敛到$L$，$\{a_{nk + 2}\},\{a_{nk + 1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又\\
+    $L = \dfrac{2}{a + b} $，则$a + b = 2l $，同理，$b = c = L$\\
     所以$l = L = 1$，$\{a_n\}$收敛，极限为$1$。
 
 \end{proof}
 
 \begin{proposition}
 
-    证明：数列$x_n = \dfrac{1}{1+1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n + \frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1, 2, \cdots)$\\
-    有位于$\left[0,\dfrac{1}{2}\right]$的极限。
+    证明：数列$x_n = \dfrac{1}{1 + 1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n + \frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1, 2, \cdots)$\\
+    有位于$\left[ 0,\dfrac{1}{2} \right]$的极限。
     
 \end{proposition}
 
@@ -692,7 +692,7 @@
     
     \begin{align*}
         0 & \leq \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 2} + a_{n + 3}}} \\
-        & = \liminf_{n \to \infty}{\left( \dfrac{a_n}{a_{n + 1} + a_{n + 2}} \cdot \dfrac{a_{n + 1}+a_{n + 2}}{a_{n + 2} + a_{n + 3}} \right)} \\
+        & = \liminf_{n \to \infty}{\left( \dfrac{a_n}{a_{n + 1} + a_{n + 2}} \cdot \dfrac{a_{n + 1} + a_{n + 2}}{a_{n + 2} + a_{n + 3}} \right)} \\
         & \leq \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 1} + a_{n + 2}}} - \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 1} + a_{n + 2}}} \\
         & = 0
     \end{align*}
@@ -724,9 +724,9 @@
     则对任意$0 < \varepsilon < l - \euler$，选取$N \in \mathbb{N}$，$n > N$时
     $$l \leq \sup_{k\geq n }{\{s_k\}} < \euler - \varepsilon$$
     我们有
-    $$\lim\limits_{n \to \infty}{\left( 1 + \dfrac{1}{n}\right)^n} = \euler$$
+    $$\lim\limits_{n \to \infty}{\left( 1 + \dfrac{1}{n} \right)^n} = \euler$$
     令
-    $$r_n = \left(1 + \dfrac{1}{n}\right)^n$$
+    $$r_n = \left( 1 + \dfrac{1}{n} \right)^n$$
     选取$N' \in \mathbb{N}$，$n > N'$时
     $$\euler - \varepsilon < r_n < \euler + \varepsilon$$
     令$M = \max\{N,N'\}$，
@@ -798,7 +798,7 @@
         \item 
             由$a_n = \dfrac{n + 1}{2n}a_n + 1$知，
             $$2a_n - a_{n - 1} - 2 = \dfrac{a_{n - 1}}{n}$$
-            $$a_n = \sum\limits_{k = 0}^{n -1}{\dfrac{1}{\binom{n}{k}}} + 1$$
+            $$a_n = \sum\limits_{k = 0}^{n - 1}{\dfrac{1}{\binom{n}{k}}} + 1$$
             所以
 
             \begin{align*}
@@ -819,7 +819,7 @@
 
             因为$a_1 = 2$， $a_2 = \dfrac{5}{2}$， $a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n + 1}$\\
             即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
-            $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{\dfrac{n + 1}{2n}a_{n - 1}+1}$$
+            $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{\dfrac{n + 1}{2n}a_{n - 1} + 1}$$
             得
             $$\lim\limits_{n \to \infty}{a_n} = 2$$
 
@@ -852,7 +852,7 @@
     又因为$\alpha$是无理数，所以不存在$M \in \mathbb{N}$,使$M(\{i\alpha\} - \{j\alpha\}) = 1$，则
     $$M(\{i\alpha\} - \{j\alpha\}) < 1 < (M + 1)(\{i\alpha\} - \{j\alpha\})$$
     因为$\{i\alpha\} - \{j\alpha\} < \dfrac{1}{n}$，则对任意$m \in \{0, 1, \cdots, n - 1\}$，存在$k \in \{1, 2, \cdots, M\}$
-    $$k(\{i\alpha\} - \{j\alpha\}) \in \left[\dfrac{m}{n}, \dfrac{m + 1}{n}\right]$$
+    $$k(\{i\alpha\} - \{j\alpha\}) \in \left[ \dfrac{m}{n}, \dfrac{m + 1}{n} \right]$$
 
     \begin{align*}
         k (\{ i \alpha \} - \{ j \alpha \}) & = \{ k (\{ i \alpha \} - \{ j \alpha \}) \} \\
@@ -888,11 +888,11 @@
     两边乘以$2\pi$，得
     $$\left|  2\pi \left \{\dfrac{n}{2\pi} \right\} - u \right| < \delta$$
     所以
-    $$\left| \sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} - \sin{u} \right| < \varepsilon$$
+    $$\left| \sin{\left( 2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} - \sin{u} \right| < \varepsilon$$
     又因为
     $$2\pi \left \{\dfrac{n}{2\pi} \right\} = \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor$$
     则有
-    $$\sin{\left(2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} = \sin{\left[2\pi \left( \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor \right)\right]} = \sin{\left(2\pi \cdot \dfrac{n}{2\pi}\right)} = \sin{n}$$
+    $$\sin{\left( 2\pi \left \{\dfrac{n}{2\pi} \right\} \right)} = \sin{\left[ 2\pi \left( \dfrac{n}{2\pi} - \left\lfloor \dfrac{n}{2\pi} \right\rfloor \right) \right]} = \sin{\left( 2\pi \cdot \dfrac{n}{2\pi} \right)} = \sin{n}$$
     即
     $$|\sin{n} - \sin{u}| = |\sin{n} - v| < \varepsilon$$
 
@@ -909,7 +909,7 @@
     由算术几何平均值不等式知
 
     \begin{align*}
-        \sqrt[n]{1 + \sqrt[n]{2 + \cdots + \sqrt[n]{n}}} & = \sqrt[n]{\left(1 + \sqrt[n]{2 + \cdots + \sqrt[n]{n}}\right) \times 1 \times \cdots \times 1} \\
+        \sqrt[n]{1 + \sqrt[n]{2 + \cdots + \sqrt[n]{n}}} & = \sqrt[n]{\left( 1 + \sqrt[n]{2 + \cdots + \sqrt[n]{n}} \right) \times 1 \times \cdots \times 1} \\
         & \leq \dfrac{n - 1 + 1 + \sqrt[n]{2 + \cdots + \sqrt[n]{n}}}{n} \\
         & = 1 + \dfrac{1}{n} \sqrt[n]{2 + \cdots + \sqrt[n]{n}} \\
         & \leq 1 + \dfrac{1}{n} \sqrt[n]{2 + 3 + \cdots + n} \\
@@ -943,7 +943,7 @@
     则当$n > N = N_1 + N_2$时有
 
     \begin{align*}
-        \left|\dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n} - a\right| & = \left| \dfrac{p_1 (a_n - a) + p_2 (a_{n - 1} - a) + \cdots + p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
+        \left| \dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n} - a \right| & = \left| \dfrac{p_1 (a_n - a) + p_2 (a_{n - 1} - a) + \cdots + p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \leq \left| \dfrac{p_1 (a_n - a)}{p_1 + p_2 + \cdots + p_n} \right| + \cdots + \left| \dfrac{p_{n - N_2} (a_{N_2 + 1} - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \quad + \left| \dfrac{p_{n - N_2 + 1} (a_{N_2} - a)}{p_1 + p_2 + \cdots + p_n} \right| + \cdots + \left| \dfrac{p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \leq \left| \dfrac{(p_1 + p_2 + \cdots + p_{n - N_2})\varepsilon}{p_1 + p_2 + \cdots + p_n} \right| + 2M N_2 \varepsilon \\
@@ -995,7 +995,7 @@
     \end{align*}
 
     因此令$\varepsilon = (M + 1)\varepsilon'$，对于任意$\varepsilon >  0$，存在一个$N(\varepsilon) = N_1(\varepsilon') = N_1(\dfrac{\varepsilon}{M + 1})$，使得当$N > N(\varepsilon)$时
-    $$\dfrac{\left|x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right|}{\ln n} < \varepsilon$$
+    $$\dfrac{\left| x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n} \right|}{\ln n} < \varepsilon$$
 
 \end{proof}
 
@@ -1030,7 +1030,7 @@
             \begin{align*}
                 |x_{n + 2} - 4| & = |\sqrt{x_{n + 1}} - 2 + \sqrt{x_{n}} - 2| \\
                 & \leq |\sqrt{x_{n + 1}} - 2| + |\sqrt{x_{n}} - 2| \\
-                & = \left|\dfrac{x_{n + 1} - 4}{\sqrt{x_{n + 1}} + 2}\right| + \left|\dfrac{x_{n} - 4}{\sqrt{x_{n}} + 2}\right| \\
+                & = \left| \dfrac{x_{n + 1} - 4}{\sqrt{x_{n + 1}} + 2} \right| + \left| \dfrac{x_{n} - 4}{\sqrt{x_{n}} + 2} \right| \\
                 & \leq \dfrac{1}{3} |x_{n + 1} - 4| + \dfrac{1}{3}|x_n - 4| 
             \end{align*}
 
@@ -1043,7 +1043,7 @@
 
 \begin{proposition}
 
-    设$x_0 \in \left(0, \dfrac{\pi}{2}\right]$，定义$x_{n + 1} = \sin{x_n}$，求$\lim\limits_{n \to\infty}{nx_n^2}$的值。
+    设$x_0 \in \left( 0, \dfrac{\pi}{2} \right]$，定义$x_{n + 1} = \sin{x_n}$，求$\lim\limits_{n \to\infty}{nx_n^2}$的值。
 
 \end{proposition}
 
@@ -1073,7 +1073,7 @@
     由数学归纳法易证
     $$a_n \leq 2, \quad n \in \mathbb{N}$$
     设函数$f(x) = {\sqrt{2}}^x - x$，则
-    $$f'(x) = \dfrac{1}{2}\ln2 {\sqrt{2}}^x - 1, \quad f''(x) = \left(\dfrac{1}{2}\ln 2 \right)^2 {\sqrt{2}}^x \geq 0$$
+    $$f'(x) = \dfrac{1}{2}\ln2 {\sqrt{2}}^x - 1, \quad f''(x) = \left( \dfrac{1}{2}\ln 2 \right)^2 {\sqrt{2}}^x \geq 0$$
     易知$x \leq 2$时，$f'(x) < 0$，，且$f(2) = 0$. 因此
     $$f(x) \geq 0, \quad 0 \leq x \leq 2$$
     即$a_{n + 1} \leq a_n$。所以数列$\{a_n\}$收敛，且极限$a$满足
@@ -1084,7 +1084,7 @@
 
 \begin{proposition}
 
-    设$$S_{n} = \sum\limits_{k =1}^{n} \left[ \dfrac{1}{4k-3} + \dfrac{1}{4k - 1} - \dfrac{1}{2k} \right]$$
+    设$$S_{n} = \sum\limits_{k = 1}^{n} \left[ \dfrac{1}{4k - 3} + \dfrac{1}{4k - 1} - \dfrac{1}{2k} \right]$$
     证明$S_{n}$收敛并求其值。
 
 \end{proposition}
@@ -1094,7 +1094,7 @@
     易知
     
     \begin{align*}
-        \lim\limits_{n \to +\infty } S_{n} & =  \lim\limits_{n \to +\infty} \sum\limits_{k = 1}^{n} \left[ \dfrac{1}{4k-3} - \dfrac{1}{4k - 2} + \dfrac{1}{4k - 1} - \dfrac{1}{4k}  + \dfrac{1}{2} \left[ \dfrac{1}{2k - 1} - \dfrac{1}{2k} \right] \right] \\
+        \lim\limits_{n \to +\infty } S_{n} & =  \lim\limits_{n \to +\infty} \sum\limits_{k = 1}^{n} \left[ \dfrac{1}{4k - 3} - \dfrac{1}{4k - 2} + \dfrac{1}{4k - 1} - \dfrac{1}{4k}  + \dfrac{1}{2} \left[ \dfrac{1}{2k - 1} - \dfrac{1}{2k} \right] \right] \\
         & = \dfrac{3}{2} \lim\limits_{n \to + \infty} \sum\limits_{k = 1}^{n}  \left[  \dfrac{1}{2k - 1} -\dfrac{1}{2k} \right] \\
         & = \dfrac{3}{2} \ln 2
     \end{align*}
@@ -1139,8 +1139,8 @@
     $n = 1$或$h = 0$时不等式显然成立，下面只证明$n>1$和$h\neq 0$时的情况。\\
     将$(1 + h)^n - 1$作因式分解，可以得到
     $$(1 + h)^n - 1 = h[1 + (1 + h) + (1 + h)^2 + \cdots + (1 + h)^{n - 1}]$$
-    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1+h)^n - 1>nh$.\\
-    当$-1 < h < 0$时，右边方括号内第二项起都小于$1$，则$(1+h)^n - 1 < nh$，又因为$h < 0$，\\
+    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1 + h)^n - 1>nh$.\\
+    当$-1 < h < 0$时，右边方括号内第二项起都小于$1$，则$(1 + h)^n - 1 < nh$，又因为$h < 0$，\\
     所以得到$(1 + h)^n - 1 > nh$.\\
     下证等号成立的条件，易知$A > 0$，$A + B > 0$，$n \in \mathbb{N}$时成立不等式
     $$(A + B)^n \geq A^n + nA^{n - 1}B$$
@@ -1171,7 +1171,7 @@
     \end{align*}
 
     \begin{align*}
-        & \left(\dfrac{a_1 + a_2 + \cdots + a_{k + 1}}{k + 1}\right)^{k + 1} \\
+        & \left( \dfrac{a_1 + a_2 + \cdots + a_{k + 1}}{k + 1} \right)^{k + 1} \\
         = & \  (A + B)^{k + 1}\\
         \geq & \  A^{k + 1} + (k + 1) A^k B\\
         = & \ A^k(A + (k + 1)B)\\
@@ -1238,8 +1238,8 @@
 
     令$X = \sum{{x_i}^p}$，$Y = \sum{{y_i}^q}$.
     由\textup{Young}不等式得
-    $$\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}} = \left( \dfrac{{x_i}^p}{X} \right)^{\frac{1}{p}}\left( \dfrac{{y_i}^q}{Y} \right)^{\frac{1}{q}}\leq \dfrac{1}{p}\dfrac{{x_i}^p}{X} + \dfrac{1}{q}\dfrac{{y_i}^q}{Y}$$
-    $$\sum{\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}} \leq \dfrac{1}{p}\dfrac{\sum{{x_i}^p}}{X} + \dfrac{1}{q}\dfrac{\sum{{y_i}^q}}{Y} = \dfrac{1}{p}+\dfrac{1}{q} = 1 $$
+    $$\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}} = \left( \dfrac{{x_i}^p}{X} \right)^{\frac{1}{p}}\left( \dfrac{{y_i}^q}{Y} \right)^{\frac{1}{q}} \leq \dfrac{1}{p}\dfrac{{x_i}^p}{X} + \dfrac{1}{q}\dfrac{{y_i}^q}{Y}$$
+    $$\sum{\dfrac{x_i y_i}{X^{\frac{1}{p}} Y^{\frac{1}{q}}}} \leq \dfrac{1}{p}\dfrac{\sum{{x_i}^p}}{X} + \dfrac{1}{q}\dfrac{\sum{{y_i}^q}}{Y} = \dfrac{1}{p} + \dfrac{1}{q} = 1 $$
     $$\sum{x_i y_i} \leq X^{\frac{1}{p}} Y^{\frac{1}{q}} = (\sum{{x_i}^{p}})^{\frac{1}{p}} (\sum{{y_i}^{q}})^{\frac{1}{q}}$$
 
 \end{proof}
@@ -1254,11 +1254,11 @@
 
 \begin{proof}
 
-    $$\sum{(x_i + y_i)}^p = \left( \sum{(x_i + y_i)}^{p-1} \right) (x_i + y_i) = x_i \sum{(x_i + y_i)}^{p-1} + y_i \sum{(x_i + y_i)^{p-1}}$$
+    $$\sum{(x_i + y_i)}^p = \left( \sum{(x_i + y_i)}^{p - 1} \right) (x_i + y_i) = x_i \sum{(x_i + y_i)}^{p - 1} + y_i \sum{(x_i + y_i)^{p - 1}}$$
     由\textup{H{\H o}lder}不等式得
     
     \begin{align*}
-        \sum{(x_i + y_i)}^p & \leq \left( \sum{{x_i}^p} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p - 1)}} \right)^{\frac{1}{q}} + \left( \sum{{y_i}^q} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p-1)}} \right)^{\frac{1}{q}} \\
+        \sum{(x_i + y_i)}^p & \leq \left( \sum{{x_i}^p} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p - 1)}} \right)^{\frac{1}{q}} + \left( \sum{{y_i}^q} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p - 1)}} \right)^{\frac{1}{q}} \\
         & = \left( \sum{(x_i + y_i)}^p \right) ^{\frac{1}{q}} \left( \left( \sum{{x_i}^p} \right)^{\frac{1}{p}}  + \left( \sum{{y_i}^{p}} \right)^{\frac{1}{p}} \right)
     \end{align*}
 

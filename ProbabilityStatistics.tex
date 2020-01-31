@@ -74,8 +74,8 @@
     则有
     
     \begin{align*}
-        Var(X) & = Var\left( X - \dfrac{a + b}{2}\right) \\
-        & = E \left( X - \dfrac{a + b}{2}\right)^2 - \left[ E\left( X - \dfrac{a + b}{2} \right) \right]^2 \\
+        Var(X) & = Var\left( X - \dfrac{a + b}{2} \right) \\
+        & = E \left( X - \dfrac{a + b}{2} \right)^2 - \left[ E\left( X - \dfrac{a + b}{2} \right) \right]^2 \\
         & \leq E\left( X - \dfrac{a + b}{2} \right)^2 \\
         & \leq \left( \dfrac{b - a}{2} \right)^2
     \end{align*}
@@ -119,14 +119,14 @@
     记$n p_n^k = \lambda_n$，即$p_n = \dfrac{\lambda_n}{n}$，则有
 
     \begin{align*}
-        \binom{n}{k}p_n^k(1 - p_n)^{n - k} & = \dfrac{n(n - 1) \cdots (n - k + 1)}{k!} \left( \dfrac{\lambda_n}{n}\right)^k \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k} \\
-        & = \dfrac{\lambda_n^k}{k!} \left( 1 - \dfrac{1}{n} \right) \left(1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right) \left(1 - \dfrac{\lambda_n}{n} \right)^{n - k}
+        \binom{n}{k}p_n^k(1 - p_n)^{n - k} & = \dfrac{n(n - 1) \cdots (n - k + 1)}{k!} \left( \dfrac{\lambda_n}{n} \right)^k \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k} \\
+        & = \dfrac{\lambda_n^k}{k!} \left( 1 - \dfrac{1}{n} \right) \left( 1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right) \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k}
     \end{align*}
 
     对固定的$k$有
     $$\lim\limits_{n \to \infty}{\lambda_n} = \lambda$$
     $$\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k}} = \euler^{-\lambda}$$
-    $$\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{1}{n}\right) \left( 1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right)} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
+    $$\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{1}{n} \right) \left( 1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right)} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
     因此，对任意的$k$成立。定理得证。
 
 \end{proof}

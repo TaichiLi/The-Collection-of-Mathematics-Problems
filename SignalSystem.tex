@@ -5,7 +5,7 @@
 \begin{proposition}
 
     考虑离散时间信号
-    $$x[n] = 1 - \sum\limits_{k = 3}^{\infty}{\delta[n - 1 -k]}$$
+    $$x[n] = 1 - \sum\limits_{k = 3}^{\infty}{\delta[n - 1 - k]}$$
     确定整数$M$和$n_0$的值，使得$x[n]$能表示为
     $$x[n] = u[Mn - n_0]$$
 
@@ -39,7 +39,7 @@
 
     \begin{enumerate}
         
-        \item 求整数$A$以满足$h[n] - Ah[n -1] = \delta[n]$。
+        \item 求整数$A$以满足$h[n] - Ah[n - 1] = \delta[n]$。
         
         \item 利用\textup{(a)}的结果，求$S_1$的逆系统$S_2$是线性时不变的单位脉冲响应$g[n]$。
         
@@ -69,7 +69,7 @@
             即求$g[n]$，使得
             $$h[n] \ast g[n] = \delta[n]$$
             由\textup{(a)}知，$h[n] - \dfrac{1}{5}h[n - 1] = \delta[n]$，易得
-            $$g[n] = \delta[n] - \dfrac{1}{5}\delta[n -1]$$
+            $$g[n] = \delta[n] - \dfrac{1}{5}\delta[n - 1]$$
 
     \end{enumerate}
 
@@ -105,7 +105,7 @@
 
         \item 利用恰当的傅里叶变换性质求$t\euler^{-|t|}$的傅里叶变换。
         
-        \item 根据\textup{(a)}的结果，再结合对偶性质，求$\dfrac{4t}{(1+t^2)^2}$的傅里叶变换。
+        \item 根据\textup{(a)}的结果，再结合对偶性质，求$\dfrac{4t}{(1 + t^2)^2}$的傅里叶变换。
 
     \end{enumerate}
 
@@ -122,7 +122,7 @@
             $$\image \dfrac{\diff \left( \dfrac{2}{1 + \omega^2} \right)}{\diff \omega} = \dfrac{-4\omega \image}{(1 + \omega^2)^2}$$
         
         \item 
-            设$x(t) = t\euler^{-|t|}$，$y(t) = \dfrac{4t}{(1+t^2)^2} = \image X(\image t)$\\
+            设$x(t) = t\euler^{-|t|}$，$y(t) = \dfrac{4t}{(1 + t^2)^2} = \image X(\image t)$\\
             由引理\ref{lemma:dual}知，
             $$Y(\image \omega) = -2 \pi \image t \euler^{-|t|}$$
 
@@ -135,7 +135,7 @@
 \begin{proposition}
     
     设$Y(\euler^{\image \omega})$的逆变换是
-    $$y[n] = \left( \dfrac{\sin{\omega_c n}}{\pi n}\right)^2$$
+    $$y[n] = \left( \dfrac{\sin{\omega_c n}}{\pi n} \right)^2$$
     其中$0 < \omega_c < \pi$. 试确定$\omega_c$的值，以保证
     $$Y(\euler^{\image \pi}) = \dfrac{1}{2}$$
 
@@ -157,14 +157,14 @@
         Y(\euler^{\image \omega}) & = X(\euler^{\image \omega}) \ast X(\euler^{\image \omega}) \\
         & = \dfrac{1}{2\pi} \int_{2\pi}{X(\euler^{\image \theta}) X(\euler^{\image (\omega - \theta)})}\diff \theta \\
         & = \dfrac{1}{2\pi} \int_{-\omega_c}^{\omega_c}{X(\euler^{\image (\omega - \theta)})}\diff \theta \\
-        & = \dfrac{1}{2\pi} \int_{\omega -\omega_c}^{\omega + \omega_c}{X(\euler^{\image \theta})}\diff \theta
+        & = \dfrac{1}{2\pi} \int_{\omega - \omega_c}^{\omega + \omega_c}{X(\euler^{\image \theta})}\diff \theta
     \end{align*}
 
     则有
     
     \begin{align*}
-        Y(\euler^{\image \pi}) & = \dfrac{1}{2\pi} \int_{\pi -\omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \\
-        & = \dfrac{1}{2\pi} \left[ \int_{\pi -\omega_c}^{\omega_c}{X(\euler^{\image \theta})}\diff \theta + \int_{2\pi - \omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \right] \\
+        Y(\euler^{\image \pi}) & = \dfrac{1}{2\pi} \int_{\pi - \omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \\
+        & = \dfrac{1}{2\pi} \left[ \int_{\pi - \omega_c}^{\omega_c}{X(\euler^{\image \theta})}\diff \theta + \int_{2\pi - \omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \right] \\
         & = \dfrac{1}{2\pi} \left( 2\omega_c - \pi + 2\omega_c - \pi \right) \\
         & = \dfrac{1}{2} 
     \end{align*}
@@ -212,7 +212,7 @@
 
     采用离散时间滤波实现连续时间滤波，假定所用的采样周期为$T$，输入$x_c(t)$为带限信号，而有$X_c(\image \omega) = 0$，$|\omega| \geq \dfrac{\pi}{T}$。
     若整个系统具有
-    $$y_c(t) = \dfrac{\diff}{\diff t} x_c \left(t - \dfrac{T}{2} \right)$$
+    $$y_c(t) = \dfrac{\diff}{\diff t} x_c \left( t - \dfrac{T}{2} \right)$$
     试求离散时间滤波器的单位脉冲响应$h[n]$。
 
 \end{proposition}
@@ -237,7 +237,7 @@
     \begin{align*}
         h[n] & = \dfrac{1}{2\pi} \int_{2\pi}{H_d(\euler^{\image \omega})\euler^{\image \omega n}}\diff \omega \\
         & = \dfrac{1}{2\pi} \int_{\pi}^{-\pi}{\image \dfrac{\omega}{T} \euler^{-\frac{\image \omega}{2}} \euler^{\image \omega n}}\diff \omega \\
-        & = - \dfrac{\sin{\left[\pi (n - \dfrac{1}{2}) \right]}}{\pi T \left( n - \dfrac{1}{2} \right)^2}
+        & = - \dfrac{\sin{\left[ \pi (n - \dfrac{1}{2}) \right]}}{\pi T \left( n - \dfrac{1}{2} \right)^2}
     \end{align*}
 
 \end{proof}
