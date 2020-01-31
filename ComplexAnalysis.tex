@@ -32,7 +32,7 @@
 \begin{proposition}
 
     设数列$\{a_n\}$由$-1$，$0$，$1$组成。证明：
-    $$a_0\sqrt{2 + \sqrt{a_1 \sqrt{2 + a_2\sqrt{2 + \cdots}}}} = 2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{n = 0}^{\infty}{\dfrac{a_0 a_1 \cdots a_n}{2^n}}\right)}$$
+    $$a_0\sqrt{2 + \sqrt{a_1 \sqrt{2 + a_2\sqrt{2 + \cdots}}}} = 2 \sin{\left( \dfrac{\pi}{4} \sum\limits_{n = 0}^{\infty}{\dfrac{a_0 a_1 \cdots a_n}{2^n}}\right)}$$
 
 \end{proposition}
 
@@ -41,7 +41,7 @@
     设
     $$z_n = 2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^n}}\right)}$$
     易知
-    $$\mathrm{sgn}{z_n} = \mathrm{sgn}\left(2 \sin{\left(\dfrac{\pi}{4} \sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^n}}\right)}\right) = a_0$$
+    $$\mathrm{sgn}{z_n} = \mathrm{sgn}\left(2 \sin{\left( \dfrac{\pi}{4} \sum\limits_{k = 0}^{n}{\dfrac{a_0 a_1 \cdots a_k}{2^n}} \right)} \right) = a_0$$
     对$a_0 \neq 0$，有
     $$z_n^2 - 2 = a_1\sqrt{2 + a_2\sqrt{2 + \cdots + a_n\sqrt{2}}}$$
     且有
@@ -75,7 +75,7 @@
     令$z = x + \imag\xi, \diff x = \diff z$，则有
 
     \begin{align*}
-        &\euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x+\imag\xi)^2}}\diff x \\
+        & \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x+\imag\xi)^2}}\diff x \\
         = \ & \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi z^2}}\diff x \\
         = \ & \euler^{\pi\xi^2} \dfrac{\sqrt{\pi}}{\sqrt{\pi}} \\
         = \ & \euler^{\pi\xi^2}
@@ -115,16 +115,16 @@
 \begin{proof}
 
     由题设$f(z)$在复平面$\mathrm{C}$内都能\textup{Taylor}展开，则
-    $$f(z) = \sum\limits_{n=0}^{\infty}{\dfrac{f^{(n)}(z_0)}{n!}(z - z_0)^n}$$
+    $$f(z) = \sum\limits_{n = 0}^{\infty}{\dfrac{f^{(n)}(z_0)}{n!}(z - z_0)^n}$$
     应用\textup{Cauthy}积分公式，得
     $$f(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{f(\euler^{\imag \theta})}\diff \theta$$
-    从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r\to0^{+}$，有$f(0) = 0$
+    从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r \to 0^{+}$，有$f(0) = 0$
     再由
     $$f'(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag \theta})}{r\euler^{\imag \theta}}}\diff \theta$$
     则可知$f'(0) = 0$，同理$f''(0) = f^{(3)}(0) = 0$\\
     当$n \geq 4$时
     $$f^{(n)}(0) =  \dfrac{n!}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag\theta})}{r^n \euler^{\imag\theta}}}\diff \theta$$
-    $$|f^{(n)}(0)| \leq \dfrac{n!}{2\pi} \dfrac{r^{\frac{16}{5}}}{r^n} \to 0\quad(r\to+\infty)$$
+    $$|f^{(n)}(0)| \leq \dfrac{n!}{2\pi} \dfrac{r^{\frac{16}{5}}}{r^n} \to 0 \quad (r \to + \infty)$$
     从而
     $$f^{(n)}(0) = 0,\quad \forall n \in \mathbb{N}$$
     即
@@ -183,8 +183,8 @@
 
 \begin{proposition}
 
-    设$\lim\limits_{n\to\infty}{a_nz^n}$收敛，证明：
-    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum\limits_{n=1}^{\infty}{a_n}$$
+    设$\lim\limits_{n \to \infty}{a_nz^n}$收敛，证明：
+    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proposition}
 
@@ -193,35 +193,35 @@
     记$A_k = \sum\limits_{n = 1}^{k}{A_n},\ A_0 = 0$，则
 
     \begin{align*}
-        \sum\limits_{n=1}^{N}{(1-r^n)a_n} & = (1-r^N)A_N + \sum\limits_{n=1}^{N}{(r^n-r^{n+1})A_n}\\
-        & = (1 - r)A_N + \sum\limits_{n=1}^{N}{(r^n-r^{n+1})(A_N - A_n)}
+        \sum\limits_{n = 1}^{N}{(1 - r^n)a_n} & = (1 - r^N)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})A_n}\\
+        & = (1 - r)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})(A_N - A_n)}
     \end{align*}
 
-    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n-r^{n+1})(A_N - A_n)} = 0$\\
+    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$\\
     对任意$\varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
     $$|A_n - A| < \varepsilon $$
-    其中$A = \lim\limits_{n\to\infty}{A_N}$\\
-    取$(1-\varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $\\
+    其中$A = \lim\limits_{n \to \infty}{A_N}$\\
+    取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $\\
     由于$A_n$有界，设$|A_n| \leq M $，则$n > N'$时
     
     \begin{align*}
-        \sum\limits_{n=1}^{N-1}{(r^n - r^{n+1})(A_N - A_n)} & \leq (1 - r)\sum\limits_{n=1}^{N'}{r^n|A_n - A|} + \sum\limits_{n=N'+1}^{N-1}{r^n(|A_n - A| + |A_N -A|)}\\
-        & \leq (\sum\limits_{n=1}^{N'}{2r^nM} + \sum\limits_{n=N'+1}^{N-1}{r^n2\varepsilon})\\
+        \sum\limits_{n = 1}^{N-1}{(r^n - r^{n + 1})(A_N - A_n)} & \leq (1 - r)\sum\limits_{n = 1}^{N'}{r^n|A_n - A|} + \sum\limits_{n=N'+1}^{N-1}{r^n(|A_n - A| + |A_N -A|)}\\
+        & \leq (\sum\limits_{n = 1}^{N'}{2r^nM} + \sum\limits_{n=N'+1}^{N-1}{r^n2\varepsilon})\\
         & = (1 - r)\left(2M\dfrac{r - r^{N'+1}}{1 - r} + 2\varepsilon r^{N'+1}\dfrac{1 - R^{N-N'+1}}{1 - r}\right)\\
         & < 2M\varepsilon + 2\varepsilon\\
         & = 2(M+1)\varepsilon
     \end{align*}
 
-    令$n\to+\infty$，再$r\to1$\\
+    令$n \to +\infty$，再$r \to 1$\\
     即
-    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n=1}^{\infty}{a_nr^n}} = \sum\limits_{n=1}^{\infty}{a_n}$$
+    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proof}
 
 \begin{proposition}
     
     设$f$在$\mathbb{C}$上解析，且满足对于任一点$z_0\in\mathbb{C}$，$f$在$z_0$的\textup{Tarloy}展开式
-    $$f(z) = \sum\limits_{n=0}^{+\infty}{a_n(z-z_0)}$$
+    $$f(z) = \sum\limits_{n = 0}^{+\infty}{a_n(z-z_0)}$$
     满足至少有一个$c_n$为$0$，证明$f$是多项式。
 
 \end{proposition}
@@ -229,7 +229,7 @@
 \begin{proof}
     
     考虑开单位圆盘$D = \Delta(0,1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
-    在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p=0$\\
+    在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p= 0$\\
     可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0\in D$，
     由唯一性定理知，$f^{(p)}\equiv 0$在$\mathbb{C}$上恒成立，故$f$为多项式。
 
@@ -492,8 +492,8 @@
 \begin{proposition}
     
     设$f$在一个包含单位圆盘的开集上（除去单位圆盘上的唯一一个极点$z_0$）解析。\\
-    证明：若$\sum\limits_{n=1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1}}} = z_0$$
+    证明：若$\sum\limits_{n = 1}^{\infty}{a_nz^n}$表示$f$在开单位圆盘上的\textup{Taylor}级数，那么
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 1}}} = z_0$$
 
 \end{proposition}
 
@@ -508,10 +508,10 @@
     所以
     $$f(z) = \sum\limits_{n = 0}^{\infty}{\left(b_n - \dfrac{c}{z^{n + 1}}\right)z^n} = \sum\limits_{n = 0}^{\infty}{a_n z^n}$$
     则有
-    $$\dfrac{a_n}{a_{n+1}} = 
-    \dfrac{b_n - \frac{c}{z_0^{n+1}}} {b_{n+1} - \frac{c}{z_0^{n+2}}} = 
-    z_0 \dfrac{(b_n z_0^n) z_0 - c} {(b_{n+1}z_0^{n+1}) z_0 - c} =
-    z_0 \dfrac{z_0 h_n - c}{z_0 h_{n+1} - c}$$
+    $$\dfrac{a_n}{a_{n + 1}} = 
+    \dfrac{b_n - \frac{c}{z_0^{n + 1}}} {b_{n + 1} - \frac{c}{z_0^{n + 2}}} = 
+    z_0 \dfrac{(b_n z_0^n) z_0 - c} {(b_{n + 1}z_0^{n + 1}) z_0 - c} =
+    z_0 \dfrac{z_0 h_n - c}{z_0 h_{n + 1} - c}$$
     其中$h_n$是$h(z)$在$z = z_0$处\textup{Taylor}级数第$n$项的系数。因为$h(z)$在单位圆内解析，有$\lim\limits_{n \to \infty}{h_n} = 0$. 且
     $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 1}}} = \lim\limits_{n \to \infty}{\left(a_0 \dfrac{a_0 h_n - c}{z_0h_{n + 1} - c}\right)} = z_0$$
 
@@ -570,8 +570,8 @@
 
 \begin{proposition}
 
-    已知$D$是单位圆盘，设$f:D\to\mathbb{C}$是解析函数，证明：\\
-    函数$f$的直径$d =\sup\limits_{z,w\in D}{|f(z) - f(w)|}$满足
+    已知$D$是单位圆盘，设$f:D \to \mathbb{C}$是解析函数，证明：\\
+    函数$f$的直径$d = \sup\limits_{z,w\in D}{|f(z) - f(w)|}$满足
     $$2|f'(0)| \leq d$$
 
 \end{proposition}
@@ -646,7 +646,7 @@
     当且仅当
     $$f(z) = f'(0)z + f(0)$$
     其中
-    $$d =\sup\limits_{z,w\in D(0,1)}{|f(z) - f(w)|}$$
+    $$d = \sup\limits_{z,w\in D(0,1)}{|f(z) - f(w)|}$$
     
 \end{theorem}
 
@@ -667,7 +667,7 @@
     
     设$f$在$0 < |z| < R$解析，存在$M >0$，使得任意$r$，$0 < r < R$，有
     $$r \int_{0}^{2 \pi}{|2f(\mathrm{e^{i\theta}})|}\diff \theta < M$$
-    证明：$z=0$是一个可去发散点，否则是简单极点。
+    证明：$z = 0$是一个可去发散点，否则是简单极点。
 
 \end{proposition}
 
@@ -691,8 +691,8 @@
     $$|f(z)| \leq \dfrac{M}{ \pi r_2} + \dfrac{M}{ \pi|z|},\quad 0 < |z| < \dfrac{r_2}{2}$$
     所以$$|zf(z)| \leq \dfrac{M|z|}{ \pi r_2} + \dfrac{M}{\pi}$$
     则极限是有限的。\\
-    $z=0$是可去极点，极限为$0$.\\
-    $z=0$是简单极点，极限非$0$.
+    $z = 0$是可去极点，极限为$0$.\\
+    $z = 0$是简单极点，极限非$0$.
 
 \end{proof}
 
@@ -707,8 +707,8 @@
     
     $f(z)$在$|z|<1$内解析，且$z = 0$为$n(n \geq 1)$级零点，则有
     $$f(z) = \sum\limits_{m = n}^{\infty}{a_mz^m}$$
-    显然$\varphi(z) = \dfrac{f(z)}{z^{n-1}}$在$|z|<1$内解析，且$\varphi(0) = 0$，有
-    $$ \max\varphi(z) \leq \max_{|z| = r}|\varphi(z)| = \dfrac{|f(z)|}{r^{n-1}} \leq \dfrac{1}{r^{n-1}} $$
+    显然$\varphi(z) = \dfrac{f(z)}{z^{n - 1}}$在$|z|<1$内解析，且$\varphi(0) = 0$，有
+    $$ \max\varphi(z) \leq \max_{|z| = r}|\varphi(z)| = \dfrac{|f(z)|}{r^{n - 1}} \leq \dfrac{1}{r^{n - 1}} $$
     令$n \to 1$，则$|\varphi(z)| < 1$，于是$|\varphi(z)| \leq |z|$，即
     $$|f(z)| \leq z^n$$
 
@@ -727,7 +727,7 @@
     
     反证法。若存在$a,\ b\in \Delta(0,1), \quad a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
-    则设$\varphi(z) = \dfrac{a-z}{1-\overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $\\
+    则设$\varphi(z) = \dfrac{a-z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $\\
     令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
     $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
     由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
@@ -761,9 +761,9 @@
         
         \item
             $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
-            $$ f(z) =\sum\limits_{n=1}^{\infty}{a_nz^n}$$
-            令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$，
-            显然$z=0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
+            $$ f(z) = \sum\limits_{n = 1}^{\infty}{a_nz^n}$$
+            令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$，
+            显然$z = 0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
             $$|\varphi(z)| = |z|^2$$
             即
             $$|f(z) + f(-z)| \leq 2|z|^2$$
@@ -772,8 +772,8 @@
             $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
             由\textup{(1)}知，$\left|\dfrac{\varphi(z)}{z^2}\right| \leq 1$，且$\left|\dfrac{\varphi(z_0)}{z_0^2}\right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得\\
             $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
-            $$f(z) + f(-z) = \sum\limits_{n=1}^{\infty}{a_{2n}z^{2n}}$$
-            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n=1}^{\infty}{a_{2n-1}z^{2n-1}}$\\
+            $$f(z) + f(-z) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$$
+            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$\\
             显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
 
             \begin{align*}
@@ -813,8 +813,8 @@
 
 \begin{proof}
     
-    若$\lim\limits_{z\to z_0}{f(z)} = w_0$，其中$z_0,\ w_0 \in \mathbb{C}$，则
-    $$\lim\limits_{z\to z_0}{|f(z)|} = |w_0|$$
+    若$\lim\limits_{z \to z_0}{f(z)} = w_0$，其中$z_0,\ w_0 \in \mathbb{C}$，则
+    $$\lim\limits_{z \to z_0}{|f(z)|} = |w_0|$$
 
 \end{proof}
 
@@ -825,7 +825,7 @@
     又$\Big||a| - |b|\Big| \leq |a -b|$，则 
     $$\Big| |f(z) - |w| \Big| \leq | f(z) - w| < \varepsilon $$
     易知
-    $$\lim\limits_{z\to z_0}{|f(z)} = |w_0|$$
+    $$\lim\limits_{z \to z_0}{|f(z)} = |w_0|$$
 
 \end{proposition}
 
@@ -847,23 +847,23 @@
 
 \begin{proposition}
     
-    设$f(z) = \sum\limits_{n=0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
+    设$f(z) = \sum\limits_{n = 0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
     $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积，证明：
-    $$A =  \pi\sum\limits_{n=1}^{\infty}{n|a_n|^2}$$
+    $$A =  \pi\sum\limits_{n = 1}^{\infty}{n|a_n|^2}$$
 
 \end{proposition}
 
 \begin{proof}
     
-    易证$A = \iint_{D}{|f'(z)|}\diff x\diff y$，又$f'(z) = \sum\limits_{n=1}^{\infty}{na_nz^{n-1}}$，设$z = \euler^{\imag\theta}$，则有
+    易证$A = \iint_{D}{|f'(z)|}\diff x\diff y$，又$f'(z) = \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}}$，设$z = \euler^{\imag\theta}$，则有
 
     \begin{align*}
         A & = \iint_{D}{|f'(z)|^2}\diff x\diff y \\ 
           & = \iint_{D}{f'(z)\overline{{f'(z)}}}\diff x\diff y \\
-          & = \iint_{D}{\left(\sum\limits_{n=1}^{\infty}{na_nz^{n-1}}\right)\overline{\left(\sum\limits_{n=1}^{\infty}{na_nz^{n-1}}\right)}}\diff x\diff y \\
-          & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left(r\sum\limits_{n=1}^{\infty}{na_nr^{n-1}\euler^{(n-1)\imag\theta}}\right)\left(\sum\limits_{n=1}^{\infty}{n\overline{a_n}r^{n-1}\euler^{-(n-1)\imag\theta}}\right)}\diff r}\diff \theta \\
-          & = \int_{0}^{1}{r\sum\limits_{n=1}^{\infty}{2n^2|a_n|^2 \pi r^{2n-2}}} \\
-          & = \pi \sum\limits_{n=1}^{\infty}{n|a_n|^2}
+          & = \iint_{D}{\left(\sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}}\right)\overline{\left(\sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}}\right)}}\diff x\diff y \\
+          & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left(r\sum\limits_{n = 1}^{\infty}{na_nr^{n - 1}\euler^{(n - 1)\imag\theta}}\right)\left(\sum\limits_{n = 1}^{\infty}{n\overline{a_n}r^{n - 1}\euler^{-(n - 1)\imag\theta}}\right)}\diff r}\diff \theta \\
+          & = \int_{0}^{1}{r\sum\limits_{n = 1}^{\infty}{2n^2|a_n|^2 \pi r^{2n - 2}}} \\
+          & = \pi \sum\limits_{n = 1}^{\infty}{n|a_n|^2}
     \end{align*}
 
     其中
@@ -871,20 +871,20 @@
     \int_{o}^{2\pi}{\euler^{\imag n\theta}}\diff \theta = 
     \left\{
         \begin{aligned}
-            &2\pi, & n=0\\
+            &2\pi, & n = 0\\
             &0, & n \neq 0\\
         \end{aligned}
     \right.
     $$
     即
-    $$A = \pi \sum\limits_{n=1}^{\infty}{n|a_n|^2}$$
+    $$A = \pi \sum\limits_{n = 1}^{\infty}{n|a_n|^2}$$
 
 \end{proof}
 
 \begin{proposition}
 
-    设$f:D\to\mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta,\ \alpha,\ \beta \in D$，则
-    $$|f'(\alpha)| \leq \dfrac{1-|\beta|^2}{1-|\alpha|^2}$$
+    设$f:D \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta,\ \alpha,\ \beta \in D$，则
+    $$|f'(\alpha)| \leq \dfrac{1 - |\beta|^2}{1 - |\alpha|^2}$$
     当且仅当等号成立时，有$f(z) = \varphi_{-\beta}(\varphi_{\alpha(z)}),\ c \in \mathbb{C}$，且$|c| = 1$，其中
     $$\varphi_{\alpha} = \dfrac{z -\alpha}{1 - \overline{\alpha}{z}},\ \varphi_{\beta} = \dfrac{z -\beta}{1 - \overline{\beta}{z}}$$
 
@@ -902,7 +902,7 @@
     \end{align*}
 
     则有
-    $$|f'(\alpha)| \leq \dfrac{1-|\beta|^2}{1 - |\alpha|^2}$$
+    $$|f'(\alpha)| \leq \dfrac{1 - |\beta|^2}{1 - |\alpha|^2}$$
 
 \end{proof}
 
@@ -927,9 +927,9 @@
 
 \begin{proposition}
     
-    设$f:D\to\mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
+    设$f:D \to \mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
     其中$D = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0,1)$
-    $$M(r) \leq \dfrac{2Ar}{1-r}$$
+    $$M(r) \leq \dfrac{2Ar}{1 - r}$$
     其中$M(r) = \max\limits_{|z|=r}\{|f(z)|\}$
 
 \end{proposition}
@@ -952,9 +952,9 @@
     由$g(z)$定义知
     $$f(z) = \dfrac{2Ag(z)}{1 + g(z)}$$
     则
-    $$ |f(z)| \leq \dfrac{2A(z)}{1-|z|} \leq \dfrac{2Ar}{1-r}$$
+    $$ |f(z)| \leq \dfrac{2A(z)}{1 - |z|} \leq \dfrac{2Ar}{1 - r}$$
     即
-    $$M(r) \leq \dfrac{2Ar}{1-r}$$
+    $$M(r) \leq \dfrac{2Ar}{1 - r}$$
 
 \end{proof}
 
@@ -984,7 +984,7 @@
     \varphi(z) = 
     \left\{
         \begin{aligned}
-            &\dfrac{f(z)}{z}, & z \neq 0\\
+            & \dfrac{f(z)}{z}, & z \neq 0\\
             &f'(0), & z = 0\\
         \end{aligned}
     \right.
@@ -995,7 +995,7 @@
     若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$\\
     若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
     $$|f(z_0)| \leq |z_0|$$
-    由于$f(0) = 0$，上式当$z=0$时成立，则
+    由于$f(0) = 0$，上式当$z = 0$时成立，则
     $$|f(z_0)| \leq |z_0|,\quad x\in \Delta(0,1)$$
     若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0,1)$内取得最大模，\\
     从而$\varphi(z) \equiv c$， 又$|c| = 1$，则$\varphi(z) = \euler^{\imag\alpha}$，所以
@@ -1005,8 +1005,8 @@
 
 \begin{theorem}[Schwarz-Pick定理]
 
-    设$f:D\to\mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，且$f(z_0) = w_0,\ z\in D$，则
-    $$ \left| \dfrac{f(z)-w_0}{1-\overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
+    设$f:D \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，且$f(z_0) = w_0,\ z\in D$，则
+    $$ \left| \dfrac{f(z)-w_0}{1 - \overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
     等号当且仅当$f(z)$是分式线性映射时成立。
 
 \end{theorem}
@@ -1022,6 +1022,6 @@
     从而在$|z|<1$内
     $$|S(f(z))| \leq |T(z)|$$
     即
-    $$ \left| \dfrac{f(z)-w_0}{1-\overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
+    $$ \left| \dfrac{f(z)-w_0}{1 - \overline{w_0}f(z)}\right| \leq \left| \dfrac{z-z_0}{1 - z_0z}\right|$$
     
 \end{proof}

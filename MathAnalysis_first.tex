@@ -5,7 +5,7 @@
 \begin{proposition}[Cauthy命题]
 
     设$\{x_n\}$收敛于$l$，则它的前$n$项的算术平均数也收敛于$l$，即有
-    $$\lim\limits_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
+    $$\lim\limits_{x \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
 
 \end{proposition}
 
@@ -13,45 +13,44 @@
 
     $\{x_n\}$收敛于$l$，则$\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$ 时
     $$|x_n - l| < \varepsilon$$
-    则
+    则有
 
     \begin{align*}
-        \left|\dfrac{x_1 + x_2 + \cdots + x_n}{n} - l\right| &= \left|\dfrac{\sum\limits_{i=1}^{n}{x_i - l}}{n}\right|\\
-        &\leq \dfrac{\sum\limits_{i=1}^{n}{|x_i - l|}}{n}\\
-        &= \dfrac{\sum\limits_{i=1}^{N}{|x_i - l|}}{n} + \dfrac{\sum\limits_{i=N+1}^{n}{|x_i - l|}}{n}\\
-        &\leq \dfrac{M}{n} + \dfrac{(n-N)\varepsilon}{n}
+        \left|\dfrac{x_1 + x_2 + \cdots + x_n}{n} - l\right| & = \left|\dfrac{\sum\limits_{i = 1}^{n}{x_i - l}}{n}\right|\\
+        & \leq \dfrac{\sum\limits_{i = 1}^{n}{|x_i - l|}}{n}\\
+        & = \dfrac{\sum\limits_{i = 1}^{N}{|x_i - l|}}{n} + \dfrac{\sum\limits_{i = N + 1}^{n}{|x_i - l|}}{n}\\
+        & \leq \dfrac{M}{n} + \dfrac{(n - N)\varepsilon}{n}
     \end{align*}
 
-    其中$M = \sum\limits_{i=1}^{N}{|x_i-l|}$，$M$为有限值。
-    $N_1 = \max\left\{\left\lfloor\dfrac{M}{\varepsilon}\right\rfloor,\ N \right\}$，\\
-    即有$n>N_1$时成立不等式
+    其中$M = \sum\limits_{i = 1}^{N}{|x_i - l|}$，$M$为有限值。\\
+    $N_1 = \max\left\{\left\lfloor\dfrac{M}{\varepsilon}\right\rfloor,\ N \right\}$，当$N > N_1$时成立不等式
     $$\left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| < \varepsilon$$
     也即
-    $$\lim\limits_{x\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
+    $$\lim\limits_{x \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
 
 \end{proof}
 
 \begin{corollary}[Cauthy命题推论]
 
-    若$\lim\limits_{n\to\infty}{(a_n - a_{n-1})} = d$，
+    若$\lim\limits_{n \to \infty}{(a_n - a_{n - 1})} = d$，
     则
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = d$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{n}} = d$$
 
 \end{corollary}
 
 \begin{proof}
 
-    因为$\lim\limits_{n\to\infty}{(a_n - a_{n-1})} = d$，所以数列$\{a_n - a_{n - 1}\}$收敛于$d$。\\
+    因为$\lim\limits_{n \to \infty}{(a_n - a_{n - 1})} = d$，所以数列$\{a_n - a_{n - 1}\}$收敛于$d$. \\
     由\textup{Cauthy}命题知，
     
     \begin{align*}
-        & \lim\limits_{n\to\infty}{\dfrac{(a_2 - a_1) + (a_3 - a_2) + \cdots + (a_{n + 1} - a_n)}{n}} \\
-        = & \ \lim\limits_{n\to\infty}{\dfrac{a_{n + 1} - a_1}{n}} \\
-        = & \ \lim\limits_{n\to\infty}{\dfrac{n + 1}{n} \dfrac{a_{n + 1}}{n + 1}} - \lim\limits_{n\to\infty}{\dfrac{a_1}{n}} = d
+        & \lim\limits_{n \to \infty}{\dfrac{(a_2 - a_1) + (a_3 - a_2) + \cdots + (a_{n + 1} - a_n)}{n}} \\
+        = & \ \lim\limits_{n \to \infty}{\dfrac{a_{n + 1} - a_1}{n}} \\
+        = & \ \lim\limits_{n \to \infty}{\dfrac{n + 1}{n} \dfrac{a_{n + 1}}{n + 1}} - \lim\limits_{n \to \infty}{\dfrac{a_1}{n}} = d
     \end{align*}
 
     即
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = d$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{n}} = d$$
 
 \end{proof}
 
@@ -59,117 +58,118 @@
 
     设$\{a_n\}$是正数列，且收敛于$A$，
     则
-    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_1a_2\cdots a_n}} = A$$
+    $$\lim\limits_{n \to \infty}{\sqrt[n]{a_1a_2\cdots a_n}} = A$$
 
 \end{corollary}
 
 \begin{proof}
 
     显然有
-    $$\ln{\left((a_1a_2\cdots a_n)^{\frac{1}{n}}\right)} = \dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}$$
-    由\textup{Cauthy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$，所以
-    $$\lim\limits_{n\to\infty}{\dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}} = \ln{A}$$
+    $$\ln{\sqrt[n]{a_1 a_2 \cdots a_n}} = \dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}$$
+    由\textup{Cauthy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$. \\    
+    所以
+    $$\lim\limits_{n \to \infty}{\dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}} = \ln{A}$$
     也即
-    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_1a_2\cdots a_n}} = A$$
+    $$\lim\limits_{n \to \infty}{\sqrt[n]{a_1 a_2 \cdots a_n}} = A$$
 
 \end{proof}
 
 
 \begin{corollary}[Cauthy命题推论]
 
-    设$\{a_n\}$是正数列，且存在极限$\lim\limits_{n\to\infty}{\dfrac{a_{n+1}}{a_n}}=l$，
+    设$\{a_n\}$是正数列，且存在极限$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，
     则
-    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_n}} = l$$
+    $$\lim\limits_{n \to \infty}{\sqrt[n]{a_n}} = l$$
 
 \end{corollary}
 
 \begin{proof}
 
-    因为$\lim\limits_{n\to\infty}{\dfrac{a_{n+1}}{a_n}}=l$，所以数列$\left\{\ln{\dfrac{a_n}{a_{n - 1}}}\right\}$收敛于$\ln{l}$ \\
-    由\textup{Cauthy}命题知，
+    因为$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，所以数列$\left\{\ln{\dfrac{a_n}{a_{n - 1}}}\right\}$收敛于$\ln{l}$ \\
+    由\textup{Cauthy}命题知
     
     \begin{align*}
-        & \lim\limits_{n\to\infty}{\dfrac{\ln{\dfrac{a_2}{a_1}} + \ln{\dfrac{a_3}{a_2}} + \cdots + \ln{\dfrac{a_{n + 1}}{a_n}}}{n}} \\
-        = & \ \lim\limits_{n\to\infty}{\dfrac{\ln{\dfrac{a_{n + 1}}{a_1}}}{n}} \\
-        = & \ \lim\limits_{n\to\infty}{\dfrac{\ln{a_{n + 1} - \ln{a_1}}}{n}} \\
-        = & \ \lim\limits_{n\to\infty}{\dfrac{n + 1}{n}\dfrac{\ln{a_{n + 1}}}{n + 1}} - \lim\limits_{n\to\infty}{\dfrac{\ln{a_1}}{n}} = \ln{l}
+        & \lim\limits_{n \to \infty}{\dfrac{\ln{\dfrac{a_2}{a_1}} + \ln{\dfrac{a_3}{a_2}} + \cdots + \ln{\dfrac{a_{n + 1}}{a_n}}}{n}} \\
+        = & \ \lim\limits_{n \to \infty}{\dfrac{\ln{\dfrac{a_{n + 1}}{a_1}}}{n}} \\
+        = & \ \lim\limits_{n \to \infty}{\dfrac{\ln{a_{n + 1} - \ln{a_1}}}{n}} \\
+        = & \ \lim\limits_{n \to \infty}{\dfrac{n + 1}{n}\dfrac{\ln{a_{n + 1}}}{n + 1}} - \lim\limits_{n \to \infty}{\dfrac{\ln{a_1}}{n}} = \ln{l}
     \end{align*}
 
     即
-    $$\lim\limits_{n\to\infty}{\dfrac{\ln{a_n}}{n}} = \ln{l}$$
+    $$\lim\limits_{n \to \infty}{\dfrac{\ln{a_n}}{n}} = \ln{l}$$
     也即
-    $$\lim\limits_{n\to\infty}{\sqrt[n]{a_n}}=l$$
+    $$\lim\limits_{n \to \infty}{\sqrt[n]{a_n}} = l$$
 
 \end{proof}
 
 \begin{proposition}[Cauthy命题$\infty$时的特例]
 
-    $\lim\limits_{n\to\infty}{x_n} = +\infty$，证明：
-    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
+    $\lim\limits_{n \to \infty}{x_n} = +\infty$，证明：
+    $$\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
 
 \end{proposition}
 
 \begin{proof} 
 
-    $\forall A > 0$，由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n>N$时，$a_n > 2A + 2$，\\
+    $\forall A > 0$，由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n>N$时，$a_n > 2A + 2$. \\
     又
-    $$\lim\limits_{n\to\infty}{\dfrac{n-N_1}{n}} = 1 > \dfrac{1}{2}$$
-    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
+    $$\lim\limits_{n \to \infty}{\dfrac{n - N_1}{n}} = 1 > \dfrac{1}{2}$$
+    $$\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
     于是
 
     \begin{align*}
-        \dfrac{x_1 + x_2 + \cdots + x_n}{n} & = \dfrac{x_1 + x_2 + \cdots + x_{N_1}}{n} + \dfrac{x_{N_1+1} + x_{N_1+2} + \cdots + x_n}{n} \\
-        & > -1 + \dfrac{n-N_1}{n}(2A+2) \\
+        \dfrac{x_1 + x_2 + \cdots + x_n}{n} & = \dfrac{x_1 + x_2 + \cdots + x_{N_1}}{n} + \dfrac{x_{N_1 + 1} + x_{N_1 + 2} + \cdots + x_n}{n} \\
+        & > -1 + \dfrac{n - N_1}{n}(2A + 2) \\
         & > -1 + \dfrac{1}{2}(2A + 2) \\
         & = A 
     \end{align*}
 
     故
-    $$\lim\limits_{n\to\infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
+    $$\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
     
 \end{proof} 
 
 \begin{proposition}[$\dfrac{0}{0}$型的stolz公式]
 
     设$\{a_n\}$和$\{b_n\}$都是收敛于$0$的数列，其中$\{a_n\}$是严格单调递减数列，且存在
-    $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
+    $$\lim\limits_{n \to \infty}{\dfrac{b_{n + 1} -  b_n}{a_{n + 1} - a_n}} = l $$
     其中$l$为有限值或无穷。则有
-    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
 
 \begin{proof}
     
     $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
-    $$\left| \dfrac{b_n-b_{n+1}}{a_n-a_{n+1}}-l\right| < \varepsilon$$
-    $$(l-\varepsilon)(a_n-a_{n+1})<b_n-b_{n+1}<(l+\varepsilon)(a_n-a_{n+1})$$
-    任取$m>n$，将上式中$n$替换为$n+1$，$n+2$，$n+3$，$\cdots$，$m-1$，有
+    $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l\right| < \varepsilon$$
+    $$(l-\varepsilon)(a_n - a_{n + 1})<b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
+    任取$m>n$，将上式中$n$替换为$n + 1$，$n + 2$，$n + 3$，$\cdots$，$m - 1$，有
 
     \begin{align*}
-        &(l-\varepsilon)(a_{n+1}-a_{n+2})<b_{n+1}-b_{n+2}<(l+\varepsilon)(a_{n+1}-a_{n+2})\\
-        &(l-\varepsilon)(a_{n+2}-a_{n+3})<b_{n+2}-b_{n+3}<(l+\varepsilon)(a_{n+2}-a_{n+3})\\
-        &\vdots\\
-        &(l-\varepsilon)(a_{m-1}-a_{m})<b_{m-1}-b_{m}<(l+\varepsilon)(a_{m-1}-a_{m})
+        &(l - \varepsilon)(a_{n + 1} - a_{n + 2}) < b_{n + 1} - b_{n + 2}<(l + \varepsilon)(a_{n + 1} - a_{n + 2}) \\
+        &(l - \varepsilon)(a_{n + 2} - a_{n + 3}) < b_{n + 2} - b_{n + 3}<(l + \varepsilon)(a_{n + 2} - a_{n + 3}) \\
+        & \vdots \\
+        &(l - \varepsilon)(a_{m - 1} - a_{m}) < b_{m - 1} - b_{m} < (l + \varepsilon)(a_{m - 1} - a_{m})
     \end{align*}
 
     将上式相加得到
-    $$(l-\varepsilon)(a_{n}-a_{m})<b_{n}-b_{m}<(l+\varepsilon)(a_{n}-a_{m})$$
-    $$\left| \dfrac{b_n-b_{m}}{a_n-a_{m}}-l\right| < \varepsilon$$
-    对于$m$，令$m\to+\infty$，有
-    $$\lim\limits_{m\to\infty}{a_m}=\lim\limits_{m\to\infty}{b_m}=0$$
-    又
-    $$\lim\limits_{m\to\infty}{\left| \dfrac{b_n-b_{m}}{a_n-a_{m}}-l\right|} = \left|\dfrac{b_n}{a_n}-l\right|$$
+    $$(l-\varepsilon)(a_{n} - a_{m})<b_{n} - b_{m}<(l + \varepsilon)(a_{n} - a_{m})$$
+    $$\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l\right| < \varepsilon$$
+    对于$m$，令$m \to +\infty$，有
+    $$\lim\limits_{m \to \infty}{a_m} = \lim\limits_{m \to \infty}{b_m} =  0$$
+    又有
+    $$\lim\limits_{m \to \infty}{\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l\right|} = \left|\dfrac{b_n}{a_n} - l\right|$$
     则
-    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proof}
 
 \begin{proposition}[$\dfrac{*}{\infty}$型的stolz公式]
     
     设有数列$\{a_n\}$和$\{b_n\}$，其中$\{a_n\}$是严格单调增加的发散数列，且存在
-    $$\lim\limits_{n\to\infty}{\dfrac{b_{n+1}- b_n}{a_{n+1}-a_n}} = l $$
+    $$\lim\limits_{n \to \infty}{\dfrac{b_{n + 1} -  b_n}{a_{n + 1} - a_n}} = l $$
     其中$l$为有限值或无穷。则有
-    $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}} = l$$
+    $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = l$$
 
 \end{proposition}
 
@@ -178,40 +178,40 @@
     \begin{enumerate}
 
         \item
-            $l$为有限值\\
+            $l$为有限值时。\\
             $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
-            $$\left| \dfrac{b_n-b_{n+1}}{a_n-a_{n+1}}-l\right| < \varepsilon$$
-            $$(l-\varepsilon)(a_n-a_{n+1})<b_n-b_{n+1}<(l+\varepsilon)(a_n-a_{n+1})$$
-            取定$n$，将上式中$n$替换为$N$，$N+1$，$N+2$，$\cdots$，$n-1$，有
+            $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l\right| < \varepsilon$$
+            $$(l - \varepsilon)(a_n - a_{n + 1}) < b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
+            取定$n$，将上式中$n$替换为$N$，$N + 1$，$N + 2$，$\cdots$，$n - 1$，有
 
             \begin{align*}
-                &(l-\varepsilon)(a_{N}-a_{N+1})<b_{N}-b_{N+1}<(l+\varepsilon)(a_{N}-a_{N+1})\\
-                &(l-\varepsilon)(a_{N+1}-a_{N+2})<b_{N+1}-b_{N+2}<(l+\varepsilon)(a_{N+1}-a_{N+2})\\
-                &\vdots\\
-                &(l-\varepsilon)(a_{n-1}-a_{n})<b_{n}-b_{n}<(l+\varepsilon)(a_{n-1}-a_{n})
+                & (l - \varepsilon)(a_{N} - a_{N + 1})<b_{N} - b_{N + 1} < (l + \varepsilon)(a_{N} - a_{N + 1}) \\
+                & (l - \varepsilon)(a_{N + 1} - a_{N + 2}) < b_{N + 1} - b_{N + 2} < (l + \varepsilon)(a_{N + 1} - a_{N + 2}) \\
+                & \vdots \\
+                & (l - \varepsilon)(a_{n - 1} - a_{n}) < b_{n} - b_{n} < (l + \varepsilon)(a_{n - 1} - a_{n})
             \end{align*}
 
             将上式相加得到
-            $$(l-\varepsilon)(a_{n}-a_{N})<b_{n}-b_{N}<(l+\varepsilon)(a_{n}-a_{N})$$
-            $$\left| \dfrac{b_n-b_{N}}{a_n-a_{N}}-l\right| < \varepsilon$$
-            $$\dfrac{b_n}{a_n}-l = \left(1-\dfrac{a_N}{a_n}\right)\left(\dfrac{b_n-b_N}{a_n-a_N}-l\right) + \dfrac{b_N-la_N}{a_N}$$
-            由于$\lim\limits_{n\to\infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使得当$n>N_1$时成立
-            $$0<1-\dfrac{a_N}{a_n}<2$$
-            $$\left|\dfrac{b_N-la_N}{a_n}\right|<\varepsilon$$
-            则当$n>\max\{N_1, N\}$有
-            $$\left|\dfrac{b_n}{a_n}-l\right|<3\varepsilon$$
+            $$(l - \varepsilon)(a_{n} - a_{N}) < b_{n} - b_{N} < (l + \varepsilon)(a_{n} - a_{N})$$
+            $$\left| \dfrac{b_n - b_{N}}{a_n - a_{N}} - l\right| < \varepsilon$$
+            $$\dfrac{b_n}{a_n} - l = \left(1 - \dfrac{a_N}{a_n}\right)\left(\dfrac{b_n - b_N}{a_n - a_N} - l\right) + \dfrac{b_N - la_N}{a_N}$$
+            由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使得当$n > N_1$时成立
+            $$0 < 1 - \dfrac{a_N}{a_n} < 2$$
+            $$\left|\dfrac{b_N - la_N}{a_n}\right| < \varepsilon$$
+            则当$n>\max\{N_1, N\}$时有
+            $$\left|\dfrac{b_n}{a_n} - l\right| < 3\varepsilon$$
 
         \item
-            $l$为$+\infty$时\\
+            $l$为$+\infty$时。\\
             $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
-            $$b_{n+1}-b_n>a_{n+1}-a_n$$
+            $$b_{n + 1} - b_n > a_{n + 1} - a_n$$
             由\textup{(1)}可知，
-            $$b_{n+1}-b_N>a_{n+1}-a_n$$
-            则$\lim\limits_{n\to\infty}{b_n}=+\infty$，且$\{b_n\}$严格单调增加，
-            所以，
-            $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{a_n-a_{n-1}}{b_n-b_{n-1}}} = 0$$
+            $$b_{n + 1} - b_N > a_{n + 1} - a_n$$
+            则$\lim\limits_{n \to \infty}{b_n} = +\infty$，且$\{b_n\}$严格单调增加。\\
+            所以
+            $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = \lim\limits_{n \to \infty}{\dfrac{a_n - a_{n - 1}}{b_n - b_{n - 1}}} = 0$$
             故
-            $$\lim\limits_{n\to\infty}{\dfrac{b_n}{a_n}}=\lim\limits_{n\to\infty}{\dfrac{\frac{1}{a_n}}{b_n}}=+\infty$$
+            $$\lim\limits_{n \to \infty}{\dfrac{b_n}{a_n}} = \lim\limits_{n \to \infty}{\dfrac{\frac{1}{a_n}}{b_n}} = +\infty$$
 
         \item $l$为$-\infty$时同\textup{(2)}.
 
@@ -221,42 +221,42 @@
 
 \begin{proposition}[Carleman不等式]
 
-    设$\sum\limits_{n=1}^{\infty}{a_n}$为收敛的正项级数，
+    设$\sum\limits_{n = 1}^{\infty}{a_n}$为收敛的正项级数，
     则不等式
-    $$\sum\limits_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}}\leq \euler\sum\limits_{n=1}^{\infty}{a_n}$$
+    $$\sum\limits_{n = 1}^{\infty}{\sqrt[n]{a_1 a_2 \cdots a_n}} \leq \euler \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proposition}
 
 \begin{proof}
 
     \begin{align*}
-        \sum\limits_{n=1}^{\infty}{\sqrt[n]{a_1a_2\cdots a_n}} &= \sum\limits_{n=1}^{\infty}{\dfrac{\sqrt[n]{a_1(2a_2)\cdots (na_n)}}{\sqrt[n]{n!}}}\\
-        &\leq\sum\limits_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n\sqrt[n]{n!}}}\\
-        &\leq\euler\sum\limits_{n=1}^{\infty}{\dfrac{a_1+2a_2+\cdots +na_n}{n(n+1)}}\\
-        &=\euler\sum\limits_{n=1}^{\infty}{\dfrac{1}{n(n+1)}\sum\limits_{k=1}^{n}{ka_k}}\\
-        &=\euler\sum\limits_{k=1}^{N}{\left\{ka_k\left[\sum\limits_{n=k}^{N}{\dfrac{1}{n(n+1)}}\right]\right\}}\\
-        &=\euler\sum\limits_{k=1}^{N}{ka_k(\dfrac{1}{k}-\dfrac{1}{N + 1})} \\
-        &\leq\euler\sum\limits_{k=1}^{N}{a_k}
+        \sum\limits_{n = 1}^{\infty}{\sqrt[n]{a_1 a_2 \cdots a_n}} & = \sum\limits_{n = 1}^{\infty}{\dfrac{\sqrt[n]{a_1 (2a_2) \cdots (na_n)}}{\sqrt[n]{n!}}} \\
+        & \leq \sum\limits_{n = 1}^{\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n\sqrt[n]{n!}}} \\
+        & \leq \euler \sum\limits_{n = 1}^{\infty}{\dfrac{a_1 + 2a_2 + \cdots + na_n}{n(n + 1)}} \\
+        & = \euler \sum\limits_{n = 1}^{\infty}{\left[ \dfrac{1}{n(n + 1)} \sum\limits_{k = 1}^{n}{ka_k} \right]} \\
+        & = \euler \sum\limits_{k = 1}^{N}{\left\{ ka_k\left[ \sum\limits_{n = k}^{N}{\dfrac{1}{n(n + 1)}} \right] \right\}} \\
+        & = \euler \sum\limits_{k = 1}^{N}{\left[ ka_k \left(\dfrac{1}{k} - \dfrac{1}{N + 1} \right) \right]} \\
+        & \leq \euler \sum\limits_{k = 1}^{N}{a_k}
     \end{align*}
 
     令$N\to+\infty$，即可得到\textup{Carleman}不等式。\\
     下证不等式右边的系数$\euler$不能在改进。\\
     对于每个$N$构造一个数列
-    $$b_n=\left\{
+    $$b_n= \left\{
         \begin{aligned}
-            &\dfrac{1}{n}, & n & = 1,2,\cdots,N \\
-            &0, & n & > N
+            & \dfrac{1}{n}, & n & = 1,2,\cdots,N \\
+            & 0, & n & > N
         \end{aligned}
     \right.
     $$
-    然后作出两个级数和之比，令$n\to+\infty$，应用\textup{stolz}定理，有
-    $$\lim\limits_{N\to\infty}{\dfrac{\sum\limits_{n=1}^{N}{\sqrt[n]{a_1a_2\cdots a_n}}}{\sum\limits_{n=1}^{N}{b_n}}}=\lim\limits_{N\to\infty}{\dfrac{N}{\sqrt[N]{N!}}}=\euler$$
+    然后作出两个级数和之比，令$n\to+\infty$，应用\textup{stolz}定理得
+    $$\lim\limits_{N \to \infty}{\dfrac{\sum\limits_{n = 1}^{N}{\sqrt[n]{a_1 a_2 \cdots a_n}}}{\sum\limits_{n = 1}^{N}{b_n}}} = \lim\limits_{N \to \infty}{\dfrac{N}{\sqrt[N]{N!}}} = \euler$$
 
 \end{proof}
 
 \begin{theorem}[Sapagof判别法]
 
-设正数列$\{a_n\}$单调减少，则$\lim\limits_{n\to\infty}{a_n}=0$的充分必要条件是正项级数$\sum\limits_{n=1}^{\infty}{(1-\dfrac{a_{n+1}}{a_n})}$发散。
+设正数列$\{a_n\}$单调减少，则$\lim\limits_{n \to \infty}{a_n} =  0$的充分必要条件是正项级数$\sum\limits_{n = 1}^{\infty}{\left( 1 - \dfrac{a_{n + 1}}{a_n} \right)}$发散。
     
 \end{theorem}
 
@@ -264,43 +264,44 @@
     
     先证充分性。\\
     正数列$\{a_n\}$单调减少，则$\{a_n\}$存在极限，即
-    $$\lim\limits_{n\to\infty}{a_n} = a(a>0)$$
-    设$b_n=1-\dfrac{a_{n+1}}{a_n} = \dfrac{a_n-a_{n+1}}{a_n}\leq\dfrac{a_n-a_{n+1}}{a}$，
+    $$\lim\limits_{n \to \infty}{a_n} = a(a > 0)$$
+    设
+    $$b_n = 1 - \dfrac{a_{n + 1}}{a_n} = \dfrac{a_n - a_{n + 1}}{a_n} \leq \dfrac{a_n - a_{n + 1}}{a}$$
     则
 
     \begin{align*}
-        \sum\limits_{n=1}^{m}{b_n}&=\sum\limits_{n=1}^{m}{(1-\dfrac{a_{n+1}}{a_{n}})}\\
-        &\leq\dfrac{1}{a}\sum\limits_{n=1}^{m}{(a_n-a_{n+1})}\\
-        &=\dfrac{1}{a}(a_1-a_{m+1})
+        \sum\limits_{n = 1}^{m}{b_n} & = \sum\limits_{n = 1}^{m}{(1 - \dfrac{a_{n + 1}}{a_{n}})} \\
+        & \leq \dfrac{1}{a} \sum\limits_{n = 1}^{m}{(a_n - a_{n + 1})} \\
+        & = \dfrac{1}{a}(a_1 - a_{m + 1})
     \end{align*}
 
     \begin{align*}
-        \sum\limits_{n=1}^{\infty}{b_n} &= \lim\limits_{m\to\infty}{\sum\limits_{n=1}^{m}{b_n}}\\
-        &\leq\lim\limits_{m\to\infty}{\dfrac{1}{a}(a_1-a_{m+1})}\\
-        & = \dfrac{1}{a}(a_1-a)
+        \sum\limits_{n = 1}^{\infty}{b_n} & = \lim\limits_{m \to \infty}{\sum\limits_{n = 1}^{m}{b_n}} \\
+        & \leq \lim\limits_{m \to \infty}{\dfrac{1}{a}(a_1 - a_{m + 1})} \\
+        & = \dfrac{1}{a}(a_1 - a)
     \end{align*}
 
-    可知$\sum\limits_{n=1}^{\infty}{b_n}$收敛。\\
-    再证必要性。若$a=0$，则由柯西准则，
+    可知$\sum\limits_{n = 1}^{\infty}{b_n}$收敛。\\
+    再证必要性。若$a = 0$，则由柯西准则得
 
     \begin{align*}
-        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_{k+1}}{a_k})}\\
-        &\geq\sum\limits_{k=n+1}^{n+p}{\dfrac{a_k-a_{k+1}}{a_k}}\\
-        & = \dfrac{1}{a_{n+1}}(a_{n+1}-a_{n+p+1})\\
-        & = \dfrac{a_{n+p+1}}{a_{n+1}}
+        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{(1 - \dfrac{a_{k + 1}}{a_k})} \\
+        & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k-a_{k + 1}}{a_k}} \\
+        & = \dfrac{1}{a_{n + 1}}(a_{n + 1} - a_{n + p + 1}) \\
+        & = \dfrac{a_{n + p + 1}}{a_{n + 1}}
     \end{align*}
 
-    因为$\lim\limits_{n\to\infty}{a_n}=0$，则总存在$p \in \mathbb{N}$，
+    因为$\lim\limits_{n \to \infty}{a_n} =  0$，则总存在$p \in \mathbb{N}$，
     使得
-    $$\sum\limits_{k=n+1}^{n+p}{b_k}\geq\dfrac{1}{2}$$
-    所以$\sum\limits_{n=1}^{\infty}{b_n}$发散。
+    $$\sum\limits_{k = n + 1}^{n + p}{b_k}\geq\dfrac{1}{2}$$
+    所以$\sum\limits_{n = 1}^{\infty}{b_n}$发散。
 
 \end{proof}
 
 \begin{theorem}[Sapagof判别法等价形式\romannum{1}]
 
     设$\{a_n\}$是单调增加的正数列，则该数列与级数
-    $$\sum\limits_{n=1}^{\infty}{\left(1-\dfrac{a_{n+1}}{a_n}\right)}$$
+    $$\sum\limits_{n = 1}^{\infty}{\left(1 - \dfrac{a_{n + 1}}{a_n}\right)}$$
     同敛散。
         
 \end{theorem}
@@ -308,80 +309,79 @@
 \begin{proof}
 
     $\{a_n\}$单调增加，若$\{a_n\}$收敛，则
-    $$\lim\limits_{n\to\infty}{a_n}=a \ (a\neq+\infty)$$
+    $$\lim\limits_{n \to \infty}{a_n} = a \ (a \neq +\infty)$$
 
     \begin{align*}
-        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
-        & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+1}}}\\
-        & = \dfrac{a_{n+p+1}-a_{n+1}}{a_{n+1}}
+        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)}\\
+        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + 1}}}\\
+        & = \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}}
     \end{align*}
 
-    因为$\lim\limits_{n\to\infty}{a_n}=a$，则$\forall \varepsilon >0$，$\exists N\in \mathbb{N}$，$n>N$时，
-    $$|a_n-a|<\varepsilon$$
+    因为$\lim\limits_{n \to \infty}{a_n} = a$，则$\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$时，$|a_n - a| < \varepsilon$. \\
     所以
 
     \begin{align*}
-        \left| \dfrac{a_{n+p+1}-a_{n+1}}{a_{n+1}}\right| &= \left| \dfrac{a_{n+p+1}-a + a -a_{n+1}}{a_{n+1}}\right|\\
-        & = \dfrac{|a_{n+p+1}-a|+|a_{n+1}-a|}{a_{n+1}}\\
-        & = \dfrac{2\varepsilon}{a_{n+1}}
+        \left| \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + 1}}\right| & = \left| \dfrac{a_{n + p + 1} - a + a - a_{n + 1}}{a_{n + 1}}\right|\\
+        & = \dfrac{|a_{n + p + 1} - a| + |a_{n + 1} - a|}{a_{n + 1}}\\
+        & = \dfrac{2\varepsilon}{a_{n + 1}}
     \end{align*} 
 
-    所以$\sum\limits_{n=1}^{\infty}{b_n}$收敛。\\
-    若$\lim\limits_{n\to\infty}{a_n}=+\infty$，则
+    所以$\sum\limits_{n = 1}^{\infty}{b_n}$收敛。\\
+    若$\lim\limits_{n \to \infty}{a_n} = +\infty$，则
 
     \begin{align*}
-        \sum\limits_{k=n+1}^{n+p}{b_k} &= \sum\limits_{k=n+1}^{n+p}{(1-\dfrac{a_k}{a_{k+1}})}\\
-        & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_{k+1}-a_k}{a_{n+p+1}}}\\
-        & = \dfrac{a_{n+p+1}-a_{n+1}}{a_{n+p+1}}\\
-        & = 1-\dfrac{a_{n+1}}{a_{n+p+1}}
+        \sum\limits_{k = n + 1}^{n + p}{b_k} & = \sum\limits_{k = n + 1}^{n + p}{\left( 1 - \dfrac{a_k}{a_{k + 1}} \right)}\\
+        & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_{k + 1} - a_k}{a_{n + p + 1}}}\\
+        & = \dfrac{a_{n + p + 1} - a_{n + 1}}{a_{n + p + 1}}\\
+        & = 1 - \dfrac{a_{n + 1}}{a_{n + p + 1}}
     \end{align*}
 
-    由柯西准则，因为$\lim\limits_{n\to\infty}{a_n}=+\infty$，则存在$p \in \mathbb{N}$，
-    $$ \dfrac{a_{n+1}}{a_{n+p+1}} \leq \dfrac{1}{2}$$
+    由柯西准则，因为$\lim\limits_{n \to \infty}{a_n} = +\infty$，则存在$p \in \mathbb{N}$，
+    $$ \dfrac{a_{n + 1}}{a_{n + p + 1}} \leq \dfrac{1}{2}$$
     则
-    $$ 1-\dfrac{a_{n+1}}{a_{n+p+1}} \geq \dfrac{1}{2}$$
-    所以$\sum\limits_{n=1}^{\infty}{b_n}$发散。
+    $$ 1 - \dfrac{a_{n + 1}}{a_{n + p + 1}} \geq \dfrac{1}{2}$$
+    所以$\sum\limits_{n = 1}^{\infty}{b_n}$发散。
 
 \end{proof}
 
 \begin{theorem}
     
-    $\{S_n\}$是正项级数$\sum\limits_{n=1}^{\infty}{a_n}$的部分和数列，则
-    $\sum\limits_{n=1}^{\infty}{a_n}$和$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{S_n}}$同敛散。
+    $\{S_n\}$是正项级数$\sum\limits_{n = 1}^{\infty}{a_n}$的部分和数列，则
+    $\sum\limits_{n = 1}^{\infty}{a_n}$和$\sum\limits_{n = 1}^{\infty}{\dfrac{a_n}{S_n}}$同敛散。
 
 \end{theorem}
 
 \begin{proof}
     
-    $\sum\limits_{n=1}^{\infty}{a_n}$收敛，则
+    $\sum\limits_{n = 1}^{\infty}{a_n}$收敛，则
 
     \begin{align*}
-        \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \leq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+1}}}\\
-        &\leq \dfrac{S_{n+p+1}-S_{n}}{S_{n+1}}\\
-        &\leq \dfrac{S_{n+p+1}-S_{n}}{S_{n}}
+        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \leq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + 1}}}\\
+        & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + 1}}\\
+        & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n}}
     \end{align*}
 
-    设$\sum\limits_{n=1}^{\infty}{a_n} = S$，则$\forall \varepsilon >0$，$\exists N\in\mathbb{N}$，$n>N$时，
-    $$|S_n-S|<\varepsilon$$
+    设$\sum\limits_{n = 1}^{\infty}{a_n} = S$，则$\forall \varepsilon >0$，$\exists N\in\mathbb{N}$，$n>N$时，$|S_n - S|<\varepsilon$. \\
+    则有
 
     \begin{align*}
-        \left|\dfrac{S_{n+p+1}-S_{n}}{S_{n}}\right| &= \left|\dfrac{S_{n+p+1}-S+S-S_{n}}{S_{n}}\right|\\
-        & \leq \dfrac{|S_{n+p+1}-S|+|S_{n+1}-S|}{S_n}\\
+        \left|\dfrac{S_{n + p + 1} - S_{n}}{S_{n}}\right| & = \left|\dfrac{S_{n + p + 1} - S + S - S_{n}}{S_{n}}\right|\\
+        & \leq \dfrac{|S_{n + p + 1} - S| + |S_{n + 1} - S|}{S_n}\\
         & = \dfrac{2\varepsilon}{S_n}
     \end{align*}
 
-    所以$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{S_n}}$收敛。\\
-    $\sum\limits_{n=1}^{\infty}{a_n}$发散，则$\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}}=+\infty$，且有
+    所以$\sum\limits_{n = 1}^{\infty}{\dfrac{a_n}{S_n}}$收敛。\\
+    $\sum\limits_{n = 1}^{\infty}{a_n}$发散，则$\lim\limits_{n \to \infty}{\sum\limits_{k  = 1}^{n}{a_k}} = +\infty$，且有
 
     \begin{align*}
-        \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_k}} & \geq \sum\limits_{k=n+1}^{n+p}{\dfrac{a_k}{S_{n+p+1}}}\\
-        &\geq \dfrac{S_{n+p+1}-S_{n}}{S_{n+p+1}}\\
-        &= 1-\dfrac{S_{n}}{S_{n+p+1}}
+        \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_k}} & \geq \sum\limits_{k = n + 1}^{n + p}{\dfrac{a_k}{S_{n + p + 1}}}\\
+        & \geq \dfrac{S_{n + p + 1} - S_{n}}{S_{n + p + 1}}\\
+        & = 1 - \dfrac{S_{n}}{S_{n + p + 1}}
     \end{align*}
 
-    因为$\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n}{a_k}}=+\infty=\lim\limits_{n\to\infty}{S_n}=+\infty$，则存在$p\in\mathbb{N}$，
-    $$1-\dfrac{S_{n}}{S_{n+p+1}} \geq \dfrac{1}{2}$$
-    所以$\sum\limits_{n=1}^{\infty}{\dfrac{a_n}{S_n}}$发散。
+    因为$\lim\limits_{n \to \infty}{\sum\limits_{k  = 1}^{n}{a_k}} = +\infty = \lim\limits_{n \to \infty}{S_n} = +\infty$，则存在$p \in \mathbb{N}$，
+    $$1 - \dfrac{S_{n}}{S_{n + p + 1}} \geq \dfrac{1}{2}$$
+    所以$\sum\limits_{n = 1}^{\infty}{\dfrac{a_n}{S_n}}$发散。
 
 \end{proof}
 
@@ -390,12 +390,12 @@
     \begin{enumerate}
 
         \item 
-            正项级数$\sum\limits_{n=1}^{\infty}{a_n}$收敛的充分必要条件时存在正数列$\{b_n\}$和正数$\delta$，使得当$n$充分大时有
-            $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}\geq \delta >0$$
+            正项级数$\sum\limits_{n = 1}^{\infty}{a_n}$收敛的充分必要条件时存在正数列$\{b_n\}$和正数$\delta$，使得当$n$充分大时有
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1}\geq \delta >0$$
 
         \item 
-            正项级数$\sum\limits_{n=1}^{\infty}{a_n}$发散的充分必要条件时存在发散的正项级数$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$，使得当$n$充分大时有
-            $$b_n  \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}\leq0$$
+            正项级数$\sum\limits_{n = 1}^{\infty}{a_n}$发散的充分必要条件时存在发散的正项级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{b_n}}$，使得当$n$充分大时有
+            $$b_n  \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1}\leq 0$$
 
     \end{enumerate}
 
@@ -407,34 +407,34 @@
 
         \item   
             先证充分性。\\
-            由$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}\geq \delta >0$得
-            $$a_nb_n-a_{n+1}b_{n+1}\geq \delta a_{n+1}$$
-            $$a_{n+1}\leq \dfrac{1}{\delta}(a_nb_n-a_{n+1}b_{n+1})$$
-            不妨设$n\geq 1$，时上式成立，则
+            由$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \geq \delta >0$得
+            $$a_nb_n - a_{n + 1}b_{n + 1}\geq \delta a_{n + 1}$$
+            $$a_{n + 1}\ leq \dfrac{1}{\delta}(a_nb_n - a_{n + 1}b_{n + 1})$$
+            不妨设$n \geq 1$时上式成立，则
 
             \begin{align*}
-                \sum\limits_{k=1}^{n}{a_k} &= a_1 + \sum\limits_{k=2}^{n}{a_k}\\
-                & \leq a_1 +  \dfrac{1}{\delta}\sum\limits_{k=1}^{n-1}{(a_k b_k-a_{k+1}b_{k+1})}\\
-                & = a_1 +  \dfrac{1}{\delta}(a_1 b_1-a_{n}b_{n})\\
-                & = a_1 +  \dfrac{1}{\delta}a_1 b_1
+                \sum\limits_{k  = 1}^{n}{a_k} & = a_1 + \sum\limits_{k = 2}^{n}{a_k}\\
+                & \leq a_1 + \dfrac{1}{\delta} \sum\limits_{k  = 1}^{n - 1}{(a_k b_k - a_{k + 1}b_{k + 1})}\\
+                & = a_1 + \dfrac{1}{\delta}(a_1 b_1 - a_{n}b_{n})\\
+                & = a_1 + \dfrac{1}{\delta}a_1 b_1
             \end{align*}
 
-            所以$\sum\limits_{n=1}^{\infty}{a_n}$收敛。
+            所以$\sum\limits_{n = 1}^{\infty}{a_n}$收敛。
             再证必要性。\\
             令
-            $$b_n=\dfrac{R_n}{a_n}$$
-            其中$R_n$为$\sum\limits_{n=1}^{\infty}{a_n}$的余项，即
+            $$b_n = \dfrac{R_n}{a_n}$$
+            其中$R_n$为$\sum\limits_{n = 1}^{\infty}{a_n}$的余项，即
             $$R_n= S-S_n$$
-            $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{R_n}{a_{n+1}}-\dfrac{R_{n+1}}{a_{n+1}}=1>0$$
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{R_n}{a_{n + 1}} - \dfrac{R_{n + 1}}{a_{n + 1}} = 1>0$$
             必要性得证。
 
         \item   
             充分性即为比较判别法的比值形式。\\
             下证必要性。\\
             令
-            $$b_n=\dfrac{S_n}{a_n}$$
-            易知$\sum\limits_{n=1}^{\infty}{\dfrac{1}{b_n}}$发散
-            $$b_n \cdot \dfrac{a_n}{a_{n+1}}-b_{n+1}=\dfrac{S_{n}-S_{n+1}}{a_{n+1}}=-1\leq0$$
+            $$b_n = \dfrac{S_n}{a_n}$$
+            易知$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{b_n}}$发散
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{S_{n} - S_{n + 1}}{a_{n + 1}} = -1\leq0$$
             必要性得证。
 
 \end{enumerate}
@@ -443,22 +443,22 @@
 
 \begin{proposition}
     
-    $\lim\limits_{n\to\infty}{(a_{n+p} - a_n)} = \lambda_1$，$p$为固定的正整数，$\lambda$是常数，则
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{\lambda}} = \dfrac{\lambda}{p}$$
+    $\lim\limits_{n \to \infty}{(a_{n + p} - a_n)} = \lambda_1$，$p$为固定的正整数，$\lambda$是常数，则
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{\lambda}} = \dfrac{\lambda}{p}$$
 
 \end{proposition}
 
 \begin{proof}
     
     对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列\\
-    由$\lim\limits_{n\to\infty}{a_{n+p} - a_n} = \lambda$，则
-    $$\lim\limits_{n\to\infty}{a_{(n+1)p + i} - a_{np+i}} = \lambda$$
-    令$A^{(i)}_{n} = a_{(n+1)p+i} - a_{np + i}$，由\textup{Cauthy}命题知
-    $$\lim\limits_{n\to\infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda$$
+    由$\lim\limits_{n \to \infty}{a_{n + p} - a_n} = \lambda$，则
+    $$\lim\limits_{n \to \infty}{a_{(n + 1)p + i} - a_{np + i}} = \lambda$$
+    令$A^{(i)}_{n} = a_{(n + 1)p + i} - a_{np + i}$，由\textup{Cauthy}命题知
+    $$\lim\limits_{n \to \infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda$$
     即
-    $$\lim\limits_{n\to\infty}{\dfrac{a_{(n+1)p+i} - a_{p+i}}{n}} = \lim\limits_{n\to\infty}{\dfrac{a_{(n+1)p+i}}{n}} = \lambda$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_{(n + 1)p + i} - a_{p + i}}{n}} = \lim\limits_{n \to \infty}{\dfrac{a_{(n + 1)p + i}}{n}} = \lambda$$
     则
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{n}} = \lim\limits_{n\to\infty}{\dfrac{a_{np+i}}{np+i}} = \dfrac{n}{np+i} \lim\limits_{n\to\infty}{\dfrac{a_{np+i}}{n}} = \dfrac{\lambda}{p}$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{n}} = \lim\limits_{n \to \infty}{\dfrac{a_{np + i}}{np + i}} = \dfrac{n}{np + i} \lim\limits_{n \to \infty}{\dfrac{a_{np + i}}{n}} = \dfrac{\lambda}{p}$$
 
 \end{proof}
 
@@ -468,9 +468,9 @@
 
     \begin{enumerate}
 
-        \item $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = 2$$
+        \item $$\lim\limits_{n \to \infty}{\sqrt[n]{A_n}} = 2$$
                 
-        \item $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
+        \item $$\lim\limits_{n \to \infty}{\sqrt[n]{G_n}} = \euler^{\frac{1}{2}}$$
 
     \end{enumerate}
 
@@ -481,12 +481,12 @@
     \begin{enumerate}
         
         \item 
-            因为$$A_n = \sum\limits_{k=0}^{n}{\binom{n}{k}} = 2^n$$则
-            $$\lim\limits_{n\to\infty}{\sqrt[n]{A_n}} = \lim\limits_{n\to\infty}{\sqrt[n]{\dfrac{2^n}{n}}} = 2$$
+            因为$$A_n = \sum\limits_{k = 0}^{n}{\binom{n}{k}} = 2^n$$则
+            $$\lim\limits_{n \to \infty}{\sqrt[n]{A_n}} = \lim\limits_{n \to \infty}{\sqrt[n]{\dfrac{2^n}{n}}} = 2$$
 
         \item 
             因为$$G_n = \sqrt[n]{\binom{n}{0}\binom{n}{1}\cdots\binom{n}{n}}$$则
-            $$\lim\limits_{n\to\infty}{\sqrt[n]{G_n}}  = \lim\limits_{n\to\infty}{\sqrt[n^2]{\binom{n}{0}\binom{n}{1}\cdots\binom{n}{n}}} = \lim\limits_{n\to\infty}{\dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}} = \euler^{\frac{1}{2}}  $$
+            $$\lim\limits_{n \to \infty}{\sqrt[n]{G_n}}  = \lim\limits_{n \to \infty}{\sqrt[n^2]{\binom{n}{0} \binom{n}{1} \cdots \binom{n}{n}}} = \lim\limits_{n \to \infty}{\dfrac{1}{n^2} \sum\limits_{k = 0}^{n}{\ln{\binom{n}{k}}}} = \euler^{\frac{1}{2}}  $$
     
         \end{enumerate}
     
@@ -494,7 +494,9 @@
 
 \begin{proposition}
     
-    设$x_n = \dfrac{1}{n^2} \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}},\ n\in\mathbb{N}$，求$\lim\limits_{n\to\infty}{x_n}$
+    设
+    $$x_n = \dfrac{1}{n^2} \sum\limits_{k = 0}^{n}{\ln{\binom{n}{k}}}, \quad n \in \mathbb{N}$$
+    求$\lim\limits_{n \to \infty}{x_n}$.
 
 \end{proposition}
 
@@ -503,113 +505,112 @@
     应用\textup{stolz}公式，知
 
     \begin{align*}
-        \lim\limits_{n\to\infty}{x_n}  = & \lim\limits_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\binom{n+1}{k}}} - \sum\limits_{k=0}^{n}{\ln{\binom{n}{k}}}}{(n+1)^2 - n^2}} \\
-        = & \lim\limits_{n\to\infty}{\dfrac{\sum\limits_{k=0}^{n}{\ln{\dfrac{n+1}{n+1-k}}}}{2n+1}} \\
-        = & \lim\limits_{n\to\infty}{\dfrac{\ln{(1+\frac{1}{n})^{n-1}}}{2}} \\
-        = & \dfrac{1}{2}
+        \lim\limits_{n \to \infty}{x_n}  = & \lim\limits_{n \to \infty}{\dfrac{\sum\limits_{k = 0}^{n}{\ln{\binom{n + 1}{k}}} - \sum\limits_{k = 0}^{n}{\ln{\binom{n}{k}}}}{(n + 1)^2 - n^2}} \\
+        = & \lim\limits_{n \to \infty}{\dfrac{\sum\limits_{k = 0}^{n}{\ln{\dfrac{n + 1}{n + 1 - k}}}}{2n + 1}} \\
+        = & \lim\limits_{n \to \infty}{\dfrac{\ln{(1 + \frac{1}{n})^{n - 1}}}{2}} \\
+        = & \ \dfrac{1}{2}
     \end{align*}
 
 \end{proof}
 
 \begin{proposition}
     
-    设数列$\{a_n\}$满足$\lim\limits_{n\to\infty}{a_n\sum\limits_{k=1}^{n}{a_k^2}} = 1$，证明：
-    $$\lim\limits_{n\to\infty}{\sqrt{3na_n}} = 1$$
+    设数列$\{a_n\}$满足$\lim\limits_{n \to \infty}{a_n \sum\limits_{k  = 1}^{n}{a_k^2}} = 1$，证明：
+    $$\lim\limits_{n \to \infty}{\sqrt{3na_n}} = 1$$
 
 \end{proposition}
 
 \begin{proof}
 
-    令$S_n = \sum\limits_{k=1}^{n}{a_k^2}$，则$S_n$单调增加，且$S_n\to\infty$，否则若$\lim\limits_{n\to\infty}{S_n} = S$，\\
-    则$\lim\limits_{n\to\infty}{a_n^2} = 0$，即
-    $$\lim\limits_{n\to\infty}{a_n} = 0$$
+    令$S_n = \sum\limits_{k  = 1}^{n}{a_k^2}$，则$S_n$单调增加，且$S_n \to \infty$，否则若$\lim\limits_{n \to \infty}{S_n} = S$，\\
+    则$\lim\limits_{n \to \infty}{a_n^2} = 0$，即
+    $$\lim\limits_{n \to \infty}{a_n} = 0$$
     所以
-    $$\lim\limits_{n\to\infty}{a_nS_n} = \lim\limits_{n\to\infty}{a_nS} = 0$$
-    与题设矛盾。故$\lim\limits_{n\to\infty}{S_n} = +\infty$，又
-    $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{a_n \cdot S_n \cdot \dfrac{1}{S_n}} = \lim\limits_{n\to\infty}{a_nS_n} \cdot \lim\limits_{n\to\infty}{\dfrac{1}{S_n}} = 0$$
+    $$\lim\limits_{n \to \infty}{a_nS_n} = \lim\limits_{n \to \infty}{a_nS} = 0$$
+    与题设矛盾。故$\lim\limits_{n \to \infty}{S_n} = +\infty$，又
+    $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{a_n \cdot S_n \cdot \dfrac{1}{S_n}} = \lim\limits_{n \to \infty}{a_nS_n} \cdot \lim\limits_{n \to \infty}{\dfrac{1}{S_n}} = 0$$
 
     \begin{align*}
-        S_n^3 - S_{n-1}^3 &= (S_n - S_{n-1}) (S_n^2 + S_{n-1}S_n + S_{n-1}^2) \\
+        S_n^3 - S_{n - 1}^3 & = (S_n - S_{n - 1}) (S_n^2 + S_{n - 1}S_n + S_{n - 1}^2) \\
         = & a_n^2 (2S_n^2 - 3a_n^2S_n + a_n^4) \\
         = & 2a_n^2S_n^2 - 3a_n^4S_n + a_n^6 
     \end{align*}
     
-    $$\lim\limits_{n\to\infty}{S_n^3 - S_{n-1}^3}= \lim\limits_{n\to\infty}{\big( 3(a_nS_n)^2 - 3a_n^3(a_nS_n) + a_n^6 \big)} = 3$$
-    $$\lim\limits_{n\to\infty}{\dfrac{1}{3na_n^3}} = \lim\limits_{n\to\infty}{\dfrac{1}{a_n^3S_n^3} \cdot \dfrac{S_n^3}{3n}} = \lim\limits_{n\to\infty}{\dfrac{S_n^3}{3n}} = \lim\limits_{n\to\infty}{\dfrac{S_n^3 - S_{n-1}^3}{3}} = 1$$
+    $$\lim\limits_{n \to \infty}{S_n^3 - S_{n - 1}^3} =  \lim\limits_{n \to \infty}{\big( 3(a_nS_n)^2 - 3a_n^3(a_nS_n) + a_n^6 \big)} = 3$$
+    $$\lim\limits_{n \to \infty}{\dfrac{1}{3na_n^3}} = \lim\limits_{n \to \infty}{\dfrac{1}{a_n^3S_n^3} \cdot \dfrac{S_n^3}{3n}} = \lim\limits_{n \to \infty}{\dfrac{S_n^3}{3n}} = \lim\limits_{n \to \infty}{\dfrac{S_n^3 - S_{n - 1}^3}{3}} = 1$$
     故
-    $$\lim\limits_{n\to\infty}{\sqrt{3na_n}} = 1$$
+    $$\lim\limits_{n \to \infty}{\sqrt{3na_n}} = 1$$
 
 \end{proof}
 
 \begin{proposition}
 
-    $\lim\limits_{n\to\infty}{a_n} = a $，$\lim\limits_{n\to\infty}{b_n} = b $，证明：
-    $$\lim\limits_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
+    $\lim\limits_{n \to \infty}{a_n} = a $，$\lim\limits_{n \to \infty}{b_n} = b $，证明：
+    $$\lim\limits_{n \to \infty}{\dfrac{a_0b_n + a_1b_{n - 1} + \cdots + a_nb_0}{n}} = ab$$
 
 \end{proposition}
 
 \begin{proof}
 
-    因$\lim\limits_{n\to\infty}{a_n} = a$，$\lim\limits_{n\to\infty}{b_n} = b $，故数列$\{a_n\},\ \{b_n\}$有界，\\
-    $\exists M > 0$，
+    因$\lim\limits_{n \to \infty}{a_n} = a$，$\lim\limits_{n \to \infty}{b_n} = b $，故数列$\{a_n\},\ \{b_n\}$有界，$\exists M > 0$，
     $$|a_n| < M,\quad |b_n| < M, \quad \forall n \in \mathbb{N}$$
     $\forall \varepsilon > 0 $，$\exists N \in \mathbb{N}$，$n > N$时有
     $$|a_n -a| < \dfrac{\varepsilon}{4M}, \quad |b_n -b| < \dfrac{\varepsilon}{4M}$$
-    取自然数$N_1 > \max\left\{N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k=0}^{n}{|a_k - a|} + \sum\limits_{k=0}^{n}{(|b_k - a|)} + |b| \right)\right\}$\\
+    取自然数$N_1 > \max\left\{N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right)\right\}$\\
     则当$n > N_1$时有
 
     \begin{align*}
-        &\left| \dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n} \right| \\
-        = \ & \dfrac{1}{n} \left| \sum\limits_{k=0}^{n}{b_{n-k}(a_k - a)} + \sum\limits_{k=0}^{n}{a_k(b_{n-k} - b)} + ab \right| \\
-        = \ & \dfrac{M}{N} \left| \sum\limits_{k=0}^{N_1}{|a_k - a|} + \sum\limits_{k=0}^{N_1}{|b_{n-k} - b|} + |b| \right| \\
-        \ & + \ \dfrac{M}{n} \left| \sum\limits_{k=N_1+1}^{n}{|a_k - a|} + \sum\limits_{k=N_1}^{n}{|b_{n-k} - b|} \right| \\
+        & \left| \dfrac{a_0b_n + a_1b_{n - 1} + \cdots + a_nb_0}{n} \right| \\
+        = \ & \dfrac{1}{n} \left| \sum\limits_{k = 0}^{n}{b_{n - k}(a_k - a)} + \sum\limits_{k = 0}^{n}{a_k(b_{n - k} - b)} + ab \right| \\
+        = \ & \dfrac{M}{N} \left| \sum\limits_{k = 0}^{N_1}{|a_k - a|} + \sum\limits_{k = 0}^{N_1}{|b_{n - k} - b|} + |b| \right| \\
+        \ & + \ \dfrac{M}{n} \left| \sum\limits_{k = N_1 + 1}^{n}{|a_k - a|} + \sum\limits_{k = N_1}^{n}{|b_{n - k} - b|} \right| \\
         \leq \ & \dfrac{\varepsilon}{2} + \dfrac{2M}{n}(n - N_1) - \dfrac{\varepsilon}{4M} \\
         < \ & \varepsilon 
     \end{align*}
 
     故
-    $$\lim\limits_{n\to\infty}{\dfrac{a_0b_n + a_1b_{n-1} + \cdots + a_nb_0}{n}} = ab$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_0b_n + a_1b_{n - 1} + \cdots + a_nb_0}{n}} = ab$$
     
 \end{proof}
 
 \begin{proposition}
 
-    设$a_1 = 1$，$a_n = n(a_{n-1}+1),\quad n = 2,3,\cdots $，且
-    $$x_n = \prod_{k=1}^{n}{\left(1+\dfrac{1}{a_n}\right)}$$
-    求$\lim\limits_{n\to\infty}{x_n}$
+    设$a_1 = 1$，$a_n = n(a_{n - 1}+1),\quad n = 2,3,\cdots $，且
+    $$x_n = \prod_{k  = 1}^{n}{\left(1+\dfrac{1}{a_n}\right)}$$
+    求$\lim\limits_{n \to \infty}{x_n}$
 
 \end{proposition}
 
 \begin{proof}
 
-    由$\dfrac{a_{n-1}+1}{a_n} = \dfrac{1}{n}$得
+    由$\dfrac{a_{n - 1}+1}{a_n} = \dfrac{1}{n}$得
 
     \begin{align*}
-        \prod_{k=1}^{n}{\left(1+\dfrac{1}{a_n}\right)} = & \left(1+\dfrac{1}{a_1}\right) \left(1+\dfrac{1}{a_2}\right) \cdots \left(1+\dfrac{1}{a_n}\right) \\
+        \prod_{k  = 1}^{n}{\left(1+\dfrac{1}{a_n}\right)} = & \left(1+\dfrac{1}{a_1}\right) \left(1 + \dfrac{1}{a_2}\right) \cdots \left(1+\dfrac{1}{a_n}\right) \\
         = & \dfrac{a_1 + 1}{a_1} \cdot \dfrac{a_2 + 1}{a_2} \cdots \dfrac{a_n + 1}{a_n} \\
-        = & \dfrac{1}{a_1} \cdot \dfrac{a_1 + 1}{a_2} \cdot \dfrac{a_2 + 1}{a_3} \cdots \dfrac{a_{n-1} + 1}{a_n} \cdot a_{n+1} \\
+        = & \dfrac{1}{a_1} \cdot \dfrac{a_1 + 1}{a_2} \cdot \dfrac{a_2 + 1}{a_3} \cdots \dfrac{a_{n - 1} + 1}{a_n} \cdot a_{n + 1} \\
         = & \dfrac{1}{1} \cdot \dfrac{1}{2} \cdots \dfrac{1}{n} \\
-        = &\dfrac{a_{n+1}}{n!} 
+        = & \dfrac{a_{n + 1}}{n!} 
     \end{align*}
 
     \begin{align*}
-        \dfrac{a_n}{n!} = & \dfrac{n(a_{n-1}+1)}{n!} = \dfrac{a_{n-1}}{(n-1)!} + \dfrac{1}{(n-1)!} \\
-        = & \dfrac{a_{n-2}}{(n-2)!} + \dfrac{1}{(n-2)!} + \dfrac{1}{(n-1)!} \\
+        \dfrac{a_n}{n!} = & \dfrac{n(a_{n - 1} + 1)}{n!} = \dfrac{a_{n - 1}}{(n - 1)!} + \dfrac{1}{(n - 1)!} \\
+        = & \dfrac{a_{n - 2}}{(n - 2)!} + \dfrac{1}{(n - 2)!} + \dfrac{1}{(n - 1)!} \\
         & \cdots \\ 
-        = & \dfrac{a_1}{1!} + \dfrac{1}{1!} + \dfrac{1}{2!} + \cdots + \dfrac{1}{(n-1)!} \\
-        = & \sum\limits_{k=1}^{n-1}{\dfrac{1}{k!}} 
+        = & \dfrac{a_1}{1!} + \dfrac{1}{1!} + \dfrac{1}{2!} + \cdots + \dfrac{1}{(n - 1)!} \\
+        = & \sum\limits_{k  = 1}^{n - 1}{\dfrac{1}{k!}} 
     \end{align*}
 
     则
-    $$\dfrac{a_n}{n!} = \sum\limits_{k=1}^{n}{\dfrac{1}{k!}}$$
+    $$\dfrac{a_n}{n!} = \sum\limits_{k  = 1}^{n}{\dfrac{1}{k!}}$$
     所以
-    $$\lim\limits_{n\to\infty}{x_n} = \lim\limits_{n\infty}{\sum\limits_{k=0}^{n}{\dfrac{1}{k!}}} = \euler$$
+    $$\lim\limits_{n \to \infty}{x_n} = \lim\limits_{n\infty}{\sum\limits_{k = 0}^{n}{\dfrac{1}{k!}}} = \euler$$
 
 \end{proof}
 
 \begin{proposition}
 
-    设$a_1,a_2>0$，$a_{n+1} = \dfrac{2}{a_n + a_{n-1}}$，证明：$\{a_n\}$收敛。
+    设$a_1,a_2>0$，$a_{n + 1} = \dfrac{2}{a_n + a_{n - 1}}$，证明：$\{a_n\}$收敛。
 
 \end{proposition}
 
@@ -618,20 +619,22 @@
     选取$\alpha$，使得
     $$\alpha < \min\{a_0,a_1\} \leq \max\{a_0,a_1\} < \dfrac{1}{\alpha}$$
     由数学归纳法可证
-    $$\alpha < \min\{a_{n-1},a_n\} \leq \max\{a_{n-1},a_n\} < \dfrac{1}{\alpha}$$
+    $$\alpha < \min\{a_{n - 1},a_n\} \leq \max\{a_{n - 1},a_n\} < \dfrac{1}{\alpha}$$
     即
-    $$\alpha < a_n < \dfrac{1}{\alpha},\quad \forall n\in\mathbb{N}$$
-    所以$\{a_n\}$有界\\
+    $$\alpha < a_n < \dfrac{1}{\alpha}, \quad \forall n \in \mathbb{N}$$
+    所以$\{a_n\}$有界。\\
     令
-    $$L = \limsup_{n\to\infty}{a_n},\quad l = \liminf_{n\to\infty}{a_n}$$
-    且易知$L,l$均是有限数，则$L \leq \dfrac{1}{\alpha},\quad l \geq \alpha$
+    $$L = \limsup_{n \to \infty}{a_n},\quad l = \liminf_{n \to \infty}{a_n}$$
+    且易知$L,l$均是有限数，则$L \leq \dfrac{1}{\alpha}$，$l \geq \alpha$.
+
     \begin{align*}
-        L & = \limsup_{n\to\infty}{a_n} = \limsup_{n\to\infty}{\dfrac{2}{a_{n-1} + a_{n-2}}} \\
-         & = \dfrac{1}{\liminf\limits_{n\to\infty}{(a_{n-1} + a_{n-2})}} = \dfrac{2}{\liminf\limits_{n\to\infty}{a_{n-1}} + \liminf\limits_{n\to\infty}{a_{n-2}}} \\ 
-         &= \dfrac{1}{l}
+        L & = \limsup_{n \to \infty}{a_n} = \limsup_{n \to \infty}{\dfrac{2}{a_{n - 1} + a_{n - 2}}} \\
+         & = \dfrac{1}{\liminf\limits_{n \to \infty}{(a_{n - 1} + a_{n - 2})}} = \dfrac{2}{\liminf\limits_{n \to \infty}{a_{n - 1}} + \liminf\limits_{n \to \infty}{a_{n - 2}}} \\ 
+         & = \dfrac{1}{l}
     \end{align*}
-    同理$l = \dfrac{1}{L}$，则$lL = 1$\\
-    可设$\{a_{nk+3}\}$收敛到$L$，$\{a_{nk+2}\},\{a_{nk+1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又\\
+
+    同理$l = \dfrac{1}{L}$，则$lL = 1$. \\
+    可设$\{a_{nk+3}\}$收敛到$L$，$\{a_{nk+2}\},\{a_{nk + 1}\},\{a_{nk}\}$分别收敛到$a,b,c$，则$l < a,b,c < L$，又\\
     $L = \dfrac{2}{a+b} $，则$a+b = 2l $，同理，$b =c =L$\\
     所以$l = L = 1$，$\{a_n\}$收敛，极限为$1$。
 
@@ -639,7 +642,7 @@
 
 \begin{proposition}
 
-    证明：数列$x_n = \dfrac{1}{1+1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n+\frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1,2,\cdots)$\\
+    证明：数列$x_n = \dfrac{1}{1+1} + \dfrac{1}{2 + \frac{1}{2}} + \cdots + \dfrac{1}{n + \frac{1}{n}} - \ln{\dfrac{n}{\sqrt{2}}} \quad (n = 1, 2, \cdots)$\\
     有位于$\left[0,\dfrac{1}{2}\right]$的极限。
     
 \end{proposition}
@@ -649,30 +652,30 @@
     设
     $$f(x) = \dfrac{1}{x + \frac{1}{x}} = \dfrac{x}{x^2 + 1}$$
     则
-    $$f'(x) = \dfrac{1-x^2}{(x^2 + 1)^2} < 1,\quad x\in[1,+\infty)$$
-    所以$f(x)$在$[1,+\infty)$上单调减少。
+    $$f'(x) = \dfrac{1 - x^2}{(x^2 + 1)^2} < 1,\quad x \in [1, +\infty)$$
+    所以$f(x)$在$[1, +\infty)$上单调减少。
 
     \begin{align*}
-        x_n \geq & \int_{1}^{2}{\dfrac{1}{x+\frac{1}{x}}}\diff x + \int_{2}^{3}{\dfrac{1}{x+\frac{1}{x}}}\diff x + \cdots + \int_{2}^{3}{\dfrac{1}{x+\frac{1}{x}}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
-        = & \int_{1}^{n+1}{\dfrac{x}{x^2 + 1}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
-        = & \dfrac{1}{2} \ln{(x^2 + 1)} \Big|_{1}^{n+1} - \ln{\dfrac{n}{\sqrt{2}}} \\
-        = & \dfrac{1}{2} \ln{\dfrac{(n+1)^2 + 1}{2}} - \ln{\dfrac{n}{\sqrt{2}}} \\
-        = & \ln{\sqrt{\dfrac{(n+1)^2 + 1}{n}}} \\
+        x_n \geq & \int_{1}^{2}{\dfrac{1}{x + \frac{1}{x}}}\diff x + \int_{2}^{3}{\dfrac{1}{x + \frac{1}{x}}}\diff x + \cdots + \int_{2}^{3}{\dfrac{1}{x + \frac{1}{x}}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
+        = & \int_{1}^{n + 1}{\dfrac{x}{x^2 + 1}}\diff x - \ln{\dfrac{n}{\sqrt{2}}} \\
+        = & \dfrac{1}{2} \ln{(x^2 + 1)} \Big|_{1}^{n + 1} - \ln{\dfrac{n}{\sqrt{2}}} \\
+        = & \dfrac{1}{2} \ln{\dfrac{(n + 1)^2 + 1}{2}} - \ln{\dfrac{n}{\sqrt{2}}} \\
+        = & \ln{\sqrt{\dfrac{(n + 1)^2 + 1}{n}}} \\
         \geq & \ln1 = 0 
     \end{align*}
 
     $\{x_n\}$有下界，又
-    $$x_{n+1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
+    $$x_{n + 1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
     $\{x_n\}$单调减少，则$\{x_n\}$收敛。
     由$x_n \geq 0,\ x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
-    $$0 \leq \lim\limits_{n\to\infty}{a_n} \leq \dfrac{1}{2}$$
+    $$0 \leq \lim\limits_{n \to \infty}{a_n} \leq \dfrac{1}{2}$$
 
 \end{proof}
 
 \begin{proposition}
 
     设$a_n > 0$，且
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+1} + a_{n+2}}} = 0$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 1} + a_{n + 2}}} = 0$$
     证明：数列$\{a_n\}$无界。
     
 \end{proposition}
@@ -680,27 +683,27 @@
 \begin{proof}
     
     反证法。假设$\{a_n\}$有界，即$\exists M > 0$，$a_n \leq M,\ \forall n \in \mathbb{N}$，则有
-    $$0 < \dfrac{a_n}{2M} \leq \dfrac{a_n}{a_{n+1} + a_{n+2}}, \ \forall n \in \mathbb{N}$$
+    $$0 < \dfrac{a_n}{2M} \leq \dfrac{a_n}{a_{n + 1} + a_{n + 2}}, \ \forall n \in \mathbb{N}$$
     两边对$n$取极限，得到
-    $$\lim\limits_{n\to\infty}{a_n} = 0$$
+    $$\lim\limits_{n \to \infty}{a_n} = 0$$
     设
-    $$A(n) = \dfrac{a_n}{a_{n+1} + a_{n+2}}, \quad B(n) = \dfrac{a_{n+1}}{a_{n+1} + a_{n+2}}$$
+    $$A(n) = \dfrac{a_n}{a_{n + 1} + a_{n + 2}}, \quad B(n) = \dfrac{a_{n + 1}}{a_{n + 1} + a_{n + 2}}$$
     显然$B(n) \in (0,1],\  \forall n \in \mathbb{N}$，则
     
     \begin{align*}
-        0 & \leq \limsup_{n\to\infty}{\dfrac{a_n}{a_{n+2} + a_{n+3}}} \\
-        & = \liminf_{n\to\infty}{\left( \dfrac{a_n}{a_{n+1} + a_{n+2}} \cdot \dfrac{a_{n+1}+a_{n+2}}{a_{n+2} + a_{n+3}} \right)} \\
-        & \leq \limsup_{n\to\infty}{\dfrac{a_n}{a_{n+1} + a_{n+2}}} - \limsup_{n\to\infty}{\dfrac{a_n}{a_{n+1} + a_{n+2}}} \\
+        0 & \leq \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 2} + a_{n + 3}}} \\
+        & = \liminf_{n \to \infty}{\left( \dfrac{a_n}{a_{n + 1} + a_{n + 2}} \cdot \dfrac{a_{n + 1}+a_{n + 2}}{a_{n + 2} + a_{n + 3}} \right)} \\
+        & \leq \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 1} + a_{n + 2}}} - \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 1} + a_{n + 2}}} \\
         & = 0
     \end{align*}
     
     即
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+2} + a_{n+3}}} = 0$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 2} + a_{n + 3}}} = 0$$
     同理可证，对任意$p \in \mathbb{N}$
-    $$\lim\limits_{n\to\infty}{\dfrac{a_n}{a_{n+p} + a_{n+p+1}}} = 0$$
+    $$\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + p} + a_{n + p + 1}}} = 0$$
     则$\forall p \in \mathbb{N}$，$\exists N_p \in \mathbb{N}$，$n > N_p$时
-    $$\dfrac{a_n}{a_{n+p} + a_{n+p+1}} < \dfrac{1}{4}$$
-    即$n > N_p$时，$a_n < 2a_{n+p}$和$a_n < 2a_{n + p + 1}$中至少有一个成立。\\
+    $$\dfrac{a_n}{a_{n + p} + a_{n + p + 1}} < \dfrac{1}{4}$$
+    即$n > N_p$时，$a_n < 2a_{n + p}$和$a_n < 2a_{n + p + 1}$中至少有一个成立。\\
     显然我们可以选取一个子列，使其单调增加且无界。
     
 \end{proof}
@@ -708,20 +711,20 @@
 \begin{proposition}
 
     证明：
-    $$\lim\limits_{n\to\infty}{\left( \dfrac{1+a_{n+1}}{a_n} \right)^n} \geq \euler$$
+    $$\lim\limits_{n \to \infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
     对所有正数数列$\{a_n\}$成立，且$\euler$不能再改进。
 
 \end{proposition}
 
 \begin{proof}
 
-    设$s_k = \left( \dfrac{1+a_{k+1}}{a_k} \right)^k$，则$s_k \geq 0$，且$\sup\limits_{k\geq n}\{s_k\}$对$n$不增。\\
+    设$s_k = \left( \dfrac{1 + a_{k + 1}}{a_k} \right)^k$，则$s_k \geq 0$，且$\sup\limits_{k \geq n}\{s_k\}$对$n$不增。\\
     则$\sup\limits_{k\geq n}\{s_k\}$对$n$极限存在，设
-    $$\lim\limits_{n\to\infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
+    $$\lim\limits_{n \to \infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
     则对任意$0 < \varepsilon < l - \euler$，选取$N \in \mathbb{N}$，$n > N$时
     $$l \leq \sup_{k\geq n }{\{s_k\}} < \euler - \varepsilon$$
     我们有
-    $$\lim\limits_{n\to\infty}{\left( 1 + \dfrac{1}{n}\right)^n} = \euler$$
+    $$\lim\limits_{n \to \infty}{\left( 1 + \dfrac{1}{n}\right)^n} = \euler$$
     令
     $$r_n = \left(1 + \dfrac{1}{n}\right)^n$$
     选取$N' \in \mathbb{N}$，$n > N'$时
@@ -731,19 +734,19 @@
     进一步有
     $$s_n \leq \sup_{k\geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
     则有
-    $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n+1}}{n+1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
-    $$\sum\limits_{k = M + 1}^{m-1}{\dfrac{1}{k+1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
+    $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n + 1}}{n + 1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
+    $$\sum\limits_{k = M + 1}^{m - 1}{\dfrac{1}{k + 1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
     令$m \to \infty$，则$\sum\limits_{k = M + 1}^{\infty}{\dfrac{1}{k + 1}}$收敛，而调和级数不收敛。所以
-    $$\lim\limits_{n\to\infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
+    $$\lim\limits_{n \to \infty}{\left( \dfrac{1 + a_{n + 1}}{a_n} \right)^n} \geq \euler$$
 
 \end{proof}
 
 \begin{proposition}
     
     设
-    $$\lim\limits_{n\to\infty}{a_n} = q, \quad |q| < 1$$
+    $$\lim\limits_{n \to \infty}{a_n} = q, \quad |q| < 1$$
     证明：
-    $$\lim\limits_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
+    $$\lim\limits_{n \to \infty}{(a_n + a_{n - 1}q + \cdots + a_1q^{n - 1})} = \dfrac{a}{1 - q}$$
 
 \end{proposition}
 
@@ -751,38 +754,38 @@
 
     $\forall \varepsilon > 0$，$\exists N_1 \in \mathbb{N}$，$n > N_1$时
     $$|a_n - a| < \dfrac{1 - |q|}{3(1 - q)}\varepsilon$$
-    因为$\lim\limits_{n\to\infty}{q^n} = 0$，则存在$N_2 \in \mathbb{N}$，$n > N_2$时
-    $$|q|^n < \dfrac{\varepsilon}{3N_1M|1-q|}, \quad |aq^n| < \dfrac{\varepsilon}{3}$$
+    因为$\lim\limits_{n \to \infty}{q^n} = 0$，则存在$N_2 \in \mathbb{N}$，$n > N_2$时
+    $$|q|^n < \dfrac{\varepsilon}{3N_1M|1 - q|}, \quad |aq^n| < \dfrac{\varepsilon}{3}$$
     因此当$n > N = N_1 + N_2 + 1$时，有
 
     \begin{align*}
-        & |(1 - q)(a_n + a_{n-1}q + \cdots + a_1q^{n-1} - a)| \\
-        = \ & \Big|(1 - q)[(a_n - a) + (a_{n-1} - a)q + \cdots + (a_{N_1 + 1} - a)q^{n - N_1 - 1} + \cdots + (a_1 - a)q^{n-1} - aq^n] \Big| \\
+        & |(1 - q)(a_n + a_{n - 1}q + \cdots + a_1q^{n - 1} - a)| \\
+        = \ & \Big|(1 - q)[(a_n - a) + (a_{n - 1} - a)q + \cdots + (a_{N_1 + 1} - a)q^{n - N_1 - 1} + \cdots + (a_1 - a)q^{n - 1} - aq^n] \Big| \\
         < \ & |1 - q| \left[ \dfrac{(1 - |q|)\varepsilon}{3(1 - q)} \cdot \dfrac{1 - |q|^{n - N_1}}{1 - |q|} + N_1M \dfrac{\varepsilon}{3N_1M|1 - q|} \right] + \dfrac{\varepsilon}{3} \\
         < \ & \dfrac{\varepsilon}{3} + \dfrac{\varepsilon}{3} + \dfrac{\varepsilon}{3} \\
         = \ & \varepsilon 
     \end{align*}
 
     所以
-    $$\lim\limits_{n\to\infty}{(1 - q)(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = a$$
+    $$\lim\limits_{n \to \infty}{(1 - q)(a_n + a_{n - 1}q + \cdots + a_1q^{n - 1})} = a$$
     又$1 - q \neq 0$，所以
-    $$\lim\limits_{n\to\infty}{(a_n + a_{n-1}q + \cdots + a_1q^{n-1})} = \dfrac{a}{1 - q}$$
+    $$\lim\limits_{n \to \infty}{(a_n + a_{n - 1}q + \cdots + a_1q^{n - 1})} = \dfrac{a}{1 - q}$$
 
 \end{proof}
 
 \begin{proposition}
 
     设数列$\{a_n\}$满足
-    $$a_n = \sum\limits_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}}, \quad n = 1,2,\cdots$$
+    $$a_n = \sum\limits_{k = 0}^{n}{\dfrac{1}{\binom{n}{k}}}, \quad n = 1,2,\cdots$$
     证明：
     
     \begin{enumerate}
 
         \item 
             当$n \geq 2$时，
-            $$a_n = \dfrac{n+1}{2n}a_n + 1$$
+            $$a_n = \dfrac{n + 1}{2n}a_n + 1$$
         
-        \item $$\lim\limits_{n\to\infty}{a_n} = 2$$
+        \item $$\lim\limits_{n \to \infty}{a_n} = 2$$
         
     \end{enumerate}
 
@@ -793,32 +796,32 @@
     \begin{enumerate}
 
         \item 
-            由$a_n = \dfrac{n+1}{2n}a_n + 1$知，
-            $$2a_n - a_{n-1} - 2 = \dfrac{a_{n-1}}{n}$$
-            $$a_n = \sum\limits_{k=0}^{n -1}{\dfrac{1}{\binom{n}{k}}} + 1$$
+            由$a_n = \dfrac{n + 1}{2n}a_n + 1$知，
+            $$2a_n - a_{n - 1} - 2 = \dfrac{a_{n - 1}}{n}$$
+            $$a_n = \sum\limits_{k = 0}^{n -1}{\dfrac{1}{\binom{n}{k}}} + 1$$
             所以
 
             \begin{align*}
-                2a_n - a_{n-1} - 2 & = \sum\limits_{k=0}^{n}{\dfrac{1}{\binom{n}{k}}} + \sum\limits_{k=0}^{n}{\binom{n}{k+1}} - \sum\limits_{k=0}^{n}{\binom{n-1}{k}} \\
-                & = \dfrac{k!(n-k)!}{n!} + \dfrac{(k+1)!(n-k+1)!}{n!} - \dfrac{(k-1)!(n-k-1)!}{(n-1)!} \\
-                & = \dfrac{k!(n-k-1)!}{n!} \\
-                & = \dfrac{1}{n} a_{n-1} 
+                2a_n - a_{n - 1} - 2 & = \sum\limits_{k = 0}^{n}{\dfrac{1}{\binom{n}{k}}} + \sum\limits_{k = 0}^{n}{\binom{n}{k + 1}} - \sum\limits_{k = 0}^{n}{\binom{n - 1}{k}} \\
+                & = \dfrac{k!(n - k)!}{n!} + \dfrac{(k + 1)!(n - k + 1)!}{n!} - \dfrac{(k - 1)!(n - k - 1)!}{(n - 1)!} \\
+                & = \dfrac{k!(n - k - 1)!}{n!} \\
+                & = \dfrac{1}{n} a_{n - 1} 
             \end{align*}
 
 
         \item 
             \begin{align*}
-                2(a_n - a_{n-1}) & = \dfrac{n+1}{n}a_{n-1} - \dfrac{n+2}{n+1} a_n \\
-                & = a_{n-1} - a_n + \dfrac{1}{n}a_{n-1} - \dfrac{1}{n + 1}a_n \\
-                & > (a_{n-1} - a_n) + \dfrac{1}{n + 1}(a_{n-1} - a_n) \\
-                & = \dfrac{n+2}{n+1}  (a_{n-1} - a_n) 
+                2(a_n - a_{n - 1}) & = \dfrac{n + 1}{n}a_{n - 1} - \dfrac{n + 2}{n + 1} a_n \\
+                & = a_{n - 1} - a_n + \dfrac{1}{n}a_{n - 1} - \dfrac{1}{n + 1}a_n \\
+                & > (a_{n - 1} - a_n) + \dfrac{1}{n + 1}(a_{n - 1} - a_n) \\
+                & = \dfrac{n + 2}{n + 1}  (a_{n - 1} - a_n) 
             \end{align*}
 
-            因为$a_1 = 2, a_2 = \dfrac{5}{2}, a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n+1}$\\
+            因为$a_1 = 2$， $a_2 = \dfrac{5}{2}$， $a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n + 1}$\\
             即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
-            $$\lim\limits_{n\to\infty}{a_n} = \lim\limits_{n\to\infty}{\dfrac{n+1}{2n}a_{n-1}+1}$$
+            $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{\dfrac{n + 1}{2n}a_{n - 1}+1}$$
             得
-            $$\lim\limits_{n\to\infty}{a_n} = 2$$
+            $$\lim\limits_{n \to \infty}{a_n} = 2$$
 
     \end{enumerate}
 
@@ -841,7 +844,7 @@
     $$\{i\alpha\} = i\alpha - \lfloor i\alpha \rfloor = j\alpha - \lfloor j\alpha \rfloor = \{j\alpha\}$$
     则有
     $$\alpha = \dfrac{\lfloor i\alpha \rfloor - \lfloor j\alpha \rfloor}{i - j} \in \mathbb{Q}$$
-    与题设矛盾，所以显然集合$S$是无穷集，且$S \subseteq [0,1]$。\\
+    与题设矛盾，所以显然集合$S$是无穷集，且$S \subseteq [0, 1]$。\\
     由\textup{Bolzano-Weierstrass}定理知，集合$S$至少存在一个聚点。因此易知，$\forall n \in \mathbb{N}$，$\exists i,\ j \in \mathbb{N}$使得
     $$0 < \{i\alpha\} - \{j\alpha\} < \dfrac{1}{n}$$
     则存在$M \in \mathbb{N}$使得
@@ -866,7 +869,7 @@
 
 \begin{proposition}
 
-    证明：数列$\{\sin{n}\}$在区间$[-1,1]$上稠密。
+    证明：数列$\{\sin{n}\}$在区间$[-1, 1]$上稠密。
 
 \end{proposition}
 
@@ -914,18 +917,18 @@
     \end{align*}
 
     易知
-    $$\lim\limits_{n\to\infty}{\dfrac{1}{n} \sqrt[n]{\dfrac{(n + 2)(n - 1)}{2}}} = 0$$
+    $$\lim\limits_{n \to \infty}{\dfrac{1}{n} \sqrt[n]{\dfrac{(n + 2)(n - 1)}{2}}} = 0$$
     又$a_n \leq 0$，则由夹逼定理得
-    $$0 \leq \lim\limits_{n\to\infty}{a_n} \leq \lim\limits_{n\to\infty}{\dfrac{1}{n} \sqrt[n]{\dfrac{(n + 2)(n - 1)}{2}}} = 0$$
+    $$0 \leq \lim\limits_{n \to \infty}{a_n} \leq \lim\limits_{n \to \infty}{\dfrac{1}{n} \sqrt[n]{\dfrac{(n + 2)(n - 1)}{2}}} = 0$$
     即
-    $$\lim\limits_{n\to\infty}{a_n} = 0$$
+    $$\lim\limits_{n \to \infty}{a_n} = 0$$
     
 \end{proof}
 
 \begin{proposition}
     
-    证明：若$p_k > 0$，$k = 1,\ 2,\ \cdots$，且$\lim\limits_{n\to \infty}{\dfrac{p_n}{p_1 + p_2 + \cdots + p_n}} = 0$，$\lim\limits_{n\to\infty}{a_n} = a$，则
-    $$\lim\limits_{n\to\infty}{\dfrac{p_1 a_n + p_2 a_{n-1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n}} = a$$
+    证明：若$p_k > 0$，$k = 1,\ 2,\ \cdots$，且$\lim\limits_{n\to \infty}{\dfrac{p_n}{p_1 + p_2 + \cdots + p_n}} = 0$，$\lim\limits_{n \to \infty}{a_n} = a$，则
+    $$\lim\limits_{n \to \infty}{\dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n}} = a$$
 
 \end{proposition}
 
@@ -940,7 +943,7 @@
     则当$n > N = N_1 + N_2$时有
 
     \begin{align*}
-        \left|\dfrac{p_1 a_n + p_2 a_{n-1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n} - a\right| & = \left| \dfrac{p_1 (a_n - a) + p_2 (a_{n-1} - a) + \cdots + p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
+        \left|\dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n} - a\right| & = \left| \dfrac{p_1 (a_n - a) + p_2 (a_{n - 1} - a) + \cdots + p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \leq \left| \dfrac{p_1 (a_n - a)}{p_1 + p_2 + \cdots + p_n} \right| + \cdots + \left| \dfrac{p_{n - N_2} (a_{N_2 + 1} - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \quad + \left| \dfrac{p_{n - N_2 + 1} (a_{N_2} - a)}{p_1 + p_2 + \cdots + p_n} \right| + \cdots + \left| \dfrac{p_n (a_1 - a)}{p_1 + p_2 + \cdots + p_n} \right| \\
         & \leq \left| \dfrac{(p_1 + p_2 + \cdots + p_{n - N_2})\varepsilon}{p_1 + p_2 + \cdots + p_n} \right| + 2M N_2 \varepsilon \\
@@ -948,34 +951,34 @@
     \end{align*}
 
     即
-    $$\lim\limits_{n\to\infty}{\dfrac{p_1 a_n + p_2 a_{n-1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n}} = a$$
+    $$\lim\limits_{n \to \infty}{\dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n}} = a$$
     
 \end{proof}
 
 \begin{proposition}
 
     计算
-    $$\lim\limits_{n\to\infty}{n\left(\int_{0}^{\frac{\pi}{4}}{\tan^n{\left(\dfrac{x}{n}\right)}}\diff x\right)^{\frac{1}{n}}}$$
+    $$\lim\limits_{n \to \infty}{n \left( \int_{0}^{\frac{\pi}{4}}{\tan^n{\left( \dfrac{x}{n} \right)}}\diff x \right)^{\frac{1}{n}}}$$
 
 \end{proposition}
 
 \begin{proof}
 
     易知
-    $$\int_{0}^{\frac{\pi}{4}}{\left(\dfrac{x}{n}\right)^n}\diff x \leq \int_{0}^{\frac{\pi}{4}}{\tan^n{\left(\dfrac{x}{n}\right)}}\diff x \leq \dfrac{\pi}{4} \tan^n{\left(\dfrac{\pi}{4n}\right)}$$
+    $$\int_{0}^{\frac{\pi}{4}}{\left( \dfrac{x}{n} \right)^n}\diff x \leq \int_{0}^{\frac{\pi}{4}}{\tan^n{\left( \dfrac{x}{n} \right)}}\diff x \leq \dfrac{\pi}{4} \tan^n {\left( \dfrac{\pi}{4n} \right)}$$
     因为
-    $$\lim\limits_{n\to\infty}{n \left( \int_{0}^{\frac{\pi}{4}}{\left(\dfrac{x}{n}\right)^n}\diff x \right)^{\frac{1}{n}}} = \lim\limits_{n\to\infty}{\dfrac{\pi}{4}\sqrt{\dfrac{\pi}{n + 1}}} = \dfrac{\pi}{4}$$
+    $$\lim\limits_{n \to \infty}{n \left( \int_{0}^{\frac{\pi}{4}}{\left( \dfrac{x}{n} \right)^n}\diff x \right)^{\frac{1}{n}}} = \lim\limits_{n \to \infty}{\dfrac{\pi}{4} \sqrt{\dfrac{\pi}{n + 1}}} = \dfrac{\pi}{4}$$
     又有
-    $$\lim\limits_{n\to\infty}{n \sqrt[n]{\dfrac{\pi}{4}\tan^n{\left( \dfrac{\pi}{4n} \right)}}} = \lim\limits_{n\to\infty}{\left(n \tan{\left(\dfrac{\pi}{4n}\right)} \cdot \sqrt[n]{\dfrac{\pi}{4}}\right)} = \dfrac{\pi}{4}$$
+    $$\lim\limits_{n \to \infty}{n \sqrt[n]{\dfrac{\pi}{4}\tan^n{\left( \dfrac{\pi}{4n} \right)}}} = \lim\limits_{n \to \infty}{\left( n \tan{\left( \dfrac{\pi}{4n} \right)} \cdot \sqrt[n]{\dfrac{\pi}{4}} \right)} = \dfrac{\pi}{4}$$
     则由夹逼定则得
-    $$\lim\limits_{n\to\infty}{n\left(\int_{0}^{\frac{\pi}{4}}{\tan^n{\left(\dfrac{x}{n}\right)}}\diff x\right)^{\frac{1}{n}}} = \dfrac{\pi}{4}$$
+    $$\lim\limits_{n \to \infty}{n \left( \int_{0}^{\frac{\pi}{4}}{\tan^n{\left( \dfrac{x}{n} \right)}}\diff x \right)^{\frac{1}{n}}} = \dfrac{\pi}{4}$$
 
 \end{proof}
 
 \begin{proposition}
 
-    已知$\lim\limits_{n\to\infty}{x_n} = 0$，用定义证明
-    $$\lim\limits_{n\to\infty}{\dfrac{\left(x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right)}{\ln n}} = 0$$
+    已知$\lim\limits_{n \to \infty}{x_n} = 0$，用定义证明
+    $$\lim\limits_{n \to \infty}{\dfrac{\left( x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n} \right)}{\ln n}} = 0$$
 
 \end{proposition}
 
@@ -984,14 +987,14 @@
     设$\max|x_n| = M$，且对任意$\varepsilon ' > 0$，存在一个$N_1(\varepsilon ')$，使得当$N > N_1(\varepsilon ')$时，$|x_k| \leq \varepsilon '$成立。则有
     
     \begin{align*}
-        \dfrac{\left|x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right|}{\ln n} & = \dfrac{\left| \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}x_k} + \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k}x_k}\right|}{\ln n} \\
-        & \leq \dfrac{\left| \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}x_k} \right| + \left| \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k}x_k}\right|}{\ln n} \\
-        & \leq \dfrac{ \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}\left| x_k \right|} + \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k} \left| x_k \right|}}{\ln n} \\
-        & \leq \dfrac{M \varepsilon ' + \left( \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k}} \right)\varepsilon '}{\ln n} \\
+        \dfrac{\left| x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n} \right|}{\ln n} & = \dfrac{\left| \sum\limits_{k = 1}^{N_1(\varepsilon')}{\frac{1}{n + 1 - k}x_k} + \sum\limits_{k = N_1(\varepsilon') + 1}^{n}{\frac{1}{n + 1 - k}x_k} \right|}{\ln n} \\
+        & \leq \dfrac{\left| \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}x_k} \right| + \left| \sum\limits_{k = N_1(\varepsilon') + 1}^{n}{\frac{1}{n + 1 - k}x_k} \right|}{\ln n} \\
+        & \leq \dfrac{ \sum\limits_{k = 1}^{N_1(\varepsilon ')}{\frac{1}{n + 1 - k}\left| x_k \right|} + \sum\limits_{k = N_1(\varepsilon ) + 1}^{n}{\frac{1}{n + 1 - k} \left| x_k \right|}}{\ln n} \\
+        & \leq \dfrac{M \varepsilon' + \left( \sum\limits_{k = N_1(\varepsilon ') + 1}^{n}{\frac{1}{n + 1 - k}} \right)\varepsilon'}{\ln n} \\
         & < (M + 1) \varepsilon
     \end{align*}
 
-    因此令$\varepsilon = (M + 1)\varepsilon '$，对于任意$\varepsilon >  0$，存在一个$N(\varepsilon) = N_1(\varepsilon') = N_1(\dfrac{\varepsilon}{M + 1})$，使得当$N > N(\varepsilon)$时
+    因此令$\varepsilon = (M + 1)\varepsilon'$，对于任意$\varepsilon >  0$，存在一个$N(\varepsilon) = N_1(\varepsilon') = N_1(\dfrac{\varepsilon}{M + 1})$，使得当$N > N(\varepsilon)$时
     $$\dfrac{\left|x_n + \frac{x_{n - 1}}{2} + \cdots + \frac{x_1}{n}\right|}{\ln n} < \varepsilon$$
 
 \end{proof}
@@ -1047,9 +1050,9 @@
 \begin{proof}
 
     因为$nx_n^2 = \dfrac{n}{\frac{1}{x_n^2}}$，由\textup{Stolz}定理知
-    $$\lim\limits_{n \to\infty}{nx_n^2} = \lim\limits_{n\to\infty}{\dfrac{n}{\frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{(n + 1) - n}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{1}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}}$$
+    $$\lim\limits_{n \to\infty}{nx_n^2} = \lim\limits_{n \to \infty}{\dfrac{n}{\frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{(n + 1) - n}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}} = \lim\limits_{n \to \infty}{\dfrac{1}{\frac{1}{x_{n + 1}^2} - \frac{1}{x_n^2}}}$$
     $$\dfrac{1}{x_{n + 1}^2} - \dfrac{1}{x_n^2} = \dfrac{1}{\sin^2{x_n}} - \dfrac{1}{x_n^2} = \dfrac{x_n^2 - \sin^2{x_n}}{x_n^2 \sin^2{x_n}}$$
-    易知$\lim\limits_{n\to\infty}{x_n} = 0$，所以
+    易知$\lim\limits_{n \to \infty}{x_n} = 0$，所以
     $$\lim\limits_{n \to \infty}{\dfrac{x_n^2 - \sin^2{x_n}}{x_n^2 \sin^2{x_n}}} = \lim\limits_{x \to 0}{\dfrac{x^2 - \sin^2{x}}{x^2 \sin^2{x}}} = \dfrac{1}{3}$$
     因此
     $$\lim\limits_{n \to\infty}{nx_n^2} = 3$$
@@ -1091,8 +1094,8 @@
     易知
     
     \begin{align*}
-        \lim\limits_{n \to +\infty } S_{n} & =  \lim\limits_{n\to +\infty} \sum\limits_{k = 1}^{n} \left[   \dfrac{1}{4k-3} - \dfrac{1}{4k-2} +  \dfrac{1}{4k-1} - \dfrac{1}{4k}  + \dfrac{1}{2} \left[  \dfrac{1}{2k-1} -\dfrac{1}{2k} \right]      \right] \\
-        & = \dfrac{3}{2} \lim\limits_{n \to + \infty} \sum\limits_{k = 1}^{n}  \left[  \dfrac{1}{2k-1} -\dfrac{1}{2k} \right] \\
+        \lim\limits_{n \to +\infty } S_{n} & =  \lim\limits_{n \to +\infty} \sum\limits_{k = 1}^{n} \left[ \dfrac{1}{4k-3} - \dfrac{1}{4k - 2} + \dfrac{1}{4k - 1} - \dfrac{1}{4k}  + \dfrac{1}{2} \left[ \dfrac{1}{2k - 1} - \dfrac{1}{2k} \right] \right] \\
+        & = \dfrac{3}{2} \lim\limits_{n \to + \infty} \sum\limits_{k = 1}^{n}  \left[  \dfrac{1}{2k - 1} -\dfrac{1}{2k} \right] \\
         & = \dfrac{3}{2} \ln 2
     \end{align*}
 
@@ -1112,7 +1115,7 @@
     \begin{align*}
         \left( 1 + \int_{0}^{1}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n & \geq \left( 1 + \int_{0}^{1}{\dfrac{\sin^n x}{x^n}}\diff x \right)^n \\
         & \geq \left( 1 + \int_{0}^{\frac{1}{\sqrt{n}}}{\dfrac{\sin^n{x}}{x^n}}\diff x \right)^n \\
-        & \geq \left(1 + \dfrac{5}{6\sqrt{n}}\right)^n \\
+        & \geq \left( 1 + \dfrac{5}{6\sqrt{n}} \right)^n \\
         & \geq \dfrac{5\sqrt{n}}{6}
     \end{align*}
 
@@ -1125,60 +1128,60 @@
 
 \begin{theorem}[Bernoulli不等式]
 
-    设$h>-1$，$n\in\mathbb{N}$，则成立不等式
-    $$(1+h)^n\geq1+nh$$
-    其中$n>1$时等号成立的充分必要条件时$h=0$.
+    设$h > -1$，$n \in \mathbb{N}$，则成立不等式
+    $$(1 + h)^n \geq 1 + nh$$
+    其中$n > 1$时等号成立的充分必要条件时$h = 0$.
 
 \end{theorem}
 
 \begin{proof}
     
-    $n=1$或$h=0$时不等式显然成立，下面只证明$n>1$和$h\neq 0$时的情况。\\
-    将$(1+h)^n-1$作因式分解，可以得到
-    $$(1+h)^n-1=h[1+(1+h)+(1+h)^2+\cdots+(1+h)^{n-1}]$$
-    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1+h)^n-1>nh$.\\
-    当$-1<h<0$时，右边方括号内第二项起都小于$1$，则$(1+h)^n-1<nh$，又因为$h<0$，\\
-    所以得到$(1+h)^n-1>nh$.\\
-    下证等号成立的条件，易知$A>0$，$A+B>0$，$n\in\mathbb{N}$时成立不等式
-    $$(A+B)^n\geq A^n + nA^{n-1}B$$
-    且$n>1$时等号成立的充分必要条件是$B=0$.
+    $n = 1$或$h = 0$时不等式显然成立，下面只证明$n>1$和$h\neq 0$时的情况。\\
+    将$(1 + h)^n - 1$作因式分解，可以得到
+    $$(1 + h)^n - 1 = h[1 + (1 + h) + (1 + h)^2 + \cdots + (1 + h)^{n - 1}]$$
+    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1+h)^n - 1>nh$.\\
+    当$-1 < h < 0$时，右边方括号内第二项起都小于$1$，则$(1+h)^n - 1 < nh$，又因为$h < 0$，\\
+    所以得到$(1 + h)^n - 1 > nh$.\\
+    下证等号成立的条件，易知$A > 0$，$A + B > 0$，$n \in \mathbb{N}$时成立不等式
+    $$(A + B)^n \geq A^n + nA^{n - 1}B$$
+    且$n>1$时等号成立的充分必要条件是$B = 0$.
 
 \end{proof}
 
 \begin{theorem}[算术平均值-几何平均值不等式]
     
-    设$a_1,a_2,\cdots,a_n$是$n$个非负实数，则成立不等式
-    $$\dfrac{a_1+a_2+\cdots+a_n}{n}\geq \sqrt[n]{a_1,a_2,\cdots,a_n}$$
-    其中等号成立的充分必要条件是$a_1=a_2=\cdots=a_n$.
+    设$a_1, a_2, \cdots, a_n$是$n$个非负实数，则成立不等式
+    $$\dfrac{a_1 + a_2 + \cdots + a_n}{n}\geq \sqrt[n]{a_1, a_2, \cdots, a_n}$$
+    其中等号成立的充分必要条件是$a_1 = a_2 = \cdots = a_n$.
 
 \end{theorem}
 
 \begin{proof}
     
-    显然，若$a_1,a_2,\cdots,a_n$中有$0$，则不等式成立，且此时等号成立的充分必要条件是$a_1=a_2=\cdots=a_n=0$.\\
-    下面只证$a_1,a_2,\cdots,a_n$全为正数时的情况。
-    $n=1$时不等式成立。\\
-    假设$n=k$时不等式成立，则$n=k+1$时有以下分解
-    $$\dfrac{a_1+a_2+\cdots+a_{k+1}}{k+1} = \dfrac{a_1+a_2+\cdots+a_{k}}{k}+ \dfrac{ka_{k+1}-(a_1+a_2+\cdots+a_k)}{k(k+1)}$$
+    显然，若$a_1, a_2,\cdots, a_n$中有$0$，则不等式成立，且此时等号成立的充分必要条件是$a_1 = a_2 = \cdots = a_n = 0$.\\
+    下面只证$a_1, a_2,\cdots, a_n$全为正数时的情况。
+    $n = 1$时不等式成立。\\
+    假设$n = k$时不等式成立，则$n = k + 1$时有以下分解
+    $$\dfrac{a_1 + a_2 + \cdots + a_{k + 1}}{k + 1} = \dfrac{a_1 + a_2 + \cdots + a_{k}}{k} + \dfrac{ka_{k + 1} - (a_1 + a_2 + \cdots + a_k)}{k(k + 1)}$$
     令
     
     \begin{align*}
-        A&=\dfrac{a_1+a_2+\cdots+a_{k}}{k}\\
-        B&=\dfrac{ka_{k+1}-(a_1+a_2+\cdots+a_k)}{k(k+1)}
+        A & = \dfrac{a_1 + a_2 + \cdots + a_{k}}{k} \\
+        B & = \dfrac{ka_{k + 1} - (a_1 + a_2 + \cdots + a_k)}{k(k + 1)}
     \end{align*}
 
     \begin{align*}
-        & \left(\dfrac{a_1+a_2+\cdots+a_{k+1}}{k+1}\right)^{k+1} \\
-        = & \  (A+B)^{k+1}\\
-        \geq & \  A^{k+1} + (k+1) A^k B\\
-        = & \ A^k(A+(k+1)B)\\
-        = & \ A^k a_{k+1}\\
-        \geq & \ a_1 a_2 \cdots a_{k+1}
+        & \left(\dfrac{a_1 + a_2 + \cdots + a_{k + 1}}{k + 1}\right)^{k + 1} \\
+        = & \  (A + B)^{k + 1}\\
+        \geq & \  A^{k + 1} + (k + 1) A^k B\\
+        = & \ A^k(A + (k + 1)B)\\
+        = & \ A^k a_{k + 1}\\
+        \geq & \ a_1 a_2 \cdots a_{k + 1}
     \end{align*}
 
     不等式等好成立时条件也可以由数学归纳法得到。\\
-    $n=1$时显然成立。\\
-    假设$n=k$时成立，则$n=k+1$时可以由以上推导过程观察得到等号成立的充分必要条件是
+    $n = 1$时显然成立。\\
+    假设$n = k$时成立，则$n = k + 1$时可以由以上推导过程观察得到等号成立的充分必要条件是
 
     \begin{align*}
         & a_1 = a_2 = \cdots = a_k \\
@@ -1191,10 +1194,10 @@
 
 \begin{theorem}[Young不等式]
 
-    $p,q\in\mathbb{R}^+$，且$\dfrac{1}{p}+\dfrac{1}{q}=1$，则
+    $p, q \in \mathbb{R}^+$，且$\dfrac{1}{p} + \dfrac{1}{q} = 1$，则
 
     \begin{align*}
-        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p > 1)\\
+        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p > 1) \\
         a^{\frac{1}{p}} b^{\frac{1}{q}} & \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p < 1)
     \end{align*}
 
@@ -1207,56 +1210,56 @@
     设函数
     $$f(x) = x^{\alpha} - \alpha x + \alpha - 1$$
     易证$\alpha < 1 $时，$f(x) \leq 0$；$\alpha \geq 1$时，$f(x) \geq 0$.
-    令$x=\dfrac{a}{b}$，则
+    令$x = \dfrac{a}{b}$，则
     
     \begin{align*}
-        &\left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \leq 0 \quad (\alpha < 1)\\
-        &\left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \geq 0 \quad (\alpha \geq 1)
+        & \left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \leq 0 \quad (\alpha < 1) \\
+        & \left( \dfrac{a}{b} \right)^{\alpha} - \alpha \left( \dfrac{a}{b} \right) + \alpha - 1 \geq 0 \quad (\alpha \geq 1)
     \end{align*}
 
     令$\alpha = \dfrac{1}{p}$，有
 
     \begin{align*}
-        a^{\frac{1}{p}}b^{\frac{1}{q}}&\leq\dfrac{1}{p}a+\dfrac{1}{q}b\quad(p>1)\\
-        a^{\frac{1}{p}}b^{\frac{1}{q}}&\geq\dfrac{1}{p}a+\dfrac{1}{q}b\quad(p<1)
+        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p>1) \\
+        a^{\frac{1}{p}} b^{\frac{1}{q} }& \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p<1)
     \end{align*}
 
 \end{proof}
 
 \begin{theorem}[H{\H o}lder不等式]
     
-    $p,q\in\mathbb{R}^+$，且$\dfrac{1}{p}+\dfrac{1}{q}=1$，则
-    $$\sum{x_i y_i} \leq \left(\sum{{x_i}^{p}}\right)^{\frac{1}{p}} \left(\sum{{y_i}^{q}}\right)^{\frac{1}{q}}$$
+    $p, q \in \mathbb{R}^+$，且$\dfrac{1}{p} + \dfrac{1}{q} = 1$，则
+    $$\sum{x_i y_i} \leq \left( \sum{{x_i}^{p}} \right)^{\frac{1}{p}} \left( \sum{{y_i}^{q}} \right)^{\frac{1}{q}}$$
     其中，$\{x_i\}$和$\{y_i\}$均为非负数。
 
 \end{theorem}
 
 \begin{proof}
 
-    令$X=\sum{{x_i}^p}$，$Y=\sum{{y_i}^q}$.
+    令$X = \sum{{x_i}^p}$，$Y = \sum{{y_i}^q}$.
     由\textup{Young}不等式得
-    $$\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}=\left(\dfrac{{x_i}^p}{X}\right)^{\frac{1}{p}}\left(\dfrac{{y_i}^q}{Y}\right)^{\frac{1}{q}}\leq \dfrac{1}{p}\dfrac{{x_i}^p}{X} + \dfrac{1}{q}\dfrac{{y_i}^q}{Y}$$
-    $$\sum{\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}} \leq \dfrac{1}{p}\dfrac{\sum{{x_i}^p}}{X} + \dfrac{1}{q}\dfrac{\sum{{y_i}^q}}{Y} = \dfrac{1}{p}+\dfrac{1}{q}=1 $$
+    $$\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}} = \left( \dfrac{{x_i}^p}{X} \right)^{\frac{1}{p}}\left( \dfrac{{y_i}^q}{Y} \right)^{\frac{1}{q}}\leq \dfrac{1}{p}\dfrac{{x_i}^p}{X} + \dfrac{1}{q}\dfrac{{y_i}^q}{Y}$$
+    $$\sum{\dfrac{x_i y_i}{X^{\frac{1}{p}}Y^{\frac{1}{q}}}} \leq \dfrac{1}{p}\dfrac{\sum{{x_i}^p}}{X} + \dfrac{1}{q}\dfrac{\sum{{y_i}^q}}{Y} = \dfrac{1}{p}+\dfrac{1}{q} = 1 $$
     $$\sum{x_i y_i} \leq X^{\frac{1}{p}} Y^{\frac{1}{q}} = (\sum{{x_i}^{p}})^{\frac{1}{p}} (\sum{{y_i}^{q}})^{\frac{1}{q}}$$
 
 \end{proof}
 
 \begin{theorem}[Minkowski不等式]
 
-    设$p\in\mathbb{R}^+$
-    $$\left( \sum{(x_i + y_i)}^p \right) ^{\frac{1}{p}} \leq \left(\sum{{x_i}^p}\right)^{\frac{1}{p}} + \left(\sum{{y_i}^{p}}\right)^{\frac{1}{p}}$$
+    设$p \in \mathbb{R}^+$
+    $$\left( \sum{(x_i + y_i)}^p \right) ^{\frac{1}{p}} \leq \left( \sum{{x_i}^p} \right)^{\frac{1}{p}} + \left( \sum{{y_i}^{p}} \right)^{\frac{1}{p}}$$
     其中，$\{x_i\}$和$\{y_i\}$均为非负数。
 
 \end{theorem}
 
 \begin{proof}
 
-    $$\sum{(x_i + y_i)}^p = \left( \sum{(x_i + y_i)}^{p-1} \right) (x_i + y_i) = x_i \sum{(x_i + y_i)}^{p-1} + y_i \sum{(x_i+ y_i)^{p-1}}$$
+    $$\sum{(x_i + y_i)}^p = \left( \sum{(x_i + y_i)}^{p-1} \right) (x_i + y_i) = x_i \sum{(x_i + y_i)}^{p-1} + y_i \sum{(x_i + y_i)^{p-1}}$$
     由\textup{H{\H o}lder}不等式得
     
     \begin{align*}
-        \sum{(x_i + y_i)}^p &\leq \left(\sum{{x_i}^p}\right)^{\frac{1}{p}} \left(\sum{(x_i + y_i)^{q(p-1)}}\right)^{\frac{1}{q}} + \left(\sum{{y_i}^q}\right)^{\frac{1}{p}} \left(\sum{(x_i + y_i)^{q(p-1)}}\right)^{\frac{1}{q}}\\
-        &= \left( \sum{(x_i + y_i)}^p \right) ^{\frac{1}{q}} \left( \left(\sum{{x_i}^p}\right)^{\frac{1}{p}}  + \left(\sum{{y_i}^{p}}\right)^{\frac{1}{p}} \right)
+        \sum{(x_i + y_i)}^p & \leq \left( \sum{{x_i}^p} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p - 1)}} \right)^{\frac{1}{q}} + \left( \sum{{y_i}^q} \right)^{\frac{1}{p}} \left( \sum{(x_i + y_i)^{q(p-1)}} \right)^{\frac{1}{q}} \\
+        & = \left( \sum{(x_i + y_i)}^p \right) ^{\frac{1}{q}} \left( \left( \sum{{x_i}^p} \right)^{\frac{1}{p}}  + \left( \sum{{y_i}^{p}} \right)^{\frac{1}{p}} \right)
     \end{align*}
 
 \end{proof}
@@ -1266,14 +1269,14 @@
     \begin{enumerate}
         
         \item 
-            设$F\in\mathbb{C}[a,b]$，处处大于$0$，且单调减少，则有
-            $$ \int_{a}^{b}{F(x)}\diff x\int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x $$
+            设$F \in C[a,b]$，处处大于$0$，且单调减少，则有
+            $$\int_{a}^{b}{F(x)}\diff x \int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x$$
 
         \item 
-            设$f,g$在区间$[a,b]$上对于任何$x,y$有
-            $$ (f(x)-f(y))(g(x)-g(y))\geq 0 $$
-            又设$p\in\mathbb{R}[a,b]$，且处处大于$0$. 则有
-            $$ \int_{a}^{b}{p(x)f(x)}\diff x\int_{a}^{b}{p(x)g(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x \int_{a}^{b}{p(x)f(x)g(x)}\diff x $$
+            设$f$，$g$在区间$[a, b]$上对于任何$x$， $y$有
+            $$(f(x) - f(y))(g(x) - g(y)) \geq 0 $$
+            又设$p(x)$是区间$[a, b]$上的黎曼可积函数，且处处大于$0$. 则有
+            $$\int_{a}^{b}{p(x)f(x)}\diff x \int_{a}^{b}{p(x)g(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x \int_{a}^{b}{p(x)f(x)g(x)}\diff x$$
 
     \end{enumerate}
 
@@ -1287,15 +1290,15 @@
             令两边第二项积分变量替换为$y$，化为二重积分，得
         
             \begin{align*}
-                I_1 &= \int_{a}^{b}{\int_{a}^{b}{F(x)yF^2(y)-F^(x)yF(y)}\diff x}\diff y\\
-                &= \int_{a}^{b}{\int_{a}^{b}{yF(x)F(y)(F(y)-F(x))}\diff x}\diff y
+                I_1 & = \int_{a}^{b}{\int_{a}^{b}{F(x)yF^2(y) - F^(x)yF(y)}\diff x}\diff y \\
+                & = \int_{a}^{b}{\int_{a}^{b}{yF(x)F(y)(F(y) - F(x))}\diff x}\diff y
             \end{align*}
 
             再令$x$与$y$交换，得
-            $$I_2 = \int_{a}^{b}{\int_{a}^{b}{xF(x)F(y)(F(x)-F(y))}\diff x}\diff y$$
-            因为积分区域关于$x=y$对称，则
-            $$2I = I_1 + I_2 =  \int_{a}^{b}{\int_{a}^{b}{F(x)F(y)(F(x)-F(y))}\diff x}\diff y$$
-            因为$F(x)$单调减少且处处大于$0$，所以$F(x)F(y)(F(x)-F(y)) \leq 0$，即$I\leq 0$.
+            $$I_2 = \int_{a}^{b}{\int_{a}^{b}{xF(x)F(y)(F(x) - F(y))}\diff x}\diff y$$
+            因为积分区域关于$x = y$对称，则
+            $$2I = I_1 + I_2 = \int_{a}^{b}{\int_{a}^{b}{F(x)F(y)(F(x) - F(y))}\diff x}\diff y$$
+            因为$F(x)$单调减少且处处大于$0$，所以$F(x)F(y)(F(x) - F(y)) \leq 0$，即$I \leq 0$.
             则
             $$ \int_{a}^{b}{F(x)}\diff x\int_{a}^{b}{xF^2(x)}\diff x \leq \int_{a}^{b}{F^2(x)}\diff x \int_{a}^{b}{xF(x)}\diff x $$
 
@@ -1307,10 +1310,10 @@
 
 \begin{theorem}[Bellman-Gronwall不等式]
 
-    设当$x\geq 0$时，$f(x)$，$g(x)$为非负连续函数，且有
-    $$f(x)\leq A + \int_{0}^{x}{f(t)g(t)}\diff t$$
-    其中$A>0$.\\
-    则当$x\geq 0$时
+    设当$x \geq 0$时，$f(x)$，$g(x)$为非负连续函数，且有
+    $$f(x) \leq A + \int_{0}^{x}{f(t)g(t)}\diff t$$
+    其中$A > 0$. \\
+    则当$x \geq 0$时
     $$ f(x) \leq A \euler^{\int_{0}^{x}{g(t)}\diff t} $$
 
 \end{theorem}
@@ -1320,9 +1323,9 @@
     由题设得
 
     \begin{align*}
-        \dfrac{f(x)}{A+\int_{0}^{x}{f(t)g(t)}\diff t} & \leq 1\\
-        \dfrac{f(x)g(x)}{A+\int_{0}^{x}{f(t)g(t)}\diff t} & \leq g(x)\\
-        \int_{0}^{x}{\dfrac{f(x)g(x)}{A+\int_{0}^{x}{f(t)g(t)}\diff t}}\diff x & \leq \ln A + \int_{0}^{x}{g(t)}\diff t
+        \dfrac{f(x)}{A + \int_{0}^{x}{f(t)g(t)}\diff t} & \leq 1 \\
+        \dfrac{f(x)g(x)}{A + \int_{0}^{x}{f(t)g(t)}\diff t} & \leq g(x) \\
+        \int_{0}^{x}{\dfrac{f(x)g(x)}{A + \int_{0}^{x}{f(t)g(t)}\diff t}}\diff x & \leq \ln A + \int_{0}^{x}{g(t)}\diff t
     \end{align*}
 
     即
@@ -1332,27 +1335,27 @@
 
 \begin{theorem}
     
-    设$f\in\mathbb{R}[a,b]$，且$0<m\leq f(x) \leq M$，则有
-    $$ \int_{a}^{b}{\dfrac{1}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M+m)^2}{4Mm}(b-a)^2 $$
+    设$f$是区间$[a, b]$上的黎曼可积函数，且$0 < m \leq f(x) \leq M$，则有
+    $$\int_{a}^{b}{\dfrac{1}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M + m)^2}{4Mm}(b - a)^2 $$
 
 \end{theorem}
 
 \begin{proof}
     
-    左右两边同乘$MN$，得
-    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M+m)^2}{4}(b-a)^2$$
+    左右两边同乘$Mm$，得
+    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M + m)^2}{4}(b - a)^2$$
     由均值不等式得
 
     \begin{align*}
-        \sqrt{\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x} \sqrt{\int_{a}^{b}{f(x)}\diff x} & \leq \dfrac{1}{2} \int_{a}^{b}{\left[\dfrac{Mm}{f(x)}+f(x)\right]}\diff x\\
-        & = \dfrac{1}{2} \int_{a}^{b}{\left[\dfrac{(f(x)-M)(f(x)-m)}{f(x)}+(M+m)\right]}\diff x\\
-        & \leq \dfrac{1}{2} \int_{a}^{b}{(M+m)}\diff x\\
-        & = \dfrac{1}{2}(b-a)(M+m)
+        \sqrt{\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x} \sqrt{\int_{a}^{b}{f(x)}\diff x} & \leq \dfrac{1}{2} \int_{a}^{b}{\left[ \dfrac{Mm}{f(x)} + f(x) \right]}\diff x \\
+        & = \dfrac{1}{2} \int_{a}^{b}{\left[ \dfrac{(f(x) - M)(f(x) - m)}{f(x)} + (M + m) \right]}\diff x \\
+        & \leq \dfrac{1}{2} \int_{a}^{b}{(M + m)}\diff x \\
+        & = \dfrac{1}{2}(b - a)(M + m)
     \end{align*}
 
     则有
-    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq\dfrac{1}{4} (b-a)^2(M+m)^2$$
+    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq\dfrac{1}{4} (b - a)^2(M + m)^2$$
     即
-    $$ \int_{a}^{b}{\dfrac{1}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M+m)^2}{4Mm}(b-a)^2 $$
+    $$ \int_{a}^{b}{\dfrac{1}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M + m)^2}{4Mm}(b - a)^2 $$
 
 \end{proof}

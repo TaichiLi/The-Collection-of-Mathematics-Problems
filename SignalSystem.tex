@@ -35,7 +35,7 @@
 \begin{proposition}
 
     考虑一个离散时间系统$X_1$，其单位脉冲响应为
-    $$h[n] = \left(\dfrac{1}{5}\right)^nu[n]$$
+    $$h[n] = \left( \dfrac{1}{5} \right)^nu[n]$$
 
     \begin{enumerate}
         
@@ -53,11 +53,11 @@
         
         \item 
             由题设，因为
-            $$h[n] - Ah[n - 1]  = \left(\dfrac{1}{5}\right)^nu[n] - A\left(\dfrac{1}{5}\right)^{n - 1}u[n - 1]$$
+            $$h[n] - Ah[n - 1]  = \left( \dfrac{1}{5} \right)^nu[n] - A \left( \dfrac{1}{5} \right)^{n - 1}u[n - 1]$$
             即
             $$h[n] - Ah[n - 1] = \left\{
                         \begin{aligned}
-                            & \left(\dfrac{1}{5}\right)^n - A\left(\dfrac{1}{5}\right)^{n - 1}, && n \geq 0 \\
+                            & \left( dfrac{1}{5} \right)^n - A \left( \dfrac{1}{5} \right)^{n - 1}, && n \geq 0 \\
                             & 1, && n = 0 \\
                             & 0, && n \leq -1 
                         \end{aligned}
@@ -135,7 +135,7 @@
 \begin{proposition}
     
     设$Y(\euler^{\image \omega})$的逆变换是
-    $$y[n] = \left(\dfrac{\sin{\omega_c n}}{\pi n}\right)^2$$
+    $$y[n] = \left( \dfrac{\sin{\omega_c n}}{\pi n}\right)^2$$
     其中$0 < \omega_c < \pi$. 试确定$\omega_c$的值，以保证
     $$Y(\euler^{\image \pi}) = \dfrac{1}{2}$$
 
@@ -164,8 +164,8 @@
     
     \begin{align*}
         Y(\euler^{\image \pi}) & = \dfrac{1}{2\pi} \int_{\pi -\omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \\
-        & = \dfrac{1}{2\pi} \left[\int_{\pi -\omega_c}^{\omega_c}{X(\euler^{\image \theta})}\diff \theta + \int_{2\pi - \omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \right] \\
-        & = \dfrac{1}{2\pi} \left(2\omega_c - \pi + 2\omega_c - \pi\right) \\
+        & = \dfrac{1}{2\pi} \left[ \int_{\pi -\omega_c}^{\omega_c}{X(\euler^{\image \theta})}\diff \theta + \int_{2\pi - \omega_c}^{\pi + \omega_c}{X(\euler^{\image \theta})}\diff \theta \right] \\
+        & = \dfrac{1}{2\pi} \left( 2\omega_c - \pi + 2\omega_c - \pi \right) \\
         & = \dfrac{1}{2} 
     \end{align*}
 
@@ -175,7 +175,7 @@
 
 \begin{proposition}
 
-    $$X(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}}\left( \dfrac{\sin{\frac{3}{2}\omega}}{\sin{\frac{\omega}{2}}}\right) + 5\pi \delta(\omega), \quad -\pi < \omega \leq \pi$$
+    $$X(\euler^{\image \omega}) = \dfrac{1}{1 - \euler^{-\image \omega}} \left( \dfrac{\sin{\frac{3}{2}\omega}}{\sin{\frac{\omega}{2}}} \right) + 5\pi \delta(\omega), \quad -\pi < \omega \leq \pi$$
     求$x[n]$
 
 \end{proposition}
@@ -212,7 +212,7 @@
 
     采用离散时间滤波实现连续时间滤波，假定所用的采样周期为$T$，输入$x_c(t)$为带限信号，而有$X_c(\image \omega) = 0$，$|\omega| \geq \dfrac{\pi}{T}$。
     若整个系统具有
-    $$y_c(t) = \dfrac{\diff}{\diff t}x_c\left(t - \dfrac{T}{2}\right)$$
+    $$y_c(t) = \dfrac{\diff}{\diff t} x_c \left(t - \dfrac{T}{2} \right)$$
     试求离散时间滤波器的单位脉冲响应$h[n]$。
 
 \end{proposition}
@@ -231,13 +231,13 @@
         \right.
     $$
     所以
-    $$H_d(\euler^{\image \omega T}) = H_c\left(\dfrac{\image \omega}{T}\right) = \image \dfrac{\omega}{T} \euler^{-\frac{\image \omega}{2}}, \quad |\omega| \leq \pi$$
+    $$H_d(\euler^{\image \omega T}) = H_c \left( \dfrac{\image \omega}{T} \right) = \image \dfrac{\omega}{T} \euler^{-\frac{\image \omega}{2}}, \quad |\omega| \leq \pi$$
     由离散时间傅里叶逆变换公式得
     
     \begin{align*}
         h[n] & = \dfrac{1}{2\pi} \int_{2\pi}{H_d(\euler^{\image \omega})\euler^{\image \omega n}}\diff \omega \\
         & = \dfrac{1}{2\pi} \int_{\pi}^{-\pi}{\image \dfrac{\omega}{T} \euler^{-\frac{\image \omega}{2}} \euler^{\image \omega n}}\diff \omega \\
-        & = - \dfrac{\sin{\left[\pi (n - \dfrac{1}{2})\right]}}{\pi T \left(n - \dfrac{1}{2}\right)^2}
+        & = - \dfrac{\sin{\left[\pi (n - \dfrac{1}{2}) \right]}}{\pi T \left( n - \dfrac{1}{2} \right)^2}
     \end{align*}
 
 \end{proof}
@@ -310,9 +310,9 @@
 
         \item $x(t) = 0,\ t < 0$
         
-        \item $x\left(\dfrac{k}{80}\right) = 0, \ k = 1, 2, 3, \cdots$
+        \item $x \left( \dfrac{k}{80} \right) = 0, \ k = 1, 2, 3, \cdots$
         
-        \item $x\left(\dfrac{1}{160}\right) = \euler^{-120}$
+        \item $x \left( \dfrac{1}{160} \right) = \euler^{-120}$
         
    \end{enumerate}
 
@@ -341,9 +341,9 @@
     
     \begin{enumerate}
 
-        \item $$(1 + z^{-1}) / \left(1 + \frac{1}{3}z^{-1}\right) = \left(1 + \dfrac{2}{3}z^{-1} - \dfrac{2}{9}z^{-2}\right)$$
+        \item $$(1 + z^{-1}) / \left( 1 + \frac{1}{3}z^{-1} \right) = \left( 1 + \dfrac{2}{3}z^{-1} - \dfrac{2}{9}z^{-2} \right)$$
         
-        \item $$(z^{-1} + 1) / \left(\frac{1}{3}z^{-1} + 1\right) = (3 - 6z^{1} + 18z^{2})$$
+        \item $$(z^{-1} + 1) / \left( \frac{1}{3}z^{-1} + 1 \right) = (3 - 6z^{1} + 18z^{2})$$
 
     \end{enumerate}
 
