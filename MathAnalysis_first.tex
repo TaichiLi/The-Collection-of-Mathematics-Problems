@@ -111,7 +111,7 @@
 
 \begin{proof} 
 
-    $\forall A > 0$，由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n>N$时，$a_n > 2A + 2$. \\
+    $\forall A > 0$，由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，故$\exists N_1 \in \mathbb{N}$，$n > N$时，$a_n > 2A + 2$. \\
     又
     $$\lim\limits_{n \to \infty}{\dfrac{n - N_1}{n}} = 1 > \dfrac{1}{2}$$
     $$\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = 0 > -1$$
@@ -140,20 +140,20 @@
 
 \begin{proof}
     
-    $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
+    $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$时
     $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l \right| < \varepsilon$$
-    $$(l - \varepsilon)(a_n - a_{n + 1})<b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
-    任取$m>n$，将上式中$n$替换为$n + 1$，$n + 2$，$n + 3$，$\cdots$，$m - 1$，有
+    $$(l - \varepsilon)(a_n - a_{n + 1}) < b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
+    任取$m > n$，将上式中$n$替换为$n + 1$，$n + 2$，$n + 3$，$\cdots$，$m - 1$，有
 
     \begin{align*}
-        &(l - \varepsilon)(a_{n + 1} - a_{n + 2}) < b_{n + 1} - b_{n + 2}<(l + \varepsilon)(a_{n + 1} - a_{n + 2}) \\
-        &(l - \varepsilon)(a_{n + 2} - a_{n + 3}) < b_{n + 2} - b_{n + 3}<(l + \varepsilon)(a_{n + 2} - a_{n + 3}) \\
+        &(l - \varepsilon)(a_{n + 1} - a_{n + 2}) < b_{n + 1} - b_{n + 2} < (l + \varepsilon)(a_{n + 1} - a_{n + 2}) \\
+        &(l - \varepsilon)(a_{n + 2} - a_{n + 3}) < b_{n + 2} - b_{n + 3} < (l + \varepsilon)(a_{n + 2} - a_{n + 3}) \\
         & \vdots \\
         &(l - \varepsilon)(a_{m - 1} - a_{m}) < b_{m - 1} - b_{m} < (l + \varepsilon)(a_{m - 1} - a_{m})
     \end{align*}
 
     将上式相加得到
-    $$(l - \varepsilon)(a_{n} - a_{m})<b_{n} - b_{m}<(l + \varepsilon)(a_{n} - a_{m})$$
+    $$(l - \varepsilon)(a_{n} - a_{m}) < b_{n} - b_{m} < (l + \varepsilon)(a_{n} - a_{m})$$
     $$\left| \dfrac{b_n - b_{m}}{a_n - a_{m}} - l \right| < \varepsilon$$
     对于$m$，令$m \to +\infty$，有
     $$\lim\limits_{m \to \infty}{a_m} = \lim\limits_{m \to \infty}{b_m} =  0$$
@@ -179,13 +179,13 @@
 
         \item
             $l$为有限值时。\\
-            $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
+            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$时
             $$\left| \dfrac{b_n - b_{n + 1}}{a_n - a_{n + 1}} - l \right| < \varepsilon$$
             $$(l - \varepsilon)(a_n - a_{n + 1}) < b_n - b_{n + 1} < (l + \varepsilon)(a_n - a_{n + 1})$$
             取定$n$，将上式中$n$替换为$N$，$N + 1$，$N + 2$，$\cdots$，$n - 1$，有
 
             \begin{align*}
-                & (l - \varepsilon)(a_{N} - a_{N + 1})<b_{N} - b_{N + 1} < (l + \varepsilon)(a_{N} - a_{N + 1}) \\
+                & (l - \varepsilon)(a_{N} - a_{N + 1}) < b_{N} - b_{N + 1} < (l + \varepsilon)(a_{N} - a_{N + 1}) \\
                 & (l - \varepsilon)(a_{N + 1} - a_{N + 2}) < b_{N + 1} - b_{N + 2} < (l + \varepsilon)(a_{N + 1} - a_{N + 2}) \\
                 & \vdots \\
                 & (l - \varepsilon)(a_{n - 1} - a_{n}) < b_{n} - b_{n} < (l + \varepsilon)(a_{n - 1} - a_{n})
@@ -198,12 +198,12 @@
             由于$\lim\limits_{n \to \infty}{a_n} = +\infty$，$\exists N_1 \in \mathbb{N}$，使得当$n > N_1$时成立
             $$0 < 1 - \dfrac{a_N}{a_n} < 2$$
             $$\left| \dfrac{b_N - la_N}{a_n} \right| < \varepsilon$$
-            则当$n>\max\{N_1, N\}$时有
+            则当$n > \max\{N_1, N\}$时有
             $$\left| \dfrac{b_n}{a_n} - l \right| < 3\varepsilon$$
 
         \item
             $l$为$+\infty$时。\\
-            $\forall \varepsilon>0$，$\exists N \in \mathbb{N}$，$n > N$时
+            $\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$时
             $$b_{n + 1} - b_n > a_{n + 1} - a_n$$
             由\textup{(1)}可知，
             $$b_{n + 1} - b_N > a_{n + 1} - a_n$$
@@ -293,7 +293,7 @@
 
     因为$\lim\limits_{n \to \infty}{a_n} =  0$，则总存在$p \in \mathbb{N}$，
     使得
-    $$\sum\limits_{k = n + 1}^{n + p}{b_k}\geq\dfrac{1}{2}$$
+    $$\sum\limits_{k = n + 1}^{n + p}{b_k} \geq \dfrac{1}{2}$$
     所以$\sum\limits_{n = 1}^{\infty}{b_n}$发散。
 
 \end{proof}
@@ -361,7 +361,7 @@
         & \leq \dfrac{S_{n + p + 1} - S_{n}}{S_{n}}
     \end{align*}
 
-    设$\sum\limits_{n = 1}^{\infty}{a_n} = S$，则$\forall \varepsilon >0$，$\exists N\in\mathbb{N}$，$n>N$时，$|S_n - S|<\varepsilon$. \\
+    设$\sum\limits_{n = 1}^{\infty}{a_n} = S$，则$\forall \varepsilon > 0$，$\exists N\in\mathbb{N}$，$n > N$时，$|S_n - S| < \varepsilon$. \\
     则有
 
     \begin{align*}
@@ -391,11 +391,11 @@
 
         \item 
             正项级数$\sum\limits_{n = 1}^{\infty}{a_n}$收敛的充分必要条件时存在正数列$\{b_n\}$和正数$\delta$，使得当$n$充分大时有
-            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1}\geq \delta >0$$
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \geq \delta > 0$$
 
         \item 
             正项级数$\sum\limits_{n = 1}^{\infty}{a_n}$发散的充分必要条件时存在发散的正项级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{b_n}}$，使得当$n$充分大时有
-            $$b_n  \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1}\leq 0$$
+            $$b_n  \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \leq 0$$
 
     \end{enumerate}
 
@@ -407,8 +407,8 @@
 
         \item   
             先证充分性。\\
-            由$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \geq \delta >0$得
-            $$a_nb_n - a_{n + 1}b_{n + 1}\geq \delta a_{n + 1}$$
+            由$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \geq \delta > 0$得
+            $$a_nb_n - a_{n + 1}b_{n + 1} \geq \delta a_{n + 1}$$
             $$a_{n + 1}\ leq \dfrac{1}{\delta}(a_nb_n - a_{n + 1}b_{n + 1})$$
             不妨设$n \geq 1$时上式成立，则
 
@@ -425,7 +425,7 @@
             $$b_n = \dfrac{R_n}{a_n}$$
             其中$R_n$为$\sum\limits_{n = 1}^{\infty}{a_n}$的余项，即
             $$R_n = S - S_n$$
-            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{R_n}{a_{n + 1}} - \dfrac{R_{n + 1}}{a_{n + 1}} = 1>0$$
+            $$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} = \dfrac{R_n}{a_{n + 1}} - \dfrac{R_{n + 1}}{a_{n + 1}} = 1 > 0$$
             必要性得证。
 
         \item   
@@ -610,7 +610,7 @@
 
 \begin{proposition}
 
-    设$a_1,a_2>0$，$a_{n + 1} = \dfrac{2}{a_n + a_{n - 1}}$，证明：$\{a_n\}$收敛。
+    设$a_1,a_2 > 0$，$a_{n + 1} = \dfrac{2}{a_n + a_{n - 1}}$，证明：$\{a_n\}$收敛。
 
 \end{proposition}
 
@@ -719,10 +719,10 @@
 \begin{proof}
 
     设$s_k = \left( \dfrac{1 + a_{k + 1}}{a_k} \right)^k$，则$s_k \geq 0$，且$\sup\limits_{k \geq n}\{s_k\}$对$n$不增。\\
-    则$\sup\limits_{k\geq n}\{s_k\}$对$n$极限存在，设
-    $$\lim\limits_{n \to \infty}{\sup_{k\geq n}{\{a_k\}}} = l >\euler$$
+    则$\sup\limits_{k \geq n}\{s_k\}$对$n$极限存在，设
+    $$\lim\limits_{n \to \infty}{\sup_{k \geq n}{\{a_k\}}} = l > \euler$$
     则对任意$0 < \varepsilon < l - \euler$，选取$N \in \mathbb{N}$，$n > N$时
-    $$l \leq \sup_{k\geq n }{\{s_k\}} < \euler - \varepsilon$$
+    $$l \leq \sup_{k \geq n }{\{s_k\}} < \euler - \varepsilon$$
     我们有
     $$\lim\limits_{n \to \infty}{\left( 1 + \dfrac{1}{n} \right)^n} = \euler$$
     令
@@ -730,9 +730,9 @@
     选取$N' \in \mathbb{N}$，$n > N'$时
     $$\euler - \varepsilon < r_n < \euler + \varepsilon$$
     令$M = \max\{N,N'\}$，
-    $$s_n \leq \sup_{k\geq n}\{s_k\} < r_n, \quad \forall n > M$$
+    $$s_n \leq \sup_{k \geq n}\{s_k\} < r_n, \quad \forall n > M$$
     进一步有
-    $$s_n \leq \sup_{k\geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
+    $$s_n \leq \sup_{k \geq n}\{a_k\} \leq r_n,\quad \forall n > M$$
     则有
     $$\dfrac{1}{n + 1} < \dfrac{a_n}{n} - \dfrac{a_{n + 1}}{n + 1} < \dfrac{a_{M + 1}}{M + 1}, \quad n > M$$
     $$\sum\limits_{k = M + 1}^{m - 1}{\dfrac{1}{k + 1}} < \dfrac{a_{M + 1}}{M + 1} - \dfrac{a_m}{m} < \dfrac{a_{M + 1}}{M + 1}$$
@@ -1136,22 +1136,22 @@
 
 \begin{proof}
     
-    $n = 1$或$h = 0$时不等式显然成立，下面只证明$n>1$和$h\neq 0$时的情况。\\
+    $n = 1$或$h = 0$时不等式显然成立，下面只证明$n > 1$和$h\neq 0$时的情况。\\
     将$(1 + h)^n - 1$作因式分解，可以得到
     $$(1 + h)^n - 1 = h[1 + (1 + h) + (1 + h)^2 + \cdots + (1 + h)^{n - 1}]$$
-    当$h>0$时，右边方括号内第二项起都大于$1$，因此$(1 + h)^n - 1>nh$. \\
+    当$h > 0$时，右边方括号内第二项起都大于$1$，因此$(1 + h)^n - 1 > nh$. \\
     当$-1 < h < 0$时，右边方括号内第二项起都小于$1$，则$(1 + h)^n - 1 < nh$，又因为$h < 0$，\\
     所以得到$(1 + h)^n - 1 > nh$. \\
     下证等号成立的条件，易知$A > 0$，$A + B > 0$，$n \in \mathbb{N}$时成立不等式
     $$(A + B)^n \geq A^n + nA^{n - 1}B$$
-    且$n>1$时等号成立的充分必要条件是$B = 0$.
+    且$n > 1$时等号成立的充分必要条件是$B = 0$.
 
 \end{proof}
 
 \begin{theorem}[算术平均值-几何平均值不等式]
     
     设$a_1, a_2, \cdots, a_n$是$n$个非负实数，则成立不等式
-    $$\dfrac{a_1 + a_2 + \cdots + a_n}{n}\geq \sqrt[n]{a_1, a_2, \cdots, a_n}$$
+    $$\dfrac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1, a_2, \cdots, a_n}$$
     其中等号成立的充分必要条件是$a_1 = a_2 = \cdots = a_n$.
 
 \end{theorem}
@@ -1220,8 +1220,8 @@
     令$\alpha = \dfrac{1}{p}$，有
 
     \begin{align*}
-        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p>1) \\
-        a^{\frac{1}{p}} b^{\frac{1}{q} }& \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p<1)
+        a^{\frac{1}{p}} b^{\frac{1}{q}} & \leq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p > 1) \\
+        a^{\frac{1}{p}} b^{\frac{1}{q} }& \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad(p < 1)
     \end{align*}
 
 \end{proof}
@@ -1329,7 +1329,7 @@
     \end{align*}
 
     即
-    $$f(x)\leq A+\int_{0}^{x}{f(t)g(t)}\diff t \leq A \euler^{\int_{0}^{x}{g(t)}\diff t} $$
+    $$f(x) \leq A+\int_{0}^{x}{f(t)g(t)}\diff t \leq A \euler^{\int_{0}^{x}{g(t)}\diff t} $$
 
 \end{proof}
 
@@ -1354,7 +1354,7 @@
     \end{align*}
 
     则有
-    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq\dfrac{1}{4} (b - a)^2(M + m)^2$$
+    $$\int_{a}^{b}{\dfrac{Mm}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{1}{4} (b - a)^2(M + m)^2$$
     即
     $$ \int_{a}^{b}{\dfrac{1}{f(x)}}\diff x \int_{a}^{b}{f(x)}\diff x \leq \dfrac{(M + m)^2}{4Mm}(b - a)^2 $$
 

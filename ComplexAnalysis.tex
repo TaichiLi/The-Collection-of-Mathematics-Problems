@@ -72,7 +72,7 @@
     $$-\pi(x^2 + 2\imag x\xi) = -\pi (x^2 + 2\pi\imag x - \xi^2 + \xi^2) = -\pi(x + \imag \xi)^2 - \pi\xi^2$$
     则
     $$\int_{-\infty}^{+\infty}{\euler^{-\pi x^2}\euler^{-2\pi \imag x\xi}}\diff x = \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x + \imag\xi)^2}}\diff x$$
-    令$z = x + \imag\xi, \diff x = \diff z$，则有
+    令$z = x + \imag\xi$，$\diff x = \diff z$，则有
 
     \begin{align*}
         & \euler^{\pi\xi^2} \int_{-\infty}^{+\infty}{\euler^{-\pi (x + \imag\xi)^2}}\diff x \\
@@ -201,7 +201,8 @@
     对任意$\varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
     $$|A_n - A| < \varepsilon $$
     其中$A = \lim\limits_{n \to \infty}{A_N}$ \\
-    取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则$0 < 1 - r < 1 - r^{N'} < \varepsilon $ \\
+    取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则
+    $$0 < 1 - r < 1 - r^{N'} < \varepsilon $$
     由于$A_n$有界，设$|A_n| \leq M $，则$n > N'$时
     
     \begin{align*}
@@ -401,7 +402,7 @@
 
     \begin{align*}
         (2n + 1)C_n & = \sum\limits_{|m| > n + M}{|a_{m - n} + \cdots + a_{m + n}|} \\
-        & \quad + \sum\limits_{n + M\leq |m| < n - M}{|a_{m - n} + \cdots + a_{m + n}|} \\
+        & \quad + \sum\limits_{n + M \leq |m| < n - M}{|a_{m - n} + \cdots + a_{m + n}|} \\
         & \quad + \sum\limits_{|m| < n - M}{|a_{m - n} + \cdots + a_{m + n}|}
     \end{align*}
 
@@ -665,7 +666,7 @@
 
 \begin{proposition}
     
-    设$f$在$0 < |z| < R$解析，存在$M >0$，使得任意$r$，$0 < r < R$，有
+    设$f$在$0 < |z| < R$解析，存在$M > 0$，使得任意$r$，$0 < r < R$，有
     $$r \int_{0}^{2 \pi}{|2f(\mathrm{e^{i\theta}})|}\diff \theta < M$$
     证明：$z = 0$是一个可去发散点，否则是简单极点。
 
@@ -698,16 +699,16 @@
 
 \begin{proposition}
 
-    设$f(z)$在$|z| < 1 $内解析，并且$z = 0$为$f(z)$的$n(n \geq 1)$级零点，当$|z|<1$时，$|f(z)| < 1$. \\
-    证明：当$|z|<1$时，$|f(z)| \leq |z|^n$
+    设$f(z)$在$|z| < 1 $内解析，并且$z = 0$为$f(z)$的$n(n \geq 1)$级零点，当$|z| < 1$时，$|f(z)| < 1$. \\
+    证明：当$|z| < 1$时，$|f(z)| \leq |z|^n$
 
 \end{proposition}
 
 \begin{proof}
     
-    $f(z)$在$|z|<1$内解析，且$z = 0$为$n(n \geq 1)$级零点，则有
+    $f(z)$在$|z| < 1$内解析，且$z = 0$为$n(n \geq 1)$级零点，则有
     $$f(z) = \sum\limits_{m = n}^{\infty}{a_mz^m}$$
-    显然$\varphi(z) = \dfrac{f(z)}{z^{n - 1}}$在$|z|<1$内解析，且$\varphi(0) = 0$，有
+    显然$\varphi(z) = \dfrac{f(z)}{z^{n - 1}}$在$|z| < 1$内解析，且$\varphi(0) = 0$，有
     $$ \max\varphi(z) \leq \max_{|z| = r}|\varphi(z)| = \dfrac{|f(z)|}{r^{n - 1}} \leq \dfrac{1}{r^{n - 1}} $$
     令$n \to 1$，则$|\varphi(z)| < 1$，于是$|\varphi(z)| \leq |z|$，即
     $$|f(z)| \leq z^n$$
@@ -760,17 +761,17 @@
     \begin{enumerate}
         
         \item
-            $f(z)$在$|z|<1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
+            $f(z)$在$|z| < 1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
             $$ f(z) = \sum\limits_{n = 1}^{\infty}{a_nz^n}$$
             令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$，
-            显然$z = 0$是$\varphi(z)$的$k(k\geq 2)$级零点，所以
+            显然$z = 0$是$\varphi(z)$的$k(k \geq 2)$级零点，所以
             $$|\varphi(z)| = |z|^2$$
             即
             $$|f(z) + f(-z)| \leq 2|z|^2$$
 
         \item 
             $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
-            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0|<1$，则由\textup{Schwarz}引理得 \\
+            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0| < 1$，则由\textup{Schwarz}引理得 \\
             $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
             $$f(z) + f(-z) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$$
             设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$ \\
@@ -831,17 +832,17 @@
 
 \begin{proposition}
     
-    设$f(z)$在$|z|\leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$ \\
-    证明：$f(z)$在$|z|< 1$内至少有一个零点。
+    设$f(z)$在$|z| \leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$ \\
+    证明：$f(z)$在$|z| < 1$内至少有一个零点。
 
 \end{proposition}
 
 \begin{proof}
     
-    反证法。假设$f(z)$在$|z| < 1$内无零点，又$|z| = 1$上$|f(0)| > m >0$ \\
-    则$f(z)$在$|z|\leq 1$内无零点，$\dfrac{1}{f(z)}$在$|z|\leq 1$解析，由最大模定理知
+    反证法。假设$f(z)$在$|z| < 1$内无零点，又$|z| = 1$上$|f(0)| > m > 0$ \\
+    则$f(z)$在$|z| \leq 1$内无零点，$\dfrac{1}{f(z)}$在$|z| \leq 1$解析，由最大模定理知
     $$\max_{|z| \leq 1}{\left| \dfrac{1}{f(z)} \right|} = \max_{|z| = 1}{\left| \dfrac{1}{f(z)} \right|}  < \dfrac{1}{m}$$
-    然而$\left| \dfrac{1}{f(z)} \right| > \dfrac{1}{m}$，与题设矛盾，所以$f(z)$在$|z|< 1$内至少有一个零点。
+    然而$\left| \dfrac{1}{f(z)} \right| > \dfrac{1}{m}$，与题设矛盾，所以$f(z)$在$|z| < 1$内至少有一个零点。
 
 \end{proof}
 
@@ -960,7 +961,7 @@
 
 \begin{lemma}[Schwarz引理]
     
-    设$f(z)$在单位圆盘$|z|<1$内解析，在闭圆盘$|z| \leq 1$上是连续的，并且满足$f(0) = 0$，又在$|z| < 1$内处处有$|f(z)| < 1$，则
+    设$f(z)$在单位圆盘$|z| < 1$内解析，在闭圆盘$|z| \leq 1$上是连续的，并且满足$f(0) = 0$，又在$|z| < 1$内处处有$|f(z)| < 1$，则
 
     \begin{enumerate}
         
@@ -977,7 +978,7 @@
 \begin{proof}
     
         
-    由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z|<1$内可以\textup{Taylor}展开，有
+    由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z| < 1$内可以\textup{Taylor}展开，有
     $$f(z) = c_1 z + c_2 z^2 + \dots + $$
     令$\varphi(z) =  c_1 + c_2 z + \cdots $，则
     $$
@@ -1019,7 +1020,7 @@
     $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
     在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$，于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
     $$|F(\zeta)| = |S((f(T^{-1}(\zeta))))| \leq |\zeta|$$
-    从而在$|z|<1$内
+    从而在$|z| < 1$内
     $$|S(f(z))| \leq |T(z)|$$
     即
     $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$

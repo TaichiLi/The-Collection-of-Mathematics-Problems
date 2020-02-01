@@ -29,7 +29,7 @@
     因此
 
     \begin{align*}
-        \dfrac{1}{4(\ln{2}\ k - \frac{a}{4k})} &> \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \\
+        \dfrac{1}{4(\ln{2}\ k - \frac{a}{4k})} & > \sum\limits_{n = 2^{k - 1}}^{2^k - 1}{\dfrac{1}{a_{n + 1} - a_n}} \\
         & \leq \dfrac{4^{k - 1}}{\sum\limits_{n = 2^{k - 1}}^{2^k - 1}{(a_{n + 1} - a_n})} \\
         & = \dfrac{4^{k - 1}}{a_{2^k} - a^{2^{k - 1}}} \\
         & \geq \dfrac{4^{k - 1}}{a_{2^k} - a_1}
@@ -426,9 +426,9 @@
 
     设$K_n(x) = \dfrac{(1 - x^2)^n}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}$，显然有
     $$\int_{-1}^{1}{K_n(x)}\diff x = 1$$
-    且$x \neq 0$时有$\lim\limits_{n \to \infty}{K_n(x)} = 0$，则$\forall \varepsilon >0$，$\exists N \in \mathbb{N}$，$n > N$时有
+    且$x \neq 0$时有$\lim\limits_{n \to \infty}{K_n(x)} = 0$，则$\forall \varepsilon > 0$，$\exists N \in \mathbb{N}$，$n > N$时有
     $$|K_n(x)| < \varepsilon$$
-    $\forall \varepsilon >0$，$\exists \delta > 0$，$|x| < \delta$时
+    $\forall \varepsilon > 0$，$\exists \delta > 0$，$|x| < \delta$时
     $$| f(x) - f(0) | < \varepsilon$$
     令$N = \max\{N_1, N_2\}$，则有
 

@@ -110,16 +110,16 @@
 
             \begin{enumerate}
 
-                \item $a<b$时。\\
+                \item $a < b$时。\\
                     因为$f$是单调的，$a$为上确界，可得
                     $$b = f(a) \leq f\left( \dfrac{a + b}{2} \right) \leq \dfrac{a + b}{2}$$
-                    与$a<b$矛盾。
+                    与$a < b$矛盾。
 
                 \item 
-                    $a>b$时。\\
+                    $a > b$时。\\
                     因为$a$为上确界，所以存在$\eta \in A, \ \eta > \dfrac{a + b}{2}$，则
                     $$b = f(a) \geq f(\eta) > \eta > \dfrac{a + b}{2}$$
-                    与$a>b$矛盾。
+                    与$a > b$矛盾。
 
             \end{enumerate}
 
@@ -277,7 +277,7 @@
     $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
     由于$\lim\limits_{n \to \infty}{f(x + n)} = 0$，$\forall x \in [0,1]$成立，所以对任意$x_k,\ k \in \{0, 1, 2, \cdots , m - 1\}$
     $$\lim\limits_{n \to \infty}{f(x + n)} = 0$$
-    因此$\exists N \in \mathbb{N}$，$n >N$时
+    因此$\exists N \in \mathbb{N}$，$n > N$时
     $$|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0, 1, 2, \cdots, m\}$$
     当$x > N > 1$时，$\lfloor x \rfloor > N$，且
 
@@ -380,7 +380,7 @@
     如果$c = b$，则$f(x) = 0$，$\forall x \in [a,b)$，又由连续性可知
     $$f(b) = \lim\limits_{x \to b}{f(x)} = 0$$
     即$f(x) = 0$，$\forall x \in [a,b]$，与题设矛盾。因此$c \neq b$，又若$c = a$，则有$f(c) = 0$. \\
-    否则当$a<c<b$时
+    否则当$a < c < b$时
     $$f(x) = 0, \quad \forall x < c$$
     则由函数连续性知$f(c) = 0$. 综上
     $$f(c) = 0, \quad a \leq c < b$$
@@ -782,7 +782,7 @@
 
 \begin{proposition}
     
-    设$f$为$\mathbb{R}$上的连续函数，并且$\lim\limits_{n \to \infty}{f(x)} = +\infty$，又设$f$的最小值$f(a)<a$.
+    设$f$为$\mathbb{R}$上的连续函数，并且$\lim\limits_{n \to \infty}{f(x)} = +\infty$，又设$f$的最小值$f(a) < a$.
     证明：$f(f(x))$至少有两个最小值点。
 
 \end{proposition}
@@ -790,8 +790,8 @@
 \begin{proof}
     
     由题设知，$f(x)$的至于为$[f(a),+\infty]$，且$\lim\limits_{x \to \infty}{f(x)} = +\infty$ \\
-    因为$f(a)<a$，所以存在$x_1$，$x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$ \\
-    显然$f(f(x))\geq f(a) = f(f(x_1)) = f(f(x_2))$，\\
+    因为$f(a) < a$，所以存在$x_1$，$x_2$，$x_1 \neq x_2$，$f(x_1) = a = f(x_2)$ \\
+    显然$f(f(x)) \geq f(a) = f(f(x_1)) = f(f(x_2))$，\\
     所以$f(f(x))$至少有两个最小值点。
 
 \end{proof}
