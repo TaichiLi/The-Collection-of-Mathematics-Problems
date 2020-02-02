@@ -23,7 +23,7 @@
     \end{align*}
 
     其中$M = \sum\limits_{i = 1}^{N}{|x_i - l|}$，$M$为有限值。\\
-    $N_1 = \max\left\{ \left\lfloor \dfrac{M}{\varepsilon} \right\rfloor,\ N \right\}$，当$N > N_1$时成立不等式
+    $N_1 = \max\left\{ \left\lfloor \dfrac{M}{\varepsilon} \right\rfloor, N \right\}$，当$N > N_1$时成立不等式
     $$\left| \dfrac{x_1 + x_2 + \cdots + x_n}{n} - l \right| < \varepsilon$$
     也即
     $$\lim\limits_{x \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l$$
@@ -104,7 +104,7 @@
 
 \begin{proposition}[Cauthy命题$\infty$时的特例]
 
-    $\lim\limits_{n \to \infty}{x_n} = +\infty$，证明：
+    $\lim\limits_{n \to \infty}{x_n} = +\infty$. 证明：
     $$\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty$$
 
 \end{proposition}
@@ -409,7 +409,7 @@
             先证充分性。\\
             由$b_n \cdot \dfrac{a_n}{a_{n + 1}} - b_{n + 1} \geq \delta > 0$得
             $$a_nb_n - a_{n + 1}b_{n + 1} \geq \delta a_{n + 1}$$
-            $$a_{n + 1}\ leq \dfrac{1}{\delta}(a_nb_n - a_{n + 1}b_{n + 1})$$
+            $$a_{n + 1} \leq \dfrac{1}{\delta}(a_nb_n - a_{n + 1}b_{n + 1})$$
             不妨设$n \geq 1$时上式成立，则
 
             \begin{align*}
@@ -515,7 +515,7 @@
 
 \begin{proposition}
     
-    设数列$\{a_n\}$满足$\lim\limits_{n \to \infty}{a_n \sum\limits_{k  = 1}^{n}{a_k^2}} = 1$，证明：
+    设数列$\{a_n\}$满足$\lim\limits_{n \to \infty}{a_n \sum\limits_{k  = 1}^{n}{a_k^2}} = 1$. 证明：
     $$\lim\limits_{n \to \infty}{\sqrt{3na_n}} = 1$$
 
 \end{proposition}
@@ -545,18 +545,18 @@
 
 \begin{proposition}
 
-    $\lim\limits_{n \to \infty}{a_n} = a $，$\lim\limits_{n \to \infty}{b_n} = b $，证明：
+    $\lim\limits_{n \to \infty}{a_n} = a $，$\lim\limits_{n \to \infty}{b_n} = b $. 证明：
     $$\lim\limits_{n \to \infty}{\dfrac{a_0b_n + a_1b_{n - 1} + \cdots + a_nb_0}{n}} = ab$$
 
 \end{proposition}
 
 \begin{proof}
 
-    因$\lim\limits_{n \to \infty}{a_n} = a$，$\lim\limits_{n \to \infty}{b_n} = b $，故数列$\{a_n\},\ \{b_n\}$有界，$\exists M > 0$，
+    因$\lim\limits_{n \to \infty}{a_n} = a$，$\lim\limits_{n \to \infty}{b_n} = b $，故数列$\{a_n\}$，$\{b_n\}$有界，$\exists M > 0$，
     $$|a_n| < M,\quad |b_n| < M, \quad \forall n \in \mathbb{N}$$
     $\forall \varepsilon > 0 $，$\exists N \in \mathbb{N}$，$n > N$时有
     $$|a_n - a| < \dfrac{\varepsilon}{4M}, \quad |b_n - b| < \dfrac{\varepsilon}{4M}$$
-    取自然数$N_1 > \max\left\{ N,\ \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right) \right\}$ \\
+    取自然数$N_1 > \max\left\{ N, \dfrac{2M}{\varepsilon}\left( \sum\limits_{k = 0}^{n}{|a_k - a|} + \sum\limits_{k = 0}^{n}{(|b_k - a|)} + |b| \right) \right\}$ \\
     则当$n > N_1$时有
 
     \begin{align*}
@@ -610,7 +610,7 @@
 
 \begin{proposition}
 
-    设$a_1,a_2 > 0$，$a_{n + 1} = \dfrac{2}{a_n + a_{n - 1}}$，证明：$\{a_n\}$收敛。
+    设$a_1,a_2 > 0$，$a_{n + 1} = \dfrac{2}{a_n + a_{n - 1}}$. 证明：$\{a_n\}$收敛。
 
 \end{proposition}
 
@@ -667,7 +667,7 @@
     $\{x_n\}$有下界，又
     $$x_{n + 1} - x_n = \dfrac{1}{n + 1 + \frac{1}{n + 1}} - \ln{\dfrac{1}{n} + 1} < \dfrac{1}{n + 1} + \dfrac{1}{n + 1} = 0$$
     $\{x_n\}$单调减少，则$\{x_n\}$收敛。
-    由$x_n \geq 0,\ x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
+    由$x_n \geq 0$，$x_1 = \dfrac{1}{2} $知，$0 \leq x_n \leq \dfrac{1}{2}$，所以
     $$0 \leq \lim\limits_{n \to \infty}{a_n} \leq \dfrac{1}{2}$$
 
 \end{proof}
@@ -682,13 +682,13 @@
 
 \begin{proof}
     
-    反证法。假设$\{a_n\}$有界，即$\exists M > 0$，$a_n \leq M,\ \forall n \in \mathbb{N}$，则有
-    $$0 < \dfrac{a_n}{2M} \leq \dfrac{a_n}{a_{n + 1} + a_{n + 2}}, \ \forall n \in \mathbb{N}$$
+    反证法。假设$\{a_n\}$有界，即$\exists M > 0$，$a_n \leq M$，$\forall n \in \mathbb{N}$，则有
+    $$0 < \dfrac{a_n}{2M} \leq \dfrac{a_n}{a_{n + 1} + a_{n + 2}}, \quad \forall n \in \mathbb{N}$$
     两边对$n$取极限，得到
     $$\lim\limits_{n \to \infty}{a_n} = 0$$
     设
     $$A(n) = \dfrac{a_n}{a_{n + 1} + a_{n + 2}}, \quad B(n) = \dfrac{a_{n + 1}}{a_{n + 1} + a_{n + 2}}$$
-    显然$B(n) \in (0,1],\  \forall n \in \mathbb{N}$，则
+    显然$B(n) \in (0,1]$，$ \forall n \in \mathbb{N}$，则
     
     \begin{align*}
         0 & \leq \limsup_{n \to \infty}{\dfrac{a_n}{a_{n + 2} + a_{n + 3}}} \\
@@ -818,7 +818,7 @@
             \end{align*}
 
             因为$a_1 = 2$， $a_2 = \dfrac{5}{2}$， $a_3 = \dfrac{8}{3}$，所以$n \geq 4$时，$b_n \geq a_{n + 1}$ \\
-            即$\{a_n\}$单调减少，且$a_n \geq 0,\ n \in \mathbb{N}$，所以$\{a_n\}$存在极限
+            即$\{a_n\}$单调减少，且$a_n \geq 0$，$n \in \mathbb{N}$，所以$\{a_n\}$存在极限
             $$\lim\limits_{n \to \infty}{a_n} = \lim\limits_{n \to \infty}{\dfrac{n + 1}{2n}a_{n - 1} + 1}$$
             得
             $$\lim\limits_{n \to \infty}{a_n} = 2$$
@@ -840,12 +840,12 @@
 
     先证集合$S$为无穷集合。设任意$i,j \in \mathbb{N}$
     $$\{i\alpha\} \neq \{j\alpha\}$$
-    否则$\exists i,\ j \in \mathbb{N}$使得
+    否则$\exists i, j \in \mathbb{N}$使得
     $$\{i\alpha\} = i\alpha - \lfloor i\alpha \rfloor = j\alpha - \lfloor j\alpha \rfloor = \{j\alpha\}$$
     则有
     $$\alpha = \dfrac{\lfloor i\alpha \rfloor - \lfloor j\alpha \rfloor}{i - j} \in \mathbb{Q}$$
     与题设矛盾，所以显然集合$S$是无穷集，且$S \subseteq [0, 1]$. \\
-    由\textup{Bolzano-Weierstrass}定理知，集合$S$至少存在一个聚点。因此易知，$\forall n \in \mathbb{N}$，$\exists i,\ j \in \mathbb{N}$使得
+    由\textup{Bolzano-Weierstrass}定理知，集合$S$至少存在一个聚点。因此易知，$\forall n \in \mathbb{N}$，$\exists i, j \in \mathbb{N}$使得
     $$0 < \{i\alpha\} - \{j\alpha\} < \dfrac{1}{n}$$
     则存在$M \in \mathbb{N}$使得
     $$M(\{i\alpha\} - \{j\alpha\}) \leq 1 < (M + 1)(\{i\alpha\} - \{j\alpha\})$$
@@ -927,7 +927,7 @@
 
 \begin{proposition}
     
-    证明：若$p_k > 0$，$k = 1,\ 2,\ \cdots$，且$\lim\limits_{n\to \infty}{\dfrac{p_n}{p_1 + p_2 + \cdots + p_n}} = 0$，$\lim\limits_{n \to \infty}{a_n} = a$，则
+    证明：若$p_k > 0$，$k = 1, 2, \cdots$，且$\lim\limits_{n\to \infty}{\dfrac{p_n}{p_1 + p_2 + \cdots + p_n}} = 0$，$\lim\limits_{n \to \infty}{a_n} = a$，则
     $$\lim\limits_{n \to \infty}{\dfrac{p_1 a_n + p_2 a_{n - 1} + \cdots + p_n a_1}{p_1 + p_2 + \cdots + p_n}} = a$$
 
 \end{proposition}
@@ -1201,7 +1201,7 @@
         a^{\frac{1}{p}} b^{\frac{1}{q}} & \geq \dfrac{1}{p}a + \dfrac{1}{q}b \quad (p < 1)
     \end{align*}
 
-    其中$a,\ b$为任意实数。
+    其中$a, b$为任意实数。
 
 \end{theorem}
 

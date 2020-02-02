@@ -60,14 +60,14 @@ Fixed some details and added three Mathematics Analysis questions.
 
 - Add three sequence questions([4abd306](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/4abd306efab9bf36ab54b45e478f313e3e7e1b52)).
 - Modify Signals and Systems and Complex Analysis([ebccb20](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/ebccb20073199ed67f0b1535b6a93c766cd5a29f) [6be2aae](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/6be2aaefbe698fd69a74c5fdc16db8b9eb4db867)).
-- Update README([d98881a](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/d98881a158c9aea132c1f1bef996038ff9763bcb))
+- Update README([d98881a](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/d98881a158c9aea132c1f1bef996038ff9763bcb)).
 
 ### v1.2 (2020-01-19)            
 
 Fixed some details and added four Mathematics Analysis questions.
 
 - Add four Mathematics Analysis questions([5a29ab6](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/5a29ab66aa9d3cd0945ed4443f9fe9c6f5ff2560) [058c615](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/058c6155ecaeb8a6ef6e71356b40d3ed0e6727d7) [567b0d0](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/567b0d0a660614439a495fae5731d4d1bf3751ab) [382ed22](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/382ed22026242236119dc4967bab78daf1047a05)).
-- Modify some errors and defects([0e85b79](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/0e85b7981159db8708f1a0538c6f5489d4ac6375) [56317dc](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/56317dca34b6209cdc8d4c0c68bf7def2f0a5592) [a4c2971](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/a4c29718ab14504e9bd74311504c902e960e382e) [79c7b9b](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/79c7b9b9f2b9c4520a59bd0c931d084c50abc906) [78d7acc](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/78d7acc737389ceb4cd7a4e45fd74fbecf5809c3))
+- Modify some errors and defects([0e85b79](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/0e85b7981159db8708f1a0538c6f5489d4ac6375) [56317dc](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/56317dca34b6209cdc8d4c0c68bf7def2f0a5592) [a4c2971](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/a4c29718ab14504e9bd74311504c902e960e382e) [79c7b9b](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/79c7b9b9f2b9c4520a59bd0c931d084c50abc906) [78d7acc](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/78d7acc737389ceb4cd7a4e45fd74fbecf5809c3)).
 
 ### v1.3 (2020-01-21)           
 
@@ -104,7 +104,7 @@ Fixed some details and .gitignore file, added eight Complex Analysis questions.
 Fixed some details, updated README file, and added Complex Analysis, Linear Algebra and Probability Theory and Mathematical Statistics questions.
 
 - Add three questions([b70d410](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/b70d410dab2155142b245683ba121b63f1259213) [2bd9d46](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/2bd9d46c054d471d03443aba5271ca1e320d563d) [ca27ed9](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/ca27ed98ae7867eb125e32413f8a160d7fa99052)).
-- Modify README([b70d410](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/b70d410dab2155142b245683ba121b63f1259213) [49cada0](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/49cada07072da53a8fdb5fb24424aa1fa057c65c)).
+- Update README([b70d410](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/b70d410dab2155142b245683ba121b63f1259213) [49cada0](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/49cada07072da53a8fdb5fb24424aa1fa057c65c)).
 - Modify some defects([a1a4588](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/a1a45888c3a627f5324de6b0f5a39937e09a59a1)).
 
 ### v3.1 (2020-01-28)            
@@ -127,8 +127,15 @@ Fixed some details and added Linear Algebra and Discrete Mathematics questions.
 Add one integral question and update README(add change log).
 
 - Add one integral question([eca0575](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/commit/eca05758f9d85c07f2056caf8ee7b63f608585fc)).
-- Update README([a13ff40](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/commit/a13ff4039558deb7dd5e1901b79d9a959b533953) [519df72](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/commit/519df72640300fe03c772fb30adca27837e5b681) and [58455a6](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/58455a67e3a65f05a27470f617ad40f29055cbd6) current commit).
+- Update README([a13ff40](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/commit/a13ff4039558deb7dd5e1901b79d9a959b533953) [519df72](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/commit/519df72640300fe03c772fb30adca27837e5b681) [58455a6](https://github.com/TaichiLi/The-Collection-of-Mathematics-Problems/tree/58455a67e3a65f05a27470f617ad40f29055cbd6) and current commit).
 
-## Maintainer
+## Author
 
 [@Li Taiji](https://github.com/TaichiLi)
+
+## Code Specification
+
+1. The code block surrounded by `\begin{}` and `\end{}` should be flanked by one blank line.
+2. The code representing the operators(include $+$, $-$, $<$, $>$, $\leq$, $\geq$, $\neq$, $\equiv$ etc.) should be flanked by one space.
+3. Mathematical signs and symbols to be used in the document are in accordance with `GB 3102.11` and `ISO 80000-2:2009`.
+4. Use `.` after English letters and formulas, but still use `，` after them.

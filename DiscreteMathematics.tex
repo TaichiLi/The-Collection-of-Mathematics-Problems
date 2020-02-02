@@ -35,7 +35,7 @@
 
     $$V_1 = <\mathbb{Z}, +, \cdot>, \quad V_2 = <\mathbb{Z}_n, \oplus, \otimes>$$
     其中，$\mathbb{Z}$为整数集，$+$，$\cdot$分别为普通加法和乘法，$\mathbb{Z}_n = \{1, 2, 3, \cdots, n - 1\}$，
-    $\oplus$，$\otimes$分别为模$n$加法和模$n$乘法，令$f: \mathbb{Z} \to \mathbb{Z}_n$，$f(x) = x \bmod{n}$，证明$f$为$V_1$到$V_2$的满同态映射。
+    $\oplus$，$\otimes$分别为模$n$加法和模$n$乘法，令$f: \mathbb{Z} \to \mathbb{Z}_n$，$f(x) = x \bmod{n}$. 证明$f$为$V_1$到$V_2$的满同态映射。
 
 \end{proposition}
 
@@ -44,7 +44,7 @@
     $\forall x, y \in \mathbb{Z}$
     $$f(x + y) = (x + y) \bmod{n}$$
     $$f(x) \oplus f(y) = [(x \bmod{n}) + (y \bmod{n})] \bmod{n}$$
-    由取模运算的定义知，$\exists q_1, q_2 \in \mathbb{Z}, r_1, r_2 \in \mathbb{Z}_n$
+    由取模运算的定义知，$\exists q_1, q_2 \in \mathbb{Z}$，$r_1, r_2 \in \mathbb{Z}_n$
     $$x = q_1 n + r_1$$
     $$y = q_2 n + r_2$$
     则
@@ -99,7 +99,7 @@
 
 \begin{proposition}
 
-    设$G$是群，$a,b\in G$是有限阶元，证明：
+    设$G$是群，$a,b \in G$是有限阶元。证明：
 
     \begin{enumerate}
 

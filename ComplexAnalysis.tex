@@ -4,14 +4,14 @@
 
 \begin{proposition}
     
-    证明：对于$|z| \leq 1, \ |w| \leq 1$，有
+    证明：对于$|z| \leq 1$，$|w| \leq 1$，有
     $$|w - z| \leq |1 - \overline{w}z|$$
 
 \end{proposition}
 
 \begin{proof}
 
-    设$z = x_1 + y_1\imag,\ w = x_2 + y_2\imag$
+    设$z = x_1 + y_1\imag$，$w = x_2 + y_2\imag$.
     $$|w - z| = | (x_2 - x_1) + (y_2 - y_1)\imag| $$
     $$|1 - \overline{w}z| = |1 - (x_2 - y_2\imag) (x_1 - y_1\imag)| = | (1 - x_1x_2 - y_1y_2) + (x_1y_2 - x_2y_1) |$$
 
@@ -87,7 +87,7 @@
 
     证明：
     $$\left| \int_{\gamma}{\euler^{\imag z^2}}\diff z \right| \leq \dfrac{\pi(1 - \euler^{-r^2})}{4r}$$
-    其中$\gamma(t) = r\euler^{\imag t},\ t\in \left[ 0,\dfrac{\pi}{4} \right],\ r \in \mathbb{R}^+$
+    其中$\gamma(t) = r\euler^{\imag t}$，$t \in \left[ 0, \dfrac{\pi}{4} \right]$，$r \in \mathbb{R}^+$
 
 \end{proposition}
 
@@ -99,7 +99,7 @@
         & = \int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t
     \end{align*}
 
-    因为$\sin{2t} \geq \dfrac{4t}{\pi}, \ t \in \left[ 0,\dfrac{\pi}{4} \right)$，则
+    因为$\sin{2t} \geq \dfrac{4t}{\pi}$，$t \in \left[ 0,\dfrac{\pi}{4} \right)$，则
     $$\int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t \leq \int_{0}^{\frac{\pi}{4}}{r\euler^{\frac{4r^2t}{\pi}}}\diff t = \dfrac{\pi}{4r}(1 - \euler^{-r^2}) $$
 
 \end{proof}
@@ -108,7 +108,7 @@
 
     设$f(z)$在复平面上处处解析，并且不等式
     $$\int_{0}^{2\pi}{|f(\mathrm{e^{\imag \theta}})|}\diff \theta \leq r^{\frac{16}{5}} $$
-    对所有$r > 0$成立，证明：$f(z) \equiv 0$
+    对所有$r > 0$成立。证明：$f(z) \equiv 0$
 
 \end{proposition}
 
@@ -183,22 +183,25 @@
 
 \begin{proposition}
 
-    设$\lim\limits_{n \to \infty}{a_nz^n}$收敛，证明：
+    设$\lim\limits_{n \to \infty}{a_nz^n}$收敛。证明：
     $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proposition}
 
 \begin{proof}
     
-    记$A_k = \sum\limits_{n = 1}^{k}{A_n},\ A_0 = 0$，则
+    记$A_k = \sum\limits_{n = 1}^{k}{A_n}$，$A_0 = 0$，则
 
     \begin{align*}
         \sum\limits_{n = 1}^{N}{(1 - r^n)a_n} & = (1 - r^N)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})A_n} \\
         & = (1 - r)A_N + \sum\limits_{n = 1}^{N}{(r^n - r^{n + 1})(A_N - A_n)}
     \end{align*}
 
-    因为$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$，所以只需证$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$ \\
-    对任意$\varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
+    因为
+    $$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$$
+    所以只需证
+    $$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$$
+    $\forall \varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
     $$|A_n - A| < \varepsilon $$
     其中$A = \lim\limits_{n \to \infty}{A_N}$ \\
     取$(1 - \varepsilon)^{\frac{1}{N'}} < r < 1$，则
@@ -223,7 +226,7 @@
     
     设$f$在$\mathbb{C}$上解析，且满足对于任一点$z_0\in\mathbb{C}$，$f$在$z_0$的\textup{Tarloy}展开式
     $$f(z) = \sum\limits_{n = 0}^{+\infty}{a_n(z - z_0)}$$
-    满足至少有一个$c_n$为$0$，证明$f$是多项式。
+    满足至少有一个$c_n$为$0$. 证明$f$是多项式。
 
 \end{proposition}
 
@@ -231,7 +234,7 @@
     
     考虑开单位圆盘$D = \Delta(0,1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
     在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p = 0$ \\
-    可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0\in D$，
+    可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0 \in D$，
     由唯一性定理知，$f^{(p)}\equiv 0$在$\mathbb{C}$上恒成立，故$f$为多项式。
 
 \end{proof}
@@ -294,7 +297,7 @@
 
             对足够大的$m > M$，有
             $$\dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} < \dfrac{\varepsilon}{2}$$
-            因此对$m > \max{(N,M)}$
+            因此对$m > \max{(N,M)}$有
             $$\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} < \varepsilon$$
 
         \item 
@@ -571,8 +574,8 @@
 
 \begin{proposition}
 
-    已知$D$是单位圆盘，设$f:D \to \mathbb{C}$是解析函数，证明：\\
-    函数$f$的直径$d = \sup\limits_{z,w\in D}{|f(z) - f(w)|}$满足
+    已知$D$是单位圆盘，设$f:D \to \mathbb{C}$是解析函数。证明：\\
+    函数$f$的直径$d = \sup\limits_{z,w \in D}{|f(z) - f(w)|}$满足
     $$2|f'(0)| \leq d$$
 
 \end{proposition}
@@ -647,7 +650,7 @@
     当且仅当
     $$f(z) = f'(0)z + f(0)$$
     其中
-    $$d = \sup\limits_{z,w\in D(0,1)}{|f(z) - f(w)|}$$
+    $$d = \sup\limits_{z,w \in D(0,1)}{|f(z) - f(w)|}$$
     
 \end{theorem}
 
@@ -682,10 +685,10 @@
         & \leq \dfrac{1}{2 \pi} \left( \int_{C_2}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| + \int_{C_1}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| \right)
     \end{align*}
 
-    其中$C_1 = r_1\mathrm{e^{i\theta}},\ C_2 = r_2\mathrm{e^{i\theta}}$
-    由$|z - z_0| \geq \dfrac{r_2}{2},\ z \in C_2$有
+    其中$C_1 = r_1\mathrm{e^{i\theta}}$，$C_2 = r_2\mathrm{e^{i\theta}}$
+    由$|z - z_0| \geq \dfrac{r_2}{2}$，$z \in C_2$有
     $$ \dfrac{1}{2 \pi} \int_{C_2}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| \leq \dfrac{1}{ \pi r_2}\int_{0}^{2 \pi}{|f(\euler^{\imag\theta})}\diff \theta \leq \dfrac{M}{ \pi r_2^2}$$
-    由$|z - z_0| \geq \dfrac{|z|}{2},\ z \in C_1$有
+    由$|z - z_0| \geq \dfrac{|z|}{2}$，$z \in C_1$有
     $$ \dfrac{1}{2 \pi} \int_{C_1}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| \leq \dfrac{1}{ \pi|z|}\int_{0}^{2 \pi}{|f(\euler^{\imag\theta})}\diff \theta \leq \dfrac{M}{ \pi|z|}$$
     因此，我们有
     % 似有不对
@@ -726,7 +729,7 @@
 
 \begin{proof}
     
-    反证法。若存在$a,\ b\in \Delta(0,1), \quad a \neq b$，且
+    反证法。若存在$a, b \in \Delta(0,1), \quad a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
     则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $ \\
     令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
@@ -743,13 +746,13 @@
 
 \begin{proposition}
     
-    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$，证明：
+    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$. 证明：
     
     \begin{enumerate}
         
         \item   $$|f(z) + f(-z)| \leq 2 |z|^2 \quad (|z| < 1)$$
         
-        \item   如果$\exists z_0 \neq 0$，使得上面不等式中的等号在$z_0$处成立，则
+        \item   如果$\exists z_0 \neq 0$，使得上面不等式中的等号在$z = z_0$处成立，则
                 $$f(z) = \euler^{\imag\theta}z^2(\theta \in \mathbb{{R}})$$
 
     \end{enumerate}
@@ -770,11 +773,13 @@
             $$|f(z) + f(-z)| \leq 2|z|^2$$
 
         \item 
-            $|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$
-            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0| < 1$，则由\textup{Schwarz}引理得 \\
-            $\varphi(z) = \euler^{\imag\theta} z^2$，即$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$
+            $$|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$$
+            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0| < 1$，则由\textup{Schwarz}引理得
+            $$\varphi(z) = \euler^{\imag\theta} z^2$$
+            即
+            $$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$$
             $$f(z) + f(-z) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$$
-            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$ \\
+            设$f(z) = \euler^{\imag\theta} z^2 + h(z)$，其中$h(z) = \sum\limits_{n = 1}^{\infty}{a_{2n - 1}z^{2n - 1}}$. \\
             显然有$h(z) = -h(-z)$，则由$|f(z)| \leq 1$得
 
             \begin{align*}
@@ -800,7 +805,7 @@
 
 \begin{proposition}
     
-    函数$f(z)$在可求面积得区域$D$内单叶解析，并且满足$|f(z)| \leq 1$，证明：
+    函数$f(z)$在可求面积得区域$D$内单叶解析，并且满足$|f(z)| \leq 1$. 证明：
     $$\iint_{D}{|f'(z)|^2}\diff x\diff y \leq  \pi$$
 
 \end{proposition}
@@ -814,16 +819,17 @@
 
 \begin{proof}
     
-    若$\lim\limits_{z \to z_0}{f(z)} = w_0$，其中$z_0,\ w_0 \in \mathbb{C}$，则
+    若$\lim\limits_{z \to z_0}{f(z)} = w_0$，其中$z_0, w_0 \in \mathbb{C}$，则
     $$\lim\limits_{z \to z_0}{|f(z)|} = |w_0|$$
 
 \end{proof}
 
 \begin{proposition}
     
-    由极限定义，$\forall \varepsilon > 0$，$\exists \delta > 0$，$|z - z_0| < \delta$时
-    $$|f(z) - w_0 | < \varepsilon$$
-    又$\Big||a| - |b|\Big| \leq |a - b|$，则 
+    由极限定义知，$\forall \varepsilon > 0$，$\exists \delta > 0$，$|z - z_0| < \delta$时，$|f(z) - w_0 | < \varepsilon$. \\
+    又因为
+    $$\Big||a| - |b|\Big| \leq |a - b|$$
+    则 
     $$\Big| |f(z) - |w| \Big| \leq | f(z) - w| < \varepsilon $$
     易知
     $$\lim\limits_{z \to z_0}{|f(z)} = |w_0|$$
@@ -832,8 +838,7 @@
 
 \begin{proposition}
     
-    设$f(z)$在$|z| \leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$ \\
-    证明：$f(z)$在$|z| < 1$内至少有一个零点。
+    设$f(z)$在$|z| \leq 1$内解析，在$|z| = 1$上有$|f(z)| > m$，并且$|f(0)| < m$，其中$m > 0$. 证明：$f(z)$在$|z| < 1$内至少有一个零点。
 
 \end{proposition}
 
@@ -849,7 +854,7 @@
 \begin{proposition}
     
     设$f(z) = \sum\limits_{n = 0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
-    $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积，证明：
+    $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积。证明：
     $$A =  \pi\sum\limits_{n = 1}^{\infty}{n|a_n|^2}$$
 
 \end{proposition}
@@ -884,10 +889,10 @@
 
 \begin{proposition}
 
-    设$f:D \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta,\ \alpha,\ \beta \in D$，则
+    设$f:D \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta$，$\alpha, \beta \in D$，则
     $$|f'(\alpha)| \leq \dfrac{1 - |\beta|^2}{1 - |\alpha|^2}$$
-    当且仅当等号成立时，有$f(z) = \varphi_{-\beta}(\varphi_{\alpha(z)}),\ c \in \mathbb{C}$，且$|c| = 1$，其中
-    $$\varphi_{\alpha} = \dfrac{z - \alpha}{1 - \overline{\alpha}{z}},\ \varphi_{\beta} = \dfrac{z - \beta}{1 - \overline{\beta}{z}}$$
+    当且仅当等号成立时，有$f(z) = \varphi_{-\beta}(\varphi_{\alpha}(z))$. 其中
+    $$\varphi_{\alpha} = \dfrac{z - \alpha}{1 - \overline{\alpha}{z}}, \quad \varphi_{\beta} = \dfrac{z - \beta}{1 - \overline{\beta}{z}}$$
 
 \end{proposition}
 
@@ -909,7 +914,7 @@
 
 \begin{proposition}
     
-    设单叶解析函数$f(z)$将$z$平面上可求面积的区域$D$映射成$w$平面上的区域$G$，设区域$G$的面积为$A$，证明：
+    设单叶解析函数$f(z)$将$z$平面上可求面积的区域$D$映射成$w$平面上的区域$G$，设区域$G$的面积为$A$. 证明：
     $$ A = \iint_{D}{|f'(z)|^2}\diff x\diff y$$
 
 \end{proposition}
@@ -941,14 +946,14 @@
     $$A(r) = \max_{|z| = r}\{\mathrm{Re}f(z)\}$$
     因为
     $$\euler^{A(r)} = \max_{|z| = r}\{|\euler^{f(z)}|\}$$
-    由最大模原理知$A(r)$是单调增加的飞赴函数，并且由假设知$A(r) \leq A$ \\
+    由最大模原理知$A(r)$是单调增加的非负函数，并且由假设知$A(r) \leq A$ \\
     令
     $$ g(z) = \dfrac{f(z)}{2A - f(z)} = \dfrac{P + Q\imag}{(2A - P) - Q\imag} $$
     其中
     $$ P = \mathrm{Re}f(z),\quad Q = \mathrm{Im}f(z) $$
-    那么$f(z)$在$D$内解析，$\forall x\in D$
+    那么$f(z)$在$D$内解析，对任意$x \in D$有
     $$|g(z)|^2 = \dfrac{P^2 + Q^2}{(2A - P)^2 + Q^2} \leq \dfrac{R^2 + Q^2}{A^2 + Q^2} \leq 1$$
-    从而$|g(z)| \leq 1,\ g(0) = 0$，于是由\textup{Schwarz}引理得
+    从而$|g(z)| \leq 1$，$g(0) = 0$，于是由\textup{Schwarz}引理得
     $$|g(z) | \leq z$$
     由$g(z)$定义知
     $$f(z) = \dfrac{2Ag(z)}{1 + g(z)}$$
@@ -965,7 +970,7 @@
 
     \begin{enumerate}
         
-        \item $|f(z)| \leq |z|$，且$|f'(0)| \leq 1$
+        \item $|f(z)| \leq |z|$，且$|f'(0)| \leq 1$.
             
         \item 
             若在开圆盘内有一复数$z_0 \neq 0$，是$|f(z_0)| = |z_0|$，或者 $|f'(0)| = 1$，
@@ -990,15 +995,15 @@
         \end{aligned}
     \right.
     $$
-    显然$\varphi(z)$在$|z| < 1$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理
+    显然$\varphi(z)$在$|z| < 1$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理知
     $$|\varphi(z + 0)| = \max_{|z| = r}|\varphi(z_0)| = \max_{|z| = r}{\left| \dfrac{f(z)}{z} \right|} \leq \dfrac{1}{r}$$
     令$r \to 1$，则有$|\varphi(z_0)| \leq 1$ \\
     若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$ \\
     若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
     $$|f(z_0)| \leq |z_0|$$
     由于$f(0) = 0$，上式当$z = 0$时成立，则
-    $$|f(z_0)| \leq |z_0|,\quad x\in \Delta(0,1)$$
-    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0,1)$内取得最大模，\\
+    $$|f(z_0)| \leq |z_0|,\quad x \in \Delta(0,1)$$
+    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0,1)$内取得最大模。\\
     从而$\varphi(z) \equiv c$， 又$|c| = 1$，则$\varphi(z) = \euler^{\imag\alpha}$，所以
     $$f(z) = \euler^{\imag\alpha}z$$
 
@@ -1006,7 +1011,7 @@
 
 \begin{theorem}[Schwarz-Pick定理]
 
-    设$f:D \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，且$f(z_0) = w_0,\ z\in D$，则
+    设$f:D \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，$z \in D$，且$f(z_0) = w_0$. 则
     $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
     等号当且仅当$f(z)$是分式线性映射时成立。
 
@@ -1016,11 +1021,12 @@
     
     设函数$w = f(z)$，考虑分式线性映射
     $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z},\quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
-    分别$z$平面和$w$平面上的单位圆双方单值映射成$\zeta$和$\tau$平面上的单位元，并且把$z_0,\ w_0$映射成$\zeta = 0,\ \tau = 0$，则
+    分别$z$平面和$w$平面上的单位圆双方单值映射成$\zeta$和$\tau$平面上的单位元，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$，则
     $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
-    在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$，于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
+    在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\
+    于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
     $$|F(\zeta)| = |S((f(T^{-1}(\zeta))))| \leq |\zeta|$$
-    从而在$|z| < 1$内
+    从而在$|z| < 1$内有
     $$|S(f(z))| \leq |T(z)|$$
     即
     $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$

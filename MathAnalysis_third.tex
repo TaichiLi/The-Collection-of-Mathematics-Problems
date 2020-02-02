@@ -2,7 +2,7 @@
 
 \begin{proposition}
 
-    设$\{a_n\}$是严格单调增加的实数列，且$a_n \leq n^2 \ln n,\ n\in\mathbb{N}$，证明：级数
+    设$\{a_n\}$是严格单调增加的实数列，且$a_n \leq n^2 \ln n$，$n\in\mathbb{N}$. 证明：级数
     $$ \sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_{n + 1} - a_n}}$$
 
 \end{proposition}
@@ -45,7 +45,7 @@
 
 \begin{proposition}
 
-    设$\{a_n\}$使单调减少收敛于$0$的实数列，证明：
+    设$\{a_n\}$使单调减少收敛于$0$的实数列。证明：
     $$\sum\limits_{n = 1}^{\infty}{\dfrac{a_n}{n}} < \infty$$
     当且仅当$a_n = O\left( \sum\limits_{n = 1}^{\infty}{\dfrac{1}{\ln{n}}} \right)$，且$\sum\limits_{n = 1}^{\infty}{(a_n - a_{n + 1})\ln{n}}$
 
@@ -54,14 +54,14 @@
 \begin{proof}
     
     令
-    $$S_N = \sum\limits_{n = 1}^{N}{\dfrac{a_n}{n}},\ T_N = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}}$$
-    因为$\{a_n\}$单调减少收敛于$0$，且$S_n,\ T_n$单调增加，则假设$\{S_n\},\ \{T_n\}$收敛，$S,\ T$分别为其极限，注意到
+    $$S_N = \sum\limits_{n = 1}^{N}{\dfrac{a_n}{n}},\quad T_N = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}}$$
+    因为$\{a_n\}$单调减少收敛于$0$，且$S_n$，$T_n$单调增加，则假设$\{S_n\}$，$\{T_n\}$收敛，$S$，$T$分别为其极限，注意到
     $$\ln{n} - \ln{n - 1} = \int_{n - 1}^{n}{\dfrac{1}{x}}\diff x \in \left( \dfrac{1}{n},\dfrac{1}{n - 1} \right)$$
 
     \begin{enumerate}
         
         \item 
-            如果$S_N < \infty,\ N \geq 2$时，
+            如果$S_N < \infty$，$N \geq 2$时，
 
             \begin{align*}
                 a_N\ln{N} & \leq a_N\sum\limits_{n = 2}^{\infty}{[\ln{n} - \ln{(n - 1)}]} \\
@@ -86,7 +86,7 @@
             即$T < \infty$
 
         \item 
-            如果$T < \infty$，且$a_{N}\ln{N} \leq M,\ N \geq 2$时
+            如果$T < \infty$，且$a_{N}\ln{N} \leq M$，$N \geq 2$时
                     
             \begin{align*}
                 S_N - a_1 & = \sum\limits_{n = 2}^{N}{\dfrac{a_n}{n}} \\
@@ -139,7 +139,7 @@
 
 \begin{proposition}
     
-    设$a_n > 0(n = 1,2,\cdots)$，且级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$，证明：级数
+    设$a_n > 0(n = 1,2,\cdots)$，且级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$. 证明：级数
     $$ \sum\limits_{n = 1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2 + \cdots + a_n)^2}} $$
 
 \end{proposition}
@@ -185,7 +185,7 @@
 
 \begin{proposition}
     
-    设$a_n > 0$，证明级数
+    设$a_n > 0$. 证明级数
     $$\sum\limits_{n = 1}^{\infty}{\dfrac{a_n}{(1 + a_1)(1 + a_2) + \cdots + (1 + a_n)}}$$
     收敛
 
@@ -211,7 +211,7 @@
 
 \begin{proposition}
     
-    $a_n > 0$，$\sum\limits_{n = 1}^{\infty}{a_n}$收敛，证明：
+    $a_n > 0$，$\sum\limits_{n = 1}^{\infty}{a_n}$收敛。证明：
 
     \begin{enumerate}
         
@@ -263,7 +263,7 @@
 
 \begin{proposition}
     
-    若正项级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$收敛，证明：级数
+    若正项级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$收敛。证明：级数
     $$\sum\limits_{n = 1}^{\infty}{\dfrac{n}{a_1 + a_2 + \cdots + a_n}}$$
     收敛。
 
@@ -327,7 +327,7 @@
             有理点$x = \dfrac{p}{q}$，则当$n \geq q$时，
             $$n!\pi x = n! \pi \dfrac{p}{q} = k\pi,\quad k \in \mathrm{Z}$$
             则
-            $$\sin{(n!\pi x)} = 0, \ n \geq q$$
+            $$\sin{(n!\pi x)} = 0, \quad n \geq q$$
             显然$\sum\limits_{n = 0}^{\infty}{\sin{(n!\pi x)}}$收敛。
 
         \item 
@@ -447,7 +447,7 @@
 
 \begin{proposition}
 
-    $0 < a < b,\ f:[a,b] \to [-1,1]$，满足$\int_{a}^{b}{f(x)}\diff x = 0$，证明：
+    $0 < a < b$，$f:[a,b] \to [-1,1]$，满足$\int_{a}^{b}{f(x)}\diff x = 0$. 证明：
     $$\int_{a}^{b}{\dfrac{f(x)}{x}}\diff x \leq \ln{\dfrac{(a + b)^2}{4ab}}$$
 
 \end{proposition}
@@ -474,7 +474,7 @@
 
 \begin{proposition}
 
-    设函数$f$为$[0,1]$上的单调增加函数，$f(0) = 0, \ f(1) = 1$，证明：
+    设函数$f$为$[0,1]$上的单调增加函数，$f(0) = 0$，$f(1) = 1$. 证明：
     $$\int_{0}^{1}{f(f(x))}\diff x \leq 2\int_{0}^{1}{f(x)}\diff x$$
 
 \end{proposition}
@@ -496,7 +496,7 @@
 
 \begin{proposition}
 
-    设$f,g$是$[0,1] \to [0,1]$的连续函数，且$f$单调增加，证明：
+    设$f,g$是$[0,1] \to [0,1]$的连续函数，且$f$单调增加。证明：
     $$\int_{0}^{1}{f(g(x))}\diff x \leq \int_{0}^{1}{f(x)}\diff x + \int_{0}^{1}{g(x)}\diff x$$
 
 \end{proposition}
@@ -542,7 +542,7 @@
 
 \begin{proposition}
 
-    设$f:[0,1] \to \mathrm{R}$是连续函数，且$\int_{0}^{1}{f(x)}\diff x = 0$，证明：
+    设$f:[0,1] \to \mathrm{R}$是连续函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：
     $$2 \left( \int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
 
 \end{proposition}
@@ -563,7 +563,7 @@
 
 \begin{proposition}
 
-    设$f$是$[-1,1]$上的连续函数，证明：
+    设$f$是$[-1,1]$上的连续函数。证明：
     $$\int_{-1}^{1}{f^2(x)}\diff x \geq \dfrac{1}{2} \left( \int_{-1}^{1}{f(x)}\diff x \right)^2 + \dfrac{3}{2} \left( \int_{-1}^{1}{xf(x)}\diff x \right)^2$$
 
 \end{proposition}
@@ -589,7 +589,7 @@
 
 \begin{proposition}
 
-    设$f:[0,1] \to \mathrm{R}$是有连续导数的可微函数，且$f(1) = 0$，证明：
+    设$f:[0,1] \to \mathrm{R}$是有连续导数的可微函数，且$f(1) = 0$. 证明：
     $$4\int_{0}^{1}{|f'(x)|^2}\diff x \geq \int_{0}^{1}{|f(x)|^2}\diff x + \left( \int_{0}^{1}{|f(x)|}\diff x \right)$$
 
 \end{proposition}
@@ -629,7 +629,7 @@
 
 \begin{proposition}
     
-    设$f$是定义在$[0,1]$上的连续可微函数，证明：
+    设$f$是定义在$[0,1]$上的连续可微函数。证明：
     $$\left| f\left( \dfrac{1}{2} \right) \right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proposition}
@@ -641,7 +641,7 @@
     则有
     $$f\left( \dfrac{1}{2} \right) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
     $$\left| f\left( \dfrac{1}{2} \right) \right| = |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
-    由$|f(x_0)| \leq |f(x)|, \ x \in \left[ 0,\dfrac{1}{2} \right]$得
+    由$|f(x_0)| \leq |f(x)|$，$x \in \left[ 0,\dfrac{1}{2} \right]$得
     $$|f(x_0)| \leq 2 \int_{0}^{\frac{1}{2}}{|f(x)|}\diff x$$
     又有
     $$\left| f\left( \dfrac{1}{2} \right) \right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
@@ -654,7 +654,7 @@
 
 \begin{proposition}
 
-    设$f$是$[0,1]$上的连续实值函数，且$\int_{0}^{1}{f(x)}\diff x = 0$，证明：$\exists c \in (0,1)$
+    设$f$是$[0,1]$上的连续实值函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：$\exists c \in (0,1)$
     $$c^2f(c) = \int_{0}^{c}{(x^2 + x)f(x)}\diff x$$
 
 \end{proposition}
@@ -683,7 +683,7 @@
 
 \begin{proposition}
 
-    设$f$是$[0,1]$上的连续可微函数，$b > 0$，且$f(0) = 0$，证明：
+    设$f$是$[0,1]$上的连续可微函数，$b > 0$，且$f(0) = 0$. 证明：
     $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x) \right)^2 }\diff x $$
 
 \end{proposition}
@@ -711,7 +711,7 @@
 
     设$f:\mathbb{R} \to (0 ,+\infty)$是可微函数，且对于常数$k$，有
     $$|f'(x) - f'(y)| \leq k|x - y|$$
-    其中$x,y \in \mathbb{R}$，证明：
+    其中$x,y \in \mathbb{R}$. 证明：
     $$\left( f'(x) \right)^2 < 2kf(x)$$
 
 \end{proposition}
@@ -793,7 +793,7 @@
 
 \begin{proposition}
 
-    设$f$是周期为$T$的连续函数，且$\int_{0}^{T}{f(x)}\diff x = 0$，证明：
+    设$f$是周期为$T$的连续函数，且$\int_{0}^{T}{f(x)}\diff x = 0$. 证明：
     $$\int_{0}^{T}{|f(x)|^2}\diff x \leq \dfrac{T^2}{4\pi^2}\int_{0}^{T}{|f'(x)|^2}\diff x$$
 
 \end{proposition}
@@ -814,7 +814,7 @@
 
 \begin{proposition}
 
-    设$f$在$[0,a](a > 0)$上有可积的导函数，证明：
+    设$f$在$[0,a](a > 0)$上有可积的导函数。证明：
     $$|f(0)| \leq \dfrac{1}{a}\int_{0}^{a}{|f(x)|}\diff x + \int_{0}^{a}{|f'(x)|}\diff x$$
 
 \end{proposition}
@@ -843,8 +843,8 @@
 
 \begin{proposition}
 
-    设$f$在$[0,1]$上有可积的导函数，证明：
-    $$\int_{0}^{1}{|f(x)|}\diff x \leq \max\left\{ \int_{0}^{1}{|f'(x)|}\diff x,\  \left| \int_{0}^{1}{f(x)}\diff x \right| \right\}$$
+    设$f$在$[0,1]$上有可积的导函数。证明：
+    $$\int_{0}^{1}{|f(x)|}\diff x \leq \max\left\{ \int_{0}^{1}{|f'(x)|}\diff x,  \left| \int_{0}^{1}{f(x)}\diff x \right| \right\}$$
 
 \end{proposition}
 
@@ -884,7 +884,7 @@
     $$f'(x) \neq g'(x)(f(y) - f(x))$$
     不妨设
     $$f'(x) > g'(x)(f(y) - f(x))$$
-    否则由\textup{Darboux}定理知，必存在不同的两点$x,\ y$使得
+    否则由\textup{Darboux}定理知，必存在不同的两点$x$，$y$使得
     $$f'(x) = g'(x)(f(y) - f(x))$$
     令$y \to x$，有
     $$\lim\limits_{y \to x}{f'(x)} = f'(x) \geq \lim\limits_{y \to x}{g'(x)(f(y) - f(x))} = 0$$
@@ -899,14 +899,14 @@
 
 \begin{proposition}
     
-    设$f'(x)$在$[a,\ b]$上连续，证明：
+    设$f'(x)$在$[a, b]$上连续。证明：
     $$\max_{x\in[a,b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    设$x$，$x_0$是$[a,\ b]$上两点，则有
+    设$x$，$x_0$是$[a, b]$上两点，则有
     $$f(x) - f(x_0) = \int_{x_0}^{x}{f'(t)}\diff t$$
     所以
 
@@ -929,7 +929,7 @@
 \begin{theorem}
 
     $$\oooint_{\Omega}{f(ax + by + cz)}\diff \Omega = \pi \int_{-1}^{1}{(1 - u^2)f(\delta u)}\diff u$$
-    其中，积分区域$\Omega:\ x^2 + y^2 + z^2 \leq 1$，$\delta = \sqrt{a^2 + b^2 + c^2}$.
+    其中，积分区域$\Omega: x^2 + y^2 + z^2 \leq 1$，$\delta = \sqrt{a^2 + b^2 + c^2}$.
 
 \end{theorem}
 
@@ -957,7 +957,7 @@
 \begin{theorem}\label{theorem:surface}
 
     $$\ooint_{S}{f(ax + by + cz)}\diff S = 2\pi\int_{-1}^{1}{f(\delta u)}\diff u$$
-    其中，积分曲面$S:\ x^2 + y^2 + z^2 = 1$，$\delta = \sqrt{a^2 + b^2 + c^2}$.
+    其中，积分曲面$S: x^2 + y^2 + z^2 = 1$，$\delta = \sqrt{a^2 + b^2 + c^2}$.
 
 \end{theorem}
 
@@ -1003,7 +1003,7 @@
 
 \begin{proof}
 
-    设曲面$S:\ x^2 + y^2 + z^2 = 1$，应用球面坐标系，易知
+    设曲面$S: x^2 + y^2 + z^2 = 1$，应用球面坐标系，易知
 
     \begin{align*}
         &x = \sin{\theta} \cos{\varphi} \\
@@ -1032,9 +1032,9 @@
 
 \begin{proof}
     
-    由$f(x)$，$\dfrac{f(x)}{g(x)}$单调增加知，$\forall m,\ n \in \mathbb{R}$，有
+    由$f(x)$，$\dfrac{f(x)}{g(x)}$单调增加知，$\forall m, n \in \mathbb{R}$，有
     $$(f(m) - f(n))\left( \dfrac{f(m)}{g(m)} - \dfrac{f(n)}{g(n)} \right) \geq 0$$
-    对上式关于$m,\ n$从$0$到$x$积分，得
+    对上式关于$m, n$从$0$到$x$积分，得
     $$x\int_{0}^{x}{g(t)}\diff t \geq \int_{0}^{x}{f(t)}\diff t \int_{0}^{x}{\dfrac{g(t)}{f(t)}}\diff t$$
     其中，$x > 0$，则有
     $$\dfrac{x}{\int_{0}^{x}{\dfrac{g(t)}{f(t)}}\diff t} \geq \dfrac{\int_{0}^{x}{f(t)}\diff t}{\int_{0}^{x}{g(t)}\diff t}$$
@@ -1090,7 +1090,7 @@
 
 \begin{theorem}[Frullani定理]
 
-    设函数$f(x)$是$[0,\ \alpha]$上的连续函数，且对任意的$\beta$，$\int_{\beta}^{+\infty}{\dfrac{f(x)}{x}}\diff x$存在。
+    设函数$f(x)$是$[0, \alpha]$上的连续函数，且对任意的$\beta$，$\int_{\beta}^{+\infty}{\dfrac{f(x)}{x}}\diff x$存在。
     则
     $$\int_{0}^{+\infty}{\dfrac{f(ax) - f(bx)}{x}}\diff x = f(0)\log{\dfrac{b}{a}}$$
 
@@ -1127,7 +1127,7 @@
     由
     $$\lim\limits_{x \to 0}{x^2\left( \dfrac{1}{\sin^4{x}} - \dfrac{1}{x^4} \right)} = \dfrac{2}{3}$$
     知存在常数$C > 0$，使得
-    $$\left| \dfrac{x\sin^4{nx}}{\sin^4{x} - \dfrac{\sin^4{nx}}{x^3}} \right| \leq C\dfrac{\sin^4{nx}}{x} \leq Cn, \quad \forall x \in \left( 0,\ \dfrac{\pi}{2} \right)$$
+    $$\left| \dfrac{x\sin^4{nx}}{\sin^4{x} - \dfrac{\sin^4{nx}}{x^3}} \right| \leq C\dfrac{\sin^4{nx}}{x} \leq Cn, \quad \forall x \in \left( 0, \dfrac{\pi}{2} \right)$$
     因此
 
     \begin{align*}
@@ -1149,7 +1149,7 @@
 
 \begin{proposition}
 
-    设函数$f \in C^{1}[0,1]$，证明：
+    设函数$f \in C^{1}[0,1]$. 证明：
     $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} \right]} = -\dfrac{1}{2}(f(1) - f(0))$$
 
 \end{proposition}
@@ -1161,7 +1161,7 @@
         & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f'(\xi_k)\left( x - \dfrac{k}{n} \right)}\diff x} \\
     \end{align*}
     
-    因为$f \in C^{1}[0,1]$，所以在$\left[ \dfrac{k - 1}{n}, \dfrac{k}{n} \right],\ k = 1,\ 2,\  \cdots,\ n$中，存在$m_k,\ M_k$，使得
+    因为$f \in C^{1}[0,1]$，所以在$\left[ \dfrac{k - 1}{n}, \dfrac{k}{n} \right]$，$k = 1, 2, \cdots, n$中，存在$m_k, M_k$，使得
     $$m_k \leq f'(x) \leq M_k$$
     因此有
 
@@ -1181,7 +1181,7 @@
 
 \begin{proposition}
     
-    设函数$f \in C^{1}[0,1]$，$\theta \in [0, 1]$，证明：
+    设函数$f \in C^{1}[0,1]$，$\theta \in [0, 1]$. 证明：
     $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + \theta}{n} \right)} \right]} = -\left( \theta - \dfrac{1}{2} \right) (f(1) - f(0))$$
 \end{proposition}
 
@@ -1194,7 +1194,7 @@
     \end{align*}
 
     $$\sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + 1}{n} \right) - f\left( \dfrac{k + \theta}{n} \right) \right]} = -\dfrac{1}{n}(\theta - 1)\sum\limits_{k = 0}^{n - 1}{f'(\xi_k)}$$
-    其中，$\xi_k \in \left[ \dfrac{k}{n}, \dfrac{k + 1}{n} \right],\ k = 0,\ 1,\  \cdots,\ n$
+    其中，$\xi_k \in \left[ \dfrac{k}{n}, \dfrac{k + 1}{n} \right]$，$k = 0, 1, \cdots, n$
     对$n$取极限，由黎曼积分性质可知
     $$\lim\limits_{n \to \infty}{\sum\limits_{k = 0}^{n - 1}{\left[ f\left( \dfrac{k + 1}{n} \right) - f\left( \dfrac{k + \theta}{n} \right) \right]}} = -(\theta - 1)(f(1) - f(0))$$
     综上
@@ -1317,7 +1317,7 @@
 
 \begin{proposition}
 
-    设函数$f(x)$在区间$[0,1]$上二阶连续可微，证明
+    设函数$f(x)$在区间$[0,1]$上二阶连续可微。证明
     $$\int_{0}^{1}{|f'(x)|}\diff x \leq 9\int_{0}^{1}{|f(x)|}\diff x + \int_{0}^{1}{|f''(x)|}\diff x$$
 
 \end{proposition}
@@ -1341,7 +1341,7 @@
 
 \begin{theorem}
     
-    设$f$，$g$是区间$[a,b]$上的非负连续函数，且存在$u$，$v \in [a,b]$，使得$\max{f(x)} = f(u)$，$\max{g(x)} = g(u)$，$\min{f(x)} = f(v)$，$\min{g(x)} = g(v)$. \\
+    设$f$，$g$是区间$[a,b]$上的非负连续函数，且存在$u, v \in [a,b]$，使得$\max{f(x)} = f(u)$，$\max{g(x)} = g(u)$，$\min{f(x)} = f(v)$，$\min{g(x)} = g(v)$. \\
     则对任意$\lambda \in (0,1)$，存在$c \in (a,b)$，使得
     $$\int_{a}^{b}{f(x)g(x)}\diff x = \lambda f(c) \int_{a}^{b}{f(x)}\diff x + (1 - \lambda)g(c)\int_{a}^{b}{g(x)}\diff x$$
 

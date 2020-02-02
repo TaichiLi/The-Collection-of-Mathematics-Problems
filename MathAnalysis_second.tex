@@ -38,7 +38,7 @@
     $$\left| \dfrac{f(x) - f\left( \dfrac{x}{2} \right)}{x} \right| < \dfrac{\varepsilon}{2}$$
     即
     $$f(x) - f\left( \dfrac{x}{2} \right) = x\alpha(x),\quad |x| < \delta$$
-    其中$|\alpha(x)| < \dfrac{\varepsilon}{2},\ |x| < \delta$，则
+    其中$|\alpha(x)| < \dfrac{\varepsilon}{2}$，$|x| < \delta$，则
     $$f(x) - f\left( \dfrac{x}{2^n} \right) = \sum\limits_{k  = 1}^{n}{\left( f\left( \dfrac{x}{2^{k - 1}} \right) - f\left( \dfrac{x}{2^k} \right) \right)} = \sum\limits_{k  = 1}^{n}{\left[ \dfrac{x}{2^{k - 1}}\alpha\left( \dfrac{x}{2^k} \right) \right]}$$
     因为$k \in \mathbb{N}$时，
     $$\left| \dfrac{x}{2^{k - 1}} \right| \leq |x|$$
@@ -77,7 +77,7 @@
     则易知$\exists \eta \in (x_3, x_0)$
     $$f'(\eta) = 0$$
     其中$\eta$为极值点，与题设矛盾。\\
-    所以$x_0 = x_1$，又若最值点不唯一，即$\exists \alpha \in I,\ \alpha \neq x_0$
+    所以$x_0 = x_1$，又若最值点不唯一，即$\exists \alpha \in I$，$\alpha \neq x_0$
     $$f(\alpha) = f(x_0)$$
     同上可知与题设矛盾。
 
@@ -117,7 +117,7 @@
 
                 \item 
                     $a > b$时。\\
-                    因为$a$为上确界，所以存在$\eta \in A, \ \eta > \dfrac{a + b}{2}$，则
+                    因为$a$为上确界，所以存在$\eta \in A$，$\eta > \dfrac{a + b}{2}$，则
                     $$b = f(a) \geq f(\eta) > \eta > \dfrac{a + b}{2}$$
                     与$a > b$矛盾。
 
@@ -142,7 +142,7 @@
 
 \begin{proposition}
 
-    设$f,g :[a,b] \to [a,b]$是单调增加函数，且$f \circ g = g \circ f$，证明：$f$和$g$有一个公共不动点。
+    设$f,g :[a,b] \to [a,b]$是单调增加函数，且$f \circ g = g \circ f$. 证明：$f$和$g$有一个公共不动点。
 
 \end{proposition}
 
@@ -151,7 +151,7 @@
     设
     $$A = \{x| x \in [a,b] \land x \leq f(x) \land x \leq g(x)\}$$
     显然$A$非空，所以存在上确界$ u = \sup{A}$ \\
-    易知$u \leq f(u),\ u \leq g(u)$，所以            
+    易知$u \leq f(u)$，$u \leq g(u)$，所以            
     $$f(u) \leq f(g(u)) = g(f(u))$$ 
     又
     $$f(f(u)) \geq f(u)$$
@@ -173,7 +173,7 @@
 
 \begin{proof}
 
-    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以存在$\delta > 0, \ t \in \mathring{U}(x_0, \delta)$时
+    $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以存在$\delta > 0$，$t \in \mathring{U}(x_0, \delta)$时
     $$|f(t) - g(x_0)| < \dfrac{\varepsilon}{2}$$
     于是，当$|x - x_0| < \dfrac{\delta}{2}$时，有
 
@@ -200,7 +200,7 @@
 
 \begin{proof}
 
-    反证法。若$F(x) = f(x) - g(x) \neq 0,\ x \in [a, b]$，不妨设$F(x) > 0$ \\
+    反证法。若$F(x) = f(x) - g(x) \neq 0$，$x \in [a, b]$，不妨设$F(x) > 0$ \\
     则由$F$连续知，$F$在$[a, b]$上有最值，设$\min{F(x)} = m$ \\
     则
     $$F(x_{n + 1}) = f(x_{x_{n + 1}}) - g(x_{n + 1}) = f(x_{n + 1}) - f(x_{n + 2}) \geq m$$
@@ -220,7 +220,7 @@
 
 \begin{proposition}
 
-    设函数$f$在区间$[0, +\infty)$上连续且有界，证明：对任意给定的$\lambda$，存在一个数列$\{x_n\}$满足
+    设函数$f$在区间$[0, +\infty)$上连续且有界。证明：对任意给定的$\lambda$，存在一个数列$\{x_n\}$满足
 
     \begin{enumerate}
 
@@ -237,7 +237,7 @@
     反证法。不失一般性地，我们设$\lambda > 0$，$\lambda = 0$时结论显然成立；若$\lambda < 0$，则有
     $$ - [f(x_n + \lambda  + |\lambda|) - f(x_n + \lambda) ] = f(x_n + \lambda) - f(x_n) $$
     化为$\lambda > 0$的形式。\\
-    若命题不成立，则必存在$\lambda > 0,\ \varepsilon > 0, \ \forall M > 0, \ x > M$时
+    若命题不成立，则必存在$\lambda > 0$，$\varepsilon > 0$，$\forall M > 0$，当$x > M$时
     $$|f(x +\lambda) - f(x)| > \varepsilon$$
     由$f$在$(0,+\infty)$上连续，所以$f(x +\lambda) - f(x)$不变号，不妨设
     $$f(x +\lambda) - f(x) > \delta, \quad x > M$$
@@ -269,13 +269,13 @@
     因为$f$在$[0,+\infty)$上一致连续，所以$\forall \varepsilon > 0$，$\exists \delta > 0$，当$x', x'' \in [0,+\infty)$时
     $$|f(x') - f(x'')| < \dfrac{\varepsilon}{2}$$
     将$[0,1]$等分成$0 = x_0 < x_1 < \cdots < x_m = 1$，使每个区间的长度为$\dfrac{1}{m} < \delta$ \\
-    因为$x - \lfloor x \rfloor,\ \forall x \geq 1$，且
+    因为$x - \lfloor x \rfloor$，$\forall x \geq 1$，且
     $$x\to+\infty \leftrightarrow \lfloor x \rfloor \to +\infty$$
     所以存在$k \in \{0,1,2,\cdots , m - 1\}$
     $$x - \lfloor x \rfloor \in [x_k, x_{k + 1}]$$
     即
     $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
-    由于$\lim\limits_{n \to \infty}{f(x + n)} = 0$，$\forall x \in [0,1]$成立，所以对任意$x_k,\ k \in \{0, 1, 2, \cdots , m - 1\}$
+    由于$\lim\limits_{n \to \infty}{f(x + n)} = 0$，$\forall x \in [0,1]$成立，所以对任意$x_k$，$k \in \{0, 1, 2, \cdots , m - 1\}$
     $$\lim\limits_{n \to \infty}{f(x + n)} = 0$$
     因此$\exists N \in \mathbb{N}$，$n > N$时
     $$|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0, 1, 2, \cdots, m\}$$
@@ -295,7 +295,7 @@
 
 \begin{proposition}
     
-    设函数$f$在区间$[a,b]$上定义，且处处有极限，证明：
+    设函数$f$在区间$[a,b]$上定义，且处处有极限。证明：
 
     \begin{enumerate}
 
@@ -336,7 +336,7 @@
 
 \begin{proposition}
 
-    设函数$f$在$[0,+\infty)$上定义，且在其中的每个有界子区间上上有界，证明：
+    设函数$f$在$[0,+\infty)$上定义，且在其中的每个有界子区间上上有界。证明：
     $$\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = \lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]}$$
 
 \end{proposition}
@@ -403,7 +403,7 @@
 
 \begin{proposition}
     
-    设$y = (1 + \sqrt{x})^{2n + 2},\ n \in \mathbb{N}$，求$y^{(n)}(1)$
+    设$y = (1 + \sqrt{x})^{2n + 2}$，$n \in \mathbb{N}$，求$y^{(n)}(1)$
 
 \end{proposition}
 
@@ -421,7 +421,7 @@
 
 \begin{proposition}
     
-    设$f \in C^2(a,b)$，$f + f' + f'' \geq 0$，证明：$f$有下界。
+    设$f \in C^2(a,b)$，$f + f' + f'' \geq 0$. 证明：$f$有下界。
 
 \end{proposition}
 
@@ -493,7 +493,7 @@
 
 \begin{proposition}
 
-    设$f:\mathbb{R} \to \mathbb{R}$是二阶可微，周期为$2\pi$的偶函数，证明：若
+    设$f:\mathbb{R} \to \mathbb{R}$是二阶可微，周期为$2\pi$的偶函数。证明：若
     $$f''(x) + f'(x) = \dfrac{1}{f(x + \frac{3\pi}{2})}, \quad \forall x \in \mathbb{R}$$
     则$f$的周期为$\dfrac{\pi}{2}$
 
@@ -607,7 +607,7 @@
         & = f(nh) - f(0)
     \end{align*}
   
-    因为$g(x) > 0, \ \forall x \in [0,+\infty)$，所以$S_n > 0$，然而
+    因为$g(x) > 0$，$\forall x \in [0,+\infty)$，所以$S_n > 0$，然而
     $$\lim\limits_{n \to \infty}{S_n} = \lim\limits_{n \to \infty}{f(nh)} - f(0) = 0$$
     矛盾，得证。
 
@@ -677,7 +677,7 @@
 
 \begin{proposition}
     
-    设$f$在$[a,b]$上连续，在$(a,b)$上可导，且$\exists c\in (a,b)$，$f'(c) = 0$.
+    设$f$在$[a,b]$上连续，在$(a,b)$上可导，且$\exists c \in (a,b)$，$f'(c) = 0$.
     证明：$\exists \xi \in (a,b)$
     $$f'(\xi) = \dfrac{f(\xi) - f(a)}{b - a}$$
 
@@ -798,7 +798,7 @@
 
 \begin{proposition}[Cauthy方程]
     
-    设$f$对任意$x$，$y \in \mathbb{R}$，满足方程$f(x + y) = f(x) + f(y)$. 证明：
+    设$f$对任意$x, y \in \mathbb{R}$，满足方程$f(x + y) = f(x) + f(y)$. 证明：
 
     \begin{enumerate}
 
@@ -819,7 +819,7 @@
             因为$f(0) = f(x - x) = f(x) + f(-x), \quad \forall x$，所以$f(x) = -f(-x)$ \\
             易知$f(2) = f(1) + f(1) = 2f(1)$，由数学归纳法易证
             $$f(n) = nf(1)$$
-            对任意有理数$q = \dfrac{m}{n},\ m,\ n \in \mathbb{N}$，由于$f(1) = f\left( n \cdot \dfrac{1}{n} \right)$，
+            对任意有理数$q = \dfrac{m}{n}$，$m, n \in \mathbb{N}$，由于$f(1) = f\left( n \cdot \dfrac{1}{n} \right)$，
             故$f\left( \dfrac{1}{n} \right) = \dfrac{1}{n}f(1)$，从而
             $$f\left( \dfrac{m}{n} \right) = f\left( m \cdot \dfrac{1}{n} \right) = mf\left( \dfrac{1}{n} \right) = \dfrac{m}{n}f(1)$$
             则只需证$f(x) = f(1)x,\quad x \notin \mathbb{Q}$ \\
@@ -836,11 +836,11 @@
             \end{align*}
 
             所以$f$在$\mathbb{R}$连续。\\
-            设$p_0$为任意无理数，则存在有理数列$\{p_n\}\to p_0(n \to \infty)$
+            设$p_0$为任意无理数，则存在有理数列$\{p_n\}\to p_0 \ (n \to \infty)$
             $$f(p_0) = \lim\limits_{n \to \infty}{f(p_n)} = \lim\limits_{n \to \infty}{p_nf(1)} = p_0f(1)$$
             
         \item 
-            不妨设$f$在$\mathbb{R}$上单调增加。$\forall x \in \mathbb{R}$，取有理数列$\{x_n'\},\ \{x_n''\}$，\\
+            不妨设$f$在$\mathbb{R}$上单调增加。$\forall x \in \mathbb{R}$，取有理数列$\{x_n'\}$，$\{x_n''\}$，\\
             使$x_n'f(1) < x < x_n''$，且
             $$\lim\limits_{n \to \infty}{x_n'} = \lim\limits_{n \to \infty}{x_n''} = x$$
             由$f$单调增加的条件，
@@ -856,14 +856,14 @@
 
 \begin{proposition}
     
-    设函数$f(x)$在$[a,b]$连续，在$(a,b)$上可导，证明：$f(x)$在$[a,b]$内存在相异的两点$\xi,\ \eta$，使
+    设函数$f(x)$在$[a,b]$连续，在$(a,b)$上可导。证明：$f(x)$在$[a,b]$内存在相异的两点$\xi$，$\eta$，使
     $$f'(\xi)f'(\eta) = \left( \dfrac{f(b) - f(a)}{b - a} \right)^2$$
 
 \end{proposition}
 
 \begin{proof}
 
-    令$k = \dfrac{f(b) - f(a)}{b - a},\ h(x) = [f(x) = f(a)]^2 - k^2(x - a)^2$
+    令$k = \dfrac{f(b) - f(a)}{b - a}$，$h(x) = [f(x) = f(a)]^2 - k^2(x - a)^2$
     $$h'(x) = 2[f(x) - f(a)]f'(x) - 2k^2 (x - a)$$
     因为$f(a) = f(b) = 0$，由\textup{Rolle}中值定理知$\exists \xi \in (a,b)$，使得
     $$h'(\xi) = 0$$
@@ -878,8 +878,8 @@
 
 \begin{proposition}
     
-    设函数$f(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微，证明：
-    $\exists \xi,\  \eta \in (0,1)$，使
+    设函数$f(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微。证明：
+    $\exists \xi$，$ \eta \in (0,1)$，使
     $$2\eta f(1) + (c^2 - 1)f'(\eta) = f(\xi)$$
     其中，$c \in (0,1)$
     
@@ -900,7 +900,7 @@
 
 \begin{proposition}
 
-    设函数$f(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微，$f(0) = 0,\ f(1) = \dfrac{1}{2}$，证明：$\exists \xi,\eta \in (0,1),\ \xi \neq \eta$，使得
+    设函数$f(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微，$f(0) = 0$，$f(1) = \dfrac{1}{2}$. 证明：$\exists \xi,\eta \in (0,1)$，$\xi \neq \eta$，使得
     $$f'(\xi) + f'(\eta) = \xi + \eta$$
 
 \end{proposition}
@@ -908,12 +908,12 @@
 \begin{proof}
 
     令$F(x) = f(x) - \dfrac{1}{2}x^2$，则$F(0) = F(1) = 0$ \\
-    若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则存在$\xi,\eta \in (0,1),\ \xi \neq \eta$
+    若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则存在$\xi,\eta \in (0,1)$，$\xi \neq \eta$
     $$F'(\xi) + F'(\eta) = 0$$
     即
     $$f'(\xi) + f'(\eta) = \xi + \eta$$
     若$F\left( \dfrac{1}{2} \right) \neq 0$，不妨设$F\left( \dfrac{1}{2} \right) > 0$ \\
-    由\textup{Lagrange}中值定理，$\exists \xi,\eta \in (0,1),\ \xi \neq \eta$
+    由\textup{Lagrange}中值定理，$\exists \xi,\eta \in (0,1)$，$\xi \neq \eta$
     $$ \dfrac{F(1) - F(\frac{1}{2})}{1 - \frac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)$$
     $$ \dfrac{F(\frac{1}{2}) - F(0)}{\frac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)$$
     则
@@ -925,7 +925,7 @@
 
 \begin{proposition}
 
-    设函数$f(x),g(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微，且$f(0) = g(0) = f(1) = 0$，$g'(x) \neq 0$，证明： $\exists \xi,\eta \in (0,1),\ \xi < \eta$使得
+    设函数$f(x),g(x)$在闭区间$[0,1]$上连续，在$(0,1)$上可微，且$f(0) = g(0) = f(1) = 0$，$g'(x) \neq 0$. 证明： $\exists \xi,\eta \in (0,1)$，$\xi < \eta$使得
     $$\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f'(\eta)}{g'(\eta)}$$
 
 \end{proposition}
@@ -944,7 +944,7 @@
 
 \begin{proposition}
 
-    设$f:\mathbb{R}\to\mathbb{R}$二阶可微，且满足$f(0) = 2,\ f'(0) = -2,\ f(1) = 1$，证明：$\exists \xi \in (0,1)$，使得
+    设$f:\mathbb{R}\to\mathbb{R}$二阶可微，且满足$f(0) = 2$，$f'(0) = -2$，$f(1) = 1$. 证明：$\exists \xi \in (0,1)$，使得
     $$f(\xi) + f'(\xi) + f''(\xi) = 0$$
 
 \end{proposition}
@@ -968,7 +968,7 @@
 
         \item 
             若$f$至少有一个零点，令$z_1$为第一个零点，$z_2$为最后一个零点，由题设知，$0 < z_1 \leq z_2 < 1$ \\
-            函数$f$在区间$[0,z_1],\ [z_2,1]$上是正的，这表明
+            函数$f$在区间$[0,z_1]$，$[z_2,1]$上是正的，这表明
             $$f'(z_1) \leq 0,\quad f'(z_2) \geq 0$$
             所以
             $$g(z_1) = f'(z_1) \leq 0, \quad g(z_2) = f'(z_2) \geq 0$$
@@ -981,7 +981,7 @@
 
 \begin{proposition}
 
-    设函数$f(x)$可导，曲线$y = f(x)$上存在三点$(x_1, f(x_1))$，$(x_2, f(x_2))$，$(x_3, f(x_3))$共线，其中$0 < x_1 < x_2 < x_3$，证明：$\exists \xi,\  \eta \in (x_1,x_3)$，使得
+    设函数$f(x)$可导，曲线$y = f(x)$上存在三点$(x_1, f(x_1))$，$(x_2, f(x_2))$，$(x_3, f(x_3))$共线，其中$0 < x_1 < x_2 < x_3$. 证明：$\exists \xi,  \eta \in (x_1,x_3)$，使得
     $$\xi f'(\eta) - f(\xi) = \eta f'(\eta) - f(\eta)$$
 
 \end{proposition}
@@ -1001,18 +1001,18 @@
 
 \begin{proposition}
     
-    设$f$是$[0,1]$上的连续函数，且$f$在$(0,1)$上可微，$f(0) = 0,f(1) = 1$，证明：存在点列$\{\alpha_k\}$，使得
+    设$f$是$[0,1]$上的连续函数，且$f$在$(0,1)$上可微，$f(0) = 0,f(1) = 1$. 证明：存在点列$\{\alpha_k\}$，使得
     $$\sum\limits_{k = 0}^{n}{\dfrac{1}{f'(\alpha_k)}} = n, \quad n \in \mathbb{N}$$
     
 \end{proposition}
 
 \begin{proof}
 
-    由介值定理知，存在$n$个实数$b_0,\ b_1,\cdots, b_n$，其中
+    由介值定理知，存在$n$个实数$b_0, b_1,\cdots, b_n$，其中
     $$0 = b_0 < b_1 < \cdots < b_n = 1$$
     且
     $$f(b_i) = \dfrac{i}{n}, \quad i = 0,1,\cdots,n$$
-    由\textup{Lagrange}中值定理知，对于任意区间$[b_i, \ b_{i + 1}],\ i = 1, 2, \cdots, n$，$\exists \alpha_i \in (b_{i - 1}, \ b_i)$
+    由\textup{Lagrange}中值定理知，对于任意区间$[b_i, b_{i + 1}]$，$i = 1, 2, \cdots, n$，$\exists \alpha_i \in (b_{i - 1}, b_i)$
     $$f'(\alpha_i) = \dfrac{f(b_i) - f(b_{i - 1})}{b_i - b_{i - 1}} = \dfrac{1}{n(b_i - b_{i - 1})}$$
     $$\sum\limits_{i = 1}^{n}{\dfrac{1}{f'(\alpha_i)}} = n \sum\limits_{i = 0}^{n}{(b_i - b_{i - 1})} = n(b_n - b_0) = n$$
 
@@ -1044,7 +1044,7 @@
 
     设$\mathbb{R}$上的函数$f$有任意阶导数，并且对于任意$k \in \mathbb{N}$，存在$C_k > 0$使得
     $$\sup_{x \in \mathbb{R}}\left( |x|^k|f(x)| + |f^{(k)}(x)| \right) \leq C_k$$
-    证明：对于任意$k,\ l \in \mathbb{N}$，存在$C_{k,l} > 0$使得
+    证明：对于任意$k, l \in \mathbb{N}$，存在$C_{k,l} > 0$使得
     $$\sup_{x \in \mathbb{R}}|x|^k|f^{(l)}(x)| \leq C_{k,l}$$
 
 \end{proposition}
