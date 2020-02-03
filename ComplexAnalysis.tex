@@ -99,7 +99,7 @@
         & = \int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t
     \end{align*}
 
-    因为$\sin{2t} \geq \dfrac{4t}{\pi}$，$t \in \left[ 0,\dfrac{\pi}{4} \right)$，则
+    因为$\sin{2t} \geq \dfrac{4t}{\pi}$，$t \in \left[ 0, \dfrac{\pi}{4} \right)$，则
     $$\int_{0}^{\frac{\pi}{4}}{r\euler^{-r^2\sin{2t}}}\diff t \leq \int_{0}^{\frac{\pi}{4}}{r\euler^{\frac{4r^2t}{\pi}}}\diff t = \dfrac{\pi}{4r}(1 - \euler^{-r^2}) $$
 
 \end{proof}
@@ -126,7 +126,7 @@
     $$f^{(n)}(0) =  \dfrac{n!}{2\pi} \int_{0}^{2\pi}{\dfrac{f(\euler^{\imag\theta})}{r^n \euler^{\imag\theta}}}\diff \theta$$
     $$|f^{(n)}(0)| \leq \dfrac{n!}{2\pi} \dfrac{r^{\frac{16}{5}}}{r^n} \to 0 \quad (r \to + \infty)$$
     从而
-    $$f^{(n)}(0) = 0,\quad \forall n \in \mathbb{N}$$
+    $$f^{(n)}(0) = 0, \quad \forall n \in \mathbb{N}$$
     即
     $$f(z) \equiv 0$$
     
@@ -184,7 +184,7 @@
 \begin{proposition}
 
     设$\lim\limits_{n \to \infty}{a_nz^n}$收敛。证明：
-    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
+    $$\lim\limits_{r \to 1, \ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proposition}
 
@@ -198,9 +198,9 @@
     \end{align*}
 
     因为
-    $$\lim\limits_{r \to 1,\ r < 1}{(1 - r)A_N} = 0$$
+    $$\lim\limits_{r \to 1, \ r < 1}{(1 - r)A_N} = 0$$
     所以只需证
-    $$\lim\limits_{r \to 1,\ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$$
+    $$\lim\limits_{r \to 1, \ r < 1}{(r^n - r^{n + 1})(A_N - A_n)} = 0$$
     $\forall \varepsilon > 0 $，$\exists N' \in \mathbb{N}$，$n > N'$时
     $$|A_n - A| < \varepsilon $$
     其中$A = \lim\limits_{n \to \infty}{A_N}$ \\
@@ -218,7 +218,7 @@
 
     令$n \to +\infty$，再$r \to 1$ \\
     即
-    $$\lim\limits_{r \to 1,\ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
+    $$\lim\limits_{r \to 1, \ r < 1}{\sum\limits_{n = 1}^{\infty}{a_nr^n}} = \sum\limits_{n = 1}^{\infty}{a_n}$$
 
 \end{proof}
 
@@ -232,7 +232,7 @@
 
 \begin{proof}
     
-    考虑开单位圆盘$D = \Delta(0,1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
+    考虑开单位圆盘$D = \Delta(0, 1)$，则$D$内有不可数的点，所以存在正整数$p$，使得$D$内有无穷多点$\{z_n\}$，
     在这些点处的\textup{Taylor}展开式中第$p$项系数$c_p = 0$ \\
     可以在这些点中选取一个收敛子列$\{z_{n_k}\}$，且该子列收敛到$z_0 \in D$，
     由唯一性定理知，$f^{(p)}\equiv 0$在$\mathbb{C}$上恒成立，故$f$为多项式。
@@ -297,7 +297,7 @@
 
             对足够大的$m > M$，有
             $$\dfrac{\sum\limits_{n = 1}^{n_0}{n|a_n|}}{m} < \dfrac{\varepsilon}{2}$$
-            因此对$m > \max{(N,M)}$有
+            因此对$m > \max{(N, M)}$有
             $$\dfrac{\sum\limits_{n = 1}^{m}{n|a_n|}}{m} < \varepsilon$$
 
         \item 
@@ -367,7 +367,7 @@
 
 \begin{proof}
 
-    反证法。假设$z_0 = 1$不是$\varphi(z)$的发散点。设$x$是区间$(0,1)$上的任意点，由引理\ref{lemma:radius}可知，
+    反证法。假设$z_0 = 1$不是$\varphi(z)$的发散点。设$x$是区间$(0, 1)$上的任意点，由引理\ref{lemma:radius}可知，
     $$\Delta = R - |x - z_0| = 1 - x < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
     设$w$是单位圆上的任意一点，且$z_1$是半径$\vec{z_0w}$和圆$|z| = x$的交点，则有
     $$R - |z_1| = 1 - x$$
@@ -523,12 +523,12 @@
 
 \begin{proposition}
 
-    设$f : D(0,1) \to \mathbb{C}$是解析函数，
-    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{|f(z) - f(-z)|}$$
+    设$f : D(0, 1) \to \mathbb{C}$是解析函数，
+    $$d_r^{*} = \sup\limits_{z \in D(0, r)}{|f(z) - f(-z)|}$$
     证明：对于任意$0 < r < 1$，
     $$2|f'(0)| \leq \dfrac{d_r^{*}}{r}$$
     成立。且等号成立当且仅当
-    $$f(z) - f(-z) = 2f'(0)z, \quad \forall z \in D(0,1)$$
+    $$f(z) - f(-z) = 2f'(0)z, \quad \forall z \in D(0, 1)$$
 
 \end{proposition}
 
@@ -536,9 +536,9 @@
 
     充分性显然。\\
     必要性。应用反证法，不妨设
-    $$f(z) - f(-z) = 2f'(0)z + 2f^{(3)}(0)z^3, \quad \forall z \in D(0,1)$$
+    $$f(z) - f(-z) = 2f'(0)z + 2f^{(3)}(0)z^3, \quad \forall z \in D(0, 1)$$
     其中$f'(0) = r_1\euler^{\imag \theta_1}$，$f^{(3)}(0) = r_2\euler^{\imag \theta_2} \neq 0$. 则
-    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{(|2f'(0)z + 2f^{(3)}(0)z^3|)} = \sup\limits_{z \in D(0,r)}{(2|z||f'(0) + f^{(3)}(0)z^2|)}$$
+    $$d_r^{*} = \sup\limits_{z \in D(0, r)}{(|2f'(0)z + 2f^{(3)}(0)z^3|)} = \sup\limits_{z \in D(0, r)}{(2|z||f'(0) + f^{(3)}(0)z^2|)}$$
     总存在$|z| = r$，使得$f'(0)$与$f^{(3)}(0)z^2$同向，也即
     $$\dfrac{d_r^{*}}{r} = 2|f'(0) + f^{(3)}(0)z^2| > 2|f'(0)|$$
     与题设矛盾，得证。
@@ -548,22 +548,22 @@
 \begin{proposition}
 
     证明：函数$\dfrac{d_r}{r}$是$r$的单调不减函数。其中
-    $$d_r = \sup\{|f(z) - f(w)|\big| z,w \in D(0,r), |z| = |w|\}$$
+    $$d_r = \sup\{|f(z) - f(w)|\big| z, w \in D(0, r), |z| = |w|\}$$
 
 \end{proposition}
 
 \begin{proof}
 
-    考虑$0 < r < R < 1$，易知$d_r = \sup\{|f(z) - f(zu)| \big| z \in D(0,1), |z| = 1 \}$，注意到对于任意的$|u| = 1$，$z \mapsto  \dfrac{f(z) - f(zu)}{z}$是单位圆$D(0,1)$上的解析函数，因此
+    考虑$0 < r < R < 1$，易知$d_r = \sup\{|f(z) - f(zu)| \big| z \in D(0, 1), |z| = 1 \}$，注意到对于任意的$|u| = 1$，$z \mapsto  \dfrac{f(z) - f(zu)}{z}$是单位圆$D(0, 1)$上的解析函数，因此
     
     \begin{align*}
-        \dfrac{d_r}{r} & = \dfrac{1}{r} \sup_{z \in D(0,r)}{|f(z) - f(zu)|} \\
+        \dfrac{d_r}{r} & = \dfrac{1}{r} \sup_{z \in D(0, r)}{|f(z) - f(zu)|} \\
         & = \dfrac{1}{r} \sup_{|z| = r}{|f(z) - f(zu)|} \\
         & = \sup_{|z| = r}{\left| \dfrac{f(z) - f(zu)}{z} \right|} \\
-        & \leq \sup_{z \in \overline{D}(0,R)}{\left| \dfrac{f(z) - f(zu)}{z} \right|} \\
+        & \leq \sup_{z \in \overline{D}(0, R)}{\left| \dfrac{f(z) - f(zu)}{z} \right|} \\
         & = \sup_{|z| = R}{\left| \dfrac{f(z) - f(zu)}{z} \right|} \\
         & = \dfrac{1}{R} \sup_{|z| = R}{|f(z) - f(zu)|} \\
-        & = \dfrac{1}{R} \sup_{z \in D(0,R)}{|f(z) - f(zu)|} \\
+        & = \dfrac{1}{R} \sup_{z \in D(0, R)}{|f(z) - f(zu)|} \\
         & = \dfrac{1}{R} d_{R} \leq \dfrac{1}{R} d_{1}
     \end{align*}
 
@@ -575,7 +575,7 @@
 \begin{proposition}
 
     已知$D$是单位圆盘，设$f:D \to \mathbb{C}$是解析函数。证明：\\
-    函数$f$的直径$d = \sup\limits_{z,w \in D}{|f(z) - f(w)|}$满足
+    函数$f$的直径$d = \sup\limits_{z, w \in D}{|f(z) - f(w)|}$满足
     $$2|f'(0)| \leq d$$
 
 \end{proposition}
@@ -604,9 +604,9 @@
     对任意的$0 < r < 1$，
     $$2|f'(0)| = \dfrac{d_r}{r}$$
     成立当且仅当
-    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0,1)$$
+    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0, 1)$$
     其中
-    $$d_r = \sup\{|f(z) - f(w)|\big| z,w \in D(0,r), |z| = |w|\}$$
+    $$d_r = \sup\{|f(z) - f(w)|\big| z, w \in D(0, r), |z| = |w|\}$$
     
 \end{theorem}
 
@@ -614,7 +614,7 @@
     
     充分性显然。\\
     必要性。易知
-    $$d_r^{*} = \sup\limits_{z \in D(0,r)}{|f(z) - f(-z)|} \leq d_r$$
+    $$d_r^{*} = \sup\limits_{z \in D(0, r)}{|f(z) - f(-z)|} \leq d_r$$
     所以$2|f'(0)| \leq \dfrac{d_r^{*}}{r}$，因此
     $$f(z) - f(-z) = 2f'(0)z$$
     假设存在$|a| = r$，使得
@@ -636,9 +636,9 @@
     与$d_r^{*} \leq d_r$矛盾。所以
     $$f'(z) = 0, \quad \forall |z| = r$$
     由最大模定理知，
-    $$f'(z) = 0, \quad \forall z \in D(0,r)$$
+    $$f'(z) = 0, \quad \forall z \in D(0, r)$$
     因此由\textup{Cauthy-Riemann}条件知，$f'(z)$是常值函数，即
-    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0,1)$$
+    $$f(z) = f'(0)z + f(0), \quad \forall z \in D(0, 1)$$
     成立。
     
 \end{proof}
@@ -650,7 +650,7 @@
     当且仅当
     $$f(z) = f'(0)z + f(0)$$
     其中
-    $$d = \sup\limits_{z,w \in D(0,1)}{|f(z) - f(w)|}$$
+    $$d = \sup\limits_{z, w \in D(0, 1)}{|f(z) - f(w)|}$$
     
 \end{theorem}
 
@@ -692,7 +692,7 @@
     $$ \dfrac{1}{2 \pi} \int_{C_1}{\left| \dfrac{f(z)}{z - z_0} \right|}|\diff z| \leq \dfrac{1}{ \pi|z|}\int_{0}^{2 \pi}{|f(\euler^{\imag\theta})}\diff \theta \leq \dfrac{M}{ \pi|z|}$$
     因此，我们有
     % 似有不对
-    $$|f(z)| \leq \dfrac{M}{ \pi r_2} + \dfrac{M}{ \pi|z|},\quad 0 < |z| < \dfrac{r_2}{2}$$
+    $$|f(z)| \leq \dfrac{M}{ \pi r_2} + \dfrac{M}{ \pi|z|}, \quad 0 < |z| < \dfrac{r_2}{2}$$
     所以$$|zf(z)| \leq \dfrac{M|z|}{ \pi r_2} + \dfrac{M}{\pi}$$
     则极限是有限的。\\
     $z = 0$是可去极点，极限为$0$. \\
@@ -722,16 +722,16 @@
 
 \begin{proposition}
 
-    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
+    设$f(z)$是单位圆盘$\Delta(0, 1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
     证明：$f(z)$至少有一个零点。
 
 \end{proposition}
 
 \begin{proof}
     
-    反证法。若存在$a, b \in \Delta(0,1), \quad a \neq b$，且
+    反证法。若存在$a, b \in \Delta(0, 1), \quad a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
-    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0,1)$映射成$\Delta(0,1)$，且$\varphi(0) = a $ \\
+    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0, 1)$映射成$\Delta(0, 1)$，且$\varphi(0) = a $ \\
     令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
     $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
     由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
@@ -746,7 +746,7 @@
 
 \begin{proposition}
     
-    设$f(z)$是单位圆盘$\Delta(0,1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$. 证明：
+    设$f(z)$是单位圆盘$\Delta(0, 1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$. 证明：
     
     \begin{enumerate}
         
@@ -774,7 +774,7 @@
 
         \item 
             $$|\varphi(z) = \dfrac{1}{2} |f(z) + f(-z)| \leq \dfrac{1}{2} (|f(z)| + |f(-z)|) \leq 1$$
-            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1,\quad |z_0| < 1$，则由\textup{Schwarz}引理得
+            由\textup{(1)}知，$\left| \dfrac{\varphi(z)}{z^2} \right| \leq 1$，且$\left| \dfrac{\varphi(z_0)}{z_0^2} \right| = 1, \quad |z_0| < 1$，则由\textup{Schwarz}引理得
             $$\varphi(z) = \euler^{\imag\theta} z^2$$
             即
             $$f(z) + f(-z) = 2\euler^{\imag\theta} z^2$$
@@ -925,7 +925,7 @@
 
     \begin{align*}
         A & = \iint_{G}\diff x\diff y \\
-          & = \iint_{D}{\left| \dfrac{\partial(u,v)}{\partial(x,y)} \right|}\diff x\diff y \\
+          & = \iint_{D}{\left| \dfrac{\partial(u, v)}{\partial(x, y)} \right|}\diff x\diff y \\
           & = \iint_{D}{|f'(z)|^2}\diff x\diff y
     \end{align*}
 
@@ -934,7 +934,7 @@
 \begin{proposition}
     
     设$f:D \to \mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
-    其中$D = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0,1)$
+    其中$D = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0, 1)$
     $$M(r) \leq \dfrac{2Ar}{1 - r}$$
     其中$M(r) = \max\limits_{|z| = r}\{|f(z)|\}$
 
@@ -942,7 +942,7 @@
 
 \begin{proof}
     
-    $\forall r \in (0,1)$，令
+    $\forall r \in (0, 1)$，令
     $$A(r) = \max_{|z| = r}\{\mathrm{Re}f(z)\}$$
     因为
     $$\euler^{A(r)} = \max_{|z| = r}\{|\euler^{f(z)}|\}$$
@@ -950,7 +950,7 @@
     令
     $$ g(z) = \dfrac{f(z)}{2A - f(z)} = \dfrac{P + Q\imag}{(2A - P) - Q\imag} $$
     其中
-    $$ P = \mathrm{Re}f(z),\quad Q = \mathrm{Im}f(z) $$
+    $$ P = \mathrm{Re}f(z), \quad Q = \mathrm{Im}f(z) $$
     那么$f(z)$在$D$内解析，对任意$x \in D$有
     $$|g(z)|^2 = \dfrac{P^2 + Q^2}{(2A - P)^2 + Q^2} \leq \dfrac{R^2 + Q^2}{A^2 + Q^2} \leq 1$$
     从而$|g(z)| \leq 1$，$g(0) = 0$，于是由\textup{Schwarz}引理得
@@ -1002,8 +1002,8 @@
     若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
     $$|f(z_0)| \leq |z_0|$$
     由于$f(0) = 0$，上式当$z = 0$时成立，则
-    $$|f(z_0)| \leq |z_0|,\quad x \in \Delta(0,1)$$
-    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0,1)$内取得最大模。\\
+    $$|f(z_0)| \leq |z_0|, \quad x \in \Delta(0, 1)$$
+    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0, 1)$内取得最大模。\\
     从而$\varphi(z) \equiv c$， 又$|c| = 1$，则$\varphi(z) = \euler^{\imag\alpha}$，所以
     $$f(z) = \euler^{\imag\alpha}z$$
 
@@ -1020,7 +1020,7 @@
 \begin{proof}
     
     设函数$w = f(z)$，考虑分式线性映射
-    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z},\quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
+    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
     分别$z$平面和$w$平面上的单位圆双方单值映射成$\zeta$和$\tau$平面上的单位元，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$，则
     $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
     在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\

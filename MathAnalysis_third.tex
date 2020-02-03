@@ -54,9 +54,9 @@
 \begin{proof}
     
     令
-    $$S_N = \sum\limits_{n = 1}^{N}{\dfrac{a_n}{n}},\quad T_N = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}}$$
+    $$S_N = \sum\limits_{n = 1}^{N}{\dfrac{a_n}{n}}, \quad T_N = \sum\limits_{n = 1}^{N}{(a_n - a_{n + 1})\ln{n}}$$
     因为$\{a_n\}$单调减少收敛于$0$，且$S_n$，$T_n$单调增加，则假设$\{S_n\}$，$\{T_n\}$收敛，$S$，$T$分别为其极限，注意到
-    $$\ln{n} - \ln{n - 1} = \int_{n - 1}^{n}{\dfrac{1}{x}}\diff x \in \left( \dfrac{1}{n},\dfrac{1}{n - 1} \right)$$
+    $$\ln{n} - \ln{n - 1} = \int_{n - 1}^{n}{\dfrac{1}{x}}\diff x \in \left( \dfrac{1}{n}, \dfrac{1}{n - 1} \right)$$
 
     \begin{enumerate}
         
@@ -139,7 +139,7 @@
 
 \begin{proposition}
     
-    设$a_n > 0(n = 1,2,\cdots)$，且级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$. 证明：级数
+    设$a_n > 0(n = 1, 2, \cdots)$，且级数$\sum\limits_{n = 1}^{\infty}{\dfrac{1}{a_n}}$. 证明：级数
     $$ \sum\limits_{n = 1}^{\infty}{\dfrac{n^2a_n}{(a_1 + a_2 + \cdots + a_n)^2}} $$
 
 \end{proposition}
@@ -325,13 +325,13 @@
         
         \item 
             有理点$x = \dfrac{p}{q}$，则当$n \geq q$时，
-            $$n!\pi x = n! \pi \dfrac{p}{q} = k\pi,\quad k \in \mathrm{Z}$$
+            $$n!\pi x = n! \pi \dfrac{p}{q} = k\pi, \quad k \in \mathrm{Z}$$
             则
             $$\sin{(n!\pi x)} = 0, \quad n \geq q$$
             显然$\sum\limits_{n = 0}^{\infty}{\sin{(n!\pi x)}}$收敛。
 
         \item 
-            注意到$\forall x \in [0,1]$，可以被表示为如下形式
+            注意到$\forall x \in [0, 1]$，可以被表示为如下形式
             $$x = \sum\limits_{k = 0}^{\infty}{\dfrac{a_k}{k!}}, \quad a_k \in \{0, 1, \cdots, k - 1\}$$
             又由$x$的展开形式得
             $$\sin{(n!\pi x)} = (-1)^{na_{n - 1} + a_n} \sin{\left( \pi \sum\limits_{k  = 1}^{\infty}{\dfrac{a_{n + k}}{(n + 1)(n + 2) \cdots(n + k)}} \right)}$$
@@ -342,7 +342,7 @@
             $$\sum\limits_{k = 2}^{\infty}{P \left( \left| \dfrac{a_k}{k} - \dfrac{1}{2} \right| \right)} = +\infty$$
             则$\dfrac{1}{2} < \dfrac{a_k}{k} < \dfrac{1}{4}$，对无限$k \in \mathbb{N}$成立
             $$\liminf_{n \to \infty}{|\sin{(n!\pi x)}|} \geq \sin{\dfrac{\pi}{4}} = \dfrac{\sqrt{2}}{2}$$
-            对几乎所有$x \in [0,1]$成立，又$x \in M$不满足上式，其中$M$为收敛点集合，所以$M$为勒贝格集，不包含任何区间。
+            对几乎所有$x \in [0, 1]$成立，又$x \in M$不满足上式，其中$M$为收敛点集合，所以$M$为勒贝格集，不包含任何区间。
 
        \end{enumerate}
 
@@ -389,7 +389,7 @@
 
 \begin{proposition}
     
-    设$f(x)$是$[a,b]$上的连续函数，且对任意满足$\int_{a}^{b}{g(x)}\diff x$的连续函数$g(x)$有
+    设$f(x)$是$[a, b]$上的连续函数，且对任意满足$\int_{a}^{b}{g(x)}\diff x$的连续函数$g(x)$有
     $$\int_{a}^{b}{f(x)g(x)}\diff x = 0$$
     证明：$f(x)$是常值函数。
 
@@ -417,7 +417,7 @@
 
 \begin{proposition}
 
-    设$f(x) \in \mathbb{C}[-1,1]$
+    设$f(x) \in \mathbb{C}[-1, 1]$
     $$\lim\limits_{n \to \infty}{\dfrac{\int_{-1}^{1}{f(x)(1 - x^2)^n}\diff x}{\int_{-1}^{1}{(1 - x^2)^n}\diff x}} = f(0)$$
 
 \end{proposition}
@@ -447,7 +447,7 @@
 
 \begin{proposition}
 
-    $0 < a < b$，$f:[a,b] \to [-1,1]$，满足$\int_{a}^{b}{f(x)}\diff x = 0$. 证明：
+    $0 < a < b$，$f:[a, b] \to [-1, 1]$，满足$\int_{a}^{b}{f(x)}\diff x = 0$. 证明：
     $$\int_{a}^{b}{\dfrac{f(x)}{x}}\diff x \leq \ln{\dfrac{(a + b)^2}{4ab}}$$
 
 \end{proposition}
@@ -474,7 +474,7 @@
 
 \begin{proposition}
 
-    设函数$f$为$[0,1]$上的单调增加函数，$f(0) = 0$，$f(1) = 1$. 证明：
+    设函数$f$为$[0, 1]$上的单调增加函数，$f(0) = 0$，$f(1) = 1$. 证明：
     $$\int_{0}^{1}{f(f(x))}\diff x \leq 2\int_{0}^{1}{f(x)}\diff x$$
 
 \end{proposition}
@@ -496,14 +496,14 @@
 
 \begin{proposition}
 
-    设$f,g$是$[0,1] \to [0,1]$的连续函数，且$f$单调增加。证明：
+    设$f, g$是$[0, 1] \to [0, 1]$的连续函数，且$f$单调增加。证明：
     $$\int_{0}^{1}{f(g(x))}\diff x \leq \int_{0}^{1}{f(x)}\diff x + \int_{0}^{1}{g(x)}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    设$h(x) = f(x) - x$，$h(t) = \max\limits_{x \in [0,1]}{h(x)} = f(t) = t$
+    设$h(x) = f(x) - x$，$h(t) = \max\limits_{x \in [0, 1]}{h(x)} = f(t) = t$
 
     \begin{align*}
         & \int_{0}^{1}{f(g(x))}\diff x - \int_{0}^{1}{f(x)}\diff x - \int_{0}^{1}{g(x)}\diff x \\
@@ -519,8 +519,8 @@
 
 \begin{proposition}
 
-    设$f(x),g(x)$在$[a,b]$上连续，且满足
-    $$\int_{a}^{x}{f(t)}\diff t \geq \int_{a}^{x}{g(t)}\diff t, \quad x \in [a,b]$$
+    设$f(x), g(x)$在$[a, b]$上连续，且满足
+    $$\int_{a}^{x}{f(t)}\diff t \geq \int_{a}^{x}{g(t)}\diff t, \quad x \in [a, b]$$
     $$\int_{a}^{b}{f(t)}\diff t = \int_{a}^{b}{g(t)}\diff t$$
     证明：
     $$\int_{a}^{b}{xf(x)}\diff x \leq \int_{a}^{b}{xg(x)}\diff x$$
@@ -535,14 +535,14 @@
         & = (a - b) \int_{a}^{\eta}{(f(x) - g(x))}\diff x
     \end{align*}
 
-    其中$\eta \in [a,b]$. 由题设知，$\int_{a}^{\eta}{(f(x) - g(x))}\diff x < 0$，则
+    其中$\eta \in [a, b]$. 由题设知，$\int_{a}^{\eta}{(f(x) - g(x))}\diff x < 0$，则
     $$\int_{a}^{b}{xf(x)}\diff x \leq \int_{a}^{b}{xg(x)}\diff x$$
 
 \end{proof}
 
 \begin{proposition}
 
-    设$f:[0,1] \to \mathrm{R}$是连续函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：
+    设$f:[0, 1] \to \mathrm{R}$是连续函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：
     $$2 \left( \int_{0}^{1}{xf(x)}\diff x \right)^2 \leq \int_{0}^{1}{(1 - x^2)f^2(x)}\diff x$$
 
 \end{proposition}
@@ -563,7 +563,7 @@
 
 \begin{proposition}
 
-    设$f$是$[-1,1]$上的连续函数。证明：
+    设$f$是$[-1, 1]$上的连续函数。证明：
     $$\int_{-1}^{1}{f^2(x)}\diff x \geq \dfrac{1}{2} \left( \int_{-1}^{1}{f(x)}\diff x \right)^2 + \dfrac{3}{2} \left( \int_{-1}^{1}{xf(x)}\diff x \right)^2$$
 
 \end{proposition}
@@ -589,7 +589,7 @@
 
 \begin{proposition}
 
-    设$f:[0,1] \to \mathrm{R}$是有连续导数的可微函数，且$f(1) = 0$. 证明：
+    设$f:[0, 1] \to \mathrm{R}$是有连续导数的可微函数，且$f(1) = 0$. 证明：
     $$4\int_{0}^{1}{|f'(x)|^2}\diff x \geq \int_{0}^{1}{|f(x)|^2}\diff x + \left( \int_{0}^{1}{|f(x)|}\diff x \right)$$
 
 \end{proposition}
@@ -629,19 +629,19 @@
 
 \begin{proposition}
     
-    设$f$是定义在$[0,1]$上的连续可微函数。证明：
+    设$f$是定义在$[0, 1]$上的连续可微函数。证明：
     $$\left| f\left( \dfrac{1}{2} \right) \right| \leq \int_{0}^{1}{|f(x)|}\diff x + \dfrac{1}{2} \int_{0}^{1}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    设$x_0 \in [0,1]$，且
-    $$|f(x_0)| \leq |f(x)|, \quad x \in \left[ 0,\dfrac{1}{2} \right]$$
+    设$x_0 \in [0, 1]$，且
+    $$|f(x_0)| \leq |f(x)|, \quad x \in \left[ 0, \dfrac{1}{2} \right]$$
     则有
     $$f\left( \dfrac{1}{2} \right) = f(x_0) + \int_{x_0}^{\frac{1}{2}}{f'(x)}\diff x$$
     $$\left| f\left( \dfrac{1}{2} \right) \right| = |f(x_0)| + \int_{x_0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
-    由$|f(x_0)| \leq |f(x)|$，$x \in \left[ 0,\dfrac{1}{2} \right]$得
+    由$|f(x_0)| \leq |f(x)|$，$x \in \left[ 0, \dfrac{1}{2} \right]$得
     $$|f(x_0)| \leq 2 \int_{0}^{\frac{1}{2}}{|f(x)|}\diff x$$
     又有
     $$\left| f\left( \dfrac{1}{2} \right) \right| \leq 2\int_{0}^{\frac{1}{2}}{|f(x)|}\diff x + \int_{0}^{\frac{1}{2}}{|f'(x)|}\diff x$$
@@ -654,7 +654,7 @@
 
 \begin{proposition}
 
-    设$f$是$[0,1]$上的连续实值函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：$\exists c \in (0,1)$
+    设$f$是$[0, 1]$上的连续实值函数，且$\int_{0}^{1}{f(x)}\diff x = 0$. 证明：$\exists c \in (0, 1)$
     $$c^2f(c) = \int_{0}^{c}{(x^2 + x)f(x)}\diff x$$
 
 \end{proposition}
@@ -663,17 +663,17 @@
     
     令
     $$F(x) = \int_{0}^{x}{[t^2 + (1 - x)t]f(t)}\diff t$$
-    因为$f$在$[0,1]$上连续，则$F$在$[0,1]$上存在最大值，最小值。
+    因为$f$在$[0, 1]$上连续，则$F$在$[0, 1]$上存在最大值，最小值。
     设
-    $$M = \max{f(x)} = f(x_M),\quad m = \min{f(x)} = f(x_m)$$
+    $$M = \max{f(x)} = f(x_M), \quad m = \min{f(x)} = f(x_m)$$
     由题设$\int_{0}^{1}{f(x)}\diff x = 0$，则不妨设$f$不恒等于$0$，否则不等式显然成立。\\
     所以
     $$M > 0, \quad m < 0$$
     令$a = x_M$，有
     $$F'(a) = Mx_M - M\int_{0}^{x_M}{t}\diff t = Mx_M \left( 1 - \dfrac{x_M}{2} \right) > 0$$
-    同理可知$\exists b \in (0,1), F'(b) < 0$ \\
-    由介值定理知$\exists d \in (a,b)$，使$F'(d) = 0$ \\
-    又由\textup{Rolle}中值定理知，$\exists c \in (0,d)$
+    同理可知$\exists b \in (0, 1), F'(b) < 0$ \\
+    由介值定理知$\exists d \in (a, b)$，使$F'(d) = 0$ \\
+    又由\textup{Rolle}中值定理知，$\exists c \in (0, d)$
     $$F(c) - F(0) = cF'(c)$$
     即
     $$\int_{0}^{c}{[t^2 + (1 - c)t]f(t)}\diff t =  c^2f(c) - c\int_{0}^{c}{tf(t)}\diff t$$
@@ -683,7 +683,7 @@
 
 \begin{proposition}
 
-    设$f$是$[0,1]$上的连续可微函数，$b > 0$，且$f(0) = 0$. 证明：
+    设$f$是$[0, 1]$上的连续可微函数，$b > 0$，且$f(0) = 0$. 证明：
     $$\int_{0}^{b}{\dfrac{f^2(x)}{x^2}}\diff x \leq 4\int_{0}^{b}{\left( f'(x) \right)^2 }\diff x $$
 
 \end{proposition}
@@ -711,7 +711,7 @@
 
     设$f:\mathbb{R} \to (0 ,+\infty)$是可微函数，且对于常数$k$，有
     $$|f'(x) - f'(y)| \leq k|x - y|$$
-    其中$x,y \in \mathbb{R}$. 证明：
+    其中$x, y \in \mathbb{R}$. 证明：
     $$\left( f'(x) \right)^2 < 2kf(x)$$
 
 \end{proposition}
@@ -770,7 +770,7 @@
 
     则有
     $$\lim\limits_{w \to \infty}{\euler^{-w}\int_{0}^{w}{\euler^tf(t)}\diff t} = 0$$
-    则$\dfrac{1}{2}(f(x) - g(x))^2$在$[0,a]\ (\forall a \in \mathrm{R}^+)$上必定有界连续，则
+    则$\dfrac{1}{2}(f(x) - g(x))^2$在$[0, a]\ (\forall a \in \mathrm{R}^+)$上必定有界连续，则
 
     \begin{align*}
         \int_{0}^{w}{f^2(x) - g^2(x)}\diff x & = \int_{0}^{w}{\left( \dfrac{(f(x) - g(x))^2}{2} \right)'}\diff x \\
@@ -814,14 +814,14 @@
 
 \begin{proposition}
 
-    设$f$在$[0,a](a > 0)$上有可积的导函数。证明：
+    设$f$在$[0, a](a > 0)$上有可积的导函数。证明：
     $$|f(0)| \leq \dfrac{1}{a}\int_{0}^{a}{|f(x)|}\diff x + \int_{0}^{a}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    对任意$x \in [0,a]$，有
+    对任意$x \in [0, a]$，有
 
     \begin{align*}
         f(x) - f(0) & = \int_{0}^{x}{f'(t)}\diff t \\
@@ -843,7 +843,7 @@
 
 \begin{proposition}
 
-    设$f$在$[0,1]$上有可积的导函数。证明：
+    设$f$在$[0, 1]$上有可积的导函数。证明：
     $$\int_{0}^{1}{|f(x)|}\diff x \leq \max\left\{ \int_{0}^{1}{|f'(x)|}\diff x,  \left| \int_{0}^{1}{f(x)}\diff x \right| \right\}$$
 
 \end{proposition}
@@ -855,7 +855,7 @@
     则不等式显然成立
     若
     $$\left| \int_{0}^{1}{f(x)}\diff x \right| < \int_{0}^{1}{|f(x)|}\diff x$$
-    则$f(x)$在$[0,1]$上一定变号，所以存在$x_0 \in [0,1]$，$f(x_0) = 0$，则
+    则$f(x)$在$[0, 1]$上一定变号，所以存在$x_0 \in [0, 1]$，$f(x_0) = 0$，则
 
     \begin{align*}
         |f(x)| & = |f(x) - f(x_0)| \\
@@ -871,16 +871,16 @@
 
 \begin{proposition}
     
-    函数$f(x)$，$g(x)$是$[0,1]$上的可导函数，且
+    函数$f(x)$，$g(x)$是$[0, 1]$上的可导函数，且
     $$\int_{0}^{1}{f(x)}\diff x = 3 \int_{\frac{2}{3}}^{1}{f(x)}\diff x$$
-    证明：在$[0,1]$上存在不同的两点$\xi$，$\eta$，使得
+    证明：在$[0, 1]$上存在不同的两点$\xi$，$\eta$，使得
     $$f'(\xi) = g'(\xi)(f(\eta) - f(\xi))$$
 
 \end{proposition}
 
 \begin{proof}
 
-    反证法。设$\forall x,y \in [0,1]$，$x \neq y$，有
+    反证法。设$\forall x, y \in [0, 1]$，$x \neq y$，有
     $$f'(x) \neq g'(x)(f(y) - f(x))$$
     不妨设
     $$f'(x) > g'(x)(f(y) - f(x))$$
@@ -888,7 +888,7 @@
     $$f'(x) = g'(x)(f(y) - f(x))$$
     令$y \to x$，有
     $$\lim\limits_{y \to x}{f'(x)} = f'(x) \geq \lim\limits_{y \to x}{g'(x)(f(y) - f(x))} = 0$$
-    由$x$的任意性知，$f'(x) \geq 0$，$\forall x \in [0,1]$，
+    由$x$的任意性知，$f'(x) \geq 0$，$\forall x \in [0, 1]$，
     则由题设
     $$\int_{0}^{\frac{2}{3}}{f(x)}\diff x = 2 \int_{\frac{2}{3}}^{1}{f(x)}\diff x$$
     然而由于$f'(x) \geq 0$
@@ -900,7 +900,7 @@
 \begin{proposition}
     
     设$f'(x)$在$[a, b]$上连续。证明：
-    $$\max_{x\in[a,b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
+    $$\max_{x\in[a, b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
 
 \end{proposition}
 
@@ -922,7 +922,7 @@
     即
     $$|f(x_0)| \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
     由$x_0$的任意性知
-    $$\max_{x\in[a,b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
+    $$\max_{x\in[a, b]}{|f(x)|} \leq \left| \dfrac{1}{b - a}\int_{a}^{b}{f(x)}\diff x \right| + \int_{a}^{b}{|f'(x)|}\diff x$$
     
 \end{proof}
 
@@ -963,7 +963,7 @@
 
 \begin{proof}
 
-    存在一个正交矩阵$\boldsymbol{A}$，将$(\begin{smallmatrix} x,& y,& z \end{smallmatrix})$转换为$(\begin{smallmatrix} u,& v,& w \end{smallmatrix})$，即
+    存在一个正交矩阵$\boldsymbol{A}$，将$(\begin{smallmatrix} x, & y, & z \end{smallmatrix})$转换为$(\begin{smallmatrix} u, & v, & w \end{smallmatrix})$，即
     $$ \boldsymbol{A}
     \begin{pmatrix}
         x \\
@@ -1024,7 +1024,7 @@
 
 \begin{proposition}
 
-    设$f(x)$，$g(x)$是$[0,1]$上的恒正连续函数，且$f(x)$，$\dfrac{f(x)}{g(x)}$单调增加。\\
+    设$f(x)$，$g(x)$是$[0, 1]$上的恒正连续函数，且$f(x)$，$\dfrac{f(x)}{g(x)}$单调增加。\\
     证明：
     $$\int_{0}^{1}{\dfrac{\int_{0}^{x}{f(t)}\diff t}{\int_{0}^{x}{g(t)}\diff t}}\diff x \leq 2\int_{0}^{1}{\dfrac{f(x)}{g(x)}}\diff x$$
 
@@ -1149,7 +1149,7 @@
 
 \begin{proposition}
 
-    设函数$f \in C^{1}[0,1]$. 证明：
+    设函数$f \in C^{1}[0, 1]$. 证明：
     $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 1}^{n}{f\left( \dfrac{k}{n} \right)} \right]} = -\dfrac{1}{2}(f(1) - f(0))$$
 
 \end{proposition}
@@ -1161,7 +1161,7 @@
         & = \sum\limits_{k = 1}^{n}{\int_{\frac{k - 1}{n}}^{\frac{k - 1}{n}}{f'(\xi_k)\left( x - \dfrac{k}{n} \right)}\diff x} \\
     \end{align*}
     
-    因为$f \in C^{1}[0,1]$，所以在$\left[ \dfrac{k - 1}{n}, \dfrac{k}{n} \right]$，$k = 1, 2, \cdots, n$中，存在$m_k, M_k$，使得
+    因为$f \in C^{1}[0, 1]$，所以在$\left[ \dfrac{k - 1}{n}, \dfrac{k}{n} \right]$，$k = 1, 2, \cdots, n$中，存在$m_k, M_k$，使得
     $$m_k \leq f'(x) \leq M_k$$
     因此有
 
@@ -1181,7 +1181,7 @@
 
 \begin{proposition}
     
-    设函数$f \in C^{1}[0,1]$，$\theta \in [0, 1]$. 证明：
+    设函数$f \in C^{1}[0, 1]$，$\theta \in [0, 1]$. 证明：
     $$\lim\limits_{n \to \infty}{n \left[ \int_{0}^{1}{f(x)}\diff x - \dfrac{1}{n}\sum\limits_{k = 0}^{n - 1}{f\left( \dfrac{k + \theta}{n} \right)} \right]} = -\left( \theta - \dfrac{1}{2} \right) (f(1) - f(0))$$
 \end{proposition}
 
@@ -1204,15 +1204,15 @@
 
 \begin{proposition}
 
-    设函数$f \in C[0,1]$，如果极限
+    设函数$f \in C[0, 1]$，如果极限
     $$\lim\limits_{n \to \infty}{\dfrac{f(0) + f(\frac{1}{n}) + f(\frac{2}{n}) + \cdots + f(1)}{n}} = M$$
-    其中$M$为$f(x)$在$[0,1]$上的最大值。证明：$f(x) \equiv M$.
+    其中$M$为$f(x)$在$[0, 1]$上的最大值。证明：$f(x) \equiv M$.
 
 \end{proposition}
 
 \begin{proof}
 
-    反证法。设$\exists x_0 \in [0,1]$，$f(x_0) = y < M$，则由函数连续性可知，$\exists \delta > 0$，$|x - x_0| < \delta$时
+    反证法。设$\exists x_0 \in [0, 1]$，$f(x_0) = y < M$，则由函数连续性可知，$\exists \delta > 0$，$|x - x_0| < \delta$时
     $$|f(x) - f(x_0)| < \varepsilon$$
     其中$\varepsilon = \dfrac{M - y}{2}$，又由黎曼积分性质知，
     $$\lim\limits_{n \to \infty}{\dfrac{f(0) + f(\frac{1}{n}) + f(\frac{2}{n}) + \cdots + f(1)}{n}} = \int_{0}^{1}{f(x)}\diff x = M$$
@@ -1226,7 +1226,7 @@
 
 \begin{proposition}
 
-    设非负函数$f(x) \in C[0,1]$，且在$[0,1]$上是单调递增的，记
+    设非负函数$f(x) \in C[0, 1]$，且在$[0, 1]$上是单调递增的，记
     $$s = \dfrac{\int_{0}^{1}{xf(x)}\diff x}{\int_{0}^{1}{f(x)}\diff x}$$
 
     \begin{enumerate}
@@ -1255,13 +1255,13 @@
             由积分中值定理可得，
             $$\int_{0}^{\frac{1}{2}}{(x - \dfrac{1}{2})f(x)}\diff x = -\dfrac{1}{8} f(\xi_1)$$
             $$\int_{\frac{1}{2}}^{1}{(x - \dfrac{1}{2})f(x)}\diff x = \dfrac{1}{8} f(\xi_2)$$
-            其中，$0 < \xi_1 < \dfrac{1}{2} < \xi_2 < 1$，再由$f(x)$在$[0,1]$上单调递增，可知
+            其中，$0 < \xi_1 < \dfrac{1}{2} < \xi_2 < 1$，再由$f(x)$在$[0, 1]$上单调递增，可知
             $$ f(\xi_2) - f(\xi_1) \geq 0$$
             即
             $$s \geq \dfrac{1}{2}$$
 
         \item 
-            因为$f(x) \in C[0,1]$，则$f'(x) \geq 0$，考虑变上限积分
+            因为$f(x) \in C[0, 1]$，则$f'(x) \geq 0$，考虑变上限积分
             $$F(x) = \int_{0}^{x}{f(t)} \diff t$$
             显然$F''(x) = f'(x) \geq 0$，因此$F(x)$的图像是下凸的且$F(x) \geq 0$. 不妨设
             $$\int_{0}^{1}{f(x)}\diff x = 1$$
@@ -1287,7 +1287,7 @@
 
 \begin{proposition}
 
-    设$f(x) \in C^2[0,1]$，且满足$f(0) = f(1) = f'(0) = 0$，$f'(1) = 1$ \\
+    设$f(x) \in C^2[0, 1]$，且满足$f(0) = f(1) = f'(0) = 0$，$f'(1) = 1$ \\
     证明：
     $$\int_{0}^{1}{(f''(x))^2}\diff x \geq 4$$
     并指出不等式中等号成立的条件。
@@ -1310,25 +1310,25 @@
     \end{align*}
 
     所以
-    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a,b) \in \mathbb{R}^2}\left( -2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
+    $$\int_{0}^{1}{(f''(x))^2}\diff x \geq \max_{(a, b) \in \mathbb{R}^2}\left( -2a - 2b - \dfrac{a^2}{3} - ab - b^2 \right) = 4$$
     右端最小值在$a = -6$，$b = 2$时取得，因此，当$f''(x) = 6x - 2$且满足题设时不等式取等，不难得到此时$f(x) = x^3 - x^2$.
     
 \end{proof}
 
 \begin{proposition}
 
-    设函数$f(x)$在区间$[0,1]$上二阶连续可微。证明
+    设函数$f(x)$在区间$[0, 1]$上二阶连续可微。证明
     $$\int_{0}^{1}{|f'(x)|}\diff x \leq 9\int_{0}^{1}{|f(x)|}\diff x + \int_{0}^{1}{|f''(x)|}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    设$x \in \left[ 0, \dfrac{1}{3} \right]$，$y \in \left[ \dfrac{2}{3}, 1 \right]$，由\textup{Lagrange}中值定理知，$\exists z \in (x,y)$，使得
+    设$x \in \left[ 0, \dfrac{1}{3} \right]$，$y \in \left[ \dfrac{2}{3}, 1 \right]$，由\textup{Lagrange}中值定理知，$\exists z \in (x, y)$，使得
     $$f'(z) = \dfrac{f(y) - f(x)}{y - x}$$
     所以
     $$|f'(z)| \leq 3|f(x)| + 3|f(y)|$$
-    对于任意的$w \in [0,1]$，有
+    对于任意的$w \in [0, 1]$，有
     $$f'(w) - f'(z) = \int_{0}^{1}{f''(t)}\diff t$$
     因此可得
     $$|f'(w)| \leq 3|f(x)| + 3|f(y)| + \int_{0}^{1}{|f''(x)|}\diff x$$
@@ -1341,38 +1341,38 @@
 
 \begin{theorem}
     
-    设$f$，$g$是区间$[a,b]$上的非负连续函数，且存在$u, v \in [a,b]$，使得$\max{f(x)} = f(u)$，$\max{g(x)} = g(u)$，$\min{f(x)} = f(v)$，$\min{g(x)} = g(v)$. \\
-    则对任意$\lambda \in (0,1)$，存在$c \in (a,b)$，使得
+    设$f$，$g$是区间$[a, b]$上的非负连续函数，且存在$u, v \in [a, b]$，使得$\max{f(x)} = f(u)$，$\max{g(x)} = g(u)$，$\min{f(x)} = f(v)$，$\min{g(x)} = g(v)$. \\
+    则对任意$\lambda \in (0, 1)$，存在$c \in (a, b)$，使得
     $$\int_{a}^{b}{f(x)g(x)}\diff x = \lambda f(c) \int_{a}^{b}{f(x)}\diff x + (1 - \lambda)g(c)\int_{a}^{b}{g(x)}\diff x$$
 
 \end{theorem}
 
 \begin{proof}
 
-    显然，对任意$x \in [a,b]$，有$f(v) \leq f(x) \leq f(u)$. 因为$g$非负，所以
+    显然，对任意$x \in [a, b]$，有$f(v) \leq f(x) \leq f(u)$. 因为$g$非负，所以
     $$f(v)g(x) \leq f(x)g(x) \leq f(u)g(x)$$
     因此
     $$f(v) \int_{a}^{b}{g(x)}\diff x \leq \int_{a}^{b}{f(x)g(x)}\diff x \leq f(u) \int_{a}^{b}{g(x)}\diff x$$
     等号成立当且仅当$f$为常值函数或$g \equiv 0$. 同理有
     $$g(v) \int_{a}^{b}{f(x)}\diff x \leq \int_{a}^{b}{f(x)g(x)}\diff x \leq g(u) \int_{a}^{b}{f(x)}\diff x$$
-    等号成立当且仅当$g$为常值函数或$f \equiv 0$. 设$\lambda \in (0,1)$，考虑函数$h : [a,b] \to \mathbb{R}$
+    等号成立当且仅当$g$为常值函数或$f \equiv 0$. 设$\lambda \in (0, 1)$，考虑函数$h : [a, b] \to \mathbb{R}$
     $$h(t) = \lambda f(t) \int_{a}^{b}{g(x)}\diff x + (1 - \lambda)g(t)\int_{a}^{b}{f(x)}\diff x - \int_{a}^{b}{f(x)g(x)}\diff x$$
-    易知$h(u) \geq 0$，$h(v) \leq 0$. 由函数连续性知，存在$c \in [u,v]$，使得$h(c) = 0$. \\
-    下证$c \in (a,b)$. 若$c \neq u$且$c \neq v$，则显然满足$c \in (a,b)$. 
-    否则我们不妨设$c = u$，易知$f$和$g$为常值函数，因此任意$t \in [a,b]$，满足$h(t) = 0$. 若$c = v$，同理可证。
+    易知$h(u) \geq 0$，$h(v) \leq 0$. 由函数连续性知，存在$c \in [u, v]$，使得$h(c) = 0$. \\
+    下证$c \in (a, b)$. 若$c \neq u$且$c \neq v$，则显然满足$c \in (a, b)$. 
+    否则我们不妨设$c = u$，易知$f$和$g$为常值函数，因此任意$t \in [a, b]$，满足$h(t) = 0$. 若$c = v$，同理可证。
 
 \end{proof} 
 
 \begin{proposition}
     
-    设函数$f(x) \in C^1[0,1]$，且$f(0) = f(1) = 0$. 证明：
+    设函数$f(x) \in C^1[0, 1]$，且$f(0) = f(1) = 0$. 证明：
     $$\left( \int_{0}^{1}{f(x)}\diff x \right)^2 \leq \dfrac{1}{12} \int_{0}^{1}{|f'(x)|^2}\diff x$$
 
 \end{proposition}
 
 \begin{proof}
 
-    应用分部积分法，因为$f(0) = f(1) = 0$，则对任意$y \in [0,1]$，有
+    应用分部积分法，因为$f(0) = f(1) = 0$，则对任意$y \in [0, 1]$，有
     $$\int_{0}^{y}{f(x)}\diff x = \int_{0}^{y}{(y - x)f'(x)}\diff x$$
     且有
     $$\int_{y}^{1}{f(x)}\diff x = \int_{y}^{1}{(y - x)f'(x)}\diff x$$
