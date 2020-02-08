@@ -673,6 +673,36 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    已知函数$f(x) = x^n - ax - 1$，其中$n \in \mathbb{N}$，$0 < a < 1$. 证明：
+
+    \begin{enumerate}
+
+        \item 方程$f(x) = 0$有且仅有一个正实数根$\beta$，且$\beta > 1$.
+        
+        \item 方程$f(x) = 0$的任意复数根$\alpha$满足对(1)中$\beta$有$|\alpha| \leq \beta$.
+        
+    \end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 因为$f'(x) = nx^{n - 1} - a$，所以$f'(1) > 1$，又$f(1) = -a < 0$，因此方程$f(x) = 0$有且仅有一个正实数根$\beta$，且$\beta > 1$.
+        
+        \item 
+            应用反证法。假设存在$\alpha \in \mathbb{C}$，且$|\alpha| > \beta$，使得$f(\alpha) = 0$. \\
+            易知$x > \beta$时，$x^n - ax$单调增加，因此有
+            $$1 = |\alpha^n - a\alpha| \geq |\alpha^n| - a|\alpha| = |\alpha|^n - a|\alpha| > \beta^n - a\beta = 1$$
+            矛盾，得证。
+
+    \end{enumerate}
+
+\end{proof}
+
 \section{一元函数微分学}
 
 \begin{proposition}

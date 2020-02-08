@@ -1124,6 +1124,21 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    求$x \in [1,2)$，使得对任意自然数$n \in \mathbb{N}$，满足$\lfloor 2^n x \rfloor$被$4$除后余$1$或者余$2$.
+
+\end{proposition}
+
+\begin{proof}
+
+    $x$可以表示为二进制形式，$\lfloor 2^n x \rfloor$即为$x$小数点右移$n - 2$位（若$n < 2$时，即为左端补$0$后小数点左移相应位数）后保留整数部分。\\
+    $\lfloor 2^n x \rfloor$被$4$除后的余数即为$\lfloor 2^n x \rfloor$二进制表示的最后两位数，因此$x$的二进制形式中，任意连续两位数必为$01$或$10$，则
+    $$x = 1.0101 \cdots$$
+    即$x = \dfrac{4}{3}$.
+    
+\end{proof}
+
 \section{不等式}
 
 \begin{theorem}[Bernoulli不等式]
