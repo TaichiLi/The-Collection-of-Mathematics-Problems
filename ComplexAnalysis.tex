@@ -748,16 +748,16 @@
 
 \begin{proposition}
 
-    设$f(z)$是单位圆盘$\Delta(0, 1) = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
+    设$f(z)$是单位圆盘$\mathbb{D} = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
     证明：$f(z)$至少有一个零点。
 
 \end{proposition}
 
 \begin{proof}
     
-    反证法。若存在$a, b \in \Delta(0, 1), \quad a \neq b$，且
+    反证法。若存在$a, b \in \mathbb{D}$，$\quad a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
-    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\Delta(0, 1)$映射成$\Delta(0, 1)$，且$\varphi(0) = a $ \\
+    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\mathbb{D}$映射成$\mathbb{D}$，且$\varphi(0) = a $ \\
     令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
     $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
     由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
@@ -772,7 +772,7 @@
 
 \begin{proposition}
     
-    设$f(z)$是单位圆盘$\Delta(0, 1) = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$. 证明：
+    设$f(z)$是单位圆盘$\mathbb{D} = \{z \big| |z| < 1 \}$到其自身的映射，且为解析函数，$f(0) = 0$. 证明：
     
     \begin{enumerate}
         
@@ -879,20 +879,20 @@
 
 \begin{proposition}
     
-    设$f(z) = \sum\limits_{n = 0}^{\infty}{a_nz^n}$为单位圆盘$D = \{z\big| |z| < 1\}$内的单叶解析函数，\\
-    $G$为$f$将单位圆$D$映射成的区域，$A$为区域$G$的面积。证明：
+    设$f(z) = \sum\limits_{n = 0}^{\infty}{a_nz^n}$为单位圆盘$\mathbb{D} = \{z\big| |z| < 1\}$内的单叶解析函数，\\
+    $G$为$f$将单位圆盘$\mathbb{D}$映射成的区域，$A$为区域$G$的面积。证明：
     $$A =  \pi\sum\limits_{n = 1}^{\infty}{n|a_n|^2}$$
 
 \end{proposition}
 
 \begin{proof}
     
-    易证$A = \iint_{D}{|f'(z)|}\diff x\diff y$，又$f'(z) = \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}}$，设$z = \euler^{\imag\theta}$，则有
+    易证$A = \iint_{\mathbb{D}}{|f'(z)|}\diff x\diff y$，又$f'(z) = \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}}$，设$z = \euler^{\imag\theta}$，则有
 
     \begin{align*}
-        A & = \iint_{D}{|f'(z)|^2}\diff x\diff y \\ 
-          & = \iint_{D}{f'(z)\overline{{f'(z)}}}\diff x\diff y \\
-          & = \iint_{D}{\left( \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}} \right)\overline{\left( \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}} \right)}}\diff x\diff y \\
+        A & = \iint_{\mathbb{D}}{|f'(z)|^2}\diff x\diff y \\ 
+          & = \iint_{\mathbb{D}}{f'(z)\overline{{f'(z)}}}\diff x\diff y \\
+          & = \iint_{\mathbb{D}}{\left( \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}} \right)\overline{\left( \sum\limits_{n = 1}^{\infty}{na_nz^{n - 1}} \right)}}\diff x\diff y \\
           & = \int_{0}^{1}{\int_{0}^{2 \pi}{\left( r\sum\limits_{n = 1}^{\infty}{na_nr^{n - 1}\euler^{(n - 1)\imag\theta}} \right)\left( \sum\limits_{n = 1}^{\infty}{n\overline{a_n}r^{n - 1}\euler^{-(n - 1)\imag\theta}} \right)}\diff r}\diff \theta \\
           & = \int_{0}^{1}{r\sum\limits_{n = 1}^{\infty}{2n^2|a_n|^2 \pi r^{2n - 2}}} \\
           & = \pi \sum\limits_{n = 1}^{\infty}{n|a_n|^2}
@@ -915,7 +915,7 @@
 
 \begin{proposition}
 
-    设$f:D \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta$，$\alpha, \beta \in D$，则
+    设$f:\mathbb{D} \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta$，$\alpha, \beta \in \mathbb{D}$，则
     $$|f'(\alpha)| \leq \dfrac{1 - |\beta|^2}{1 - |\alpha|^2}$$
     当且仅当等号成立时，有$f(z) = \varphi_{-\beta}(\varphi_{\alpha}(z))$. 其中
     $$\varphi_{\alpha} = \dfrac{z - \alpha}{1 - \overline{\alpha}{z}}, \quad \varphi_{\beta} = \dfrac{z - \beta}{1 - \overline{\beta}{z}}$$
@@ -959,8 +959,8 @@
 
 \begin{proposition}
     
-    设$f:D \to \mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
-    其中$D = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0, 1)$
+    设$f:\mathbb{D} \to \mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
+    其中$\mathbb{D} = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0, 1)$
     $$M(r) \leq \dfrac{2Ar}{1 - r}$$
     其中$M(r) = \max\limits_{|z| = r}\{|f(z)|\}$
 
@@ -977,7 +977,7 @@
     $$ g(z) = \dfrac{f(z)}{2A - f(z)} = \dfrac{P + Q\imag}{(2A - P) - Q\imag} $$
     其中
     $$ P = \mathrm{Re}f(z), \quad Q = \mathrm{Im}f(z) $$
-    那么$f(z)$在$D$内解析，对任意$x \in D$有
+    那么$f(z)$在$\mathbb{D}$内解析，对任意$x \in \mathbb{D}$有
     $$|g(z)|^2 = \dfrac{P^2 + Q^2}{(2A - P)^2 + Q^2} \leq \dfrac{R^2 + Q^2}{A^2 + Q^2} \leq 1$$
     从而$|g(z)| \leq 1$，$g(0) = 0$，于是由\textup{Schwarz}引理得
     $$|g(z) | \leq z$$
@@ -992,7 +992,7 @@
 
 \begin{lemma}[Schwarz引理]
     
-    设$f(z)$在单位圆盘$|z| < 1$内解析，在闭圆盘$|z| \leq 1$上是连续的，并且满足$f(0) = 0$，又在$|z| < 1$内处处有$|f(z)| < 1$，则
+    设$f(z)$在单位圆盘$\mathbb{D} = \{z \big| |z| < 1\}$内解析，在闭圆盘$\overline{\mathbb{D}} = \{z \big| |z| \leq 1\}$上是连续的，并且满足$f(0) = 0$，又在$\mathbb{D}$内处处有$|f(z)| < 1$，则
 
     \begin{enumerate}
         
@@ -1009,7 +1009,7 @@
 \begin{proof}
     
         
-    由于$f(0) = 0$，且$f(z)$在$|z| < 1$内解析，则$f(z)$在$|z| < 1$内可以\textup{Taylor}展开，有
+    由于$f(0) = 0$，且$f(z)$在$\mathbb{D}$内解析，则$f(z)$在$\mathbb{D}$内可以\textup{Taylor}展开，有
     $$f(z) = c_1 z + c_2 z^2 + \dots + $$
     令$\varphi(z) =  c_1 + c_2 z + \cdots $，则
     $$
@@ -1021,23 +1021,23 @@
         \end{aligned}
     \right.
     $$
-    显然$\varphi(z)$在$|z| < 1$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理知
+    显然$\varphi(z)$在$\mathbb{D}$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理知
     $$|\varphi(z + 0)| = \max_{|z| = r}|\varphi(z_0)| = \max_{|z| = r}{\left| \dfrac{f(z)}{z} \right|} \leq \dfrac{1}{r}$$
     令$r \to 1$，则有$|\varphi(z_0)| \leq 1$ \\
     若$z_0 = 0$，有$|f'(0)| = |\varphi(0)| \leq 1$ \\
     若$z_0 \neq 0$，有$|f'(0)| = \left| \dfrac{f(z_0)}{z_0} \right| \leq 1$，即
     $$|f(z_0)| \leq |z_0|$$
     由于$f(0) = 0$，上式当$z = 0$时成立，则
-    $$|f(z_0)| \leq |z_0|, \quad x \in \Delta(0, 1)$$
-    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\Delta(0, 1)$内取得最大模。\\
+    $$|f(z_0)| \leq |z_0|, \quad x \in \mathbb{D}$$
+    若有$z_0 \neq 0$，使$|f(z_0)| = |z_0| $，或者$|f'(0)| = 1$，则$\varphi(z)$在$\mathbb{D}$内取得最大模。\\
     从而$\varphi(z) \equiv c$， 又$|c| = 1$，则$\varphi(z) = \euler^{\imag\alpha}$，所以
     $$f(z) = \euler^{\imag\alpha}z$$
 
 \end{proof}
 
-\begin{theorem}[Schwarz-Pick定理]
+\begin{theorem}[Schwarz-Pick定理\romannum{1}]
 
-    设$f:D \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，$z \in D$，且$f(z_0) = w_0$. 则
+    设$f:\mathbb{D} \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，$z \in \mathbb{D}$，且$f(z_0) = w_0$. 则
     $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
     等号当且仅当$f(z)$是分式线性映射时成立。
 
@@ -1047,7 +1047,7 @@
     
     设函数$w = f(z)$，考虑分式线性映射
     $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
-    分别$z$平面和$w$平面上的单位圆双方单值映射成$\zeta$和$\tau$平面上的单位元，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$，则
+    分别$z$平面和$w$平面上的单位圆盘双方单值映射成$\zeta$和$\tau$平面上的单位圆盘，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$. 则
     $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
     在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\
     于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
@@ -1056,5 +1056,38 @@
     $$|S(f(z))| \leq |T(z)|$$
     即
     $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
+
+\end{proof}
+
+\begin{theorem}[[Schwarz-Pick定理\romannum{2}]
+
+    
+\end{theorem}
+
+\begin{theorem}[拟双曲型距离]
+
+    定义拟双曲型距离
+    $$\rho(z, w) = \left| \dfrac{z - w}{1 - \overline{w}z} \right|, \quad z, w \in \mathbb{D}$$
+    设$f: \mathbb{D} \to \mathbb{D}$解析，则
+    $$\rho(f(z), f(w)) \leq \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
+    另外，如果$f$是单位圆盘的自同构映射, 则f保持拟双曲型距离不变:
+    $$\rho(f(z), f(w)) = \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
+    
+\end{theorem}
+
+\begin{proof}
+
+    $\forall w \in \mathbb{D}$，记$g = \psi_{f(w)} \circ f \circ \psi^{-1}_{w}$，满足
+    $$g(0) = \psi_{f(w)} \circ f \circ \psi^{-1}_{w}(0) = \psi_{f(w)} \circ f(w) = 0, \quad |g(z)| \leq 1,\ (|z| \leq 1)$$
+    由\textup{Schwarz}引理知，
+    $$|g(z)| = |\psi_{f(w)} \circ f \circ \psi^{-1}_{w}(z)| \leq |z|$$
+    取$z = \psi_{w}(u)$，则$\psi_{f(w)} \circ f(u)| \leq |\psi_{w}(w)|$，即
+    $$\rho(f(u), f(w)) \leq \rho(w, w), \quad \forall w \in \mathbb{D}$$
+    若f是单位圆盘的自同构映射, 则$g^{-1}$有定义, 且满足$g^{-1}(0) = 0$，$|g^{-1}(z)| \leq 1$，仿照上面步骤可得到
+    $$|(\psi_{f(w)} \circ f \circ \psi^{-1}_{w}(z))^{-1}| \leq |z|$$
+    从而
+    $$\rho(w, w) \leq \rho(f(u), f(w)), \quad \forall w \in \mathbb{D}$$
+    综上可知
+    $$\rho(f(z), f(w)) = \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
 
 \end{proof}
