@@ -179,6 +179,113 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设$f(z) = c_0 + c_1 z + \cdots + c_n z^n$是一多项式。
+
+    \begin{enumerate}
+
+        \item 
+            如果系数$c_k\ (k = 0, 1, \cdots, n)$是实数，证明：
+            $$\int_{-1}^{1}{f^2(x)}\diff x \leq \pi \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\dfrac{\diff \theta}{2 \pi} = \pi \sum\limits_{k = 0}^{n}{c_k^2}$$
+
+        \item 
+            如果系数$c_k\ (k = 0, 1, \cdots, n)$是复数，证明：
+            $$\int_{-1}^{1}{|f(x)|^2}\diff x \leq \pi \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\dfrac{\diff \theta}{2 \pi} = \pi \sum\limits_{k = 0}^{n}{|c_k|^2}$$
+        
+        \item 
+            证明：
+            $$\left| \sum\limits_{j, k = 0}^{n}{\dfrac{c_j c_k}{j + k + 1}} \right| \leq \pi \sum\limits_{k = 0}^{n}{c_k|^2}$$
+
+    \end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+
+    \begin{enumerate}
+
+        \item 
+        先证右边等号成立，注意到
+        $$|f(\euler^{\imag \theta})|^2 = (c_0 + c_1 \cos{\theta} + \cdots + c_n \cos{n\theta})^2 + (c_0 + c_1 \sin{\theta} + \cdots + c_n \sin{n\theta})^2$$
+        易知
+        $$\int_{0}^{2\pi}{\cos{mx}\cos{nx}}\diff x = \left\{ 
+        \begin{aligned}
+            & \pi, & m = n, \\
+            & 0, & m \neq n,
+        \end{aligned} \right.$$
+        $$\int_{0}^{2\pi}{\sin{mx}\sin{nx}}\diff x = \left\{ 
+        \begin{aligned}
+            & \pi, & m = n, \\
+            & 0, & m \neq n,
+        \end{aligned} \right.$$
+        所以
+        $$\pi \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\dfrac{\diff \theta}{2 \pi} = \pi \sum\limits_{k = 0}^{n}{c_k^2}$$
+        再证不等号。应用\textup{Cauthy}积分公式得
+        
+        \begin{align*}
+            0 & = \int_{\Gamma_1}{f^2(x)}\diff x + \int_{\Gamma_2}{f^2(z)}\diff z \\
+            & = \int_{-1}^{1}{f^2(x)}\diff x + \int_{0}^{\pi}{f^2(\euler^{\imag \theta})\imag \euler^{\imag \theta}}\diff \theta 
+        \end{align*}
+
+        其中，$\Gamma_1$：从$(-1, 0)$到$(1, 0)$的直径，$\Gamma_2$：从$(1, 0)$沿单位圆逆时针到$(-1, 0)$. \\
+        所以
+        $$\int_{-1}^{1}{f^2(x)}\diff x \leq \left| \int_{0}^{\pi}{f^2(\euler^{\imag \theta})\imag \euler^{\imag \theta}}\diff \theta \right| \leq \int_{0}^{\pi}{|f(\euler^{\imag \theta})|^2}\diff \theta$$
+        再把积分曲线变为下半圆可得
+        $$\int_{-1}^{1}{f^2(x)}\diff x \leq \int_{\pi}^{2\pi}{|f(\euler^{\imag \theta})|^2}\diff \theta$$
+        因此
+        $$\int_{-1}^{1}{f^2(x)}\diff x \leq \dfrac{1}{2} \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\diff \theta$$
+
+    \item 
+        设$c_k = x_k + \imag y_k \ (x_k, y_k \in \mathbb{R})$，并且
+
+    \begin{align*}
+        f(\euler^{\imag \theta}) & = [(x_0 + x_1 \cos{\theta} + \cdots + x_n \cos{n\theta}) - (y_1 \sin{\theta} + y_2 \sin{2\theta} + \cdots + y_n \sin{n\theta})] \\
+        & \ + \imag[(x_1 \sin{\theta} + \cdots + x_n \sin{n\theta}) + (y_0 + y_1 \cos{\theta} + y_2 \cos{2\theta} + \cdots + y_n \cos{n\theta})]
+    \end{align*}
+
+    易知
+    $$\int_{0}^{2\pi}{\cos{mx}\sin{nx}} \diff x = 0, \quad \forall m,n \in \mathbb{N}$$
+    同\textup{(1)}可证等号部分成立。 \\
+    令$x = \cos{\theta}$，$\theta \in [0, \pi]$得
+    $$\int_{-1}^{1}{|f(x)|^2}\diff x = \dfrac{1}{2} \int_{0}^{2\pi}{|f(\cos{\theta})|^2|\sin{\theta}|}\diff \theta$$
+    令$x = \sin{\theta}$，$\theta \in \left[ 0, \dfrac{\pi}{2} \right]$，并作换元$t = \pi -\theta$可得
+    $$\int_{-1}^{1}{|f(x)|^2}\diff x = \dfrac{1}{2} \int_{0}^{2\pi}{|f(\sin{\theta})|^2|\cos{\theta}|}\diff \theta$$
+    令$x = \sin{\theta}$，$\theta \in \left[ \pi, \dfrac{3\pi}{2} \right]$，并作换元$t = 3\pi -\theta$可得
+    $$\int_{-1}^{1}{|f(x)|^2}\diff x = \dfrac{1}{2} \int_{0}^{2\pi}{|f(\sin{\theta})|^2|\cos{\theta}|}\diff \theta$$
+    所以
+    \begin{align*}
+        \int_{-1}^{1}{|f(x)|^2}\diff x & \leq \dfrac{1}{4} \int_{0}^{2\pi}{|f(\cos{\theta})|^2 + |f(\sin{\theta})|^2} \diff \theta \\
+        & \dfrac{1}{4} (2\pi) \left[ x_0^2 + y_0^2 + \sum\limits_{k = 0}^{n}{(x_k^2 + y_k^2)} \right] \\
+        & \leq \dfrac{1}{4} (2\pi) \left[ 2\sum\limits_{k = 0}^{n}{(x_k^2 + y_k^2)} \right] \\
+        & = \pi \sum\limits_{k = 0}^{n}{|c_k|^2}
+    \end{align*}
+
+    \item 
+        对$f^2(x)$展开，可得$x^m$的系数是$\sum\limits_{j + k = m}{c_j c_k}$，我们把它记为$a_m \ (m = 0, 1, \cdots, 2n)$. \\
+        注意到下面的等式成立
+        
+        \begin{align*}
+            \left| \int_{0}^{1}{f^2(x)}\diff x \right| & =  \left| \int_{0}^{1}{\sum\limits_{m = 0}^{2n}{a_m x^m}}\diff x \diff x \right| \\
+            & =  \left| \sum\limits_{m = 0}^{2n}{\dfrac{a_m}{m + 1}} \right| \\
+            & =  \left| \sum\limits_{j, k = 0}^{n}{\dfrac{c_j c_k}{j + k + 1}} \right|
+        \end{align*}
+
+        由\textup{(2)}结论可得
+
+        \begin{align*}
+            \left| \int_{0}^{1}{f^2(x)}\diff x \right| & \leq \int_{0}^{1}{|f(x)|^2}\diff x \\
+            & \leq \int_{-1}^{1}{|f(x)|^2}\diff x \\
+            & \leq \pi \sum\limits_{k = 0}^{n}{|c_k|^2}
+        \end{align*}
+
+        上面的等式成立当且仅当在$-1 < x < 0$上有$|f(x)| \equiv 0$，即$c_0 = c_1 = \cdots = c_n = 0$. 
+
+    \end{enumerate}
+
+    
+\end{proof}
+
 \section{复级数}
 
 \begin{proposition}
@@ -255,7 +362,7 @@
     则有$R(C) \geq 1$，因为左边乘积中幂级数的收敛半径都是$1$，右边幂级数$C$的收敛半径$R(C)$不可能大于$1$，即$R(C) \leq 1$. 则对任意$\varepsilon > 0$，存在$N \in \mathbb{N}$，当$n > N$时，对任意$p \in \mathbb{N}^{+}$有
     $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{|S_k||z|^k} \geq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k}, \quad 1 < |z| < R$$
     所以
-    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^K} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
+    $$\sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^k} \leq \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} < \varepsilon, \quad 1 < |z| < R \eqno{(1)}$$
     因此
     $$\varepsilon > \sum\limits_{k = n + 1}^{n + p}{(n + p - k + 1)|a_k||z|^k} = \sum\limits_{k = n + 1}^{n + p}{(n + p - k)|a_k||z|^k} + \sum\limits_{k = n + 1}^{n + p}{|a_k||z|^k}$$
     由\textup{(1)}式知，
@@ -307,7 +414,7 @@
                 & < n(1 - x)\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{n} + \sum\limits_{k = n + 1}^{\infty}{k|a_k|\dfrac{x^k}{k}}        
             \end{align*}
 
-            令$m|a_m| < \dfrac{\varepsilon}{2}$，由(a)知，$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得当$m > M$时有 
+            令$m|a_m| < \dfrac{\varepsilon}{2}$，由\textup{(a)}知，$\forall \varepsilon > 0$，$\exists M \in \mathbb{N}$，使得当$m > M$时有 
             $$\dfrac{\sum\limits_{k = 0}^{n}{k|a_k|}}{m} < \dfrac{\varepsilon}{2}$$
             我们由上述不等式得
 
@@ -367,7 +474,7 @@
 
 \begin{proof}
 
-    反证法。假设$z_0 = 1$不是$\varphi(z)$的发散点。设$x$是区间$(0, 1)$上的任意点，由引理\ref{lemma:radius}可知，
+    反证法。假设$z_0 = 1$不是$\varphi(z)$的发散点。设$x$是区间$(0, 1)$上的任意点，由引理\ref{lemma:radius}可知
     $$\Delta = R - |x - z_0| = 1 - x < \dfrac{1}{\limsup\limits_{n \to \infty}{\sqrt[n]{\dfrac{|\varphi^{(n)}(z_1)|}{n!}}}}$$
     设$w$是单位圆上的任意一点，且$z_1$是半径$\vec{z_0w}$和圆$|z| = x$的交点，则有
     $$R - |z_1| = 1 - x$$
@@ -1035,35 +1142,6 @@
 
 \end{proof}
 
-\begin{theorem}[Schwarz-Pick定理\romannum{1}]
-
-    设$f:\mathbb{D} \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，$z \in \mathbb{D}$，且$f(z_0) = w_0$. 则
-    $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
-    等号当且仅当$f(z)$是分式线性映射时成立。
-
-\end{theorem}
-
-\begin{proof}
-    
-    设函数$w = f(z)$，考虑分式线性映射
-    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
-    分别$z$平面和$w$平面上的单位圆盘双方单值映射成$\zeta$和$\tau$平面上的单位圆盘，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$. 则
-    $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
-    在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\
-    于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
-    $$|F(\zeta)| = |S((f(T^{-1}(\zeta))))| \leq |\zeta|$$
-    从而在$|z| < 1$内有
-    $$|S(f(z))| \leq |T(z)|$$
-    即
-    $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
-
-\end{proof}
-
-\begin{theorem}[[Schwarz-Pick定理\romannum{2}]
-
-    
-\end{theorem}
-
 \begin{theorem}[拟双曲型距离]
 
     定义拟双曲型距离
@@ -1090,4 +1168,46 @@
     综上可知
     $$\rho(f(z), f(w)) = \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
 
+\end{proof}
+
+\begin{theorem}[Schwarz-Pick定理\romannum{1}]
+
+    设$f:\mathbb{D} \to \mathbb{C}$在$D$内解析，$|f(z)| \leq 1$，$z \in \mathbb{D}$，且$f(z_0) = w_0$. 则
+    $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
+    等号当且仅当$f(z)$是分式线性映射时成立。
+
+\end{theorem}
+
+\begin{proof}
+    
+    设函数$w = f(z)$，考虑分式线性映射
+    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
+    分别$z$平面和$w$平面上的单位圆盘双方单值映射成$\zeta$和$\tau$平面上的单位圆盘，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$. 则
+    $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
+    在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\
+    于是在$|\zeta| < 1$内，由\textup{Schwarz}引理得
+    $$|F(\zeta)| = |S((f(T^{-1}(\zeta))))| \leq |\zeta|$$
+    从而在$|z| < 1$内有
+    $$|S(f(z))| \leq |T(z)|$$
+    即
+    $$ \left| \dfrac{f(z) - w_0}{1 - \overline{w_0}f(z)} \right| \leq \left| \dfrac{z - z_0}{1 - z_0z} \right|$$
+
+\end{proof}
+
+\begin{theorem}[Schwarz-Pick定理\romannum{2}]
+
+    设$f: \mathbb{D} \to \mathbb{D}$解析，则
+    $$\dfrac{|f'(z)|}{1 - |f(z)|^2} \leq \dfrac{1}{1 - |z|^2}, \quad \forall z \in \mathbb{D}$$
+
+\end{theorem}
+
+\begin{proof}
+    
+    由拟双曲型距离定理可知
+    $$\left| \dfrac{f(z) - f(w)}{1 - \overline{f(w)}f(z)} \right| \leq \left| \dfrac{z - w}{1 - \overline{w}z} \right|$$
+    整理得
+    $$\left| \dfrac{f(z) - f(w)}{z - w} \dfrac{1}{1 - \overline{f(w)}f(z)} \right| \leq \left| \dfrac{1}{1 - \overline{w}z} \right|$$
+    令$w \to z$，并利用$\alpha \overline{\alpha} = | \alpha|^2$，可得
+    $$\dfrac{|f'(z)|}{1 - |f(z)|^2} \leq \dfrac{1}{1 - |z|^2}, \quad \forall z \in \mathbb{D}$$
+    
 \end{proof}
