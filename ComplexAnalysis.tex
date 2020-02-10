@@ -851,21 +851,37 @@
 
 \end{proof}
 
+\begin{proposition}
+
+    设$f(z)$是整函数，且$\lim\limits_{r \to \infty}{\dfrac{M(r)}{r^n}} < +\infty$，其中$M(r) = \max\limits_{|z| = r}{|f(z)|}$. 证明：$f(z)$是不高于$n$次的多项式。
+
+\end{proposition}
+
+\begin{proof}
+
+    设$f(z) = \sum\limits_{n = 0}^{\infty}{c_n z^n}$，$|z| < + \infty$，由\textup{Cauchy}不等式得
+    $$|c_k| \leq \dfrac{M(r)}{r^k}, k = 1, 2, \cdots$$
+    下证当$k \geq n + 1$时，$c_k = 0$. 令$k = n + p \ (p \geq 1)$，由题设知
+    $$\lim\limits_{r \to \infty}{\dfrac{M(r)}{r^k}} = \lim\limits_{r \to \infty}{\dfrac{1}{r^p} \dfrac{M(r)}{r^n}} = 0$$
+    则$k \geq n + 1$时$c_k = 0$. 即$f(z)$是不高于$n$次的多项式。
+
+\end{proof}
+
 \section{共形映射}
 
 \begin{proposition}
 
-    设$f(z)$是单位圆盘$\mathbb{D} = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$ \\
+    设$f(z)$是单位圆盘$\mathbb{D} = \{z \big| |z| < 1 \}$到其自身的解析映射，且有$f(z) \neq z$. \\
     证明：$f(z)$至少有一个零点。
 
 \end{proposition}
 
 \begin{proof}
     
-    反证法。若存在$a, b \in \mathbb{D}$，$\quad a \neq b$，且
+    反证法。若存在$a, b \in \mathbb{D}$，$a \neq b$，且
     $$f(a) = a, \quad  f(b) = b$$
-    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，$\varphi$将$\mathbb{D}$映射成$\mathbb{D}$，且$\varphi(0) = a $ \\
-    令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，
+    则设$\varphi(z) = \dfrac{a - z}{1 - \overline{a}z}$，于是$\varphi$将$\mathbb{D}$映射成$\mathbb{D}$，且有$\varphi(0) = a$. \\
+    令$F(z) = \varphi^{-1} \circ f \circ \varphi(z)$，则有$F(0) = 0$，且
     $$F[(\varphi^{-1}(b))] = \varphi^{-1}(b)$$
     由\textup{Schwarz}引理知$F(z) = \euler^{\mathrm{i \theta}}z$，\\
     因为
@@ -897,10 +913,12 @@
     \begin{enumerate}
         
         \item
-            $f(z)$在$|z| < 1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，所以
+            $f(z)$在$|z| < 1$内解析，则可以\textup{Taylor}展开，又因为$f(0) = 0$，\\
+            所以
             $$ f(z) = \sum\limits_{n = 1}^{\infty}{a_nz^n}$$
             令$\varphi(z) = \dfrac{1}{2} (f(z) + f(-z)) = \sum\limits_{n = 1}^{\infty}{a_{2n}z^{2n}}$，
-            显然$z = 0$是$\varphi(z)$的$k(k \geq 2)$级零点，所以
+            显然$z = 0$是$\varphi(z)$的$k(k \geq 2)$级零点，\\
+            所以
             $$|\varphi(z)| = |z|^2$$
             即
             $$|f(z) + f(-z)| \leq 2|z|^2$$
@@ -1067,7 +1085,7 @@
 \begin{proposition}
     
     设$f:\mathbb{D} \to \mathbb{C}$是解析函数，$f(0) = 0$，并且任意$z \in D$，$\mathrm{Re}(f(z)) \leq A$，\\
-    其中$\mathbb{D} = \{z \big| |z| < 1\}$，$A$是正实数，那么任意$r \in (0, 1)$
+    其中$\mathbb{D} = \{z \big| |z| < 1\}$，$A$是正实数，则对任意$r \in (0, 1)$有
     $$M(r) \leq \dfrac{2Ar}{1 - r}$$
     其中$M(r) = \max\limits_{|z| = r}\{|f(z)|\}$
 
@@ -1148,7 +1166,7 @@
     $$\rho(z, w) = \left| \dfrac{z - w}{1 - \overline{w}z} \right|, \quad z, w \in \mathbb{D}$$
     设$f: \mathbb{D} \to \mathbb{D}$解析，则
     $$\rho(f(z), f(w)) \leq \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
-    另外，如果$f$是单位圆盘的自同构映射, 则f保持拟双曲型距离不变:
+    另外，如果$f$是单位圆盘的自同构映射, 则f保持拟双曲型距离不变：
     $$\rho(f(z), f(w)) = \rho(z, w), \quad \forall z, w \in \mathbb{D}$$
     
 \end{theorem}
@@ -1159,7 +1177,7 @@
     $$g(0) = \psi_{f(w)} \circ f \circ \psi^{-1}_{w}(0) = \psi_{f(w)} \circ f(w) = 0, \quad |g(z)| \leq 1,\ (|z| \leq 1)$$
     由\textup{Schwarz}引理知，
     $$|g(z)| = |\psi_{f(w)} \circ f \circ \psi^{-1}_{w}(z)| \leq |z|$$
-    取$z = \psi_{w}(u)$，则$\psi_{f(w)} \circ f(u)| \leq |\psi_{w}(w)|$，即
+    取$z = \psi_{w}(u)$，则$|\psi_{f(w)} \circ f(u)| \leq |\psi_{w}(w)|$，即
     $$\rho(f(u), f(w)) \leq \rho(w, w), \quad \forall w \in \mathbb{D}$$
     若f是单位圆盘的自同构映射, 则$g^{-1}$有定义, 且满足$g^{-1}(0) = 0$，$|g^{-1}(z)| \leq 1$，仿照上面步骤可得到
     $$|(\psi_{f(w)} \circ f \circ \psi^{-1}_{w}(z))^{-1}| \leq |z|$$
@@ -1181,7 +1199,7 @@
 \begin{proof}
     
     设函数$w = f(z)$，考虑分式线性映射
-    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) \dfrac{w - w_0}{1 - \overline{w_0}w}$$
+    $$\zeta = T(z) = \dfrac{z - z_0}{1 - \overline{z_0}z}, \quad \tau = S(w) = \dfrac{w - w_0}{1 - \overline{w_0}w}$$
     分别$z$平面和$w$平面上的单位圆盘双方单值映射成$\zeta$和$\tau$平面上的单位圆盘，并且把$z_0, w_0$映射成$\zeta = 0$，$\tau = 0$. 则
     $$F(\zeta) = S(f(T^{-1}(\zeta)))$$
     在$|\zeta| < 1$内解析，$|F(\zeta)| \leq 1$，且$F(0) = 0$. \\
