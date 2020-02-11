@@ -1004,6 +1004,25 @@
 
 \begin{proposition}
     
+    设单叶解析函数$f(z)$将$z$平面上可求面积的区域$D$映射成$w$平面上的区域$G$，设区域$G$的面积为$A$. 证明：
+    $$ A = \iint_{D}{|f'(z)|^2}\diff x\diff y$$
+
+\end{proposition}
+
+\begin{proof}
+    
+    显然$A = \iint_{D}\diff x\diff y$，积分区域为$G$，则由积分换元公式知
+
+    \begin{align*}
+        A & = \iint_{G}\diff x\diff y \\
+          & = \iint_{D}{\left| \dfrac{\partial(u, v)}{\partial(x, y)} \right|}\diff x\diff y \\
+          & = \iint_{D}{|f'(z)|^2}\diff x\diff y
+    \end{align*}
+
+\end{proof}
+
+\begin{proposition}
+    
     设$f(z) = \sum\limits_{n = 0}^{\infty}{a_nz^n}$为单位圆盘$\mathbb{D} = \{z\big| |z| < 1\}$内的单叶解析函数，\\
     $G$为$f$将单位圆盘$\mathbb{D}$映射成的区域，$A$为区域$G$的面积。证明：
     $$A =  \pi\sum\limits_{n = 1}^{\infty}{n|a_n|^2}$$
@@ -1038,6 +1057,64 @@
 
 \end{proof}
 
+\begin{lemma}\label{lemma:complex}
+
+    设解析函数$f(z) = z + a_2 z^2 + \cdots$为单射。证明：存在一个函数$g(z)$，满足$g^2(z) = f(z^2)$，$g(0) = 0$，$g'(0) = 1$，且$g(z)$为单射。
+
+\end{lemma}
+
+\begin{proof}
+
+    显然$f(0) = 0$，$f'(0) = 1$，作$\dfrac{f(z)}{z}$没有零点，则存在函数$\varphi(z)$，使得$\varphi^2(z) = \dfrac{f(z)}{z}$. 令$g(z) = z\varphi(z^2)$，容易验证$g(0) = 0$，$g'(0) = 1$，且$g(z)$为单射。
+    
+\end{proof}
+
+\begin{theorem}\label{lemma:
+    injective}
+
+    设解析函数$f(z) = z + z_2 z^2 + \cdots$是单射，则$|a_2| \leq 2$，等号成立当且仅当
+    $$f(z) = \dfrac{z}{(1 - \euler^{\imag \theta})^2}, \quad \theta \in \mathbb{R}$$
+
+\end{theorem}
+
+\begin{proof}
+
+    由引理\ref{lemma:complex}得
+    $$\dfrac{1}{g(z)} = \sqrt{\dfrac{1}{f(z^2)}} = \dfrac{1}{z} \sqrt{\dfrac{1}{1 + a_2 z^2 + a_3 z^3 + \cdots}} = \dfrac{1}{z} + b_0 + b_1 z + \cdots$$
+    化简得
+    $$1 = (1 + b_0 z + b_1 z^2 + \cdots)^2 (1 + a_2 z^2 + a_3 z^4 + \cdots)$$
+    比较$z$，$z^2$系数可得$b_0 = 0$，$a_2 + 2 b_1 + b_0^2 = 0$，所以$b_1 = -\dfrac{a_2}{2}$. 因此
+    $$\dfrac{1}{g(z)} = \dfrac{1}{z} - \dfrac{a_2}{2}z + \cdots$$
+    由引理\ref{lemma:complex}知$\dfrac{1}{g(z)}$单射，又由\textup{Area Theorem}得
+    $$\left| \dfrac{a_2}{2} \right|^2 = |b_1|^2 \leq \sum\limits_{n = 1}^{\infty}{n|b_n|^2} \leq 1$$
+    所以$|a_2| \leq 2$. \\
+    下证等号成立的情况。如果等号成立即$|a_2| = 2$，则存在$\theta \in \mathbb{R}$，使得$a_2 = 2 \euler^{\imag \theta}$. 由\textup{Area Theorem}得，$\sum\limits_{n = 1}^{\infty}{n|b_n|^2} \leq 1$，可知其余系数$b_2 = b_3 = \cdots = 0$，因此
+    $$\dfrac{1}{g(z)} = \dfrac{1}{z} - \euler^{\imag \theta}z$$
+    由引理\ref{lemma:complex}知
+    $$g^2(z) = \dfrac{1}{\left( \frac{1}{z} - \euler^{\imag \theta}z \right)^2} = \dfrac{z^2}{(1 - \euler^{\imag \theta} z^2)^2} = f(z^2)$$
+    所以
+    $$f(z) = \dfrac{z}{(1 - \euler^{\imag \theta})^2}, \quad \theta \in \mathbb{R}$$
+
+\end{proof}
+
+\begin{theorem}
+
+    设解析函数$h(z) = \dfrac{1}{z} + c_0 + c_1 z + c_2 z^2 + \cdots$是$\mathbb{D}$上的单射，且$h(z)$取不到$w_1$，$w_2$，则$|w_1 - w_2| \leq 4$.
+
+\end{theorem}
+
+\begin{proof}
+
+    由题设得
+    $$\dfrac{1}{h(z) - w_1} = \dfrac{z}{1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots}$$
+    则$z = (1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots) (b_0 + b_1 z + \cdots)$
+    比较系数得$b_0 = 0$，$b_1 = 1$，$b_0 c_1 + b_1(c_0 - w_1) + b_2 = 0 \Rightarrow b_2 = w_1 - c_0$. \\
+    因此函数$\varphi(z) = \dfrac{1}{h(z) - w_1}$满足$\varphi(0) = 0$，$\varphi'(0) = 1$，且为解析的单射。 由定理\ref{lemma:
+    injective}得，$|b_2| = |w_1 - c_0| \leq 2$，同理$|w_2 - c_0| \leq 2$. 所以
+    $$|w_1 - w_2| \leq |w_1 - c_0| + |c_0 - w_2| \leq 4$$
+    
+\end{proof}
+
 \begin{proposition}
 
     设$f:\mathbb{D} \to \mathbb{C}$时解析函数，$|f(z)| \leq 1$，并且$f(\alpha) = \beta$，$\alpha, \beta \in \mathbb{D}$，则
@@ -1060,25 +1137,6 @@
 
     则有
     $$|f'(\alpha)| \leq \dfrac{1 - |\beta|^2}{1 - |\alpha|^2}$$
-
-\end{proof}
-
-\begin{proposition}
-    
-    设单叶解析函数$f(z)$将$z$平面上可求面积的区域$D$映射成$w$平面上的区域$G$，设区域$G$的面积为$A$. 证明：
-    $$ A = \iint_{D}{|f'(z)|^2}\diff x\diff y$$
-
-\end{proposition}
-
-\begin{proof}
-    
-    显然$A = \iint_{D}\diff x\diff y$，积分区域为$G$，则由积分换元公式知
-
-    \begin{align*}
-        A & = \iint_{G}\diff x\diff y \\
-          & = \iint_{D}{\left| \dfrac{\partial(u, v)}{\partial(x, y)} \right|}\diff x\diff y \\
-          & = \iint_{D}{|f'(z)|^2}\diff x\diff y
-    \end{align*}
 
 \end{proof}
 
