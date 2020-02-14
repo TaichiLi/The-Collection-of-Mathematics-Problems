@@ -1106,8 +1106,8 @@
     
 \end{proof}
 
-\begin{theorem}\label{lemma:
-    injective}
+\begin{theorem}\label{theorem:
+    injective1}
 
     设解析函数$f(z) = z + z_2 z^2 + \cdots$是单射，则$|a_2| \leq 2$，等号成立当且仅当
     $$f(z) = \dfrac{z}{(1 - \euler^{\imag \theta})^2}, \quad \theta \in \mathbb{R}$$
@@ -1135,7 +1135,7 @@
 
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{theorem:injective2}
 
     设解析函数$f(z) = \dfrac{1}{z} + c_0 + c_1 z + c_2 z^2 + \cdots$是$\mathbb{D}$上的单射，且$h(z)$取不到$w_1$，$w_2$，则$|w_1 - w_2| \leq 4$.
 
@@ -1150,11 +1150,25 @@
     比较系数得
     $$b_0 = 0, \ b_1 = 1, \ b_0 c_1 + b_1(c_0 - w_1) + b_2 = 0 \Rightarrow b_2 = w_1 - c_0$$
     因此函数$\varphi(z) = \dfrac{1}{f(z) - w_1}$满足$\varphi(0) = 0$，$\varphi'(0) = 1$，且为解析的单射。 \\
-    由定理\ref{lemma:
-    injective}得，$|b_2| = |w_1 - c_0| \leq 2$，同理$|w_2 - c_0| \leq 2$. \\
+    由定理\ref{theorem:
+    injective1}得，$|b_2| = |w_1 - c_0| \leq 2$，同理$|w_2 - c_0| \leq 2$. \\
     所以
     $$|w_1 - w_2| \leq |w_1 - c_0| + |c_0 - w_2| \leq 4$$
     
+\end{proof}
+
+\begin{theorem}[Koebe-Bieberbach定理]
+
+    设$f: \mathbb{D} \to \mathbb{C}$是解析函数，$f(0) = 0$，$f'(0) = 1$，且$f$为单射，则必有$D\left( 0, \dfrac{1}{4} \right) \subset f(\mathbb{D})$，即$f(\mathbb{D})$包含以原点为圆心，半径为$\dfrac{1}{4}$的圆盘。
+
+\end{theorem}
+
+\begin{proof}
+
+    设$f(z)$取不到$w$，则$\dfrac{1}{f(z)}$取不到$0$和$\dfrac{1}{w}$. \\
+    由定理\ref{theorem:injective2}知$\left| 0 - \dfrac{1}{w} \right| \leq 4$， 即$|w| \geq 4$. \\
+    因此$f(z)$取不到的值都位于圆盘$D\left( 0, \dfrac{1}{4} \right)$之外，所以$D\left( 0, \dfrac{1}{4} \right) \subset f(\mathbb{D})$.
+
 \end{proof}
 
 \begin{proposition}
