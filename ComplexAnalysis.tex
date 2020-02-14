@@ -1057,6 +1057,43 @@
 
 \end{proof}
 
+
+\begin{theorem}[Area theorem]
+    
+    设$f(z) = \dfrac{1}{z} + c_0 + c_1 z + c_2 z
+    ^2 + \cdots$在$0 < |z| < 1$内为单射且解析，则
+    $$\sum\limits_{n = 1}^{\infty}{n|c_n|^2} \leq 1$$
+    
+\end{theorem}
+
+\begin{proof}
+    
+    由题设知，$f(z)$将正向圆周$|z| = r\ (r < 1)$映射成简单闭曲线$\gamma_r$，即
+    $$\gamma_r(\theta) = f(r\euler^{-\imag \theta}), \quad \theta \in [0, 2\pi]$$
+    令$D_r$为简单闭曲线$\gamma$围成的有界区域，$S_r$为$D_r$的面积，易知，曲线$\gamma$正向包围$D_r$. \\
+    因此
+    $$S_r = \int_{\gamma_r}{x}\diff y - \int_{\gamma_r}{y}\diff x$$
+    应用链式法则得
+    $$S_r = \int_{0}^{2\pi}{\mathrm{Re}(f(r \euler^{-\imag \theta})) \mathrm{Im}(-\imag r \euler^{-\imag \theta} f'(r \euler^{-\imag \theta}))} \diff \theta = -\int_{0}^{2\pi}{\mathrm{Im}(f(r \euler^{-\imag \theta})) \mathrm{Re}(-\imag r \euler^{-\imag \theta} f'(r \euler^{-\imag \theta}))} \diff \theta$$
+    因此$D$等于上式右边两项的平均值，即
+    $$S_r = \dfrac{1}{2} \mathrm{Re}\int_{0}^{2\pi}{f(r \euler^{-\imag \theta}) \overline{r \euler^{-\imag \theta} f'(r \euler^{-\imag \theta})}} \diff \theta$$
+    令$c_{-1} = 1$，幂级数展开得
+    $$S_r = -\dfrac{1}{2}\mathrm{Re}\int_{0}^{2\pi}{\sum\limits_{n = -1}^{\infty}{\sum\limits_{n = -1}^{\infty}{m r^{n + m}a_n \overline{a_m} \euler^{\imag (m - n)\theta}}}}\diff \theta$$
+    因为
+    $$\int_{0}^{2\pi}{\euler^{\imag(m - n)\theta}}\diff \theta = \left\{
+        \begin{aligned}
+            & 2\pi, & m = n, \\
+            & 0, & m \neq n,           
+        \end{aligned}
+    \right.$$
+    所以
+    $$S_r = - \pi\sum\limits_{n = -1}^{\infty}{nr^{2n}|a_n|^2} = \dfrac{\pi}{r^2} - \pi\sum\limits_{n = 1}^{\infty}{nr^{2n}|a_n|^2} \geq 0$$
+    令$r \to 1$得
+    $$\sum\limits_{n = 1}^{\infty}{n|a_n|^2} \leq 1$$
+    下证$\gamma_r$正向围绕$D_r$. 设$r'$满足$r < r' < 1$，$z_0 = f(r')$. 存在足够小的正数$s$，使得$\gamma_s$环绕$z_0$，且环绕数为$1$. 当$t \neq r'$时，因为$f$是单射，所以$\gamma_t$不通过$z_0$. 因此由环绕数的同伦不变性可知，$\gamma_r$对$z_0$的环绕数为$1$，也即$z_0 \in D_r$，且$\gamma_r$正向环绕$D_r$.
+
+\end{proof}
+
 \begin{lemma}\label{lemma:complex}
 
     设解析函数$f(z) = z + a_2 z^2 + \cdots$为单射。证明：存在一个函数$g(z)$，满足$g^2(z) = f(z^2)$，$g(0) = 0$，$g'(0) = 1$，且$g(z)$为单射。
@@ -1083,7 +1120,8 @@
     $$\dfrac{1}{g(z)} = \sqrt{\dfrac{1}{f(z^2)}} = \dfrac{1}{z} \sqrt{\dfrac{1}{1 + a_2 z^2 + a_3 z^3 + \cdots}} = \dfrac{1}{z} + b_0 + b_1 z + \cdots$$
     化简得
     $$1 = (1 + b_0 z + b_1 z^2 + \cdots)^2 (1 + a_2 z^2 + a_3 z^4 + \cdots)$$
-    比较$z$，$z^2$系数可得$b_0 = 0$，$a_2 + 2 b_1 + b_0^2 = 0$，所以$b_1 = -\dfrac{a_2}{2}$. 因此
+    比较$z$，$z^2$系数可得$b_0 = 0$，$a_2 + 2 b_1 + b_0^2 = 0$，所以$b_1 = -\dfrac{a_2}{2}$. \\
+    因此
     $$\dfrac{1}{g(z)} = \dfrac{1}{z} - \dfrac{a_2}{2}z + \cdots$$
     由引理\ref{lemma:complex}知$\dfrac{1}{g(z)}$单射，又由\textup{Area Theorem}得
     $$\left| \dfrac{a_2}{2} \right|^2 = |b_1|^2 \leq \sum\limits_{n = 1}^{\infty}{n|b_n|^2} \leq 1$$
@@ -1099,18 +1137,22 @@
 
 \begin{theorem}
 
-    设解析函数$h(z) = \dfrac{1}{z} + c_0 + c_1 z + c_2 z^2 + \cdots$是$\mathbb{D}$上的单射，且$h(z)$取不到$w_1$，$w_2$，则$|w_1 - w_2| \leq 4$.
+    设解析函数$f(z) = \dfrac{1}{z} + c_0 + c_1 z + c_2 z^2 + \cdots$是$\mathbb{D}$上的单射，且$h(z)$取不到$w_1$，$w_2$，则$|w_1 - w_2| \leq 4$.
 
 \end{theorem}
 
 \begin{proof}
 
     由题设得
-    $$\dfrac{1}{h(z) - w_1} = \dfrac{z}{1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots}$$
-    则$z = (1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots) (b_0 + b_1 z + \cdots)$
-    比较系数得$b_0 = 0$，$b_1 = 1$，$b_0 c_1 + b_1(c_0 - w_1) + b_2 = 0 \Rightarrow b_2 = w_1 - c_0$. \\
-    因此函数$\varphi(z) = \dfrac{1}{h(z) - w_1}$满足$\varphi(0) = 0$，$\varphi'(0) = 1$，且为解析的单射。 由定理\ref{lemma:
-    injective}得，$|b_2| = |w_1 - c_0| \leq 2$，同理$|w_2 - c_0| \leq 2$. 所以
+    $$\dfrac{1}{f(z) - w_1} = \dfrac{z}{1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots}$$
+    则
+    $$z = (1 + (c_0 - w_1)z + c_1 z^2 + c_2 z^3 + \cdots) (b_0 + b_1 z + \cdots)$$
+    比较系数得
+    $$b_0 = 0, \ b_1 = 1, \ b_0 c_1 + b_1(c_0 - w_1) + b_2 = 0 \Rightarrow b_2 = w_1 - c_0$$
+    因此函数$\varphi(z) = \dfrac{1}{f(z) - w_1}$满足$\varphi(0) = 0$，$\varphi'(0) = 1$，且为解析的单射。 \\
+    由定理\ref{lemma:
+    injective}得，$|b_2| = |w_1 - c_0| \leq 2$，同理$|w_2 - c_0| \leq 2$. \\
+    所以
     $$|w_1 - w_2| \leq |w_1 - c_0| + |c_0 - w_2| \leq 4$$
     
 \end{proof}
