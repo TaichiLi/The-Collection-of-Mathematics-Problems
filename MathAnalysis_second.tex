@@ -12,9 +12,9 @@
 
     应用数学归纳法。$n = 1$时，$f(x) = c_1 \euler^{\lambda_1 x}$无零点，结论成立。\\
     假设$n = m$时成立，则$n = m + 1$时，应用反证法，假设此时零点个数大于等于$m + 1$
-    $$f(x) = \sum\limits_{k  = 1}^{m + 1}{c_k\euler^{\lambda_k x}} = \left[ c_{m + 1} + \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} \right]$$
+    \[f(x) = \sum\limits_{k  = 1}^{m + 1}{c_k\euler^{\lambda_k x}} = \left[ c_{m + 1} + \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} \right]\]
     令
-    $$g(x) = \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} + c_{m + 1}$$
+    \[g(x) = \sum\limits_{k  = 1}^{m}{c_k\euler^{(\lambda_k - \lambda_{m + 1}) x}} + c_{m + 1}\]
     则$g(x)$有至少$m + 1$个零点，由\textup{Rolle}中值定理得，$g'(x) = \sum\limits_{k  = 1}^{m}{c_k (\lambda_k - \lambda_{m + 1}) \euler^{(\lambda_k - \lambda_{m + 1}) x}}$至少有$m$个零点 \\
     因为$a_k = c_k(\lambda_k - \lambda_{m + 1})$互异，且$\lambda_k - \lambda_{m + 1}$不同时为$0$ \\
     所以$g'(x)$零点个数小于$m$个，与假设矛盾。则$n = m + 1$时结论成立。\\
@@ -26,22 +26,22 @@
 
     设$\lim\limits_{n \to \infty}{f(x)} = 0$，且$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$ \\
     证明：
-    $$f(x) = O(x) \quad (x \to 0)$$
+    \[f(x) = O(x) \quad (x \to 0)\]
 
 \end{proposition}
 
 \begin{proof}
 
     因为$f(x) - f\left( \dfrac{x}{2} \right) = O(x) \ (x\to 0)$，所以
-    $$\lim\limits_{x\to\infty}{\left| \dfrac{f(x) - f\left( \dfrac{x}{2} \right)}{x} \right|}$$
+    \[\lim\limits_{x\to\infty}{\left| \dfrac{f(x) - f\left( \dfrac{x}{2} \right)}{x} \right|}\]
     $\forall \varepsilon > 0$，$\exists \delta > 0$，$|x| < \delta$
-    $$\left| \dfrac{f(x) - f\left( \dfrac{x}{2} \right)}{x} \right| < \dfrac{\varepsilon}{2}$$
+    \[\left| \dfrac{f(x) - f\left( \dfrac{x}{2} \right)}{x} \right| < \dfrac{\varepsilon}{2}\]
     即
-    $$f(x) - f\left( \dfrac{x}{2} \right) = x\alpha(x), \quad |x| < \delta$$
+    \[f(x) - f\left( \dfrac{x}{2} \right) = x\alpha(x), \quad |x| < \delta\]
     其中$|\alpha(x)| < \dfrac{\varepsilon}{2}$，$|x| < \delta$，则
-    $$f(x) - f\left( \dfrac{x}{2^n} \right) = \sum\limits_{k  = 1}^{n}{\left( f\left( \dfrac{x}{2^{k - 1}} \right) - f\left( \dfrac{x}{2^k} \right) \right)} = \sum\limits_{k  = 1}^{n}{\left[ \dfrac{x}{2^{k - 1}}\alpha\left( \dfrac{x}{2^k} \right) \right]}$$
+    \[f(x) - f\left( \dfrac{x}{2^n} \right) = \sum\limits_{k  = 1}^{n}{\left( f\left( \dfrac{x}{2^{k - 1}} \right) - f\left( \dfrac{x}{2^k} \right) \right)} = \sum\limits_{k  = 1}^{n}{\left[ \dfrac{x}{2^{k - 1}}\alpha\left( \dfrac{x}{2^k} \right) \right]}\]
     因为$k \in \mathbb{N}$时，
-    $$\left| \dfrac{x}{2^{k - 1}} \right| \leq |x|$$
+    \[\left| \dfrac{x}{2^{k - 1}} \right| \leq |x|\]
     所以
 
     \begin{align*}
@@ -51,13 +51,13 @@
     \end{align*}
 
     所以
-    $$\left| \dfrac{f(x) - f\left( \dfrac{x}{2^n} \right)}{x} \right| \leq \varepsilon \left[ 1 - \left( \dfrac{1}{2} \right)^n \right] < \varepsilon$$
+    \[\left| \dfrac{f(x) - f\left( \dfrac{x}{2^n} \right)}{x} \right| \leq \varepsilon \left[ 1 - \left( \dfrac{1}{2} \right)^n \right] < \varepsilon\]
     又
-    $$\lim\limits_{n \to \infty}{f\left( \dfrac{x}{2^n} \right)} = \lim\limits_{n \to \infty}{f(x)} = 0$$
+    \[\lim\limits_{n \to \infty}{f\left( \dfrac{x}{2^n} \right)} = \lim\limits_{n \to \infty}{f(x)} = 0\]
     则
-    $$\lim\limits_{n \to \infty}{\left| \dfrac{f(x) - f\left( \dfrac{x}{2^n} \right)}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon $$
+    \[\lim\limits_{n \to \infty}{\left| \dfrac{f(x) - f\left( \dfrac{x}{2^n} \right)}{x} \right|} = \left| \dfrac{f(x)}{x} \right| < \varepsilon \]
     所以
-    $$f(x) = O(x) \quad (x \to 0)$$
+    \[f(x) = O(x) \quad (x \to 0)\]
 
 \end{proof}
 
@@ -71,14 +71,14 @@
 
     不妨设$x_0$是$f$的唯一极小值点，$x_1$是$f$的最小值点，应用反证法，假设$x_0 \neq x_1$，则不妨设$x_0 < x_1$ \\
     因为$x_0$是极小值点，所以存在$ x_2 > x_0$，$x_2 < x_1$
-    $$f(x_2) > f(x_0) > f(x_1)$$
+    \[f(x_2) > f(x_0) > f(x_1)\]
     由介值定理得，$\exists x_3 \in (x_2, x_1)$
-    $$f(x_3) = f(x_0)$$
+    \[f(x_3) = f(x_0)\]
     则易知$\exists \eta \in (x_3, x_0)$
-    $$f'(\eta) = 0$$
+    \[f'(\eta) = 0\]
     其中$\eta$为极值点，与题设矛盾。\\
     所以$x_0 = x_1$，又若最值点不唯一，即$\exists \alpha \in I$，$\alpha \neq x_0$
-    $$f(\alpha) = f(x_0)$$
+    \[f(\alpha) = f(x_0)\]
     同上可知与题设矛盾。
 
 \end{proof}
@@ -112,13 +112,13 @@
 
                 \item $a < b$时。\\
                     因为$f$是单调的，$a$为上确界，可得
-                    $$b = f(a) \leq f\left( \dfrac{a + b}{2} \right) \leq \dfrac{a + b}{2}$$
+                    \[b = f(a) \leq f\left( \dfrac{a + b}{2} \right) \leq \dfrac{a + b}{2}\]
                     与$a < b$矛盾。
 
                 \item 
                     $a > b$时。\\
                     因为$a$为上确界，所以存在$\eta \in A$，$\eta > \dfrac{a + b}{2}$，则
-                    $$b = f(a) \geq f(\eta) > \eta > \dfrac{a + b}{2}$$
+                    \[b = f(a) \geq f(\eta) > \eta > \dfrac{a + b}{2}\]
                     与$a > b$矛盾。
 
             \end{enumerate}
@@ -149,16 +149,16 @@
 \begin{proof}
 
     设
-    $$A = \{x| x \in [a, b] \land x \leq f(x) \land x \leq g(x)\}$$
+    \[A = \{x| x \in [a, b] \land x \leq f(x) \land x \leq g(x)\}\]
     显然$A$非空，所以存在上确界$ u = \sup{A}$ \\
     易知$u \leq f(u)$，$u \leq g(u)$，所以            
-    $$f(u) \leq f(g(u)) = g(f(u))$$ 
+    \[f(u) \leq f(g(u)) = g(f(u))\] 
     又
-    $$f(f(u)) \geq f(u)$$
+    \[f(f(u)) \geq f(u)\]
     即$f(u) \in A$，则
-    $$f(u) \leq u$$
+    \[f(u) \leq u\]
     所以
-    $$u = f(u) = g(u)$$
+    \[u = f(u) = g(u)\]
     则$u$为$f$和$g$的公共不动点。
 
 \end{proof}
@@ -166,7 +166,7 @@
 \begin{proposition}
     
     设函数$f$在区间$I$上只有可去间断点，定义
-    $$g(x) = \lim\limits_{t \to x}{f(t)}$$
+    \[g(x) = \lim\limits_{t \to x}{f(t)}\]
     证明：$g \in C(I)$
 
 \end{proposition}
@@ -174,7 +174,7 @@
 \begin{proof}
 
     $\forall x_0 \in I$，因为$g(x_0) = \lim\limits_{t \to x}{f(t)}$，所以存在$\delta > 0$，$t \in \mathring{U}(x_0, \delta)$时
-    $$|f(t) - g(x_0)| < \dfrac{\varepsilon}{2}$$
+    \[|f(t) - g(x_0)| < \dfrac{\varepsilon}{2}\]
     于是，当$|x - x_0| < \dfrac{\delta}{2}$时，有
 
     \begin{align*}
@@ -185,7 +185,7 @@
     \end{align*}
 
     所以
-    $$\lim\limits_{x\to x_0}{g(x)} = g(x_0)$$
+    \[\lim\limits_{x\to x_0}{g(x)} = g(x_0)\]
     即$g$在$x_0$处连续，由$x_0$的任意性可知，$g$在区间$I$上连续。
 
 \end{proof}
@@ -193,7 +193,7 @@
 \begin{proposition}
 
     设函数$f$和$g$在$[a, b]$上连续，且有$x_n \in [a, b]$，使得
-    $$g(x_n) = f(x_{n + 1}), \quad n \in \mathbb{N}$$
+    \[g(x_n) = f(x_{n + 1}), \quad n \in \mathbb{N}\]
     证明：必有一点$x_0 \in [a, b]$，使得$f(x_0) = g(x_0)$
 
 \end{proposition}
@@ -203,7 +203,7 @@
     反证法。若$F(x) = f(x) - g(x) \neq 0$，$x \in [a, b]$，不妨设$F(x) > 0$ \\
     则由$F$连续知，$F$在$[a, b]$上有最值，设$\min{F(x)} = m$ \\
     则
-    $$F(x_{n + 1}) = f(x_{x_{n + 1}}) - g(x_{n + 1}) = f(x_{n + 1}) - f(x_{n + 2}) \geq m$$
+    \[F(x_{n + 1}) = f(x_{x_{n + 1}}) - g(x_{n + 1}) = f(x_{n + 1}) - f(x_{n + 2}) \geq m\]
     所以
     
     \begin{align*}
@@ -213,7 +213,7 @@
     \end{align*}
 
     则
-    $$f(x_{n + 1}) \leq f(x_1) - mn$$
+    \[f(x_{n + 1}) \leq f(x_1) - mn\]
     即$f$无界，与题设矛盾。得证。
 
 \end{proof}
@@ -224,9 +224,9 @@
 
     \begin{enumerate}
 
-        \item $$\lim\limits_{n \to \infty}{x_n} = +\infty$$
+        \item \[\lim\limits_{n \to \infty}{x_n} = +\infty\]
         
-        \item $$\lim\limits_{n \to \infty}{[f(x_n + \lambda) - f(x_n)]} = 0$$
+        \item \[\lim\limits_{n \to \infty}{[f(x_n + \lambda) - f(x_n)]} = 0\]
         
     \end{enumerate}
 
@@ -235,12 +235,12 @@
 \begin{proof}
 
     反证法。不失一般性地，我们设$\lambda > 0$，$\lambda = 0$时结论显然成立；若$\lambda < 0$，则有
-    $$ - [f(x_n + \lambda  + |\lambda|) - f(x_n + \lambda) ] = f(x_n + \lambda) - f(x_n) $$
+    \[ - [f(x_n + \lambda  + |\lambda|) - f(x_n + \lambda) ] = f(x_n + \lambda) - f(x_n) \]
     化为$\lambda > 0$的形式。\\
     若命题不成立，则必存在$\lambda > 0$，$\varepsilon > 0$，$\forall M > 0$，当$x > M$时
-    $$|f(x +\lambda) - f(x)| > \varepsilon$$
+    \[|f(x +\lambda) - f(x)| > \varepsilon\]
     由$f$在$(0, +\infty)$上连续，所以$f(x +\lambda) - f(x)$不变号，不妨设
-    $$f(x +\lambda) - f(x) > \delta, \quad x > M$$
+    \[f(x +\lambda) - f(x) > \delta, \quad x > M\]
     则
 
     \begin{align*}
@@ -250,7 +250,7 @@
     \end{align*}
 
     令$m \to \infty$，则
-    $$f(x_n + m\lambda)  \to \infty$$
+    \[f(x_n + m\lambda)  \to \infty\]
     与$f$有界矛盾。
     
 \end{proof}
@@ -258,27 +258,27 @@
 \begin{proposition}
 
     设函数$f$在$[0, +\infty)$上一致连续，且任意$x \in [0, 1]$有
-    $$\lim\limits_{n \to \infty}{f'(x + n)} = 0$$
+    \[\lim\limits_{n \to \infty}{f'(x + n)} = 0\]
     证明：
-    $$\lim\limits_{n \to \infty}{f(x)} = 0$$
+    \[\lim\limits_{n \to \infty}{f(x)} = 0\]
 
 \end{proposition}
 
 \begin{proof}
 
     因为$f$在$[0, +\infty)$上一致连续，所以$\forall \varepsilon > 0$，$\exists \delta > 0$，当$x', x'' \in [0, +\infty)$时
-    $$|f(x') - f(x'')| < \dfrac{\varepsilon}{2}$$
+    \[|f(x') - f(x'')| < \dfrac{\varepsilon}{2}\]
     将$[0, 1]$等分成$0 = x_0 < x_1 < \cdots < x_m = 1$，使每个区间的长度为$\dfrac{1}{m} < \delta$ \\
     因为$x - \lfloor x \rfloor$，$\forall x \geq 1$，且
-    $$x\to+\infty \leftrightarrow \lfloor x \rfloor \to +\infty$$
+    \[x\to+\infty \leftrightarrow \lfloor x \rfloor \to +\infty\]
     所以存在$k \in \{0, 1, 2, \cdots , m - 1\}$
-    $$x - \lfloor x \rfloor \in [x_k, x_{k + 1}]$$
+    \[x - \lfloor x \rfloor \in [x_k, x_{k + 1}]\]
     即
-    $$0 \leq x - \lfloor x \rfloor - x_k < \delta$$
+    \[0 \leq x - \lfloor x \rfloor - x_k < \delta\]
     由于$\lim\limits_{n \to \infty}{f(x + n)} = 0$，$\forall x \in [0, 1]$成立，所以对任意$x_k$，$k \in \{0, 1, 2, \cdots , m - 1\}$
-    $$\lim\limits_{n \to \infty}{f(x + n)} = 0$$
+    \[\lim\limits_{n \to \infty}{f(x + n)} = 0\]
     因此$\exists N \in \mathbb{N}$，$n > N$时
-    $$|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0, 1, 2, \cdots, m\}$$
+    \[|f(x_k + n)| < \dfrac{\varepsilon}{2}, \quad k \{0, 1, 2, \cdots, m\}\]
     当$x > N > 1$时，$\lfloor x \rfloor > N$，且
 
     \begin{align*}
@@ -288,7 +288,7 @@
     \end{align*}
 
     所以
-    $$\lim\limits_{n \to \infty}{f(x)} = 0$$
+    \[\lim\limits_{n \to \infty}{f(x)} = 0\]
 
 \end{proof}
 
@@ -314,20 +314,20 @@
         \item
             反证法。若对$\varepsilon_0 > 0$，在$[a, b]$上使$\left| \lim\limits_{t \to x}{f(t) - f(x)} \right| > \varepsilon$的点有无限个，\\
             令间断点集合为点列$\{x_n\} \subset [a, b]$，由聚点定理得，存在子列$\{x_k\}$收敛，即
-            $$\lim\limits_{k \to \infty}{x_k} = \alpha $$
+            \[\lim\limits_{k \to \infty}{x_k} = \alpha \]
             又由题设，设$\lim\limits_{t \to \alpha}{f(t)} = \alpha$，由极限性质得知，$\exists \delta > 0$，$|t - a| < \delta$
-            $$|f(t) - \alpha| < \dfrac{1}{2} \varepsilon_0$$
+            \[|f(t) - \alpha| < \dfrac{1}{2} \varepsilon_0\]
             又由\textup{Heine}归结定理得
-            $$\lim\limits_{k \to +\infty}{f(x_k)} = \lim\limits_{t \to \alpha}{f(t)} = \alpha$$
+            \[\lim\limits_{k \to +\infty}{f(x_k)} = \lim\limits_{t \to \alpha}{f(t)} = \alpha\]
             则存在$k_0 \in \mathbb{N}$，$k \geq k_0$时
-            $$|f(t) - f(x_k)| \leq |f(t) - \alpha| + |f(x_k) - \alpha| = \dfrac{1}{2} \varepsilon + \dfrac{1}{2} \varepsilon = \varepsilon$$
+            \[|f(t) - f(x_k)| \leq |f(t) - \alpha| + |f(x_k) - \alpha| = \dfrac{1}{2} \varepsilon + \dfrac{1}{2} \varepsilon = \varepsilon\]
             其中$|t - x_k|$可任意小，与题设矛盾。
         
         \item 
             设$A = \left\{ x \Big| x \in [a, b] \land \left| \lim\limits_{t \to x}{f(t) - f(x)} \right| > 0 \right\}$为间断点集合
-            $$A = \bigcup_{n = 1}^{\infty}{A_n}$$
+            \[A = \bigcup_{n = 1}^{\infty}{A_n}\]
             其中
-            $$A_n = \left\{ x \Big| x \in [a, b] \land \left| \lim\limits_{t \to x}{f(t) - f(x)} \right| > \dfrac{1}{n} \right\}$$
+            \[A_n = \left\{ x \Big| x \in [a, b] \land \left| \lim\limits_{t \to x}{f(t) - f(x)} \right| > \dfrac{1}{n} \right\}\]
             由\textup{(1)}知$A_n$为有限集，所以$A$至多可列。
 
     \end{enumerate}
@@ -337,18 +337,18 @@
 \begin{proposition}
 
     设函数$f$在$[0, +\infty)$上定义，且在其中的每个有界子区间上上有界。证明：
-    $$\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = \lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]}$$
+    \[\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = \lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]}\]
 
 \end{proposition}
 
 \begin{proof}
 
     因为$\lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]} = A$，所以$\forall \varepsilon > 0$，$\exists \delta_1 > \max\{0, a\}$，$x > \delta_1$时
-    $$|f(x + 1) - f(x) - A| < \dfrac{\varepsilon}{3}$$
+    \[|f(x + 1) - f(x) - A| < \dfrac{\varepsilon}{3}\]
     固定$\delta_1$，由题设知$f$在$(\delta_1, \delta_1 + 1)$上有界，则存在$M > 0$
-    $$|f(x)| < M, \quad x \in(\delta_1, \delta_1 + 1)$$
+    \[|f(x)| < M, \quad x \in(\delta_1, \delta_1 + 1)\]
     选取$\delta > \delta_1$，使
-    $$\dfrac{M}{\delta} < \dfrac{\varepsilon}{3}, \quad \left| \dfrac{\delta_1 + 1}{\delta} \right| < \dfrac{\varepsilon}{3}$$
+    \[\dfrac{M}{\delta} < \dfrac{\varepsilon}{3}, \quad \left| \dfrac{\delta_1 + 1}{\delta} \right| < \dfrac{\varepsilon}{3}\]
     于是，当$x > \delta$时，$\exists n \in \mathbb{N}$，使$x - n \in (\delta_1, \delta_1 + 1)$ \\
     又
 
@@ -361,14 +361,14 @@
     \end{align*}
 
     因此
-    $$\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = A =  \lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]}$$
+    \[\lim\limits_{x \to +\infty}{\dfrac{f(x)}{x}} = A =  \lim\limits_{x \to +\infty}{[f(x + 1) - f(x)]}\]
 
 \end{proof}
 
 \begin{proposition}
 
     设$f$是$[a, b]$上的可微函数，且$f(a) = 0$，$\exists A > 0$，$\beta \geq 1$
-    $$ |f'(x)| \leq A|f(x)|^{\beta}, \quad \forall x \in [a, b]$$
+    \[ |f'(x)| \leq A|f(x)|^{\beta}, \quad \forall x \in [a, b]\]
     证明：$f(x) \equiv 0$
 
 \end{proposition}
@@ -378,25 +378,25 @@
     反证法。设存在$x \in [a, b]$，$f(x) \neq 0$. \\
     令$S = \{x | x \in [a, b] \land f(x) \neq 0\}$，则显然$S$非空。设$ c = \inf{S}$ \\
     如果$c = b$，则$f(x) = 0$，$\forall x \in [a, b)$，又由连续性可知
-    $$f(b) = \lim\limits_{x \to b}{f(x)} = 0$$
+    \[f(b) = \lim\limits_{x \to b}{f(x)} = 0\]
     即$f(x) = 0$，$\forall x \in [a, b]$，与题设矛盾。因此$c \neq b$，又若$c = a$，则有$f(c) = 0$. \\
     否则当$a < c < b$时
-    $$f(x) = 0, \quad \forall x < c$$
+    \[f(x) = 0, \quad \forall x < c\]
     则由函数连续性知$f(c) = 0$. 综上
-    $$f(c) = 0, \quad a \leq c < b$$
+    \[f(c) = 0, \quad a \leq c < b\]
     因为$f$在$x = c$处连续且$f(c) = 0$，则存在$\delta > 0$，选取一个$d$满足$|d - c| < \delta$，使得$x \in [c, d]$时，
     $|f(x)| \leq 1$，且
-    $$A(x - c) \leq \dfrac{1}{2}$$
+    \[A(x - c) \leq \dfrac{1}{2}\]
     因为$f$在$[c, d]$连续，所以存在最值，即令
-    $$ |f(t)| = \max_{x\in[c, d]}{|f(x)|}$$
+    \[ |f(t)| = \max_{x\in[c, d]}{|f(x)|}\]
     又因为$c = \inf{S}$，则$\forall \varepsilon > 0$，$\exists m \in (c, c + \varepsilon)$，使得$f(m) \neq 0$ \\
     则$f(t) \neq 0$，且$t > c$，由\textup{Lagrange}中值定理知
-    $$| f(t)| = |f(t) - f(c)| = |t - c||f'(u)| \leq |t - c||f(u)|^{\beta}, \quad u \in (c, t)$$
+    \[| f(t)| = |f(t) - f(c)| = |t - c||f'(u)| \leq |t - c||f(u)|^{\beta}, \quad u \in (c, t)\]
     又由$A(x - c) \leq \dfrac{1}{2}$得
-    $$|t - c||f(u)|^{\beta} \dfrac{1}{2}|f(u)|^{\beta} \leq \dfrac{1}{2} |f(u)|$$
+    \[|t - c||f(u)|^{\beta} \dfrac{1}{2}|f(u)|^{\beta} \leq \dfrac{1}{2} |f(u)|\]
     即$|f(t)| \leq \dfrac{1}{2}|f(u)|$
     则
-    $$f(t) = f(u) = 0$$
+    \[f(t) = f(u) = 0\]
     也即$f(x) \equiv 0$，与假设矛盾。得证。
 
 \end{proof}
@@ -410,12 +410,12 @@
 \begin{proof}
 
     设$f(x) = (1 - \sqrt{x})^{2n + 2}$，易知对$f(x)$求$n$次导后，每项依然会有$(1 - \sqrt{x})$，则
-    $$f^{(n)}(1) = 0$$
+    \[f^{(n)}(1) = 0\]
     所以
-    $$y^{(n)}(1) = \left[ (1 + \sqrt{x})^{2n + 2} + (1 - \sqrt{x})^{2n + 2} \right]^{(n)}\Big|_{x = 1}$$
-    $$ (1 + \sqrt{x})^{2n + 2} + (1 - \sqrt{x})^{2n + 2} = 2 \sum\limits_{k = 0}^{n + 1}{\binom{2n + 2}{2k}x^k}$$
+    \[y^{(n)}(1) = \left[ (1 + \sqrt{x})^{2n + 2} + (1 - \sqrt{x})^{2n + 2} \right]^{(n)}\Big|_{x = 1}\]
+    \[ (1 + \sqrt{x})^{2n + 2} + (1 - \sqrt{x})^{2n + 2} = 2 \sum\limits_{k = 0}^{n + 1}{\binom{2n + 2}{2k}x^k}\]
     对右侧函数求$n$次导，易知
-    $$y^{(n)}(1) = 4(n + 1)(n + 1)!$$
+    \[y^{(n)}(1) = 4(n + 1)(n + 1)!\]
 
 \end{proof}
 
@@ -428,19 +428,19 @@
 \begin{proof}
 
     设
-    $$g(t) = \euler^{\frac{1}{\sqrt{3}}t}f\left( \frac{1}{\sqrt{3}}t \right)$$
+    \[g(t) = \euler^{\frac{1}{\sqrt{3}}t}f\left( \frac{1}{\sqrt{3}}t \right)\]
     则
-    $$g + g'' = \dfrac{4}{3}\euler^{\frac{1}{\sqrt{3}}t} \left[ f\left( \dfrac{1}{\sqrt{3}}t \right) + f'\left( \frac{1}{\sqrt{3}}t \right) + f''\left( \frac{1}{\sqrt{3}}t \right) \right] \geq 0, \quad t \in \left( \dfrac{\sqrt{3}}{2}a, \dfrac{\sqrt{3}}{2}b \right)$$
+    \[g + g'' = \dfrac{4}{3}\euler^{\frac{1}{\sqrt{3}}t} \left[ f\left( \dfrac{1}{\sqrt{3}}t \right) + f'\left( \frac{1}{\sqrt{3}}t \right) + f''\left( \frac{1}{\sqrt{3}}t \right) \right] \geq 0, \quad t \in \left( \dfrac{\sqrt{3}}{2}a, \dfrac{\sqrt{3}}{2}b \right)\]
     选取$s, t$，使得
-    $$\max\{b - a, \pi\} < t < s < b$$
+    \[\max\{b - a, \pi\} < t < s < b\]
     设
-    $$h_s(t) = g(t) \cos{(t - s)} - g'(t)\sin{(t - s)}$$
-    $$h'_s(t) = -[g(t) + g''(t)] \sin{(t - s)} \geq 0$$
+    \[h_s(t) = g(t) \cos{(t - s)} - g'(t)\sin{(t - s)}\]
+    \[h'_s(t) = -[g(t) + g''(t)] \sin{(t - s)} \geq 0\]
     其中$\sin{(t - s)} < 0$则
-    $$g(s) = h_s(s) \geq h_s(t) \geq -|g(t)| - |g'(t)|$$
+    \[g(s) = h_s(s) \geq h_s(t) \geq -|g(t)| - |g'(t)|\]
     选取任意$t \in (\max\{b - a, \pi\}, b)$，上式表明$g$在$(t, b)$上有上界。\\
     设$G(x) = g(a + b - x)$，则显然$G \in C^2(a, b)$
-    $$G(x) + G''(x) = g(a + b - x) + g''(a + b - x) \geq 0$$
+    \[G(x) + G''(x) = g(a + b - x) + g''(a + b - x) \geq 0\]
     所以$G$在$(t, b)$上有下界，即$g$在$(a, a + b - t)$上有下界。\\
     若$a + b - t > t$，即$t < \dfrac{a + b}{2}$时，$g$在$(a, b)$上有界。否则可在$(a + b - t ,t)$上重复以上操作。
 
@@ -449,9 +449,9 @@
 \begin{proposition}
 
     设$f$是可微实函数，且存在$M > 0$，使得
-    $$|f(x + t) - 2f(x) + f(x - t)| \leq Mt^2, \quad \forall x, t$$
+    \[|f(x + t) - 2f(x) + f(x - t)| \leq Mt^2, \quad \forall x, t\]
     证明：
-    $$|f'(x + t) - f'(x)| \leq M|t|$$
+    \[|f'(x + t) - f'(x)| \leq M|t|\]
 
 \end{proposition}
 
@@ -459,9 +459,9 @@
 
     我们将证明即使没有$f$可微的条件，依然可以得出结论。\\
     由题设得
-    $$-Mt^2 \leq f(x + t) - 2f(x) + f(x - t) \leq ^2, \quad \forall x, t$$
+    \[-Mt^2 \leq f(x + t) - 2f(x) + f(x - t) \leq ^2, \quad \forall x, t\]
     设$h_1(x) = f(x) - \dfrac{M}{2}x^2$，则由上式得
-    $$h_1(x + t) - 2h_1(x) + h_1(x - t) = f(x + t) - 2(x) + f(x - t) - Mt^2 \leq 0$$
+    \[h_1(x + t) - 2h_1(x) + h_1(x - t) = f(x + t) - 2(x) + f(x - t) - Mt^2 \leq 0\]
     这表明$h_1$是$\mathbb{R}$上连续的下凸函数，同理设$h_2(x) = f(x) + \dfrac{M}{2}x^2$，$h_2$是$\mathbb{R}$上连续的上凸函数。则
 
     \begin{align}
@@ -487,14 +487,14 @@
     \end{align*}
 
     即
-    $$|f'(y) - f'(x) | \leq M|y - x|$$
+    \[|f'(y) - f'(x) | \leq M|y - x|\]
 
 \end{proof}
 
 \begin{proposition}
 
     设$f:\mathbb{R} \to \mathbb{R}$是二阶可微，周期为$2\pi$的偶函数。证明：若
-    $$f''(x) + f'(x) = \dfrac{1}{f(x + \frac{3\pi}{2})}, \quad \forall x \in \mathbb{R}$$
+    \[f''(x) + f'(x) = \dfrac{1}{f(x + \frac{3\pi}{2})}, \quad \forall x \in \mathbb{R}\]
     则$f$的周期为$\dfrac{\pi}{2}$
 
 \end{proposition}
@@ -502,20 +502,20 @@
 \begin{proof}
     
     由$f$的偶性得
-    $$f''(x) = f''(-x), \quad f(x) = f(-x), \quad \forall x \in \mathbb{R}$$
+    \[f''(x) = f''(-x), \quad f(x) = f(-x), \quad \forall x \in \mathbb{R}\]
     则
-    $$f''(-x) + f(-x) = f''(x) + f(x) = \dfrac{1}{f(-x + \frac{3\pi}{2})} = \dfrac{1}{f(x + \frac{3\pi}{2})}, \quad \forall x \in \mathbb{R}$$
+    \[f''(-x) + f(-x) = f''(x) + f(x) = \dfrac{1}{f(-x + \frac{3\pi}{2})} = \dfrac{1}{f(x + \frac{3\pi}{2})}, \quad \forall x \in \mathbb{R}\]
     即
-    $$f\left( x + \dfrac{3\pi}{2} \right) = f\left( -x + \dfrac{3\pi}{2} \right) = f\left( x - \dfrac{3\pi}{2} \right)$$
+    \[f\left( x + \dfrac{3\pi}{2} \right) = f\left( -x + \dfrac{3\pi}{2} \right) = f\left( x - \dfrac{3\pi}{2} \right)\]
     $f$以$3\pi$为周期，又由题设知，$f$周期为$2\pi$，则$f$必以$\pi$为周期。\\
     考察函数
-    $$g(x) = f\left( x + \dfrac{\pi}{2} \right)$$
+    \[g(x) = f\left( x + \dfrac{\pi}{2} \right)\]
     因为
-    $$f(x + \pi) = f(x), \quad \forall x \in \mathbb{R}$$
+    \[f(x + \pi) = f(x), \quad \forall x \in \mathbb{R}\]
     则
-    $$f''(x) + f(x) = \dfrac{1}{f(x + \frac{3\pi}{2})} = \dfrac{1}{f(x + \frac{\pi}{2})} = \dfrac{1}{g(x)}$$
+    \[f''(x) + f(x) = \dfrac{1}{f(x + \frac{3\pi}{2})} = \dfrac{1}{f(x + \frac{\pi}{2})} = \dfrac{1}{g(x)}\]
     又
-    $$g(-x) = f\left( -x + \dfrac{\pi}{2} \right) = f\left( x - \dfrac{\pi}{2} \right) = f\left( x + \dfrac{\pi}{2} \right) = g(x)$$
+    \[g(-x) = f\left( -x + \dfrac{\pi}{2} \right) = f\left( x - \dfrac{\pi}{2} \right) = f\left( x + \dfrac{\pi}{2} \right) = g(x)\]
     所以$g(x)$也是偶函数，
     
     \begin{align*}
@@ -531,17 +531,17 @@
     \end{align}
 
     即
-    $$fg'' - gf'' = (fg' - g'f)'$$
+    \[fg'' - gf'' = (fg' - g'f)'\]
     所以
-    $$f'g - g'f = c, \quad c \in \mathbb{R}$$
+    \[f'g - g'f = c, \quad c \in \mathbb{R}\]
     同时由于$g'(x)$，$f'(x)$是奇函数，则$c = 0$ \\
     又$f$，$g$为$\mathbb{R}$上周期函数，所以$f$，$g$必有界，则由\textup{(1)}式得$g(x) \neq 0$ \\
     故
-    $$\left( \dfrac{f}{g} \right)' = \dfrac{c}{g^2} = 0$$
+    \[\left( \dfrac{f}{g} \right)' = \dfrac{c}{g^2} = 0\]
     即
-    $$f = ag, \quad a \in \mathbb{R}$$
+    \[f = ag, \quad a \in \mathbb{R}\]
     又因为$f$在$\mathbb{R}$上连续且是周期函数，则存在最值点$x_0$，$x_1$，其中
-    $$f(x_0) = \min{f(x)}, \quad f(x_1) = \max{f(x)}$$
+    \[f(x_0) = \min{f(x)}, \quad f(x_1) = \max{f(x)}\]
     则有
     
     \begin{align*}
@@ -550,28 +550,28 @@
     \end{align*}
 
     则
-    $$g(x) = f(x), \quad \forall x \in \mathbb{R}$$
+    \[g(x) = f(x), \quad \forall x \in \mathbb{R}\]
     即
-    $$f\left( x + \dfrac{\pi}{2} \right) = f(x), \quad \forall x \in \mathbb{R}$$
+    \[f\left( x + \dfrac{\pi}{2} \right) = f(x), \quad \forall x \in \mathbb{R}\]
 
 \end{proof}
 
 \begin{proposition}
     
     设$f \in \mathbb{C}^{n}[0, 1)$，满足
-    $$f^{(k)} \leq 1 + |f| + |f'| + \cdots + |f^{(k - 1)}|, \quad k \leq n$$
+    \[f^{(k)} \leq 1 + |f| + |f'| + \cdots + |f^{(k - 1)}|, \quad k \leq n\]
     证明：$f$有上界
 
 \end{proposition}
 
 \begin{proof}
     因为$f \in \mathbb{C}^{n}[0, 1)$，由\textup{Taylor}公式知
-    $$f(x) = f(0) + \dfrac{f'(0)x}{1!} + \dfrac{f''(0)x^2}{2!} + \cdots + \dfrac{f^{(n)(0)x^n}}{n!} + O(x^n)$$
+    \[f(x) = f(0) + \dfrac{f'(0)x}{1!} + \dfrac{f''(0)x^2}{2!} + \cdots + \dfrac{f^{(n)(0)x^n}}{n!} + O(x^n)\]
     由题设
-    $$f'(x) \leq 1 + |f(x)|$$
-    $$f''(x) \leq 1 + |f(x)| + |f'(x)| \leq 2(1 + |f(x)|)$$
+    \[f'(x) \leq 1 + |f(x)|\]
+    \[f''(x) \leq 1 + |f(x)| + |f'(x)| \leq 2(1 + |f(x)|)\]
     应用数学归纳法可证
-    $$f^{(k)}(x) \leq 2^{k - 1}(1 + |f(x)|), \quad k \leq n$$
+    \[f^{(k)}(x) \leq 2^{k - 1}(1 + |f(x)|), \quad k \leq n\]
     所以
 
     \begin{align*}
@@ -581,7 +581,7 @@
     \end{align*}
 
     因为$f$定义在$[0, 1)$上，所以
-    $$f(x) \leq f(0) + \dfrac{1}{2}(1 + |f(0)|)(\euler^2 - 1) + 1$$
+    \[f(x) \leq f(0) + \dfrac{1}{2}(1 + |f(0)|)(\euler^2 - 1) + 1\]
     即$f$有上界
     
 \end{proof}
@@ -589,17 +589,17 @@
 \begin{proposition}
     设函数$f(x)$在区间$[0, +\infty]$上连续，且$\lim\limits_{x \to +\infty}{f(x)} = f(0)$，常数$h > 0$ \\
     证明：存在$\xi \in [h, +\infty)$，使得
-    $$f(\xi) = f(\xi - h)$$
+    \[f(\xi) = f(\xi - h)\]
 \end{proposition}
 
 \begin{proof}
 
     反证法。令
-    $$g(x) = f(x) - f(x - h)$$
+    \[g(x) = f(x) - f(x - h)\]
     则$g(x)$在区间$[0, +\infty)$上连续。则
-    $$g(x) \neq 0, \quad x \in [0, +\infty)$$
+    \[g(x) \neq 0, \quad x \in [0, +\infty)\]
     不妨设
-    $$g(x) > 0, \quad \forall x \in [0, +\infty)$$
+    \[g(x) > 0, \quad \forall x \in [0, +\infty)\]
     
     \begin{align*}
         S_n & = g(h) + g(2h) + \cdots + g(nh) \\
@@ -608,7 +608,7 @@
     \end{align*}
   
     因为$g(x) > 0$，$\forall x \in [0, +\infty)$，所以$S_n > 0$，然而
-    $$\lim\limits_{n \to \infty}{S_n} = \lim\limits_{n \to \infty}{f(nh)} - f(0) = 0$$
+    \[\lim\limits_{n \to \infty}{S_n} = \lim\limits_{n \to \infty}{f(nh)} - f(0) = 0\]
     矛盾，得证。
 
 \end{proof}
@@ -616,21 +616,21 @@
 \begin{proposition}
 
     设$f \in C(0, 1)$，且
-    $$\dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \alpha < \beta = \dfrac{f(x_4) - f(x_3)}{x_4 - x_3}$$    
+    \[\dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \alpha < \beta = \dfrac{f(x_4) - f(x_3)}{x_4 - x_3}\]    
     其中$x_1$，$x_2$，$x_3$，$x_4 \in (0, 1)$. 证明:对任意$\lambda \in (\alpha, \beta)$，存在$x_5$，$x_6 \in (0, 1)$，使得
-    $$\lambda = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}$$
+    \[\lambda = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}\]
 
 \end{proposition}
 
 \begin{proof}
 
     设
-    $$F(t) = \dfrac{f((1 - t)x_2 + tx_4) - f((1 - t)x_1 + tx_3)}{(1 - t)(x_2 - x_1) + t(x_4 - x_3)}$$
+    \[F(t) = \dfrac{f((1 - t)x_2 + tx_4) - f((1 - t)x_1 + tx_3)}{(1 - t)(x_2 - x_1) + t(x_4 - x_3)}\]
     则$F$在$[0, 1]$上连续，且$\alpha = F(0) < \lambda < F(1) = \beta$. 根据连续函数的介值定理，存在$t_0 \in (0, 1)$，使得$\lambda = F(t_0)$. 令
-    $$x_5 = (1 - t_0)x_1 + t_0 x_3$$
-    $$x_6 = (1 - t_0)x_2 + t_0 x_4$$
+    \[x_5 = (1 - t_0)x_1 + t_0 x_3\]
+    \[x_6 = (1 - t_0)x_2 + t_0 x_4\]
     则
-    $$\lambda = F(t_0) = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}$$
+    \[\lambda = F(t_0) = \dfrac{f(x_6) - f（x_5}{x_6 - x_5}\]
 
 \end{proof}
 
@@ -638,31 +638,31 @@
 
     证明：$\euler^{-x} + \cos{2x} + x\sin{x} = 0$在区间$((2n - 1)\pi, (2n + 1)\pi)$恰有两个根$x_{2n _1} < x_{2n}$，$\forall n \in \mathbb{N}^{+}$
     证明如下极限存在并求之：
-    $$\lim\limits_{n \to \infty}{(-1)^n n(x_n - n\pi)}$$
+    \[\lim\limits_{n \to \infty}{(-1)^n n(x_n - n\pi)}\]
     
 \end{proposition}
 
 \begin{proof}
 
     令$\varphi(x) = \euler^{-x} + \cos{2x} + x\sin{x}$，则$\varphi'(x) = -\euler^{-x} - 2\sin{2x} + \sin{x} + x\cos{x}$. 
-    $$\varphi((2n - 1)\pi) = \euler^{-(2n - 1)\pi} + 1 > 0$$
-    $$\varphi\left( (2n - 1)\pi + \dfrac{\pi}{2} \right) = \euler^{-((2n - 1)\pi + \frac{\pi}{2})} - 1 - \left( (2n - 1)\pi + \dfrac{\pi}{2} \right) > 0$$
+    \[\varphi((2n - 1)\pi) = \euler^{-(2n - 1)\pi} + 1 > 0\]
+    \[\varphi\left( (2n - 1)\pi + \dfrac{\pi}{2} \right) = \euler^{-((2n - 1)\pi + \frac{\pi}{2})} - 1 - \left( (2n - 1)\pi + \dfrac{\pi}{2} \right) > 0\]
     当$x \in (2n\pi, (2n + 1)\pi)$时，
-    $$\varphi(x) = \euler^{-x} + \cos^2{x} + (x - \sin{x})\sin{x} > 0$$
+    \[\varphi(x) = \euler^{-x} + \cos^2{x} + (x - \sin{x})\sin{x} > 0\]
     于是存在$x_{2n - 1} \in \left( (2n - 1)\pi, (2n - 1)\pi + \dfrac{\pi}{2} \right)$，$x_{2n} \in \left( (2n - 1)\pi + \dfrac{\pi}{2}, 2n\pi \right)$. 使得
-    $$\varphi(x_{2n - 1}) = \varphi(x_{2n}) = 0$$
+    \[\varphi(x_{2n - 1}) = \varphi(x_{2n}) = 0\]
     下面证明$\varphi(x) = 0$在区间$((2n - 1)\pi, (2n + 1)\pi)$只有上述两个根。\\
     当$x \in \left( (2n - 1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4}) \right)$时，
-    $$\varphi(x) < -\dfrac{\sqrt{2}}{2}\left( (2n - 1)\pi + \dfrac{\pi}{4} \right) + 1 + 1 < 0$$
+    \[\varphi(x) < -\dfrac{\sqrt{2}}{2}\left( (2n - 1)\pi + \dfrac{\pi}{4} \right) + 1 + 1 < 0\]
     所以$\varphi(x) = 0$的两个根分别在区间$\left( (2n - 1)\pi, (2n - 1)\pi + \dfrac{\pi}{4} \right)$和 \\
     $\left( (2n - 1)\pi + \dfrac{\pi}{4}, ((2n + 1) + \dfrac{3\pi}{4}) \right)$上。 \\
     当$x \in \left( (2n - 1)\pi, (2n - 1)\pi + \dfrac{\pi}{4} \right)$时，
-    $$\varphi'(x) < -\dfrac{\sqrt{2}}{2}(2n - 1)\pi < 0$$ 
+    \[\varphi'(x) < -\dfrac{\sqrt{2}}{2}(2n - 1)\pi < 0\] 
     当$x \in \left( (2n - 1)\pi + \dfrac{\pi}{4}, (2n + 1) + \dfrac{3\pi}{4} \right)$时，
-    $$\varphi'(x) > \dfrac{\sqrt{x}}{2} \left( (2n - 1)\pi + \dfrac{3\pi}{4} \right) - 1 > 0$$
+    \[\varphi'(x) > \dfrac{\sqrt{x}}{2} \left( (2n - 1)\pi + \dfrac{3\pi}{4} \right) - 1 > 0\]
     由函数单调性确定了根的个数。\\
     因为$\lim\limits_{x_n} = + \infty$，所以
-    $$1 = \lim\limits_{n \to \infty}{\euler^{-x} + 1} = \lim\limits_{n \to \infty}{\sin{x_n}(2\sin{x_n} - x_n)} = \lim\limits_{n \to \infty}{(-1)^n \sin{(x_n - n\pi)}(2\sin{x_n} - x_n)}$$
+    \[1 = \lim\limits_{n \to \infty}{\euler^{-x} + 1} = \lim\limits_{n \to \infty}{\sin{x_n}(2\sin{x_n} - x_n)} = \lim\limits_{n \to \infty}{(-1)^n \sin{(x_n - n\pi)}(2\sin{x_n} - x_n)}\]
     因此$\lim\limits_{n \to \infty}{(x_n - n\pi)} = 0$
     
     \begin{align*}
@@ -696,7 +696,7 @@
         \item 
             应用反证法。假设存在$\alpha \in \mathbb{C}$，且$|\alpha| > \beta$，使得$f(\alpha) = 0$. \\
             易知$x > \beta$时，$x^n - ax$单调增加，因此有
-            $$1 = |\alpha^n - a\alpha| \geq |\alpha^n| - a|\alpha| = |\alpha|^n - a|\alpha| > \beta^n - a\beta = 1$$
+            \[1 = |\alpha^n - a\alpha| \geq |\alpha^n| - a|\alpha| = |\alpha|^n - a|\alpha| > \beta^n - a\beta = 1\]
             矛盾，得证。
 
     \end{enumerate}
@@ -709,7 +709,7 @@
     
     设$f$在$[a, b]$上连续，在$(a, b)$上可导，且$\exists c \in (a, b)$，$f'(c) = 0$.
     证明：$\exists \xi \in (a, b)$
-    $$f'(\xi) = \dfrac{f(\xi) - f(a)}{b - a}$$
+    \[f'(\xi) = \dfrac{f(\xi) - f(a)}{b - a}\]
 
 \end{proposition}
 
@@ -717,14 +717,14 @@
     
     设$F(x) = [f(x) - f(a)]\euler^{-\frac{x}{b - a}}$
     则$F'(x) = [f'(x) - \frac{f(x) - f(a)}{b - a}]\euler^{-\frac{x}{b - a}}$
-    $$F'(c) = -\left( \dfrac{f(c) - f(a)}{b - a} \right)\euler^{-\frac{x}{b - a}} = -\dfrac{F(c)}{b - a}$$
+    \[F'(c) = -\left( \dfrac{f(c) - f(a)}{b - a} \right)\euler^{-\frac{x}{b - a}} = -\dfrac{F(c)}{b - a}\]
     由\textup{Lagrange}中值定理得
     $\exists \eta \in (a, b)$，
-    $$F'(\eta) = \dfrac{F(c) - F(a)}{c - a} = \dfrac{F(c)}{c - a}$$
+    \[F'(\eta) = \dfrac{F(c) - F(a)}{c - a} = \dfrac{F(c)}{c - a}\]
     因为$F'(\eta)$与$F'(c)$异号，所以由达布定理知，$\exists \eta \in (a, b)$
-    $$F'(\eta) = 0$$
+    \[F'(\eta) = 0\]
     即
-    $$f'(\xi) = \dfrac{f(\xi) - f(a)}{b - a}$$
+    \[f'(\xi) = \dfrac{f(\xi) - f(a)}{b - a}\]
 
 \end{proof}
 
@@ -732,7 +732,7 @@
     
     设$f$在$[a, b]$上可微，$f'(a) = f'(b)$，则有
     $\exists \xi \in (a, b)$，使得
-    $$f'(\xi) = \dfrac{f(\xi) - f(a)}{\xi - a}$$
+    \[f'(\xi) = \dfrac{f(\xi) - f(a)}{\xi - a}\]
 
 \end{theorem}
 
@@ -753,16 +753,16 @@
     \right.
     $$
     又令$F(X) = g(x) - h(x)$，则有
-    $$F(a) = g(a) - h(a) = f'(a) - \dfrac{f(x) - f(a)}{b - a}$$
-    $$F(b) = g(b) - h(b) = \dfrac{f(b) - f(a)}{b - a}  - f'(b) = \dfrac{f(b) - f(a)}{b - a} - f'(a)$$
+    \[F(a) = g(a) - h(a) = f'(a) - \dfrac{f(x) - f(a)}{b - a}\]
+    \[F(b) = g(b) - h(b) = \dfrac{f(b) - f(a)}{b - a}  - f'(b) = \dfrac{f(b) - f(a)}{b - a} - f'(a)\]
     易见$F(a)F(b)$异号，所以存在$\eta \in (a, b)$，使得
-    $$ f(\eta) = g(\eta) - h(\eta) = 0$$
+    \[ f(\eta) = g(\eta) - h(\eta) = 0\]
     即
-    $$g(\eta) = \dfrac{f(\eta) - f(a)}{\eta - a } =  \dfrac{f(b) - f(a)}{b - a}$$
+    \[g(\eta) = \dfrac{f(\eta) - f(a)}{\eta - a } =  \dfrac{f(b) - f(a)}{b - a}\]
     则存在$\xi \in (\eta, b)$使得
-    $$g'(\xi) = \dfrac{(\xi - a)f'(\xi) - [f(\xi) - f(a)]}{(\xi - a)^2}$$
+    \[g'(\xi) = \dfrac{(\xi - a)f'(\xi) - [f(\xi) - f(a)]}{(\xi - a)^2}\]
     即
-    $$f'(\xi) = \dfrac{f(\xi) - f(a)}{\xi - a}$$
+    \[f'(\xi) = \dfrac{f(\xi) - f(a)}{\xi - a}\]
 
 \end{proof}
 
@@ -770,7 +770,7 @@
 
     设$f:[a, b]\to \mathbb{R}$，$f(0) = f(1)$.
     证明：$\forall n \in \mathbb{N}$，$\exists \xi \in \left[ 0, 1 - \dfrac{1}{n} \right]$，使得
-    $$f(\xi_n) = f\left( \xi_n + \dfrac{1}{n} \right)$$
+    \[f(\xi_n) = f\left( \xi_n + \dfrac{1}{n} \right)\]
 
 \end{proposition}
 
@@ -779,9 +779,9 @@
     设$F(x) = f(x) - f\left( x + \dfrac{1}{n} \right), \quad \forall n \in \mathbb{N}$ \\
     若不存在$\xi_n$，使得$f(\xi_n) = f\left( \xi_n +\dfrac{1}{n} \right)$ \\
     不妨设$F(x)$恒大于$0$，则有
-    $$f(1) = f(0) > f\left( \dfrac{1}{n} \right) > f\left( \dfrac{2}{n} \right) > \cdots > f(1)$$
+    \[f(1) = f(0) > f\left( \dfrac{1}{n} \right) > f\left( \dfrac{2}{n} \right) > \cdots > f(1)\]
     与题设矛盾，所以存在$\xi_n \in \left[ 0, 1 - \dfrac{1}{n} \right]$
-    $$f(\xi_n) = f\left( \xi_n + \dfrac{1}{n} \right)$$
+    \[f(\xi_n) = f\left( \xi_n + \dfrac{1}{n} \right)\]
 
 \end{proof}
 
@@ -789,7 +789,7 @@
     
     设$f$与$g$是两个周期函数，且$\lim\limits_{n \to \infty}{(f(x) - g(x))} =  0$.
     证明：
-    $$f = g $$
+    \[f = g \]
 
 \end{proposition}
 
@@ -806,7 +806,7 @@
     \end{align*}
 
     所以
-    $$f(x) = g(x)$$
+    \[f(x) = g(x)\]
 
 \end{proof}
 
@@ -848,15 +848,15 @@
             因为$f(x + y) = f(x) + f(y)$，令$x = y = 0$，得$f(0) = 0$ \\
             因为$f(0) = f(x - x) = f(x) + f(-x), \quad \forall x$，所以$f(x) = -f(-x)$ \\
             易知$f(2) = f(1) + f(1) = 2f(1)$，由数学归纳法易证
-            $$f(n) = nf(1)$$
+            \[f(n) = nf(1)\]
             对任意有理数$q = \dfrac{m}{n}$，$m, n \in \mathbb{N}$，由于$f(1) = f\left( n \cdot \dfrac{1}{n} \right)$，
             故$f\left( \dfrac{1}{n} \right) = \dfrac{1}{n}f(1)$，从而
-            $$f\left( \dfrac{m}{n} \right) = f\left( m \cdot \dfrac{1}{n} \right) = mf\left( \dfrac{1}{n} \right) = \dfrac{m}{n}f(1)$$
+            \[f\left( \dfrac{m}{n} \right) = f\left( m \cdot \dfrac{1}{n} \right) = mf\left( \dfrac{1}{n} \right) = \dfrac{m}{n}f(1)\]
             则只需证$f(x) = f(1)x, \quad x \notin \mathbb{Q}$ \\
             $f$在$x_0$处连续，故$\lim\limits_{x \to x_0}{f(x)} = f(x_0)$，也即
-            $$\lim\limits_{\Delta x \to 0}{f(x_0 +\Delta x)} = f(x_0)$$
+            \[\lim\limits_{\Delta x \to 0}{f(x_0 +\Delta x)} = f(x_0)\]
             因为$f(x +\Delta x) = f(x_0) + f(\Delta x)$，所以
-            $$\lim\limits_{\Delta x \to 0}{f(\Delta x)} = 0$$
+            \[\lim\limits_{\Delta x \to 0}{f(\Delta x)} = 0\]
             对于任意$x \in \mathbb{R}$
 
             \begin{align*}
@@ -867,18 +867,18 @@
 
             所以$f$在$\mathbb{R}$连续。\\
             设$p_0$为任意无理数，则存在有理数列$\{p_n\}\to p_0 \ (n \to \infty)$
-            $$f(p_0) = \lim\limits_{n \to \infty}{f(p_n)} = \lim\limits_{n \to \infty}{p_nf(1)} = p_0f(1)$$
+            \[f(p_0) = \lim\limits_{n \to \infty}{f(p_n)} = \lim\limits_{n \to \infty}{p_nf(1)} = p_0f(1)\]
             
         \item 
             不妨设$f$在$\mathbb{R}$上单调增加。$\forall x \in \mathbb{R}$，取有理数列$\{x_n'\}$，$\{x_n''\}$，\\
             使$x_n'f(1) < x < x_n''$，且
-            $$\lim\limits_{n \to \infty}{x_n'} = \lim\limits_{n \to \infty}{x_n''} = x$$
+            \[\lim\limits_{n \to \infty}{x_n'} = \lim\limits_{n \to \infty}{x_n''} = x\]
             由$f$单调增加的条件，
-            $$x_n'f(1) < f(x_n') \leq f(x) \leq f(x_n'') = x_n''f(1)$$
+            \[x_n'f(1) < f(x_n') \leq f(x) \leq f(x_n'') = x_n''f(1)\]
             令$n\to+\infty$，
-            $$xf(1) \leq f(x) \leq xf(1)$$
+            \[xf(1) \leq f(x) \leq xf(1)\]
             即
-            $$f(x) = xf(1)$$
+            \[f(x) = xf(1)\]
 
     \end{enumerate}
 
@@ -887,22 +887,22 @@
 \begin{proposition}
     
     设函数$f(x)$在$[a, b]$连续，在$(a, b)$上可导。证明：$f(x)$在$[a, b]$内存在相异的两点$\xi$，$\eta$，使
-    $$f'(\xi)f'(\eta) = \left( \dfrac{f(b) - f(a)}{b - a} \right)^2$$
+    \[f'(\xi)f'(\eta) = \left( \dfrac{f(b) - f(a)}{b - a} \right)^2\]
 
 \end{proposition}
 
 \begin{proof}
 
     令$k = \dfrac{f(b) - f(a)}{b - a}$，$h(x) = [f(x) = f(a)]^2 - k^2(x - a)^2$
-    $$h'(x) = 2[f(x) - f(a)]f'(x) - 2k^2 (x - a)$$
+    \[h'(x) = 2[f(x) - f(a)]f'(x) - 2k^2 (x - a)\]
     因为$f(a) = f(b) = 0$，由\textup{Rolle}中值定理知$\exists \xi \in (a, b)$，使得
-    $$h'(\xi) = 0$$
+    \[h'(\xi) = 0\]
     即
-    $$f'(\xi) = k^2 \cdot \dfrac{\xi - a}{f(\xi) - f(a)}$$
+    \[f'(\xi) = k^2 \cdot \dfrac{\xi - a}{f(\xi) - f(a)}\]
     又由\textup{Lagrange}中值定理知
-    $$\dfrac{f(\xi) - f(a)}{\xi - a} = f'(\eta), \quad \eta \in (a, \xi)$$
+    \[\dfrac{f(\xi) - f(a)}{\xi - a} = f'(\eta), \quad \eta \in (a, \xi)\]
     所以
-    $$f'(\xi)f'(\eta) = \left( \dfrac{f(b) - f(a)}{b - a} \right)^2$$
+    \[f'(\xi)f'(\eta) = \left( \dfrac{f(b) - f(a)}{b - a} \right)^2\]
 
 \end{proof}
 
@@ -910,7 +910,7 @@
     
     设函数$f(x)$在闭区间$[0, 1]$上连续，在$(0, 1)$上可微。证明：
     $\exists \xi$，$ \eta \in (0, 1)$，使
-    $$2\eta f(1) + (c^2 - 1)f'(\eta) = f(\xi)$$
+    \[2\eta f(1) + (c^2 - 1)f'(\eta) = f(\xi)\]
     其中，$c \in (0, 1)$
     
 \end{proposition}
@@ -918,20 +918,20 @@
 \begin{proof}
 
     令$F(x) = x^2f(1) + (c^2 - 1)f'(\eta) = f(\xi)$，则有
-    $$F(1) - F(0) = c^2f(1) + (1 - c^2)f(0)$$
+    \[F(1) - F(0) = c^2f(1) + (1 - c^2)f(0)\]
     $F(x)$在$[0, 1]$上连续，由介值定理得，$\exists \xi \in (0, 1)$
-    $$f(\xi) = \dfrac{F(1) - F(0)}{1 - 0} = F(1) - F(0)$$
+    \[f(\xi) = \dfrac{F(1) - F(0)}{1 - 0} = F(1) - F(0)\]
     又由\textup{Lagrange}中值定理知，$\exists \xi \in (0, 1)$
-    $$F'(\xi) = \dfrac{F(1) - F(0)}{1 - 0} = 2\eta f(1) + (c^2 - 1)f'(\eta) $$
+    \[F'(\xi) = \dfrac{F(1) - F(0)}{1 - 0} = 2\eta f(1) + (c^2 - 1)f'(\eta) \]
     即
-    $$2\eta f(1) + (c^2 - 1)f'(\eta) = f(\xi)$$
+    \[2\eta f(1) + (c^2 - 1)f'(\eta) = f(\xi)\]
 
 \end{proof}
 
 \begin{proposition}
 
     设函数$f(x)$在闭区间$[0, 1]$上连续，在$(0, 1)$上可微，$f(0) = 0$，$f(1) = \dfrac{1}{2}$. 证明：$\exists \xi, \eta \in (0, 1)$，$\xi \neq \eta$，使得
-    $$f'(\xi) + f'(\eta) = \xi + \eta$$
+    \[f'(\xi) + f'(\eta) = \xi + \eta\]
 
 \end{proposition}
 
@@ -939,71 +939,71 @@
 
     令$F(x) = f(x) - \dfrac{1}{2}x^2$，则$F(0) = F(1) = 0$ \\
     若$F\left( \dfrac{1}{2} \right) = F(0) = F(1) = 0$，则存在$\xi, \eta \in (0, 1)$，$\xi \neq \eta$
-    $$F'(\xi) + F'(\eta) = 0$$
+    \[F'(\xi) + F'(\eta) = 0\]
     即
-    $$f'(\xi) + f'(\eta) = \xi + \eta$$
+    \[f'(\xi) + f'(\eta) = \xi + \eta\]
     若$F\left( \dfrac{1}{2} \right) \neq 0$，不妨设$F\left( \dfrac{1}{2} \right) > 0$ \\
     由\textup{Lagrange}中值定理，$\exists \xi, \eta \in (0, 1)$，$\xi \neq \eta$
-    $$ \dfrac{F(1) - F(\frac{1}{2})}{1 - \frac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)$$
-    $$ \dfrac{F(\frac{1}{2}) - F(0)}{\frac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)$$
+    \[ \dfrac{F(1) - F(\frac{1}{2})}{1 - \frac{1}{2}} = F'(\xi) = -2F\left( \dfrac{1}{2} \right)\]
+    \[ \dfrac{F(\frac{1}{2}) - F(0)}{\frac{1}{2} - 0} = F'(\eta) = 2F\left( \dfrac{1}{2} \right)\]
     则
-    $$F'(\xi) + F'(\eta) = 0$$
+    \[F'(\xi) + F'(\eta) = 0\]
     即
-    $$f'(\xi) + f'(\eta) = \xi + \eta$$
+    \[f'(\xi) + f'(\eta) = \xi + \eta\]
 
 \end{proof}
 
 \begin{proposition}
 
     设函数$f(x), g(x)$在闭区间$[0, 1]$上连续，在$(0, 1)$上可微，且$f(0) = g(0) = f(1) = 0$，$g'(x) \neq 0$. 证明： $\exists \xi, \eta \in (0, 1)$，$\xi < \eta$使得
-    $$\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f'(\eta)}{g'(\eta)}$$
+    \[\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f'(\eta)}{g'(\eta)}\]
 
 \end{proposition}
 
 \begin{proof}
 
     $g(x)$在闭区间$[0, 1]$上连续，则存在$\alpha \in (0, 1)$，使得
-    $$g(\alpha) = \dfrac{1}{2}[g(1) + g(0)]$$
+    \[g(\alpha) = \dfrac{1}{2}[g(1) + g(0)]\]
     由\textup{Lagrange}中值定理得， $\exists \xi, \eta \in (0, 1)$
-    $$\dfrac{f(\alpha) - f(0)}{g(\alpha) - g(0)} = \dfrac{f'(\xi)}{g'(\xi)}$$
-    $$\dfrac{f(1) - f(\alpha)}{g(1) - g(\alpha)} = \dfrac{f'(\eta)}{g'(\eta)} = -\dfrac{f'(\xi)}{g'(\xi)}$$
+    \[\dfrac{f(\alpha) - f(0)}{g(\alpha) - g(0)} = \dfrac{f'(\xi)}{g'(\xi)}\]
+    \[\dfrac{f(1) - f(\alpha)}{g(1) - g(\alpha)} = \dfrac{f'(\eta)}{g'(\eta)} = -\dfrac{f'(\xi)}{g'(\xi)}\]
     则
-    $$\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f'(\eta)}{g'(\eta)}$$
+    \[\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f'(\eta)}{g'(\eta)}\]
 
 \end{proof}
 
 \begin{proposition}
 
     设$f:\mathbb{R}\to\mathbb{R}$二阶可微，且满足$f(0) = 2$，$f'(0) = -2$，$f(1) = 1$. 证明：$\exists \xi \in (0, 1)$，使得
-    $$f(\xi) + f'(\xi) + f''(\xi) = 0$$
+    \[f(\xi) + f'(\xi) + f''(\xi) = 0\]
 
 \end{proposition}
 
 \begin{proof}
 
     定义函数$g(x) = \dfrac{1}{2}f^2(x) + f'(x)$，则
-    $$g'(x) = f(x) f'(x) + f''(x)$$
+    \[g'(x) = f(x) f'(x) + f''(x)\]
     因为$g(0) = 0$，所以只需证明$\exists \eta \in (0, 1]$，使得$g(\eta) = 0$
 
     \begin{enumerate}
 
         \item 
             若$f$无零点，则令
-            $$h(x) = \dfrac{x}{2} - \dfrac{1}{f(x)}$$
+            \[h(x) = \dfrac{x}{2} - \dfrac{1}{f(x)}\]
             因为$h(0) = h(1) = -\dfrac{1}{2}$，所以存在$\eta \in (0, 1)$，使得
-            $$h'(\eta) = 0$$
+            \[h'(\eta) = 0\]
             又由$g(x) = f^2(x) h'(x)$，
             所以
-            $$g(\eta) = 0$$
+            \[g(\eta) = 0\]
 
         \item 
             若$f$至少有一个零点，令$z_1$为第一个零点，$z_2$为最后一个零点，由题设知，$0 < z_1 \leq z_2 < 1$ \\
             函数$f$在区间$[0, z_1]$，$[z_2, 1]$上是正的，这表明
-            $$f'(z_1) \leq 0, \quad f'(z_2) \geq 0$$
+            \[f'(z_1) \leq 0, \quad f'(z_2) \geq 0\]
             所以
-            $$g(z_1) = f'(z_1) \leq 0, \quad g(z_2) = f'(z_2) \geq 0$$
+            \[g(z_1) = f'(z_1) \leq 0, \quad g(z_2) = f'(z_2) \geq 0\]
             则存在$\eta \in [z_1, z_2]$，使得
-            $$g'(\eta) = 0$$
+            \[g'(\eta) = 0\]
 
     \end{enumerate}
 
@@ -1012,7 +1012,7 @@
 \begin{proposition}
 
     设函数$f(x)$可导，曲线$y = f(x)$上存在三点$(x_1, f(x_1))$，$(x_2, f(x_2))$，$(x_3, f(x_3))$共线，其中$0 < x_1 < x_2 < x_3$. 证明：$\exists \xi,  \eta \in (x_1, x_3)$，使得
-    $$\xi f'(\eta) - f(\xi) = \eta f'(\eta) - f(\eta)$$
+    \[\xi f'(\eta) - f(\xi) = \eta f'(\eta) - f(\eta)\]
 
 \end{proposition}
 
@@ -1020,11 +1020,11 @@
 
     若$\xi = \eta$则结论显然成立。\\
     $\xi \neq \eta$时，问题等价于
-    $$ f'(\eta) = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}$$
+    \[ f'(\eta) = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}\]
     因为三点共线，所以存在$\alpha$，$\beta \in (x_1, x_3)$，$\alpha \neq \beta$
-    $$f'(\alpha) = f'(\beta)$$
+    \[f'(\alpha) = f'(\beta)\]
     又由\textup{Flett}中值定理得，$\exists \xi, \eta \in (x_1, x_3)$
-    $$f'(\eta) = \dfrac{f(\eta) - f(\alpha)}{\eta - \alpha} = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}$$
+    \[f'(\eta) = \dfrac{f(\eta) - f(\alpha)}{\eta - \alpha} = \dfrac{f(\eta) - f(\xi)}{\eta - \xi}\]
 
 \end{proof}
 
@@ -1032,61 +1032,61 @@
 \begin{proposition}
     
     设$f$是$[0, 1]$上的连续函数，且$f$在$(0, 1)$上可微，$f(0) = 0, f(1) = 1$. 证明：存在点列$\{\alpha_k\}$，使得
-    $$\sum\limits_{k = 0}^{n}{\dfrac{1}{f'(\alpha_k)}} = n, \quad n \in \mathbb{N}$$
+    \[\sum\limits_{k = 0}^{n}{\dfrac{1}{f'(\alpha_k)}} = n, \quad n \in \mathbb{N}\]
     
 \end{proposition}
 
 \begin{proof}
 
     由介值定理知，存在$n$个实数$b_0, b_1, \cdots, b_n$，其中
-    $$0 = b_0 < b_1 < \cdots < b_n = 1$$
+    \[0 = b_0 < b_1 < \cdots < b_n = 1\]
     且
-    $$f(b_i) = \dfrac{i}{n}, \quad i = 0, 1, \cdots, n$$
+    \[f(b_i) = \dfrac{i}{n}, \quad i = 0, 1, \cdots, n\]
     由\textup{Lagrange}中值定理知，对于任意区间$[b_i, b_{i + 1}]$，$i = 1, 2, \cdots, n$，$\exists \alpha_i \in (b_{i - 1}, b_i)$
-    $$f'(\alpha_i) = \dfrac{f(b_i) - f(b_{i - 1})}{b_i - b_{i - 1}} = \dfrac{1}{n(b_i - b_{i - 1})}$$
-    $$\sum\limits_{i = 1}^{n}{\dfrac{1}{f'(\alpha_i)}} = n \sum\limits_{i = 0}^{n}{(b_i - b_{i - 1})} = n(b_n - b_0) = n$$
+    \[f'(\alpha_i) = \dfrac{f(b_i) - f(b_{i - 1})}{b_i - b_{i - 1}} = \dfrac{1}{n(b_i - b_{i - 1})}\]
+    \[\sum\limits_{i = 1}^{n}{\dfrac{1}{f'(\alpha_i)}} = n \sum\limits_{i = 0}^{n}{(b_i - b_{i - 1})} = n(b_n - b_0) = n\]
 
 \end{proof}
 
 \begin{proposition}
 
     设$f$在$[a, b]$上$n + 1$阶可微，$f^{(n + 1)}(x_0) \neq 0$，$n \in \mathbb{N}$，在$[a, b]$上有
-    $$f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}$$
+    \[f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}\]
     证明：
-    $$\lim\limits_{n \to \infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
+    \[\lim\limits_{n \to \infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}\]
 
 \end{proposition}
 
 \begin{proof}
 
     分别将$f(x)$在$x = x_0$处展开为$n + 1$阶\textup{Peano}余项的\textup{Taylor}公式和$n - 1$阶\textup{Lagrange}余项的\textup{Taylor}公式
-    $$f(x) = f(x_0) = f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}$$
-    $$f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n - 1)}(x_0)(x - x_0)^{n - 1}}{(n - 1)!} + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}$$
+    \[f(x) = f(x_0) = f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}\]
+    \[f(x) = f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(n - 1)}(x_0)(x - x_0)^{n - 1}}{(n - 1)!} + \dfrac{f^{(n)}(\xi)(x - x_0)^n}{n!}\]
     两式相减有
-    $$\dfrac{(f^{(n)}(\xi) - f^{(n)}(x_0))(x - x_0)^n}{n!} = \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}$$
-    $$\dfrac{f^{(n)}(\xi) - f^{(n)}(x_0)}{\xi - x_0} \dfrac{\xi - x_0}{x - x_0} \dfrac{(x - x_0)^{n + 1}}{n!} = \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}$$
+    \[\dfrac{(f^{(n)}(\xi) - f^{(n)}(x_0))(x - x_0)^n}{n!} = \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}\]
+    \[\dfrac{f^{(n)}(\xi) - f^{(n)}(x_0)}{\xi - x_0} \dfrac{\xi - x_0}{x - x_0} \dfrac{(x - x_0)^{n + 1}}{n!} = \dfrac{f^{(n + 1)}(x_0)(x - x_0)^{n + 1}}{(n + 1)!} + O(x - x_0)^{n + 1}\]
     两边对$x$取极限，得
-    $$\lim\limits_{n \to \infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}$$
+    \[\lim\limits_{n \to \infty}{\dfrac{\xi - x_0}{x - x_0}} = \dfrac{1}{n + 1}\]
 
 \end{proof}
 
 \begin{proposition}
 
     设$\mathbb{R}$上的函数$f$有任意阶导数，并且对于任意$k \in \mathbb{N}$，存在$C_k > 0$使得
-    $$\sup_{x \in \mathbb{R}}\left( |x|^k|f(x)| + |f^{(k)}(x)| \right) \leq C_k$$
+    \[\sup_{x \in \mathbb{R}}\left( |x|^k|f(x)| + |f^{(k)}(x)| \right) \leq C_k\]
     证明：对于任意$k, l \in \mathbb{N}$，存在$C_{k, l} > 0$使得
-    $$\sup_{x \in \mathbb{R}}|x|^k|f^{(l)}(x)| \leq C_{k, l}$$
+    \[\sup_{x \in \mathbb{R}}|x|^k|f^{(l)}(x)| \leq C_{k, l}\]
 
 \end{proposition}
 
 \begin{proof}
 
     观察到，问题可以约化为证明：对于任意$k \in \mathbb{N}^{+}$，存在$D_k > 0$，对于任意绝对值大于$2$的数$x \in \mathbb{R}$，成立
-    $$|x|^k|f'(x)| \leq D_k$$
+    \[|x|^k|f'(x)| \leq D_k\]
     任意给定$\varepsilon > 0$，由\textup{Taylor}定理知，存在$\theta \in (0, 1)$，使得
-    $$f(x + \varepsilon) - f(x) = f'(x)\varepsilon + \dfrac{1}{2}f''(x + \theta \varepsilon) \varepsilon^2$$
+    \[f(x + \varepsilon) - f(x) = f'(x)\varepsilon + \dfrac{1}{2}f''(x + \theta \varepsilon) \varepsilon^2\]
     于是我们有
-    $$|f'(x)| \leq \dfrac{|f(x + \varepsilon)| + |f(x)|}{\varepsilon} + \dfrac{1}{2}|f''(x + \theta \varepsilon)| \varepsilon$$
+    \[|f'(x)| \leq \dfrac{|f(x + \varepsilon)| + |f(x)|}{\varepsilon} + \dfrac{1}{2}|f''(x + \theta \varepsilon)| \varepsilon\]
     将$\varepsilon = \dfrac{1}{|x|^k}$代入上式，并利用已知条件，得到
 
     \begin{align*}

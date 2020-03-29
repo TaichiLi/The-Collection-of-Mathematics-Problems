@@ -9,7 +9,7 @@
 \begin{proposition}
 
     设函数$f : \mathbb{N} \to \mathbb{R}$
-    $$f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}}$$
+    \[f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}}\]
     证明：函数$f$是单射。
 
 \end{proposition}
@@ -17,12 +17,12 @@
 \begin{proof}
 
     易知$\sin{n} = \dfrac{1}{2\imag}(\euler^{\imag n} - \euler^{-\imag n})$，则有
-    $$f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{\euler^{\imag k} - \euler^{-\imag k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{z^n - z^{-n}}}$$
+    \[f(n) = \sum\limits_{k = 1}^{n}{\dfrac{1}{\sin{k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{\euler^{\imag k} - \euler^{-\imag k}}} = \dfrac{1}{2\imag}\sum\limits_{k = 1}^{n}{\dfrac{1}{z^n - z^{-n}}}\]
     其中$z = \euler^{\imag k}$. 因为$z$为超越数，所以$z$不能是任何有理系数代数方程的根。
     反证法。假设存在$n_1$，$n_2$，$n_1 < n_2$，使得$f(n_1) = f(n_2)$，则有
-    $$f(n_2) - f(n_1) = \dfrac{1}{2\imag}\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0$$
+    \[f(n_2) - f(n_1) = \dfrac{1}{2\imag}\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0\]
     即
-    $$\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0$$
+    \[\sum\limits_{k = n_1 + 1}^{n_2}{\dfrac{1}{z^n - z^{-n}}} = 0\]
     而上式为有理函数，与$z$为超越数的性质矛盾。得证。
     
 \end{proof}
@@ -33,7 +33,7 @@
 
 \begin{proposition}
 
-    $$V_1 = <\mathbb{Z}, +, \cdot>, \quad V_2 = <\mathbb{Z}_n, \oplus, \otimes>$$
+    \[V_1 = <\mathbb{Z}, +, \cdot>, \quad V_2 = <\mathbb{Z}_n, \oplus, \otimes>\]
     其中，$\mathbb{Z}$为整数集，$+$，$\cdot$分别为普通加法和乘法，$\mathbb{Z}_n = \{1, 2, 3, \cdots, n - 1\}$，
     $\oplus$，$\otimes$分别为模$n$加法和模$n$乘法，令$f: \mathbb{Z} \to \mathbb{Z}_n$，$f(x) = x \bmod{n}$. 证明$f$为$V_1$到$V_2$的满同态映射。
 
@@ -42,11 +42,11 @@
 \begin{proof}
 
     $\forall x, y \in \mathbb{Z}$
-    $$f(x + y) = (x + y) \bmod{n}$$
-    $$f(x) \oplus f(y) = [(x \bmod{n}) + (y \bmod{n})] \bmod{n}$$
+    \[f(x + y) = (x + y) \bmod{n}\]
+    \[f(x) \oplus f(y) = [(x \bmod{n}) + (y \bmod{n})] \bmod{n}\]
     由取模运算的定义知，$\exists q_1, q_2 \in \mathbb{Z}$，$r_1, r_2 \in \mathbb{Z}_n$
-    $$x = q_1 n + r_1$$
-    $$y = q_2 n + r_2$$
+    \[x = q_1 n + r_1\]
+    \[y = q_2 n + r_2\]
     则
     
     \begin{align*}
@@ -58,11 +58,11 @@
     \end{align*}
 
     其中
-    $$r_1 + r_2 = q_3 n + r_3, \quad q_3 \in \mathbb{Z}, r_3 \in \mathbb{Z}_n$$
+    \[r_1 + r_2 = q_3 n + r_3, \quad q_3 \in \mathbb{Z}, r_3 \in \mathbb{Z}_n\]
     即
-    $$f(x + y) = f(x) \oplus f(y)$$
+    \[f(x + y) = f(x) \oplus f(y)\]
     同理可证
-    $$f(x \cdot y) = f(x) \otimes f(y)$$
+    \[f(x \cdot y) = f(x) \otimes f(y)\]
     且$f$显然是满映射，得证。
 
 \end{proof}
@@ -88,7 +88,7 @@
 
         \item 
             因为$ab = ac$，且$G$是群，所以存在$a^{-1} \in G$， 两边左乘$a^{-1}$得
-            $$a^{-1} ab = a^{-1}ac$$
+            \[a^{-1} ab = a^{-1}ac\]
             即$b = c$，得证。
 
         \item 同上。
@@ -117,11 +117,11 @@
 
         \item 
             设$|b^{-1}ab| = k$，$|a| = l$，则
-            $$[b^{-1}ab]^l = \overbrace{[b^{-1}ab \  b^{-1}ab \ \cdots \  b^{-1}ab]}^{共l项} = b^{-1}a^{l}b = b^{-1}\circ e \circ b = e$$
+            \[[b^{-1}ab]^l = \overbrace{[b^{-1}ab \  b^{-1}ab \ \cdots \  b^{-1}ab]}^{共l项} = b^{-1}a^{l}b = b^{-1}\circ e \circ b = e\]
             即$k \leq l$，同理设$|bb^{-1}abb^{-1}| = m$，显然$m = l$，同时
-            $$[bb^{-1}abb^{-1}]^k = \overbrace{[b(b^{-1}ab)b^{-1} \  b(b^{-1}ab)b^{-1} \ \cdots \  b(b^{-1}ab)b^{-1}]}^{共k项} = b(b^{-1}ab)^kb^{-1} = b^{-1}\circ e \circ b = e$$
+            \[[bb^{-1}abb^{-1}]^k = \overbrace{[b(b^{-1}ab)b^{-1} \  b(b^{-1}ab)b^{-1} \ \cdots \  b(b^{-1}ab)b^{-1}]}^{共k项} = b(b^{-1}ab)^kb^{-1} = b^{-1}\circ e \circ b = e\]
             因此$l = m \leq k \leq l$，即
-            $$|b^{-1}ab| = |a|$$
+            \[|b^{-1}ab| = |a|\]
             
         \item 
             $|ba| = |b^{-1}bab| = |ba|$，得证。

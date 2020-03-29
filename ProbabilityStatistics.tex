@@ -7,17 +7,17 @@
 \begin{proposition}
 
     证明：
-    $$|P(AB) - P(A)P(B)| \leq \dfrac{1}{4}$$
+    \[|P(AB) - P(A)P(B)| \leq \dfrac{1}{4}\]
 
 \end{proposition}
 
 \begin{proposition}
 
     因为
-    $$P(AB) - P(A)P(B) = P(AB) + P(A)[P(AB) - P(\overline{A}B)] = P(AB)[1 - P(A)] - P(A)P(\overline{A}B)$$
+    \[P(AB) - P(A)P(B) = P(AB) + P(A)[P(AB) - P(\overline{A}B)] = P(AB)[1 - P(A)] - P(A)P(\overline{A}B)\]
     且
-    $$0 \leq P(AB)[1 - P(A)] \leq P(A)[1 - P(A)]$$
-    $$0 \leq P(A)P(\overline{A}B) \leq P(A)P(\overline{A}) = P(A)[1 - P(A)]$$
+    \[0 \leq P(AB)[1 - P(A)] \leq P(A)[1 - P(A)]\]
+    \[0 \leq P(A)P(\overline{A}B) \leq P(A)P(\overline{A}) = P(A)[1 - P(A)]\]
     所以
     
     \begin{align*}
@@ -37,7 +37,7 @@
 \begin{theorem}[Chebyshev不等式]
     
     设随机变量$X$的数学期望和方差都存在，则对任意常数$\varepsilon > 0$，有
-    $$P(|X - E(X)| \geq \varepsilon) \leq \dfrac{Var(X)}{\varepsilon^2}$$
+    \[P(|X - E(X)| \geq \varepsilon) \leq \dfrac{Var(X)}{\varepsilon^2}\]
 
 \end{theorem}
 
@@ -63,14 +63,14 @@
 \begin{proof}
 
     设随机变量$X$的密度函数为$p(x)$，则有
-    $$E(X) = \int_{a}^{b}{xp(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x = b$$
+    \[E(X) = \int_{a}^{b}{xp(x)}\diff x \leq \int_{a}^{b}{p(x)}\diff x = b\]
     同理$E(X) \geq a$，即$a \leq E(X) \leq b$.
     因为$a \leq X \leq b$，则
-    $$-\dfrac{b - a}{2} \leq X - \dfrac{a + b}{2} \leq \dfrac{b - a}{2}$$
+    \[-\dfrac{b - a}{2} \leq X - \dfrac{a + b}{2} \leq \dfrac{b - a}{2}\]
     因此
-    $$\left( X - \dfrac{a + b}{2} \right)^2 \leq \left( \dfrac{b - a}{2} \right)^2$$
+    \[\left( X - \dfrac{a + b}{2} \right)^2 \leq \left( \dfrac{b - a}{2} \right)^2\]
     易知
-    $$E \left( X - \dfrac{a + b}{2} \right)^2 \leq \left( \dfrac{b - a}{2} \right)^2$$
+    \[E \left( X - \dfrac{a + b}{2} \right)^2 \leq \left( \dfrac{b - a}{2} \right)^2\]
     则有
     
     \begin{align*}
@@ -85,14 +85,14 @@
 \begin{proposition}
 
     设$g(x)$为随机变量$X$取值的集合上的非负不减函数，且$E(g(x))$存在。证明：对任意的$\varepsilon > 0$，有
-    $$P(X > \varepsilon) \leq \dfrac{E(g(X))}{g(\varepsilon)}$$
+    \[P(X > \varepsilon) \leq \dfrac{E(g(X))}{g(\varepsilon)}\]
 
 \end{proposition}
 
 \begin{proof}
 
     因为$g(x)$为非负不减函数，则对任意的$\varepsilon > 0$，有
-    $$g(x) \geq g(\varepsilon) \geq 0$$
+    \[g(x) \geq g(\varepsilon) \geq 0\]
     即$\dfrac{g(x)}{g(\varepsilon)} \geq 1$，因此
 
     \begin{align*}
@@ -110,7 +110,7 @@
 \begin{theorem}[Poisson定理]
 
     在$n$重伯努利试验中，记事件$A$在一次实验中发生的概率为$p_n$（与试验次数有关）。若$\lim\limits_{n \to \infty}{n p_n} = \lambda$，则
-    $$\lim\limits_{n \to \infty}{\binom{n}{k}p_n^k(1 - p_n)^{n - k}} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
+    \[\lim\limits_{n \to \infty}{\binom{n}{k}p_n^k(1 - p_n)^{n - k}} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}\]
 
 \end{theorem}
 
@@ -124,9 +124,9 @@
     \end{align*}
 
     对固定的$k$有
-    $$\lim\limits_{n \to \infty}{\lambda_n} = \lambda$$
-    $$\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k}} = \euler^{-\lambda}$$
-    $$\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{1}{n} \right) \left( 1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right)} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}$$
+    \[\lim\limits_{n \to \infty}{\lambda_n} = \lambda\]
+    \[\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{\lambda_n}{n} \right)^{n - k}} = \euler^{-\lambda}\]
+    \[\lim\limits_{n \to \infty}{ \left( 1 - \dfrac{1}{n} \right) \left( 1 - \dfrac{2}{n} \right) \cdots \left( 1 - \dfrac{k - 1}{n} \right)} = \dfrac{\lambda^k}{k!}\euler^{-\lambda}\]
     因此，对任意的$k$成立。定理得证。
 
 \end{proof}
