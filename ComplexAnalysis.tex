@@ -209,16 +209,20 @@
         先证右边等号成立，注意到
         \[|f(\euler^{\imag \theta})|^2 = (c_0 + c_1 \cos{\theta} + \cdots + c_n \cos{n\theta})^2 + (c_0 + c_1 \sin{\theta} + \cdots + c_n \sin{n\theta})^2\]
         易知
-        $$\int_{0}^{2\pi}{\cos{mx}\cos{nx}}\diff x = \left\{ 
-        \begin{aligned}
-            & \pi, & m = n, \\
-            & 0, & m \neq n,
-        \end{aligned} \right.$$
-        $$\int_{0}^{2\pi}{\sin{mx}\sin{nx}}\diff x = \left\{ 
-        \begin{aligned}
-            & \pi, & m = n, \\
-            & 0, & m \neq n,
-        \end{aligned} \right.$$
+        \[
+            \int_{0}^{2\pi}{\cos{mx}\cos{nx}}\diff x = \left\{ 
+            \begin{aligned}
+                & \pi, & m = n, \\
+                & 0, & m \neq n,
+            \end{aligned} \right.
+        \]
+        \[
+            \int_{0}^{2\pi}{\sin{mx}\sin{nx}}\diff x = \left\{ 
+            \begin{aligned}
+                & \pi, & m = n, \\
+                & 0, & m \neq n,
+            \end{aligned} \right.
+        \]
         所以
         \[\pi \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\dfrac{\diff \theta}{2 \pi} = \pi \sum\limits_{k = 0}^{n}{c_k^2}\]
         再证不等号。应用\textup{Cauthy}积分公式得
@@ -579,22 +583,26 @@
     \end{align*}
 
     可得线性方程组，解得
-    $$c_n = \dfrac{1}{b_{n + 1}}
-    \begin{vmatrix} 
-        b_0 & 0 & 0 & \cdots & a_0 \\
-        b_1 & b_0 & 0 & \cdots & a_1 \\
-        b_2 & b_1 & b_0 & \cdots & a_2 \\
-        \vdots & \vdots & \vdots & \cdots & \vdots \\
-        b_n & b_{n - 1} & b_{n - 2} & \cdots & a_n
-    \end{vmatrix}$$
+    \[
+        c_n = \dfrac{1}{b_{n + 1}}
+        \begin{vmatrix} 
+            b_0 & 0 & 0 & \cdots & a_0 \\
+            b_1 & b_0 & 0 & \cdots & a_1 \\
+            b_2 & b_1 & b_0 & \cdots & a_2 \\
+            \vdots & \vdots & \vdots & \cdots & \vdots \\
+            b_n & b_{n - 1} & b_{n - 2} & \cdots & a_n
+        \end{vmatrix}
+    \]
     且
-    $$\begin{vmatrix} 
-        b_0 & 0 & 0 & \cdots & 0 \\
-        b_1 & b_0 & 0 & \cdots & 0 \\
-        b_2 & b_1 & b_0 & \cdots & 0 \\
-        \vdots & \vdots & \vdots & \cdots & \vdots \\
-        b_n & b_{n - 1} & b_{n - 2} & \cdots & b_0
-    \end{vmatrix} = b_0^{n + 1} \neq 0$$
+    \[
+        \begin{vmatrix} 
+            b_0 & 0 & 0 & \cdots & 0 \\
+            b_1 & b_0 & 0 & \cdots & 0 \\
+            b_2 & b_1 & b_0 & \cdots & 0 \\
+            \vdots & \vdots & \vdots & \cdots & \vdots \\
+            b_n & b_{n - 1} & b_{n - 2} & \cdots & b_0
+        \end{vmatrix} = b_0^{n + 1} \neq 0
+    \]
 
 \end{proof}
 
@@ -619,10 +627,7 @@
     所以
     \[f(z) = \sum\limits_{n = 0}^{\infty}{\left( b_n - \dfrac{c}{z^{n + 1}} \right)z^n} = \sum\limits_{n = 0}^{\infty}{a_n z^n}\]
     则有
-    $$\dfrac{a_n}{a_{n + 1}} = 
-    \dfrac{b_n - \frac{c}{z_0^{n + 1}}} {b_{n + 1} - \frac{c}{z_0^{n + 2}}} = 
-    z_0 \dfrac{(b_n z_0^n) z_0 - c} {(b_{n + 1}z_0^{n + 1}) z_0 - c} =
-    z_0 \dfrac{z_0 h_n - c}{z_0 h_{n + 1} - c}$$
+    \[\dfrac{a_n}{a_{n + 1}} = \dfrac{b_n - \frac{c}{z_0^{n + 1}}} {b_{n + 1} - \frac{c}{z_0^{n + 2}}} = z_0 \dfrac{(b_n z_0^n) z_0 - c} {(b_{n + 1}z_0^{n + 1}) z_0 - c} = z_0 \dfrac{z_0 h_n - c}{z_0 h_{n + 1} - c}\]
     其中$h_n$是$h(z)$在$z = z_0$处\textup{Taylor}级数第$n$项的系数。因为$h(z)$在单位圆内解析，有$\lim\limits_{n \to \infty}{h_n} = 0$. 且
     \[\lim\limits_{n \to \infty}{\dfrac{a_n}{a_{n + 1}}} = \lim\limits_{n \to \infty}{\left( a_0 \dfrac{a_0 h_n - c}{z_0h_{n + 1} - c} \right)} = z_0\]
 
@@ -1043,7 +1048,7 @@
     \end{align*}
 
     其中
-    $$
+    \[
     \int_{o}^{2\pi}{\euler^{\imag n\theta}}\diff \theta = 
     \left\{
         \begin{aligned}
@@ -1051,7 +1056,7 @@
             &0, & n \neq 0 \\
         \end{aligned}
     \right.
-    $$
+    \]
     即
     \[A = \pi \sum\limits_{n = 1}^{\infty}{n|a_n|^2}\]
 
@@ -1080,12 +1085,14 @@
     令$c_{-1} = 1$，幂级数展开得
     \[S_r = -\dfrac{1}{2}\mathrm{Re}\int_{0}^{2\pi}{\sum\limits_{n = -1}^{\infty}{\sum\limits_{n = -1}^{\infty}{m r^{n + m}a_n \overline{a_m} \euler^{\imag (m - n)\theta}}}}\diff \theta\]
     因为
-    $$\int_{0}^{2\pi}{\euler^{\imag(m - n)\theta}}\diff \theta = \left\{
+    \[
+        \int_{0}^{2\pi}{\euler^{\imag(m - n)\theta}}\diff \theta = \left\{
         \begin{aligned}
             & 2\pi, & m = n, \\
             & 0, & m \neq n,           
         \end{aligned}
-    \right.$$
+        \right.
+    \]
     所以
     \[S_r = - \pi\sum\limits_{n = -1}^{\infty}{nr^{2n}|a_n|^2} = \dfrac{\pi}{r^2} - \pi\sum\limits_{n = 1}^{\infty}{nr^{2n}|a_n|^2} \geq 0\]
     令$r \to 1$得
@@ -1251,15 +1258,15 @@
     由于$f(0) = 0$，且$f(z)$在$\mathbb{D}$内解析，则$f(z)$在$\mathbb{D}$内可以\textup{Taylor}展开，有
     \[f(z) = c_1 z + c_2 z^2 + \dots + \]
     令$\varphi(z) =  c_1 + c_2 z + \cdots $，则
-    $$
-    \varphi(z) = 
-    \left\{
-        \begin{aligned}
-            & \dfrac{f(z)}{z}, & z \neq 0 \\
-            &f'(0), & z = 0 \\
-        \end{aligned}
-    \right.
-    $$
+    \[
+        \varphi(z) = 
+        \left\{
+            \begin{aligned}
+                & \dfrac{f(z)}{z}, & z \neq 0 \\
+                &f'(0), & z = 0 \\
+            \end{aligned}
+        \right.
+    \]
     显然$\varphi(z)$在$\mathbb{D}$内解析，对于圆内一点$z_0$，设$|z_0| < r < 1$，则由最大模定理知
     \[|\varphi(z + 0)| = \max_{|z| = r}|\varphi(z_0)| = \max_{|z| = r}{\left| \dfrac{f(z)}{z} \right|} \leq \dfrac{1}{r}\]
     令$r \to 1$，则有$|\varphi(z_0)| \leq 1$ \\

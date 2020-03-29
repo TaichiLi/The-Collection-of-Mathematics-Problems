@@ -242,13 +242,14 @@
     令$N\to+\infty$，即可得到\textup{Carleman}不等式。\\
     下证不等式右边的系数$\euler$不能在改进。\\
     对于每个$N$构造一个数列
-    $$b_n = \left\{
+    \[
+        b_n = \left\{
         \begin{aligned}
             & \dfrac{1}{n}, & n & = 1, 2, \cdots, N \\
             & 0, & n & > N
         \end{aligned}
-    \right.
-    $$
+        \right.
+    \]
     然后作出两个级数和之比，令$n\to+\infty$，应用\textup{stolz}定理得
     \[\lim\limits_{N \to \infty}{\dfrac{\sum\limits_{n = 1}^{N}{\sqrt[n]{a_1 a_2 \cdots a_n}}}{\sum\limits_{n = 1}^{N}{b_n}}} = \lim\limits_{N \to \infty}{\dfrac{N}{\sqrt[N]{N!}}} = \euler\]
 
