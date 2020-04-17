@@ -485,7 +485,7 @@
     任意区间$[x_i, x_{i + 1}]$，$i = 1, 2, \cdots, n$上，若$f(x) < x$，则
     \[f(f(x)) \leq f(x)\]
     即
-    \[\int_{x_i}^{x_{i + 1}{f(f(x))}}\diff x \leq \int_{x_i}^{x_{i + 1}}{f(f(x_{i + 1}))}\diff x \leq 2\int_{x_i}^{x_{i + 1}}{f(x)}\diff x\]
+    \[\int_{x_i}^{x_{i + 1}}{f(f(x))}\diff x \leq \int_{x_i}^{x_{i + 1}}{f(f(x_{i + 1}))}\diff x \leq 2\int_{x_i}^{x_{i + 1}}{f(x)}\diff x\]
     若$f(x) \geq x$，则$f(f(x)) \geq f(x) \geq x$
     \[2\int_{x_i}^{x_{i + 1}}{f(x)}\diff x \geq 2\int_{x_i}^{x_{i + 1}}{x}\diff x = x_{i + 1}^2 - x_i^2\]
     \[2\int_{x_i}^{x_{i + 1}}{f(f(x))}\diff x \leq \int_{x_i}^{x_{i + 1}}{f(f(x_{i + 1}))}\diff x = x_{i + 1}(x_{i + 1} - x_i)\]
@@ -1403,5 +1403,50 @@
         & \leq \dfrac{1}{24} \left( \int_{0}^{\frac{1}{2}}{\left( f'(x) \right)^2}\diff x + \int_{\frac{1}{2}}^{1}{\left( f'(x) \right)^2}\diff x \right) \\
         & = \dfrac{1}{24} \int_{0}^{1}{\left( f'(x) \right)^2}\diff x
     \end{align*}
+
+\end{proof}
+
+\begin{proposition}
+
+    设$f(x)$是区间$[-1, 1]$上的连续函数，且满足：
+
+    \begin{enumerate}
+
+        \item $f(-1) > f(1)$
+        
+        \item $x + f(x)$是单调非减的。
+        
+        \item $\int_{-1}^{1}{f(x)}\diff x = 0$
+        
+    \end{enumerate}
+
+    证明：
+    \[\int_{-1}^{1}{f^2(x)}\diff x \leq \dfrac{2}{3}\]
+    
+\end{proposition}
+
+\begin{proof}
+
+    易知$\int_{-1}^{1}{x^2}\diff x = \dfrac{2}{3}$，则不等式可转换为
+    \[\int_{-1}^{1}{(f^2(x) - x^2)}\diff x \leq 0\]
+    令$g(x) = f(x) + x$，$h(x) = f(x) - x$，易知$g(x)$单调增加，所以有积分第二中值定理得，对任意$y \in (-1, 1)$有
+    \[\int_{-1}^{1}{(f^2(x) - x^2)}\diff x = \int_{-1}^{1}{g(x)h(x)}\diff x = g(-1)\int_{-1}^{y}{h(x)}\diff x + g(1)\int_{y}^{1}{h(x)}\diff x\]
+    又因为$g(x) = h(x) + 2x$，则
+
+    \begin{align*}
+        & g(-1)\int_{-1}^{y}{h(x)}\diff x + g(1)\int_{y}^{1}{h(x)}\diff x \\
+        = & g(-1)\int_{-1}^{y}{(h(x) + 2x)}\diff x + g(1)\int_{y}^{1}{(h(x) + 2x)}\diff x - g(-1)\int_{-1}^{y}{2x}\diff x - g(1)\int_{y}^{1}{2x}\diff x \\
+        = & g(-1)\int_{y}^{1}{g(x)}\diff x + g(1)\int_{y}^{1}{g(x)}\diff x + (1 - y^2)(g(-1) - g(1)) \\
+        = & g(-1)\left( \int_{y}^{1}{g(x)}\diff x + 1 - y^2 \right) + g(1)\left( \int_{y}^{1}{g(x)}\diff x - 1 + y^2 \right)
+    \end{align*}
+
+    令$A = \int_{-1}^{y}{g(x)}\diff x + 1 - y^2$，则$\int_{y}^{1}{g(x)}\diff x - 1 + y^2 = -A$，由积分第一中值定理得，存在$\xi \in [-1, y]$，使得
+    \[A = g(\xi)(y + 1) + 1 - y^2\]
+    反证法，假设$A < 0$，则$g(\xi) < y - 1$；同理，存在$\eta \in [y, 1]$，使得$-A = g(\eta)(1 - y) > 0$，则$g(\eta) > y + 1$，所以$g(\eta) - g(\xi) > 2$. \\
+    然而由题设可知，$g(-1) + 1 \geq g(1) - 1$，即$g(1) - g(-1) \leq 2$. 所以$A \geq 0$. \\
+    又$g(x)$是单调不减函数，所以
+    \[A(g(-1) - g(1)) \leq 0\]
+    即
+    \[\int_{-1}^{1}{f^2(x)}\diff x \leq \dfrac{2}{3}\]
 
 \end{proof}
