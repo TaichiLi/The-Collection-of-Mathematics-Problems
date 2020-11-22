@@ -2,7 +2,7 @@
 
 \section{数列与极限}
 
-\begin{proposition}[Cauthy命题]
+\begin{proposition}[Cauchy命题]
 
     设$\{x_n\}$收敛于$l$，则它的前$n$项的算术平均数也收敛于$l$，即有
     \[\lim\limits_{x \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = l\]
@@ -30,7 +30,7 @@
 
 \end{proof}
 
-\begin{corollary}[Cauthy命题推论]
+\begin{corollary}[Cauchy命题推论]
 
     若$\lim\limits_{n \to \infty}{(a_n - a_{n - 1})} = d$，
     则
@@ -41,7 +41,7 @@
 \begin{proof}
 
     因为$\lim\limits_{n \to \infty}{(a_n - a_{n - 1})} = d$，所以数列$\{a_n - a_{n - 1}\}$收敛于$d$. \\
-    由\textup{Cauthy}命题知，
+    由\textup{Cauchy}命题知，
     
     \begin{align*}
         & \lim\limits_{n \to \infty}{\dfrac{(a_2 - a_1) + (a_3 - a_2) + \cdots + (a_{n + 1} - a_n)}{n}} \\
@@ -54,7 +54,7 @@
 
 \end{proof}
 
-\begin{corollary}[Cauthy命题推论]
+\begin{corollary}[Cauchy命题推论]
 
     设$\{a_n\}$是正数列，且收敛于$A$，
     则
@@ -66,7 +66,7 @@
 
     显然有
     \[\ln{\sqrt[n]{a_1 a_2 \cdots a_n}} = \dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}\]
-    由\textup{Cauthy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$. \\    
+    由\textup{Cauchy}命题知，因为$\{a_n\}$收敛于$A$，即数列$\{\ln{a_n}\}$收敛于$\ln{A}$. \\    
     所以
     \[\lim\limits_{n \to \infty}{\dfrac{\ln{a_1} + \ln{a_2} + \cdots + \ln{a_n}}{n}} = \ln{A}\]
     也即
@@ -75,7 +75,7 @@
 \end{proof}
 
 
-\begin{corollary}[Cauthy命题推论]
+\begin{corollary}[Cauchy命题推论]
 
     设$\{a_n\}$是正数列，且存在极限$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，
     则
@@ -86,7 +86,7 @@
 \begin{proof}
 
     因为$\lim\limits_{n \to \infty}{\dfrac{a_{n + 1}}{a_n}} = l$，所以数列$\left\{ \ln{\dfrac{a_n}{a_{n - 1}}} \right\}$收敛于$\ln{l}$ \\
-    由\textup{Cauthy}命题知
+    由\textup{Cauchy}命题知
     
     \begin{align*}
         & \lim\limits_{n \to \infty}{\dfrac{\ln{\dfrac{a_2}{a_1}} + \ln{\dfrac{a_3}{a_2}} + \cdots + \ln{\dfrac{a_{n + 1}}{a_n}}}{n}} \\
@@ -102,7 +102,7 @@
 
 \end{proof}
 
-\begin{proposition}[Cauthy命题$\infty$时的特例]
+\begin{proposition}[Cauchy命题$\infty$时的特例]
 
     $\lim\limits_{n \to \infty}{x_n} = +\infty$. 证明：
     \[\lim\limits_{n \to \infty}{\dfrac{x_1 + x_2 + \cdots + x_n}{n}} = +\infty\]
@@ -454,7 +454,7 @@
     对固定的$i \in \mathbb{N}$，$\{a_{np + i}\}$是$\{a_{n}\}$的子列 \\
     由$\lim\limits_{n \to \infty}{a_{n + p} - a_n} = \lambda$，则
     \[\lim\limits_{n \to \infty}{a_{(n + 1)p + i} - a_{np + i}} = \lambda\]
-    令$A^{(i)}_{n} = a_{(n + 1)p + i} - a_{np + i}$，由\textup{Cauthy}命题知
+    令$A^{(i)}_{n} = a_{(n + 1)p + i} - a_{np + i}$，由\textup{Cauchy}命题知
     \[\lim\limits_{n \to \infty}{\dfrac{A_1 + A_2 + \cdot + A_n}{n}} = \lambda\]
     即
     \[\lim\limits_{n \to \infty}{\dfrac{a_{(n + 1)p + i} - a_{p + i}}{n}} = \lim\limits_{n \to \infty}{\dfrac{a_{(n + 1)p + i}}{n}} = \lambda\]

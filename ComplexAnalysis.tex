@@ -116,7 +116,7 @@
 
     由题设$f(z)$在复平面$\mathrm{C}$内都能\textup{Taylor}展开，则
     \[f(z) = \sum\limits_{n = 0}^{\infty}{\dfrac{f^{(n)}(z_0)}{n!}(z - z_0)^n}\]
-    应用\textup{Cauthy}积分公式，得
+    应用\textup{Cauchy}积分公式，得
     \[f(0) = \dfrac{1}{2\pi} \int_{0}^{2\pi}{f(\euler^{\imag \theta})}\diff \theta\]
     从而$2\pi|f(0)| \leq 6{\frac{16}{5}}$，令$r \to 0^{+}$，有$f(0) = 0$
     再由
@@ -225,7 +225,7 @@
         \]
         所以
         \[\pi \int_{0}^{2\pi}{|f(\euler^{\imag \theta})|^2}\dfrac{\diff \theta}{2 \pi} = \pi \sum\limits_{k = 0}^{n}{c_k^2}\]
-        再证不等号。应用\textup{Cauthy}积分公式得
+        再证不等号。应用\textup{Cauchy}积分公式得
         
         \begin{align*}
             0 & = \int_{\Gamma_1}{f^2(x)}\diff x + \int_{\Gamma_2}{f^2(z)}\diff z \\
@@ -670,7 +670,7 @@
 
 \begin{proof}
 
-    由\textup{Cauthy}公式得，
+    由\textup{Cauchy}公式得，
     \[f'(0) = \dfrac{1}{2\pi \imag} \oint_{|z| = r}{\dfrac{f(z)}{z^2}}\diff z\]
     \[f'(0) = \dfrac{1}{2\pi \imag} \oint_{|z| = r}{\dfrac{-f(-z)}{z^2}}\diff z\]
     其中$0 < r < 1$，即
@@ -715,7 +715,7 @@
         & = \left( f(a\euler^{\imag \theta}) - f(a) + \dfrac{d_r^{*}}{r}a \right) \left( f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a} \right)
     \end{align*}
 
-    由\textup{Cauthy}定理知，
+    由\textup{Cauchy}定理知，
     \[\varphi'(\theta) = 2 \mathrm{Re}\left\{ a\imag \euler^{\imag \theta}f'(a\euler^{\imag \theta}) \left( f^{*}(\overline{a}\euler^{-\imag \theta}) - f^{*}(\overline{a}) + \dfrac{d_r^{*}}{r}\overline{a} \right) \right\}\]
     所以
     \[\varphi'(0) = 2 \mathrm{Re}\left\{ a\imag f'(a)\dfrac{d_r^{*}}{r}\overline{a} \right\} = -2\dfrac{d_r^{*}}{r}|a|^2\mathrm{Im}\{f'(a)\} \neq 0\]
@@ -725,7 +725,7 @@
     \[f'(z) = 0, \quad \forall |z| = r\]
     由最大模定理知，
     \[f'(z) = 0, \quad \forall z \in D(0, r)\]
-    因此由\textup{Cauthy-Riemann}条件知，$f'(z)$是常值函数，即
+    因此由\textup{Cauchy-Riemann}条件知，$f'(z)$是常值函数，即
     \[f(z) = f'(0)z + f(0), \quad \forall z \in D(0, 1)\]
     成立。
     
@@ -790,7 +790,7 @@
 \begin{proof}
     
     设$r_2 < R$，选取$z_0$，满足$0 < z_0 < \dfrac{r_2}{2}$，再选取$r_1$，使$0 < r_1 < \dfrac{|z_0|}{2}$ \\
-    由\textup{Cauthy}积分公式得
+    由\textup{Cauchy}积分公式得
 
     \begin{align*}
         |f(z_0)| & = \left| \dfrac{1}{2\mathrm{\pi i}} \int_{C_2}{\dfrac{f(z)}{z - z_0}}\diff z - \int_{C_1}{\dfrac{f(z)}{z - z_0}}\diff z \right| \\
